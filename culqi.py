@@ -30,7 +30,7 @@ class Culqi:
         return r.content
 
     def createCharge(self, address, address_city, amount, country_code, currency_code, email, first_name, installments, last_name,
-                     order_id, phone_number, product_description, token_id):
+                     metadata, order_id, phone_number, product_description, token_id):
         charge = Object()
         charge.address = address
         charge.address_city = address_city
@@ -41,6 +41,7 @@ class Culqi:
         charge.first_name = first_name
         charge.installments = installments
         charge.last_name = last_name
+        charge.metadata = metadata
         charge.order_id = order_id
         charge.phone_number = phone_number
         charge.product_description = product_description
@@ -58,3 +59,24 @@ class Culqi:
         plan.name = name
         plan.trial_days = trial_days
         return self.jsonResult("/plans/", plan.toJSON())
+
+    def createSubscription(self, address, address_city, country_code, email, last_name, first_name, phone_number,
+                           plan_alias, token_id):
+        subscription = Object()
+        subscription.address = address
+        subscription.address_city = address_city
+        subscription.country_code = country_code
+        subscription.email = email
+        subscription.last_name = last_name
+        subscription.first_name = first_name
+        subscription.phone_number = phone_number
+        subscription.plan_alias = plan_alias
+        subscription.token_id = token_id
+        return self.jsonResult("/subscriptions/", subscription.toJSON())
+
+    def createRefund(self, amount, charge_id, reason):
+        refund = Object()
+        refund.amount = amount
+        refund.charge_id = charge_id
+        refund.reason = reason
+        return self.jsonResult("/refunds/", refund.toJSON())

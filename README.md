@@ -5,6 +5,6 @@ Biblioteca de Culqi en Python
 
 http://docs.python-requests.org/en/master/
 
-### Instrucciones
+### Instrucciones para el desarrollo
 
     $ pip install -r requirements.txt
