@@ -1,5 +1,10 @@
 # culqi-python
+
+https://pypi.python.org/pypi/culqi_py
+
 Biblioteca de Culqi en Python BETA
+
+    $ pip install culqi_py
 
 #### Python Libs
 
