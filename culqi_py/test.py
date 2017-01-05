@@ -32,19 +32,19 @@ class TestStringMethods(unittest.TestCase):
         return refund
 
     def test_token(self):
-        self.assertEqual("token", self.token()["object"])
+        self.assertEqual("token", str(self.token()["object"]))
 
     def test_charge(self):
-        self.assertEqual("charge", self.charge()["object"])
+        self.assertEqual("charge", str(self.charge()["object"]))
 
     def test_plan(self):
-        self.assertEqual("plan", self.plan()["object"])
+        self.assertEqual("plan", str(self.plan()["object"]))
 
     def test_subscription(self):
-        self.assertEqual("subscription", self.subscription()["object"])
+        self.assertEqual("subscription", str(self.subscription()["object"]))
 
     def test_refund(self):
-        self.assertEqual("refund", self.refund()["object"])
+        self.assertEqual("refund", str(self.refund()["object"]))
 
 if __name__ == '__main__':
     unittest.main()
