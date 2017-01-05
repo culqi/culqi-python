@@ -10,7 +10,7 @@ class TestStringMethods(unittest.TestCase):
     def token(self):
         token = json.loads(culqi.createToken(
                 "4111111111111111","PEN","123",9,2020,"q352454534","Muro","wmuro@me.com","William"
-                ))
+                )).decode('utf-8')
         return token
 
     def charge(self):
