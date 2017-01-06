@@ -12,7 +12,7 @@ class Culqi:
     def jsonResult(self, url, data):
         headers = {"Authorization": "Bearer "+self.API_KEY, "content-type": "application/json"}
         r = requests.post(self.API_URL+url, headers=headers, data=data)
-        return r.content
+        return r.json()
 
     def createToken(self, card_number, currency_code, cvv, exp_month, exp_year, fingerprint, last_name, email, first_name):
         token = Object()
@@ -27,7 +27,7 @@ class Culqi:
         token.first_name = first_name
         headers = {"Authorization": "Code "+self.COD_COMMERCE, "content-type": "application/json"}
         r = requests.post(self.API_URL+"/tokens/", headers=headers, data=token.toJSON())
-        return r.content
+        return r.json()
 
     def createCharge(self, address, address_city, amount, country_code, currency_code, email, first_name, installments, last_name,
                      metadata, order_id, phone_number, product_description, token_id):
