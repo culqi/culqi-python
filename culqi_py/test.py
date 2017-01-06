@@ -8,27 +8,25 @@ class TestStringMethods(unittest.TestCase):
     culqi = Culqi("pk_test_vzMuTHoueOMlgUPj","sk_test_UTCQSGcXW8bCyU59")
 
     def token(self):
-        token = json.loads(culqi.createToken(
-                "4111111111111111","PEN","123",9,2020,"q352454534","Muro","wmuro@me.com","William"
-                ))
+        token = culqi.createToken("4111111111111111","PEN","123",9,2020,"q352454534","Muro","wmuro@me.com","William")
         return token
 
     def charge(self):
-        charge = json.loads(culqi.createCharge("Avenida Lima 1232","LIMA",1000,"PE","PEN","wmuro@me.com","William",0,"Muro","",
-                 9899,3333339,"Venta de prueba",self.token()["id"]))
+        charge = culqi.createCharge("Avenida Lima 1232","LIMA",1000,"PE","PEN","wmuro@me.com","William",0,"Muro","",
+                 9899,3333339,"Venta de prueba",self.token()["id"])
         return charge
 
     def plan(self):
-        plan = json.loads(culqi.createPlan("plan-test-"+str(uuid.uuid1()),1000,"PEN","day",2,10,"Plan de Prueba "+str(uuid.uuid1()),50))
+        plan = culqi.createPlan("plan-test-"+str(uuid.uuid1()),1000,"PEN","day",2,10,"Plan de Prueba "+str(uuid.uuid1()),50)
         return plan
 
     def subscription(self):
-        subscription = json.loads(culqi.createSubscription("Avenida Lima 123213","LIMA","PE","wmuro@me.com","Muro","William",
-                       1234567789,self.plan()["alias"],self.token()["id"]))
+        subscription = culqi.createSubscription("Avenida Lima 123213","LIMA","PE","wmuro@me.com","Muro","William",
+                       1234567789,self.plan()["alias"],self.token()["id"])
         return subscription
 
     def refund(self):
-        refund = json.loads(culqi.createRefund(500,self.charge()["id"],"give me money back"))
+        refund = culqi.createRefund(500,self.charge()["id"],"give me money back")
         return refund
 
     def test_token(self):
