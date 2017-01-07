@@ -66,7 +66,7 @@ Todos los cambios en las versiones de esta biblioteca están listados en [CHANGE
 Solo debe ejecutar el siguiente comando
 
 ```python
-python culqi_py/test.py
+python culqipy/test.py
 ```
 
 
