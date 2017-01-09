@@ -30,7 +30,7 @@ class Culqi:
         return r.json()
 
     def createCharge(self, address, address_city, amount, country_code, currency_code, email, first_name, installments, last_name,
-                     metadata, order_id, phone_number, product_description, token_id):
+                     metadata, phone_number, product_description, token_id):
         charge = Object()
         charge.address = address
         charge.address_city = address_city
