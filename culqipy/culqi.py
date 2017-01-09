@@ -42,7 +42,6 @@ class Culqi:
         charge.installments = installments
         charge.last_name = last_name
         charge.metadata = metadata
-        charge.order_id = order_id
         charge.phone_number = phone_number
         charge.product_description = product_description
         charge.token_id = token_id

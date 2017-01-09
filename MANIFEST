@@ -3,6 +3,5 @@ setup.cfg
 setup.py
 culqipy/__init__.py
 culqipy/culqi.py
-culqipy/example.py
 culqipy/object.py
 culqipy/test.py
