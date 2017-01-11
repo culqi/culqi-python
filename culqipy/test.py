@@ -1,32 +1,72 @@
 import unittest ,json, uuid
 from culqi import Culqi
 
-culqi  = Culqi("pk_test_vzMuTHoueOMlgUPj","sk_test_UTCQSGcXW8bCyU59")
+culqi  = Culqi(
+    COD_COMMERCE="pk_test_vzMuTHoueOMlgUPj",
+    API_KEY="sk_test_UTCQSGcXW8bCyU59")
 
 class TestStringMethods(unittest.TestCase):
 
-    culqi = Culqi("pk_test_vzMuTHoueOMlgUPj","sk_test_UTCQSGcXW8bCyU59")
-
     def token(self):
-        token = culqi.createToken("4111111111111111","PEN","123",9,2020,"q352454534","Muro","wmuro@me.com","William")
+        token = culqi.createToken(
+            card_number="4111111111111111",
+            currency_code="PEN",
+            cvv="123",
+            exp_month=9,
+            exp_year=2020,
+            fingerprint="q352454534",
+            last_name="Muro",
+            email="wmuro@me.com",
+            first_name="William")
         return token
 
     def charge(self):
-        charge = culqi.createCharge("Avenida Lima 1232","LIMA",1000,"PE","PEN","wmuro@me.com","William",0,"Muro","",
-                 9899,3333339,"Venta de prueba",self.token()["id"])
+        charge = culqi.createCharge(
+            address="Avenida Lima 1232",
+            address_city="LIMA",
+            amount=1000,
+            country_code="PE",
+            currency_code="PEN",
+            email="wmuro@me.com",
+            first_name="William",
+            installments=0,
+            last_name="Muro",
+            metadata="",
+            phone_number=3333339,
+            product_description="Venta de prueba",
+            token_id=self.token()["id"])
         return charge
 
     def plan(self):
-        plan = culqi.createPlan("plan-test-"+str(uuid.uuid1()),1000,"PEN","day",2,10,"Plan de Prueba "+str(uuid.uuid1()),50)
+        plan = culqi.createPlan(
+            alias="plan-test-"+str(uuid.uuid1()),
+            amount=1000,
+            currency_code="PEN",
+            interval="day",
+            interval_count=2,
+            limit=10,
+            name="Plan de Prueba "+str(uuid.uuid1()),
+            trial_days=50)
         return plan
 
     def subscription(self):
-        subscription = culqi.createSubscription("Avenida Lima 123213","LIMA","PE","wmuro@me.com","Muro","William",
-                       1234567789,self.plan()["alias"],self.token()["id"])
+        subscription = culqi.createSubscription(
+            address="Avenida Lima 123213",
+            address_city="LIMA",
+            country_code="PE",
+            email="wmuro@me.com",
+            last_name="Muro",
+            first_name="William",
+            phone_number=1234567789,
+            plan_alias=self.plan()["alias"],
+            token_id=self.token()["id"])
         return subscription
 
     def refund(self):
-        refund = culqi.createRefund(500,self.charge()["id"],"give me money back")
+        refund = culqi.createRefund(
+            amount=500,
+            charge_id=self.charge()["id"],
+            reason="give me money back")
         return refund
 
     def test_token(self):

@@ -1,23 +1,72 @@
-import uuid 
+import uuid
 from culqipy import culqi
 
 def main():
-    culqiObject = culqi.Culqi("pk_test_vzMuTHoueOMlgUPj","sk_test_UTCQSGcXW8bCyU59")
-    token = culqiObject.createToken("4111111111111111","PEN","123",9,2020,"q352454534","Muro","wmuro@me.com","William")
+
+    culqiObject = culqi.Culqi(
+        COD_COMMERCE="pk_test_vzMuTHoueOMlgUPj",
+        API_KEY="sk_test_UTCQSGcXW8bCyU59")
+
+    token = culqiObject.createToken(
+        card_number="4111111111111111",
+        currency_code="PEN",
+        cvv="123",
+        exp_month=9,
+        exp_year=2020,
+        fingerprint="q352454534",
+        last_name="Muro",
+        email="wmuro@me.com",
+        first_name="William")
 
     print token["id"]
 
-    charge = culqiObject.createCharge("Avenida Lima 1232","LIMA",1000,"PE","PEN","wmuro@me.com","William",0,"Muro","",
-             9899,3333339,"Venta de prueba",token["id"])
+    charge = culqiObject.createCharge(
+        address="Avenida Lima 1232",
+        address_city="LIMA",
+        amount=1000,
+        country_code="PE",
+        currency_code="PEN",
+        email="wmuro@me.com",
+        first_name="William",
+        installments=0,
+        last_name="Muro",
+        metadata="",
+        phone_number=3333339,
+        product_description="Venta de prueba",
+        token_id=token["id"])
+
     print charge["id"]
 
-    plan = culqiObject.createPlan("plan-test-"+str(uuid.uuid1()),1000,"PEN","day",2,10,"Plan de Prueba"+str(uuid.uuid1()),50)
+    plan = culqiObject.createPlan(
+        alias="plan-test-"+str(uuid.uuid1()),
+        amount=1000,
+        currency_code="PEN",
+        interval="day",
+        interval_count=2,
+        limit=10,
+        name="Plan de Prueba "+str(uuid.uuid1()),
+        trial_days=50)
+
     print plan["alias"]
 
-    subscription = culqiObject.createSubscription("Avenida Lima 123213","LIMA","PE","wmuro@me.com","Muro","William",1234567789,plan["alias"],token["id"])
+    subscription = culqiObject.createSubscription(
+        address="Avenida Lima 123213",
+        address_city="LIMA",
+        country_code="PE",
+        email="wmuro@me.com",
+        last_name="Muro",
+        first_name="William",
+        phone_number=1234567789,
+        plan_alias=plan["alias"],
+        token_id=token["id"])
+
     print subscription
 
-    refund = culqiObject.createRefund(500,charge["id"],"give me money back")
+    refund = culqiObject.createRefund(
+        amount=500,
+        charge_id=charge["id"],
+        reason="give me money back")
+
     print refund
 
 if __name__ == "__main__":
