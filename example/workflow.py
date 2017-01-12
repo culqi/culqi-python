@@ -1,13 +1,11 @@
 import uuid
-from culqipy import culqi
-
+import culqipy
 def main():
 
-    culqiObject = culqi.Culqi(
-        COD_COMMERCE="pk_test_vzMuTHoueOMlgUPj",
-        API_KEY="sk_test_UTCQSGcXW8bCyU59")
+    culqipy.COD_COMMERCE = "pk_test_vzMuTHoueOMlgUPj"
+    culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
 
-    token = culqiObject.createToken(
+    token = culqipy.Token.create(
         card_number="4111111111111111",
         currency_code="PEN",
         cvv="123",
@@ -20,7 +18,7 @@ def main():
 
     print token["id"]
 
-    charge = culqiObject.createCharge(
+    charge = culqipy.Charge.create(
         address="Avenida Lima 1232",
         address_city="LIMA",
         amount=1000,
@@ -37,7 +35,7 @@ def main():
 
     print charge["id"]
 
-    plan = culqiObject.createPlan(
+    plan = culqipy.Plan.create(
         alias="plan-test-"+str(uuid.uuid1()),
         amount=1000,
         currency_code="PEN",
@@ -49,7 +47,7 @@ def main():
 
     print plan["alias"]
 
-    subscription = culqiObject.createSubscription(
+    subscription = culqipy.Subscription.create(
         address="Avenida Lima 123213",
         address_city="LIMA",
         country_code="PE",
@@ -62,7 +60,7 @@ def main():
 
     print subscription
 
-    refund = culqiObject.createRefund(
+    refund = culqipy.Refund.create(
         amount=500,
         charge_id=charge["id"],
         reason="give me money back")

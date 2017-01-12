@@ -1,14 +1,12 @@
-import unittest ,json, uuid
-from culqi import Culqi
+import culqipy, unittest ,json, uuid
 
-culqi  = Culqi(
-    COD_COMMERCE="pk_test_vzMuTHoueOMlgUPj",
-    API_KEY="sk_test_UTCQSGcXW8bCyU59")
+culqipy.COD_COMMERCE = "pk_test_vzMuTHoueOMlgUPj"
+culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
 
 class TestStringMethods(unittest.TestCase):
 
     def token(self):
-        token = culqi.createToken(
+        token = culqipy.Token.create(
             card_number="4111111111111111",
             currency_code="PEN",
             cvv="123",
@@ -20,8 +18,9 @@ class TestStringMethods(unittest.TestCase):
             first_name="William")
         return token
 
+
     def charge(self):
-        charge = culqi.createCharge(
+        charge = culqipy.Charge.create(
             address="Avenida Lima 1232",
             address_city="LIMA",
             amount=1000,
@@ -38,7 +37,7 @@ class TestStringMethods(unittest.TestCase):
         return charge
 
     def plan(self):
-        plan = culqi.createPlan(
+        plan = culqipy.Plan.create(
             alias="plan-test-"+str(uuid.uuid1()),
             amount=1000,
             currency_code="PEN",
@@ -50,7 +49,7 @@ class TestStringMethods(unittest.TestCase):
         return plan
 
     def subscription(self):
-        subscription = culqi.createSubscription(
+        subscription = culqipy.Subscription.create(
             address="Avenida Lima 123213",
             address_city="LIMA",
             country_code="PE",
@@ -63,7 +62,7 @@ class TestStringMethods(unittest.TestCase):
         return subscription
 
     def refund(self):
-        refund = culqi.createRefund(
+        refund = culqipy.Refund.create(
             amount=500,
             charge_id=self.charge()["id"],
             reason="give me money back")
