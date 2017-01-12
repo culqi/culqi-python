@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'culqipy',
   packages = ['culqipy'],
-  version = '0.1.3',
+  version = '0.1.5',
   description = 'Biblioteca de Culqi en Python',
   author = 'Willy Aguirre - Culqi Team',
   author_email = 'willy.aguirre@culqi.com',
