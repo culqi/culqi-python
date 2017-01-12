@@ -8,7 +8,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 
 | Versión actual|Culqi API|
 |----|----|
-| 0.1.1 (2017-01-09) |[v2](https://beta.culqi.com)|
+| 0.1.7 (2017-01-12) |[v2](https://beta.culqi.com)|
 
 ## Requisitos
 
@@ -51,7 +51,7 @@ token = culqipy.Token.create(
       email="wmuro@me.com",
       first_name="William")
 
-print token["id"]
+print(token["id"])
 ```
 
 #### Crear Cargo
@@ -72,7 +72,7 @@ charge = culqipy.Charge.create(
       product_description="Venta de prueba",
       token_id=token["id"])
 
-print charge["id"]
+print(charge["id"])
 ```
 
 #### Crear Plan
@@ -88,7 +88,7 @@ plan = culqipy.Plan.create(
       name="Plan de Prueba "+str(uuid.uuid1()),
       trial_days=50)
 
-print plan["alias"]
+print(plan["alias"])
 ```
 
 #### Crear Suscripción
@@ -105,7 +105,7 @@ subscription = culqipy.Subscription.create(
       plan_alias=plan["alias"],
       token_id=token["id"])
 
-print subscription
+print(subscription)
 ```
 
 #### Crear Devolución
@@ -116,7 +116,7 @@ refund = culqipy.Refund.create(
       charge_id=charge["id"],
       reason="give me money back")
 
-print refund
+print(refund)
 ```
 #### Nota
 Cada metodo retona un objecto json y puede ser accedido de la siguiente forma jsonObject["key"]

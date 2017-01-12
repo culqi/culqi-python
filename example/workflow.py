@@ -1,5 +1,6 @@
 import uuid
 import culqipy
+
 def main():
 
     culqipy.COD_COMMERCE = "pk_test_vzMuTHoueOMlgUPj"
@@ -16,7 +17,7 @@ def main():
         email="wmuro@me.com",
         first_name="William")
 
-    print token["id"]
+    print(token["id"])
 
     charge = culqipy.Charge.create(
         address="Avenida Lima 1232",
@@ -33,7 +34,7 @@ def main():
         product_description="Venta de prueba",
         token_id=token["id"])
 
-    print charge["id"]
+    print(charge["id"])
 
     plan = culqipy.Plan.create(
         alias="plan-test-"+str(uuid.uuid1()),
@@ -45,7 +46,7 @@ def main():
         name="Plan de Prueba "+str(uuid.uuid1()),
         trial_days=50)
 
-    print plan["alias"]
+    print(plan["alias"])
 
     subscription = culqipy.Subscription.create(
         address="Avenida Lima 123213",
@@ -58,14 +59,14 @@ def main():
         plan_alias=plan["alias"],
         token_id=token["id"])
 
-    print subscription
+    print(subscription)
 
     refund = culqipy.Refund.create(
         amount=500,
         charge_id=charge["id"],
         reason="give me money back")
 
-    print refund
+    print(refund)
 
 if __name__ == "__main__":
     main()
