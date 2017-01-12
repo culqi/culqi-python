@@ -18,7 +18,6 @@ class TestStringMethods(unittest.TestCase):
             first_name="William")
         return token
 
-
     def charge(self):
         charge = culqipy.Charge.create(
             address="Avenida Lima 1232",

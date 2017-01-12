@@ -2,11 +2,5 @@
 setup.cfg
 setup.py
 culqipy/__init__.py
-culqipy/charge.py
-culqipy/object.py
-culqipy/plan.py
-culqipy/refund.py
-culqipy/subscription.py
-culqipy/token.py
-culqipy/util.py
+culqipy/resource.py
 test/test.py
