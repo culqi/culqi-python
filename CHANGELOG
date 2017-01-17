@@ -1,7 +1,10 @@
+### 0.1.8 17-01-2017
+* Fix Create Token
+
 ### 0.1 05-01-2017
-* Crear Token
-* Crear Cargo
-* Crear Plan
-* Crear Suscripción
-* Crear Devolución
-* Tests unitarios
+* Create Token
+* Create Charge
+* Create Plan
+* Create Subscription
+* Create Refund
+* Unit Tests

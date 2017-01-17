@@ -28,9 +28,7 @@ class Token:
         token.last_name = last_name
         token.email = email
         token.first_name = first_name
-        headers = {"Authorization": "Code "+culqipy.COD_COMMERCE, "content-type": "application/json"}
-        r = requests.post(culqipy.API_URL+"/tokens/", headers=headers, data=token.toJSON(), timeout=60)
-        return r.json()
+        return Util().jsonResult(culqipy.COD_COMMERCE, "/tokens/", token.toJSON(), "POST")
 
 Token = Token()
 
