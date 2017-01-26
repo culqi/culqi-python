@@ -1,10 +1,12 @@
-import culqipy, unittest ,json, uuid
+import culqipy
+import unittest
+import uuid
 
 culqipy.COD_COMMERCE = "pk_test_vzMuTHoueOMlgUPj"
 culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
 
-class TestStringMethods(unittest.TestCase):
 
+class TestStringMethods(unittest.TestCase):
     def token(self):
         token = culqipy.Token.create(
             card_number="4111111111111111",
@@ -37,13 +39,13 @@ class TestStringMethods(unittest.TestCase):
 
     def plan(self):
         plan = culqipy.Plan.create(
-            alias="plan-test-"+str(uuid.uuid1()),
+            alias="plan-test-" + str(uuid.uuid1()),
             amount=1000,
             currency_code="PEN",
             interval="day",
             interval_count=2,
             limit=10,
-            name="Plan de Prueba "+str(uuid.uuid1()),
+            name="Plan de Prueba " + str(uuid.uuid1()),
             trial_days=50)
         return plan
 
@@ -70,8 +72,21 @@ class TestStringMethods(unittest.TestCase):
     def test_token(self):
         self.assertEqual("token", str(self.token()["object"]))
 
+    def test_find_token(self):
+        id = self.token()["id"]
+        token = culqipy.Token.get(id)
+        self.assertEqual("token", str(token["object"]))
+
     def test_charge(self):
         self.assertEqual("charge", str(self.charge()["object"]))
+
+    def test_list_charge(self):
+        params = {'min_amount': 500, 'max_amount': 1000}
+        charge_list = culqipy.Charge.list(params)
+        data = False
+        if len(charge_list) > 0:
+            data = True
+        self.assertTrue(data)
 
     def test_plan(self):
         self.assertEqual("plan", str(self.plan()["object"]))
@@ -81,6 +96,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_refund(self):
         self.assertEqual("refund", str(self.refund()["object"]))
+
 
 if __name__ == '__main__':
     unittest.main()

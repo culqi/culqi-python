@@ -1,23 +1,86 @@
-import culqipy, requests, json
+import culqipy
+import requests
+import json
+
 
 class Util:
-
-    def jsonResult(self, key, url, data, method):
-        headers = {"Authorization": "Bearer "+key, "content-type": "application/json"}
+    def json_result(self, key, url, data, method):
+        headers = {
+            "Authorization": "Bearer " + key,
+            "content-type": "application/json"
+        }
         r = ""
+        if method.upper() == "GET":
+            if not data:
+                r = requests.get(
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    timeout=60
+                )
+            else:
+                r = requests.get(
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    params=data,
+                    timeout=60
+                )
         if method.upper() == "POST":
-            r = requests.post(culqipy.API_URL+url, headers=headers, data=data, timeout=60)
+            r = requests.post(
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    data=data,
+                    timeout=60
+                )
+        if method.upper() == "DELETE":
+            r = requests.delete(
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    timeout=60
+                )
         return r.json()
 
-class ObjectHelper:
 
-    def toJSON(self):
-        return json.dumps(self,default=lambda o: o.__dict__,
-            sort_keys=True, indent=4)
+class ObjectHelper:
+    def to_json(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
+
+
+class Balance:
+    URL = "/balances/"
+
+    def list(self, params):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                params, "GET")
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
+
+Balance = Balance()
+
+
+class Iins:
+    URL = "/iins/"
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
+
+Iins = Iins()
+
 
 class Token:
+    URL = "/tokens/"
 
-    def create(self, card_number, currency_code, cvv, exp_month, exp_year, fingerprint, last_name, email, first_name):
+    def create(self, card_number, currency_code, cvv, exp_month, exp_year,
+               fingerprint, last_name, email, first_name):
         token = ObjectHelper()
         token.card_number = card_number
         token.currency_code = currency_code
@@ -28,16 +91,33 @@ class Token:
         token.last_name = last_name
         token.email = email
         token.first_name = first_name
-        headers = {"Authorization": "Code "+culqipy.COD_COMMERCE, "content-type": "application/json"}
-        r = requests.post(culqipy.API_URL+"/tokens/", headers=headers, data=token.toJSON(), timeout=60)
-        return r.json()
+        return Util().json_result(
+                culqipy.COD_COMMERCE,
+                self.URL,
+                token.to_json(), "POST")
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
 
 Token = Token()
 
-class Charge:
 
-    def create(self, address, address_city, amount, country_code, currency_code, email, first_name, installments, last_name,
-                     metadata, phone_number, product_description, token_id):
+class Charge:
+    URL = "/charges/"
+
+    def list(self, params):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                params, "GET")
+
+    def create(self, address, address_city, amount, country_code,
+               currency_code, email, first_name, installments,
+               last_name, metadata, phone_number,
+               product_description, token_id):
         charge = ObjectHelper()
         charge.address = address
         charge.address_city = address_city
@@ -52,13 +132,31 @@ class Charge:
         charge.phone_number = phone_number
         charge.product_description = product_description
         charge.token_id = token_id
-        return Util().jsonResult(culqipy.API_KEY, "/charges/", charge.toJSON(), "POST")
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                charge.to_json(), "POST")
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
 
 Charge = Charge()
 
-class Plan:
 
-    def create(self, alias, amount, currency_code, interval, interval_count, limit, name, trial_days):
+class Plan:
+    URL = "/plans/"
+
+    def list(self, params):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                params, "GET")
+
+    def create(self, alias, amount, currency_code, interval,
+               interval_count, limit, name, trial_days):
         plan = ObjectHelper()
         plan.alias = alias
         plan.amount = amount
@@ -68,13 +166,32 @@ class Plan:
         plan.limit = limit
         plan.name = name
         plan.trial_days = trial_days
-        return Util().jsonResult(culqipy.API_KEY, "/plans/", plan.toJSON(), "POST")
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                plan.to_json(), "POST")
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
 
 Plan = Plan()
 
-class Subscription:
 
-    def create(self, address, address_city, country_code, email, last_name, first_name, phone_number, plan_alias, token_id):
+class Subscription:
+    URL = "/subscriptions/"
+
+    def list(self, params):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                params, "GET")
+
+    def create(self, address, address_city, country_code, email,
+               last_name, first_name, phone_number, plan_alias,
+               token_id):
         subscription = ObjectHelper()
         subscription.address = address
         subscription.address_city = address_city
@@ -85,17 +202,49 @@ class Subscription:
         subscription.phone_number = phone_number
         subscription.plan_alias = plan_alias
         subscription.token_id = token_id
-        return Util().jsonResult(culqipy.API_KEY, "/subscriptions/", subscription.toJSON(), "POST")
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                subscription.to_json(), "POST")
+
+    def delete(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "DELETE")
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
 
 Subscription = Subscription()
 
+
 class Refund:
+    URL = "/refunds/"
+
+    def list(self, params):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                params, "GET")
 
     def create(self, amount, charge_id, reason):
         refund = ObjectHelper()
         refund.amount = amount
         refund.charge_id = charge_id
         refund.reason = reason
-        return Util().jsonResult(culqipy.API_KEY, "/refunds/", refund.toJSON(), "POST")
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL,
+                refund.to_json(), "POST")
+
+    def get(self, id):
+        return Util().json_result(
+                culqipy.API_KEY,
+                self.URL + id + "/",
+                "", "GET")
 
 Refund = Refund()
