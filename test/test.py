@@ -70,6 +70,7 @@ class TestStringMethods(unittest.TestCase):
         return refund
 
     def test_token(self):
+        print(self.token())
         self.assertEqual("token", str(self.token()["object"]))
 
     def test_find_token(self):
