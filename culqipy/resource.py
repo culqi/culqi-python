@@ -91,6 +91,10 @@ class Token:
         token.last_name = last_name
         token.email = email
         token.first_name = first_name
+        return Util().json_result(
+            culqipy.API_KEY,
+            self.URL,
+            token.to_json(), "POST")
 
     def get(self, id):
         return Util().json_result(
