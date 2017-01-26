@@ -92,7 +92,7 @@ class Token:
         token.email = email
         token.first_name = first_name
         return Util().json_result(
-            culqipy.API_KEY,
+            culqipy.COD_COMMERCE,
             self.URL,
             token.to_json(), "POST")
 
