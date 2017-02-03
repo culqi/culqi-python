@@ -5,11 +5,15 @@ from culqipy.resource import (
     Charge,
     Plan,
     Subscription,
-    Refund
+    Refund,
+    Iins,
+    Card,
+    Event,
+    Customer
 )
 
 # Configuration variables
 
-API_URL = "http://192.168.0.116:8000/v2" #"https://api.culqi.com/v2"
+API_URL = "https://api.culqi.com/v2"
 COD_COMMERCE = None
 API_KEY = None

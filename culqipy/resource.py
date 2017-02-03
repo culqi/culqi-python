@@ -5,7 +5,7 @@ import json
 
 class Util:
     @staticmethod
-    def json_result(self, key, url, data, method):
+    def json_result(key, url, data, method):
         headers = {
             "Authorization": "Bearer " + key,
             "content-type": "application/json"
@@ -39,18 +39,129 @@ class Util:
                         headers=headers,
                         timeout=60
                     )
-            return r.json()
+            return r
         except requests.exceptions.RequestException:
-            error = {"object": "error", "type": "server", "code": "404",
-                      "message": "connection...",
-                     "user_message": "No encuentra el servidor"}
+            error = {"object": "error", "type": "server",
+                     "code": "404",
+                     "message": "connection...",
+                     "user_message": "Connection Error!"}
             return json.dumps(error)
 
 
-class ObjectHelper:
-    def to_json(self):
-        return json.dumps(self, default=lambda o: o.__dict__,
-                          sort_keys=True, indent=4)
+class CulqiError(Exception):
+    def __init__(self, response_error):
+        self.response_error = response_error
+
+
+class Operation():
+    @staticmethod
+    def list(url, api_key, params):
+        try:
+            response = Util().json_result(
+                    api_key,
+                    url,
+                    params, "GET")
+            if response.status_code == "401":
+                raise CulqiError(response.json())
+            if response.status_code == "403":
+                raise CulqiError(response.json())
+            if response.status_code == "404":
+                raise CulqiError(response.json())
+            return response.json()
+        except CulqiError as ce:
+            return ce.response_error
+
+    @staticmethod
+    def create(url, api_key, body):
+        try:
+            response = Util().json_result(
+                api_key,
+                url,
+                body, "POST")
+            if response.json()["object"] == "error":
+                raise CulqiError(response.json())
+            return response.json()
+        except CulqiError as ce:
+            return ce.response_error
+
+    @staticmethod
+    def get_delete(url, api_key, id, method):
+        try:
+            response = Util().json_result(
+                    api_key,
+                    url + id + "/",
+                    "", method)
+            if response.json()["object"] == "error":
+                raise CulqiError(response.json())
+            return response.json()
+        except CulqiError as ce:
+            return ce.response_error
+
+
+class Card:
+    URL = "/cards/"
+
+    @staticmethod
+    def create(body):
+        return Operation.create(Card.URL,
+                                culqipy.API_KEY, body)
+
+    @staticmethod
+    def delete(id):
+        return Operation.get_delete(Card.URL,
+                                    culqipy.API_KEY, id, "DELETE")
+
+    @staticmethod
+    def get(id):
+        return Operation.get_delete(Card.URL,
+                                    culqipy.API_KEY, id, "GET")
+
+
+Card = Card()
+
+
+class Event:
+    URL = "/events/"
+
+    @staticmethod
+    def list(params):
+        return Operation.list(Event.URL,
+                              culqipy.API_KEY, params)
+
+    @staticmethod
+    def get(id):
+        return Operation.get_delete(Event.URL,
+                                    culqipy.API_KEY, id, "GET")
+
+
+Event = Event()
+
+
+class Customer:
+    URL = "/customers/"
+
+    @staticmethod
+    def list(params):
+        return Operation.list(Customer.URL,
+                              culqipy.API_KEY, params)
+
+    @staticmethod
+    def create(body):
+        return Operation.create(Customer.URL,
+                                culqipy.API_KEY, body)
+
+    @staticmethod
+    def delete(id):
+        return Operation.get_delete(Customer.URL,
+                                    culqipy.API_KEY, id, "DELETE")
+
+    @staticmethod
+    def get(id):
+        return Operation.get_delete(Customer.URL,
+                                    culqipy.API_KEY, id, "GET")
+
+
+Customer = Customer()
 
 
 class Transfer:
@@ -58,17 +169,14 @@ class Transfer:
 
     @staticmethod
     def list(params):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Transfer.URL,
-                params, "GET")
+        return Operation.list(Transfer.URL,
+                              culqipy.API_KEY, params)
 
     @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Transfer.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Transfer.URL,
+                                    culqipy.API_KEY, id, "GET")
+
 
 Transfer = Transfer()
 
@@ -77,11 +185,15 @@ class Iins:
     URL = "/iins/"
 
     @staticmethod
+    def list(params):
+        return Operation.list(Iins.URL,
+                              culqipy.API_KEY, params)
+
+    @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Iins.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Iins.URL,
+                                    culqipy.API_KEY, id, "GET")
+
 
 Iins = Iins()
 
@@ -90,18 +202,19 @@ class Token:
     URL = "/tokens/"
 
     @staticmethod
+    def list(params):
+        return Operation.list(Token.URL,
+                              culqipy.API_KEY, params)
+
+    @staticmethod
     def create(body):
-        return Util().json_result(
-            culqipy.COD_COMMERCE,
-            Token.URL,
-            body, "POST")
+        return Operation.create(Token.URL,
+                                culqipy.COD_COMMERCE, body)
 
     @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Token.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Token.URL,
+                                    culqipy.API_KEY, id, "GET")
 
 
 Token = Token()
@@ -112,24 +225,19 @@ class Charge:
 
     @staticmethod
     def list(params):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Charge.URL,
-                params, "GET")
+        return Operation.list(Charge.URL,
+                              culqipy.API_KEY, params)
 
     @staticmethod
     def create(body):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Charge.URL,
-                body, "POST")
+        return Operation.create(Charge.URL,
+                                culqipy.API_KEY, body)
 
     @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Charge.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Charge.URL,
+                                    culqipy.API_KEY, id, "GET")
+
 
 Charge = Charge()
 
@@ -139,24 +247,24 @@ class Plan:
 
     @staticmethod
     def list(params):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Plan.URL,
-                params, "GET")
+        return Operation.list(Plan.URL,
+                              culqipy.API_KEY, params)
 
     @staticmethod
     def create(body):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Plan.URL,
-                body, "POST")
+        return Operation.create(Plan.URL,
+                                culqipy.API_KEY, body)
+
+    @staticmethod
+    def delete(id):
+        return Operation.get_delete(Plan.URL,
+                                    culqipy.API_KEY, id, "DELETE")
 
     @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Plan.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Plan.URL,
+                                    culqipy.API_KEY, id, "GET")
+
 
 Plan = Plan()
 
@@ -165,32 +273,25 @@ class Subscription:
     URL = "/subscriptions/"
 
     @staticmethod
-    def list( params):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Subscription.URL,
-                params, "GET")
+    def list(params):
+        return Operation.list(Subscription.URL,
+                              culqipy.API_KEY, params)
 
     @staticmethod
     def create(body):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Subscription.URL,
-                body, "POST")
+        return Operation.create(Subscription.URL,
+                                culqipy.API_KEY, body)
 
     @staticmethod
     def delete(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Subscription.URL + id + "/",
-                "", "DELETE")
+        return Operation.get_delete(Subscription.URL,
+                                    culqipy.API_KEY, id, "DELETE")
 
     @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Subscription.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Subscription.URL,
+                                    culqipy.API_KEY, id, "GET")
+
 
 Subscription = Subscription()
 
@@ -200,23 +301,18 @@ class Refund:
 
     @staticmethod
     def list(params):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Refund.URL,
-                params, "GET")
+        return Operation.list(Refund.URL,
+                              culqipy.API_KEY, params)
 
     @staticmethod
     def create(body):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Refund.URL,
-                body, "POST")
+        return Operation.create(Refund.URL,
+                                culqipy.API_KEY, body)
 
     @staticmethod
     def get(id):
-        return Util().json_result(
-                culqipy.API_KEY,
-                Refund.URL + id + "/",
-                "", "GET")
+        return Operation.get_delete(Refund.URL,
+                                    culqipy.API_KEY, id, "GET")
+
 
 Refund = Refund()
