@@ -274,7 +274,7 @@ class Charge:
             response = Util().json_result(
                 culqipy.API_KEY,
                 Charge.URL + id + "/capture/",
-                "", "GET")
+                "", "POST")
             if response.json()["object"] == "error":
                 raise CulqiError(response.json())
             return response.json()
