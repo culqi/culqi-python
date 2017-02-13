@@ -70,8 +70,16 @@ class TestStringMethods(unittest.TestCase):
     #    refund = culqipy.Refund.create(dir_refund)
     #    return refund
 
+    def test_0_list_charge(self):
+        params = {'iin': '411111'}
+        token_list = culqipy.Token.list(params)
+        data = False
+        if len(token_list) > 0:
+            data = True
+        self.assertTrue(data)
+
+
     def test_1_token(self):
-        print(self.token())
         self.assertEqual("token", str(self.token()["object"]))
 
     def test_2_find_token(self):
@@ -86,7 +94,6 @@ class TestStringMethods(unittest.TestCase):
         params = {'min_amount': 500, 'max_amount': 1000}
         charge_list = culqipy.Charge.list(params)
         data = False
-        print(charge_list)
         if len(charge_list) > 0:
             data = True
         self.assertTrue(data)
