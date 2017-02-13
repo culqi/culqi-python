@@ -39,6 +39,13 @@ class Util:
                         headers=headers,
                         timeout=60
                     )
+            if method.upper() == "PATCH":
+                r = requests.patch(
+                        culqipy.API_URL + url,
+                        headers=headers,
+                        data=json.dumps(data),
+                        timeout=60
+                    )
             return r
         except requests.exceptions.RequestException:
             error = {"object": "error", "type": "server",
@@ -97,6 +104,19 @@ class Operation():
         except CulqiError as ce:
             return ce.response_error
 
+    @staticmethod
+    def update(url, api_key, id, body):
+        try:
+            response = Util().json_result(
+                api_key,
+                url + id + "/",
+                body, "PATCH")
+            if response.json()["object"] == "error":
+                raise CulqiError(response.json())
+            return response.json()
+        except CulqiError as ce:
+            return ce.response_error
+
 
 class Card:
     URL = "/cards/"
@@ -115,6 +135,11 @@ class Card:
     def get(id):
         return Operation.get_delete(Card.URL,
                                     culqipy.API_KEY, id, "GET")
+
+    @staticmethod
+    def get(id, body):
+        return Operation.update(Card.URL,
+                                    culqipy.API_KEY, id, body)
 
 
 Card = Card()
@@ -159,6 +184,11 @@ class Customer:
     def get(id):
         return Operation.get_delete(Customer.URL,
                                     culqipy.API_KEY, id, "GET")
+
+    @staticmethod
+    def get(id, body):
+        return Operation.update(Customer.URL,
+                                culqipy.API_KEY, id, body)
 
 
 Customer = Customer()
@@ -238,6 +268,11 @@ class Charge:
         return Operation.get_delete(Charge.URL,
                                     culqipy.API_KEY, id, "GET")
 
+    @staticmethod
+    def get(id, body):
+        return Operation.update(Charge.URL,
+                                culqipy.API_KEY, id, body)
+
 
 Charge = Charge()
 
@@ -264,6 +299,11 @@ class Plan:
     def get(id):
         return Operation.get_delete(Plan.URL,
                                     culqipy.API_KEY, id, "GET")
+
+    @staticmethod
+    def get(id, body):
+        return Operation.update(Plan.URL,
+                                culqipy.API_KEY, id, body)
 
 
 Plan = Plan()
@@ -292,6 +332,11 @@ class Subscription:
         return Operation.get_delete(Subscription.URL,
                                     culqipy.API_KEY, id, "GET")
 
+    @staticmethod
+    def get(id, body):
+        return Operation.update(Subscription.URL,
+                                culqipy.API_KEY, id, body)
+
 
 Subscription = Subscription()
 
@@ -313,6 +358,11 @@ class Refund:
     def get(id):
         return Operation.get_delete(Refund.URL,
                                     culqipy.API_KEY, id, "GET")
+
+    @staticmethod
+    def get(id, body):
+        return Operation.update(Refund.URL,
+                                culqipy.API_KEY, id, body)
 
 
 Refund = Refund()
