@@ -10,8 +10,7 @@ class TestStringMethods(unittest.TestCase):
     def token(self):
 
         dir_token = {'card_number': '4111111111111111', 'cvv': '123',
-                     'currency_code': 'PEN', 'first_name': 'will',
-                     'last_name': 'Muro', 'email': 'wmuro@me.com',
+                     'currency_code': 'PEN', 'email': 'wmuro@me.com',
                      'expiration_month': 9, 'expiration_year': 2020,
                      'fingerprint': 'q352454534'}
 
