@@ -269,6 +269,19 @@ class Charge:
                                     culqipy.API_KEY, id, "GET")
 
     @staticmethod
+    def capture(id):
+        try:
+            response = Util().json_result(
+                culqipy.API_KEY,
+                Charge.URL + id + "/capture/",
+                "", "GET")
+            if response.json()["object"] == "error":
+                raise CulqiError(response.json())
+            return response.json()
+        except CulqiError as ce:
+            return ce.response_error
+
+    @staticmethod
     def get(id, body):
         return Operation.update(Charge.URL,
                                 culqipy.API_KEY, id, body)
