@@ -9,7 +9,8 @@ from culqipy.resource import (
     Iins,
     Card,
     Event,
-    Customer
+    Customer,
+    Transfer
 )
 
 # Configuration variables

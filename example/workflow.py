@@ -6,65 +6,88 @@ def main():
     culqipy.COD_COMMERCE = "pk_test_vzMuTHoueOMlgUPj"
     culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
 
-    token = culqipy.Token.create(
-        card_number="4111111111111111",
-        currency_code="PEN",
-        cvv="123",
-        exp_month=9,
-        exp_year=2020,
-        fingerprint="q352454534",
-        last_name="Muro",
-        email="wmuro@me.com",
-        first_name="William")
+    # CREATE TOKEN
+
+    dir_token = {'card_number': '4111111111111111',
+                 'cvv': '123',
+                 'currency_code': 'PEN',
+                 'email': 'wmuro@me.com',
+                 'expiration_month': 9,
+                 'expiration_year': 2020}
+
+    token = culqipy.Token.create(dir_token)
 
     print(token["id"])
 
-    charge = culqipy.Charge.create(
-        address="Avenida Lima 1232",
-        address_city="LIMA",
-        amount=1000,
-        country_code="PE",
-        currency_code="PEN",
-        email="wmuro@me.com",
-        first_name="William",
-        installments=0,
-        last_name="Muro",
-        metadata="",
-        phone_number=3333339,
-        product_description="Venta de prueba",
-        token_id=token["id"])
+    # CREATE CHARGE
+
+    dir_charge = {'amount': 1000,
+                  'capture': True,
+                  'currency_code': 'PEN',
+                  'description': 'Venta de prueba',
+                  'email': 'wmuro@me.com',
+                  'installments': 0,
+                  'metadata': {'test': '1234'},
+                  'source_id': token["id"]}
+
+    charge = culqipy.Charge.create(dir_charge)
 
     print(charge["id"])
 
-    plan = culqipy.Plan.create(
-        alias="plan-test-"+str(uuid.uuid1()),
-        amount=1000,
-        currency_code="PEN",
-        interval="day",
-        interval_count=2,
-        limit=10,
-        name="Plan de Prueba "+str(uuid.uuid1()),
-        trial_days=50)
+    # CREATE PLAN
 
-    print(plan["alias"])
+    dir_plan = {'amount': 1000,
+                'currency_code': 'PEN',
+                'interval': 'days',
+                'interval_count': 2,
+                'limit': 10,
+                'metadata': {'test': '1234'},
+                'name': 'plan-test-' + str(uuid.uuid1()),
+                'trial_days': 50}
 
-    subscription = culqipy.Subscription.create(
-        address="Avenida Lima 123213",
-        address_city="LIMA",
-        country_code="PE",
-        email="wmuro@me.com",
-        last_name="Muro",
-        first_name="William",
-        phone_number=1234567789,
-        plan_alias=plan["alias"],
-        token_id=token["id"])
+    plan = culqipy.Plan.create(dir_plan)
+
+    print(plan["id"])
+
+    # CREATE CUSTOMER
+
+    dir_customer = {'address': 'Avenida Lima 123213',
+                    'address_city': 'LIMA',
+                    'country_code': 'PE',
+                    'email': 'wmuro' + str(uuid.uuid1()) + '@me.com',
+                    'first_name': 'William',
+                    'last_name': 'Muro',
+                    'metadata': {'other_email': 'wam@yahoo.com'},
+                    'phone_number': 998989789,
+                    }
+
+    customer = culqipy.Customer.create(dir_customer)
+
+    print(customer["id"])
+
+    # CREATE CARD
+
+    dir_card = {'customer_id': customer["id"],
+               'token_id': token["id"]}
+
+    card = culqipy.Card.create(dir_card)
+
+    print(card["id"])
+
+    # CREATE SUBSCRIPTION
+
+    dir_subscription = {'card_id': card["id"],
+                        'plan_id': plan["id"]}
+
+    subscription = culqipy.Subscription.create(dir_subscription)
 
     print(subscription)
 
-    refund = culqipy.Refund.create(
-        amount=500,
-        charge_id=charge["id"],
-        reason="give me money back")
+    # CREATE REFUNDs
+
+    dir_refund = {'amount': 500, 'charge_id': charge["id"], 'reason': 'give me money back'}
+
+    refund = culqipy.Refund.create(dir_refund)
 
     print(refund)
 
