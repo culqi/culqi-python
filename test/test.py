@@ -32,7 +32,7 @@ class TestStringMethods(unittest.TestCase):
     def plan(self):
         dir_plan = {'amount': 1000,
                     'currency_code': 'PEN',
-                    'interval': 'days',
+                    'interval': 'dias',
                     'interval_count': 2,
                     'limit': 10,
                     'metadata': {'test': '1234'},
@@ -90,7 +90,11 @@ class TestStringMethods(unittest.TestCase):
     def test_3_charge(self):
         self.assertEqual("charge", str(self.charge()["object"]))
 
-    def test_4_list_charge(self):
+    def test_4_charge_capture(self):
+        capture_charge = culqipy.Charge.capture( str(self.charge()["id"]) )
+        self.assertNotEqual("charge", str(capture_charge["object"]))
+
+    def test_5_list_charge(self):
         params = {'min_amount': 500, 'max_amount': 1000}
         charge_list = culqipy.Charge.list(params)
         data = False
@@ -98,16 +102,16 @@ class TestStringMethods(unittest.TestCase):
             data = True
         self.assertTrue(data)
 
-    def test_5_plan(self):
+    def test_6_plan(self):
         self.assertEqual("plan", str(self.plan()["object"]))
 
-    def test_6_customer(self):
+    def test_7_customer(self):
         self.assertEqual("customer", str(self.customer()["object"]))
 
-    def test_7_card(self):
+    def test_8_card(self):
         self.assertEqual("card", str(self.card()["object"]))
 
-    def test_8_subscription(self):
+    def test_9_subscription(self):
         self.assertEqual("subscription", str(self.subscription()["object"]))
 
     #def test_refund(self):
