@@ -16,5 +16,5 @@ from culqipy.resource import (
 # Configuration variables
 
 API_URL = "https://api.culqi.com/v2"
-COD_COMMERCE = None
-API_KEY = None
+public_key = None
+secret_key = None

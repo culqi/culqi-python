@@ -3,8 +3,8 @@ import culqipy
 
 
 def main():
-    culqipy.COD_COMMERCE = "INSERTE_SU_LLAVE_PUBLICA"
-    culqipy.API_KEY = "INSERTE_SU_LLAVE_PRIVADA"
+    culqipy.public_key = "INSERTE_SU_LLAVE_PUBLICA"
+    culqipy.secret_key = "INSERTE_SU_LLAVE_PRIVADA"
 
     # CREATE TOKEN
 
