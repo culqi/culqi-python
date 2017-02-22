@@ -2,8 +2,8 @@ import culqipy
 import unittest
 import uuid
 
-culqipy.COD_COMMERCE = 'pk_test_vzMuTHoueOMlgUPj'
-culqipy.API_KEY = 'sk_test_UTCQSGcXW8bCyU59'
+culqipy.public_key = 'pk_test_vzMuTHoueOMlgUPj'
+culqipy.secret_key = 'sk_test_UTCQSGcXW8bCyU59'
 
 
 class TestStringMethods(unittest.TestCase):
@@ -57,7 +57,6 @@ class TestStringMethods(unittest.TestCase):
                    'token_id': self.token()["id"]}
         return culqipy.Card.create(dir_card)
 
-
     def subscription(self):
         dir_subscription = {'card_id': self.card()["id"],
                             'plan_id': self.plan()["id"]}
@@ -70,14 +69,13 @@ class TestStringMethods(unittest.TestCase):
     #    refund = culqipy.Refund.create(dir_refund)
     #    return refund
 
-    def test_0_list_charge(self):
+    def test_0_list_tokens(self):
         params = {'iin': '411111'}
         token_list = culqipy.Token.list(params)
         data = False
         if len(token_list) > 0:
             data = True
         self.assertTrue(data)
-
 
     def test_1_token(self):
         self.assertEqual("token", str(self.token()["object"]))
