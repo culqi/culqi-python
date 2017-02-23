@@ -72,12 +72,6 @@ class Operation():
                     api_key,
                     url,
                     params, "GET")
-            if response.status_code == "401":
-                raise CulqiError(response.json())
-            if response.status_code == "403":
-                raise CulqiError(response.json())
-            if response.status_code == "404":
-                raise CulqiError(response.json())
             return response.json()
         except CulqiError as ce:
             return ce.response_error
