@@ -4,11 +4,23 @@ import requests
 
 
 class Util:
+
     @staticmethod
-    def json_result(key, url, data, method):
+    def json_result(url, data, method, key=None):
+        """
+        Returns an http response object.
+
+        The key by default is the secret key. It can also be the
+        public key in case we want to create a token.
+        """
+
         timeout = 60
         if method.upper() == "GET":
             timeout = 360
+
+        # Setting the secret_key by default.
+        if not key:
+            key = culqipy.secret_key
 
         headers = {
             "Authorization": "Bearer " + key,
@@ -66,23 +78,21 @@ class CulqiError(Exception):
 
 class Operation():
     @staticmethod
-    def list(url, api_key, params):
+    def list(url, params, key=None):
         try:
             response = Util().json_result(
-                api_key,
-                url,
-                params, "GET")
+                url, params, "GET", key,
+            )
             return response.json()
         except CulqiError as ce:
             return ce.response_error
 
     @staticmethod
-    def create(url, api_key, body):
+    def create(url, body, key=None):
         try:
             response = Util().json_result(
-                api_key,
-                url,
-                body, "POST")
+                url, body, "POST", key,
+            )
             if response.json()["object"] == "error":
                 raise CulqiError(response.json())
             return response.json()
@@ -90,12 +100,11 @@ class Operation():
             return ce.response_error
 
     @staticmethod
-    def get_delete(url, api_key, id, method):
+    def get_delete(url, id, method, key=None):
         try:
             response = Util().json_result(
-                api_key,
-                url + id + "/",
-                "", method)
+                url + id + "/", "", method, key,
+            )
             if response.json()["object"] == "error":
                 raise CulqiError(response.json())
             return response.json()
@@ -103,12 +112,11 @@ class Operation():
             return ce.response_error
 
     @staticmethod
-    def update(url, api_key, id, body):
+    def update(url, id, body, key=None):
         try:
             response = Util().json_result(
-                api_key,
-                url + id + "/",
-                body, "PATCH")
+                url + id + "/", body, "PATCH", key,
+            )
             if response.json()["object"] == "error":
                 raise CulqiError(response.json())
             return response.json()
@@ -121,22 +129,19 @@ class Card:
 
     @staticmethod
     def create(body):
-        return Operation.create(Card.URL,
-                                culqipy.secret_key, body)
+        return Operation.create(Card.URL, body)
 
     @staticmethod
     def delete(id):
-        return Operation.get_delete(Card.URL,
-                                    culqipy.secret_key, id, "DELETE")
+        return Operation.get_delete(Card.URL, id, "DELETE")
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Card.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Card.URL, id, "GET")
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Card.URL, culqipy.secret_key, id, body)
+        return Operation.update(Card.URL, id, body)
 
 
 Card = Card()
@@ -147,13 +152,11 @@ class Event:
 
     @staticmethod
     def list(params):
-        return Operation.list(Event.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Event.URL, params)
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Event.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Event.URL, id, "GET")
 
 
 Event = Event()
@@ -164,28 +167,23 @@ class Customer:
 
     @staticmethod
     def list(params):
-        return Operation.list(Customer.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Customer.URL, params)
 
     @staticmethod
     def create(body):
-        return Operation.create(Customer.URL,
-                                culqipy.secret_key, body)
+        return Operation.create(Customer.URL, body)
 
     @staticmethod
     def delete(id):
-        return Operation.get_delete(Customer.URL,
-                                    culqipy.secret_key, id, "DELETE")
+        return Operation.get_delete(Customer.URL, id, "DELETE")
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Customer.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Customer.URL, id, "GET")
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Customer.URL,
-                                culqipy.secret_key, id, body)
+        return Operation.update(Customer.URL, id, body)
 
 
 Customer = Customer()
@@ -196,13 +194,11 @@ class Transfer:
 
     @staticmethod
     def list(params):
-        return Operation.list(Transfer.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Transfer.URL, params)
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Transfer.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Transfer.URL, id, "GET")
 
 
 Transfer = Transfer()
@@ -213,13 +209,11 @@ class Iins:
 
     @staticmethod
     def list(params):
-        return Operation.list(Iins.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Iins.URL, params)
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Iins.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Iins.URL, id, "GET")
 
 
 Iins = Iins()
@@ -230,18 +224,16 @@ class Token:
 
     @staticmethod
     def list(params):
-        return Operation.list(Token.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Token.URL, params)
 
     @staticmethod
     def create(body):
-        return Operation.create(Token.URL,
-                                culqipy.public_key, body)
+        # A tokens need the public_key to be created.
+        return Operation.create(Token.URL, body, culqipy.public_key)
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Token.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Token.URL, id, "GET")
 
 
 Token = Token()
@@ -252,24 +244,20 @@ class Charge:
 
     @staticmethod
     def list(params):
-        return Operation.list(Charge.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Charge.URL, params)
 
     @staticmethod
     def create(body):
-        return Operation.create(Charge.URL,
-                                culqipy.secret_key, body)
+        return Operation.create(Charge.URL, body)
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Charge.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Charge.URL, id, "GET")
 
     @staticmethod
     def capture(id):
         try:
             response = Util().json_result(
-                culqipy.secret_key,
                 Charge.URL + id + "/capture/",
                 "", "POST")
             if response.json()["object"] == "error":
@@ -280,8 +268,7 @@ class Charge:
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Charge.URL,
-                                culqipy.secret_key, id, body)
+        return Operation.update(Charge.URL, id, body)
 
 
 Charge = Charge()
@@ -292,28 +279,23 @@ class Plan:
 
     @staticmethod
     def list(params):
-        return Operation.list(Plan.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Plan.URL, params)
 
     @staticmethod
     def create(body):
-        return Operation.create(Plan.URL,
-                                culqipy.secret_key, body)
+        return Operation.create(Plan.URL, body)
 
     @staticmethod
     def delete(id):
-        return Operation.get_delete(Plan.URL,
-                                    culqipy.secret_key, id, "DELETE")
+        return Operation.get_delete(Plan.URL, id, "DELETE")
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Plan.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Plan.URL, id, "GET")
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Plan.URL,
-                                culqipy.secret_key, id, body)
+        return Operation.update(Plan.URL, id, body)
 
 
 Plan = Plan()
@@ -324,28 +306,23 @@ class Subscription:
 
     @staticmethod
     def list(params):
-        return Operation.list(Subscription.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Subscription.URL, params)
 
     @staticmethod
     def create(body):
-        return Operation.create(Subscription.URL,
-                                culqipy.secret_key, body)
+        return Operation.create(Subscription.URL, body)
 
     @staticmethod
     def delete(id):
-        return Operation.get_delete(Subscription.URL,
-                                    culqipy.secret_key, id, "DELETE")
+        return Operation.get_delete(Subscription.URL, id, "DELETE")
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Subscription.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Subscription.URL, id, "GET")
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Subscription.URL,
-                                culqipy.secret_key, id, body)
+        return Operation.update(Subscription.URL, id, body)
 
 
 Subscription = Subscription()
@@ -356,23 +333,19 @@ class Refund:
 
     @staticmethod
     def list(params):
-        return Operation.list(Refund.URL,
-                              culqipy.secret_key, params)
+        return Operation.list(Refund.URL, params)
 
     @staticmethod
     def create(body):
-        return Operation.create(Refund.URL,
-                                culqipy.secret_key, body)
+        return Operation.create(Refund.URL, body)
 
     @staticmethod
     def get(id):
-        return Operation.get_delete(Refund.URL,
-                                    culqipy.secret_key, id, "GET")
+        return Operation.get_delete(Refund.URL, id, "GET")
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Refund.URL,
-                                culqipy.secret_key, id, body)
+        return Operation.update(Refund.URL, id, body)
 
 
 Refund = Refund()
