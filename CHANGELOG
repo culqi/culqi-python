@@ -1,4 +1,4 @@
-### 0.2.4 22-02-2017
+### 0.2.5 22-02-2017
 * Change the default timeout of GET method 120 to 360
 * rename COD_COMMERCE to public_key and API_KEY to secret_key
 

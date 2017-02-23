@@ -8,7 +8,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 
 | Versión actual|Culqi API|
 |----|----|
-| 0.2.3 (2017-02-13) |[v2](https://beta.culqi.com)|
+| 0.2.5 (2017-02-22) |[v2](https://culqi.com/api/#/)|
 
 ## Requisitos
 
@@ -33,8 +33,8 @@ import culqipy
 #### Inicialización
 
 ```python
-culqipy.COD_COMMERCE = "INSERTE_SU_LLAVE_PUBLICA"
-culqipy.API_KEY = "INSERTE_SU_LLAVE_PRIVADA"
+culqipy.public_key = "INSERTE_SU_LLAVE_PUBLICA"
+culqipy.secret_key = "INSERTE_SU_LLAVE_PRIVADA"
 ```
 
 #### Crear Token
