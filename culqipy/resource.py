@@ -1,6 +1,6 @@
 import culqipy
-import requests
 import json
+import requests
 
 
 class Util:
@@ -21,35 +21,35 @@ class Util:
                     r = requests.get(
                         culqipy.API_URL + url,
                         headers=headers,
-                        timeout=timeout
+                        timeout=timeout,
                     )
                 else:
                     r = requests.get(
                         culqipy.API_URL + url,
                         headers=headers,
                         params=json.dumps(data),
-                        timeout=timeout
+                        timeout=timeout,
                     )
             if method.upper() == "POST":
                 r = requests.post(
-                        culqipy.API_URL + url,
-                        headers=headers,
-                        data=json.dumps(data),
-                        timeout=timeout
-                    )
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    data=json.dumps(data),
+                    timeout=timeout,
+                )
             if method.upper() == "DELETE":
                 r = requests.delete(
-                        culqipy.API_URL + url,
-                        headers=headers,
-                        timeout=timeout
-                    )
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    timeout=timeout,
+                )
             if method.upper() == "PATCH":
                 r = requests.patch(
-                        culqipy.API_URL + url,
-                        headers=headers,
-                        data=json.dumps(data),
-                        timeout=timeout
-                    )
+                    culqipy.API_URL + url,
+                    headers=headers,
+                    data=json.dumps(data),
+                    timeout=timeout,
+                )
             return r
         except requests.exceptions.RequestException:
             error = {"object": "error", "type": "server",
@@ -69,9 +69,9 @@ class Operation():
     def list(url, api_key, params):
         try:
             response = Util().json_result(
-                    api_key,
-                    url,
-                    params, "GET")
+                api_key,
+                url,
+                params, "GET")
             return response.json()
         except CulqiError as ce:
             return ce.response_error
@@ -93,9 +93,9 @@ class Operation():
     def get_delete(url, api_key, id, method):
         try:
             response = Util().json_result(
-                    api_key,
-                    url + id + "/",
-                    "", method)
+                api_key,
+                url + id + "/",
+                "", method)
             if response.json()["object"] == "error":
                 raise CulqiError(response.json())
             return response.json()
@@ -136,8 +136,7 @@ class Card:
 
     @staticmethod
     def update(id, body):
-        return Operation.update(Card.URL,
-                                    culqipy.secret_key, id, body)
+        return Operation.update(Card.URL, culqipy.secret_key, id, body)
 
 
 Card = Card()

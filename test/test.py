@@ -53,8 +53,10 @@ class TestStringMethods(unittest.TestCase):
         return culqipy.Customer.create(dir_customer)
 
     def card(self):
-        dir_card = {'customer_id': self.customer()["id"],
-                   'token_id': self.token()["id"]}
+        dir_card = {
+            'customer_id': self.customer()["id"],
+            'token_id': self.token()["id"],
+        }
         return culqipy.Card.create(dir_card)
 
     def subscription(self):
@@ -64,10 +66,14 @@ class TestStringMethods(unittest.TestCase):
         subscription = culqipy.Subscription.create(dir_subscription)
         return subscription
 
-    #def refund(self):
-    #    dir_refund = {'amount': 500, 'charge_id': self.charge()["id"], 'reason': 'give me money back'}
-    #    refund = culqipy.Refund.create(dir_refund)
-    #    return refund
+    # def refund(self):
+    #     dir_refund = {
+    #         'amount': 500,
+    #         'charge_id': self.charge()["id"],
+    #         'reason': 'give me money back',
+    #     }
+    #     refund = culqipy.Refund.create(dir_refund)
+    #     return refund
 
     def test_0_list_tokens(self):
         params = {'iin': '411111'}
@@ -89,7 +95,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual("charge", str(self.charge()["object"]))
 
     def test_4_charge_capture(self):
-        capture_charge = culqipy.Charge.capture( str(self.charge()["id"]) )
+        capture_charge = culqipy.Charge.capture(str(self.charge()["id"]))
         self.assertNotEqual("charge", str(capture_charge["object"]))
 
     def test_5_list_charge(self):
@@ -112,8 +118,8 @@ class TestStringMethods(unittest.TestCase):
     def test_9_subscription(self):
         self.assertEqual("subscription", str(self.subscription()["object"]))
 
-    #def test_refund(self):
-    #   self.assertEqual("refund", str(self.refund()["object"]))
+    # def test_refund(self):
+    #     self.assertEqual("refund", str(self.refund()["object"]))
 
 
 if __name__ == '__main__':
