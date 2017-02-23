@@ -62,12 +62,17 @@ class Util:
                     data=json.dumps(data),
                     timeout=timeout,
                 )
+            r.raise_for_status()
             return r
-        except requests.exceptions.RequestException:
-            error = {"object": "error", "type": "server",
-                     "code": "404",
-                     "message": "connection...",
-                     "user_message": "Connection Error!"}
+        except (requests.exceptions.RequestException,
+                requests.exceptions.HTTPError):
+            error = {
+                "object": "error",
+                "type": "server",
+                "code": "404",
+                "message": "connection...",
+                "user_message": "Connection Error!",
+            }
             return json.dumps(error)
 
 
@@ -93,7 +98,7 @@ class Operation():
             response = Util().json_result(
                 url, body, "POST", key,
             )
-            if response.json()["object"] == "error":
+            if response.json().get("object") == "error":
                 raise CulqiError(response.json())
             return response.json()
         except CulqiError as ce:
@@ -105,7 +110,7 @@ class Operation():
             response = Util().json_result(
                 url + id + "/", "", method, key,
             )
-            if response.json()["object"] == "error":
+            if response.json().get("object") == "error":
                 raise CulqiError(response.json())
             return response.json()
         except CulqiError as ce:
@@ -117,7 +122,7 @@ class Operation():
             response = Util().json_result(
                 url + id + "/", body, "PATCH", key,
             )
-            if response.json()["object"] == "error":
+            if response.json().get("object") == "error":
                 raise CulqiError(response.json())
             return response.json()
         except CulqiError as ce:
@@ -258,9 +263,8 @@ class Charge:
     def capture(id):
         try:
             response = Util().json_result(
-                Charge.URL + id + "/capture/",
-                "", "POST")
-            if response.json()["object"] == "error":
+                Charge.URL + id + "/capture/", "", "POST")
+            if response.json().get("object") == "error":
                 raise CulqiError(response.json())
             return response.json()
         except CulqiError as ce:
