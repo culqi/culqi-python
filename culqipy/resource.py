@@ -5,67 +5,85 @@ import requests
 
 class Util:
 
-    @staticmethod
-    def json_result(url, data, method, key=None):
+    def __init__(self, url, data, method, key=None):
         """
-        Returns an http response object.
+        Init the arguments for a request.
 
         The key by default is the secret key. It can also be the
         public key in case we want to create a token.
         """
 
+        self.url = culqipy.API_URL + url
+        self.method = method.upper()
+        self.data = data
+        # Setting the secret_key by default.
+        self.key = key
+        if not key:
+            self.key = culqipy.secret_key
+
+    def json_result(self):
+        """
+        Returns the response as a dict if the response has content. Otherwise,
+        returns the http response object.
+        """
+
+        response = self.get_result()
+        # Returns a json dict or and object if the response does not have
+        # content.
+        return self.json_or_object(response)
+
+    def get_result(self):
+        """
+        Returns an http response object.
+        """
+
         timeout = 60
-        if method.upper() == "GET":
+        if self.method == "GET":
             timeout = 360
 
-        # Setting the secret_key by default.
-        if not key:
-            key = culqipy.secret_key
-
         headers = {
-            "Authorization": "Bearer " + key,
+            "Authorization": "Bearer " + self.key,
             "content-type": "application/json"
         }
-        r = ""
+        response = ""
         try:
-            if method.upper() == "GET":
-                if not data:
-                    r = requests.get(
-                        culqipy.API_URL + url,
+            if self.method == "GET":
+                if not self.data:
+                    response = requests.get(
+                        self.url,
                         headers=headers,
                         timeout=timeout,
                     )
                 else:
-                    r = requests.get(
-                        culqipy.API_URL + url,
+                    response = requests.get(
+                        self.url,
                         headers=headers,
-                        params=json.dumps(data),
+                        params=json.dumps(self.data),
                         timeout=timeout,
                     )
-            if method.upper() == "POST":
-                r = requests.post(
-                    culqipy.API_URL + url,
+            if self.method == "POST":
+                response = requests.post(
+                    self.url,
                     headers=headers,
-                    data=json.dumps(data),
+                    data=json.dumps(self.data),
                     timeout=timeout,
                 )
-            if method.upper() == "DELETE":
-                r = requests.delete(
-                    culqipy.API_URL + url,
+            if self.method == "DELETE":
+                response = requests.delete(
+                    self.url,
                     headers=headers,
                     timeout=timeout,
                 )
-            if method.upper() == "PATCH":
-                r = requests.patch(
-                    culqipy.API_URL + url,
+            if self.method == "PATCH":
+                response = requests.patch(
+                    self.url,
                     headers=headers,
-                    data=json.dumps(data),
+                    data=json.dumps(self.data),
                     timeout=timeout,
                 )
-            r.raise_for_status()
-            return r
-        except (requests.exceptions.RequestException,
-                requests.exceptions.HTTPError):
+            # Return the response.
+            return response
+        except requests.exceptions.RequestException:
             error = {
                 "object": "error",
                 "type": "server",
@@ -73,60 +91,58 @@ class Util:
                 "message": "connection...",
                 "user_message": "Connection Error!",
             }
-            return json.dumps(error)
+            return error
 
-
-class CulqiError(Exception):
-    def __init__(self, response_error):
-        self.response_error = response_error
+    @classmethod
+    def json_or_object(cls, response):
+        """
+        Returns the content of the response as a dict. If the object
+        does not have content, then returns the response itself.
+        """
+        try:
+            return response.json()  # Returns a dict.
+        except:
+            # If response does not have content.
+            return response
 
 
 class Operation():
+
     @staticmethod
     def list(url, params, key=None):
-        try:
-            response = Util().json_result(
-                url, params, "GET", key,
-            )
-            return response.json()
-        except CulqiError as ce:
-            return ce.response_error
+        return Util(
+            url=url,
+            data=params,
+            method="GET",
+            key=key,
+        ).json_result()
 
     @staticmethod
     def create(url, body, key=None):
-        try:
-            response = Util().json_result(
-                url, body, "POST", key,
-            )
-            if response.json().get("object") == "error":
-                raise CulqiError(response.json())
-            return response.json()
-        except CulqiError as ce:
-            return ce.response_error
+        return Util(
+            url=url,
+            data=body,
+            method="POST",
+            key=key,
+        ).json_result()
 
     @staticmethod
     def get_delete(url, id, method, key=None):
-        try:
-            response = Util().json_result(
-                url + id + "/", "", method, key,
-            )
-            if response.json().get("object") == "error":
-                raise CulqiError(response.json())
-            return response.json()
-        except CulqiError as ce:
-            return ce.response_error
+        return Util(
+            url=url + id + "/",
+            data="",
+            method=method,
+            key=key,
+        ).json_result()
 
     @staticmethod
     def update(url, id, body, key=None):
-        try:
-            response = Util().json_result(
-                url + id + "/", body, "PATCH", key,
-            )
-            if response.json().get("object") == "error":
-                raise CulqiError(response.json())
-            return response.json()
-        except CulqiError as ce:
-            return ce.response_error
+        return Util(
+            url=url + id + "/",
+            data=body,
+            method="PATCH",
+            key=key,
+        ).json_result()
 
 
 class Card:
@@ -261,14 +277,11 @@ class Charge:
 
     @staticmethod
     def capture(id):
-        try:
-            response = Util().json_result(
-                Charge.URL + id + "/capture/", "", "POST")
-            if response.json().get("object") == "error":
-                raise CulqiError(response.json())
-            return response.json()
-        except CulqiError as ce:
-            return ce.response_error
+        return Util(
+            url=Charge.URL + id + "/capture/",
+            data="",
+            method="POST",
+        ).json_result()
 
     @staticmethod
     def update(id, body):
