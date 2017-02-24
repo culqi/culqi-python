@@ -14,8 +14,14 @@ class Util:
         """
 
         self.url = culqipy.API_URL + url
+        # Validating the method.
         self.method = method.upper()
-        self.data = data
+        if self.method not in ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']:
+            raise ValueError('Method not allowed.')
+        # Setting the payload.
+        self.data = None
+        if data:
+            self.data = json.dumps(data)
         # Setting the secret_key by default.
         self.key = key
         if not key:
@@ -47,40 +53,13 @@ class Util:
         }
         response = None
         try:
-            if self.method == "GET":
-                if not self.data:
-                    response = requests.get(
-                        self.url,
-                        headers=headers,
-                        timeout=timeout,
-                    )
-                else:
-                    response = requests.get(
-                        self.url,
-                        headers=headers,
-                        params=json.dumps(self.data),
-                        timeout=timeout,
-                    )
-            if self.method == "POST":
-                response = requests.post(
-                    self.url,
-                    headers=headers,
-                    data=json.dumps(self.data),
-                    timeout=timeout,
-                )
-            if self.method == "DELETE":
-                response = requests.delete(
-                    self.url,
-                    headers=headers,
-                    timeout=timeout,
-                )
-            if self.method == "PATCH":
-                response = requests.patch(
-                    self.url,
-                    headers=headers,
-                    data=json.dumps(self.data),
-                    timeout=timeout,
-                )
+            response = getattr(requests, self.method.lower())(
+                self.url,
+                headers=headers,
+                params=self.data,
+                data=self.data,
+                timeout=timeout,
+            )
             # Return the response.
             return response
         except requests.exceptions.RequestException:
@@ -128,6 +107,9 @@ class Operation():
 
     @staticmethod
     def get_delete(url, id, method, key=None):
+        """
+        Get or delete, just change the method: "GET" or "DELETE".
+        """
         return Util(
             url=url + id + "/",
             method=method,
