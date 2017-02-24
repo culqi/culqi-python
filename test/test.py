@@ -84,7 +84,9 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(data)
 
     def test_1_token(self):
-        self.assertEqual("token", str(self.token()["object"]))
+        token = self.token()
+        print(token)
+        self.assertEqual("token", str(token["object"]))
 
     def test_2_find_token(self):
         id = self.token()["id"]
@@ -108,10 +110,14 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(data)
 
     def test_6_plan(self):
-        self.assertEqual("plan", str(self.plan()["object"]))
+        plan = self.plan()
+        print(plan)
+        self.assertEqual("plan", str(plan["object"]))
 
     def test_7_customer(self):
-        self.assertEqual("customer", str(self.customer()["object"]))
+        customer = self.customer()
+        print(customer)
+        self.assertEqual("customer", str(customer["object"]))
 
     def test_8_card(self):
         self.assertEqual("card", str(self.card()["object"]))
