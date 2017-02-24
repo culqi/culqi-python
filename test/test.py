@@ -53,8 +53,10 @@ class TestStringMethods(unittest.TestCase):
         return culqipy.Customer.create(dir_customer)
 
     def card(self):
-        dir_card = {'customer_id': self.customer()["id"],
-                   'token_id': self.token()["id"]}
+        dir_card = {
+            'customer_id': self.customer()["id"],
+            'token_id': self.token()["id"],
+        }
         return culqipy.Card.create(dir_card)
 
     def subscription(self):
@@ -64,10 +66,14 @@ class TestStringMethods(unittest.TestCase):
         subscription = culqipy.Subscription.create(dir_subscription)
         return subscription
 
-    #def refund(self):
-    #    dir_refund = {'amount': 500, 'charge_id': self.charge()["id"], 'reason': 'give me money back'}
-    #    refund = culqipy.Refund.create(dir_refund)
-    #    return refund
+    # def refund(self):
+    #     dir_refund = {
+    #         'amount': 500,
+    #         'charge_id': self.charge()["id"],
+    #         'reason': 'give me money back',
+    #     }
+    #     refund = culqipy.Refund.create(dir_refund)
+    #     return refund
 
     def test_0_list_tokens(self):
         params = {'iin': '411111'}
@@ -78,7 +84,9 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(data)
 
     def test_1_token(self):
-        self.assertEqual("token", str(self.token()["object"]))
+        token = self.token()
+        print(token)
+        self.assertEqual("token", str(token["object"]))
 
     def test_2_find_token(self):
         id = self.token()["id"]
@@ -89,7 +97,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual("charge", str(self.charge()["object"]))
 
     def test_4_charge_capture(self):
-        capture_charge = culqipy.Charge.capture( str(self.charge()["id"]) )
+        capture_charge = culqipy.Charge.capture(self.charge()["id"])
+        # The object of capture_charge is "error".
         self.assertNotEqual("charge", str(capture_charge["object"]))
 
     def test_5_list_charge(self):
@@ -101,10 +110,14 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(data)
 
     def test_6_plan(self):
-        self.assertEqual("plan", str(self.plan()["object"]))
+        plan = self.plan()
+        print(plan)
+        self.assertEqual("plan", str(plan["object"]))
 
     def test_7_customer(self):
-        self.assertEqual("customer", str(self.customer()["object"]))
+        customer = self.customer()
+        print(customer)
+        self.assertEqual("customer", str(customer["object"]))
 
     def test_8_card(self):
         self.assertEqual("card", str(self.card()["object"]))
@@ -112,8 +125,8 @@ class TestStringMethods(unittest.TestCase):
     def test_9_subscription(self):
         self.assertEqual("subscription", str(self.subscription()["object"]))
 
-    #def test_refund(self):
-    #   self.assertEqual("refund", str(self.refund()["object"]))
+    # def test_refund(self):
+    #     self.assertEqual("refund", str(self.refund()["object"]))
 
 
 if __name__ == '__main__':
