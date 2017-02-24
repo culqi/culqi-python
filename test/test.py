@@ -95,7 +95,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual("charge", str(self.charge()["object"]))
 
     def test_4_charge_capture(self):
-        capture_charge = culqipy.Charge.capture(str(self.charge()["id"]))
+        capture_charge = culqipy.Charge.capture(self.charge()["id"])
+        # The object of capture_charge is "error".
         self.assertNotEqual("charge", str(capture_charge["object"]))
 
     def test_5_list_charge(self):
