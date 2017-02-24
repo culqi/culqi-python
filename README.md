@@ -12,7 +12,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 
 ## Requisitos
 
-- Python 2.6, 2.7, 3.3, 3.4, 3.5
+- Python 2.6, 2.7, 3.3, 3.4, 3.5, 3.6
 - Credenciales de comercio en Culqi (1).
 
 ## Instalación
