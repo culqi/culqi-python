@@ -17,7 +17,7 @@ class Util:
         # Validating the method.
         self.method = method.upper()
         if self.method not in ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']:
-            raise ValueError('Method not allowed.')
+            raise RequestMethodError()
         # Setting the payload.
         self.data = None
         if data:
@@ -83,3 +83,12 @@ class Util:
         except:
             # If response does not have content.
             return response
+
+
+class RequestMethodError(Exception):
+    """Raised when a invalid method is executed."""
+
+    error_message = 'Method not allowed.'
+
+    def __init__(self):
+        super(RequestMethodError, self).__init__(self.error_message)
