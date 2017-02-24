@@ -72,8 +72,8 @@ class Util:
             }
             return error
 
-    @classmethod
-    def json_or_object(cls, response):
+    @staticmethod
+    def json_or_object(response):
         """
         Returns the content of the response as a dict. If the object
         does not have content, then returns the response itself.

@@ -64,9 +64,6 @@ class Card:
         return Operation.update(Card.URL, id, body)
 
 
-Card = Card()
-
-
 class Event:
     URL = "/events/"
 
@@ -77,9 +74,6 @@ class Event:
     @staticmethod
     def get(id):
         return Operation.get_delete(Event.URL, id, "GET")
-
-
-Event = Event()
 
 
 class Customer:
@@ -106,9 +100,6 @@ class Customer:
         return Operation.update(Customer.URL, id, body)
 
 
-Customer = Customer()
-
-
 class Transfer:
     URL = "/transfers/"
 
@@ -121,9 +112,6 @@ class Transfer:
         return Operation.get_delete(Transfer.URL, id, "GET")
 
 
-Transfer = Transfer()
-
-
 class Iins:
     URL = "/iins/"
 
@@ -134,9 +122,6 @@ class Iins:
     @staticmethod
     def get(id):
         return Operation.get_delete(Iins.URL, id, "GET")
-
-
-Iins = Iins()
 
 
 class Token:
@@ -154,9 +139,6 @@ class Token:
     @staticmethod
     def get(id):
         return Operation.get_delete(Token.URL, id, "GET")
-
-
-Token = Token()
 
 
 class Charge:
@@ -187,9 +169,6 @@ class Charge:
         return Operation.update(Charge.URL, id, body)
 
 
-Charge = Charge()
-
-
 class Plan:
     URL = "/plans/"
 
@@ -212,9 +191,6 @@ class Plan:
     @staticmethod
     def update(id, body):
         return Operation.update(Plan.URL, id, body)
-
-
-Plan = Plan()
 
 
 class Subscription:
@@ -241,9 +217,6 @@ class Subscription:
         return Operation.update(Subscription.URL, id, body)
 
 
-Subscription = Subscription()
-
-
 class Refund:
     URL = "/refunds/"
 
@@ -262,6 +235,3 @@ class Refund:
     @staticmethod
     def update(id, body):
         return Operation.update(Refund.URL, id, body)
-
-
-Refund = Refund()
