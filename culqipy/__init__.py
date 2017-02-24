@@ -1,5 +1,3 @@
-# Resource
-
 from culqipy.resource import (
     Token,
     Charge,
@@ -10,11 +8,11 @@ from culqipy.resource import (
     Card,
     Event,
     Customer,
-    Transfer
+    Transfer,
 )
+from culqipy.utils import Util
 
-# Configuration variables
-
+# Configuration variables.
 API_URL = "https://api.culqi.com/v2"
 public_key = None
 secret_key = None
