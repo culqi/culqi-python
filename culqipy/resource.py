@@ -5,7 +5,7 @@ import requests
 
 class Util:
 
-    def __init__(self, url, data, method, key=None):
+    def __init__(self, url, method, data=None, key=None):
         """
         Init the arguments for a request.
 
@@ -45,7 +45,7 @@ class Util:
             "Authorization": "Bearer " + self.key,
             "content-type": "application/json"
         }
-        response = ""
+        response = None
         try:
             if self.method == "GET":
                 if not self.data:
@@ -109,7 +109,7 @@ class Util:
 class Operation():
 
     @staticmethod
-    def list(url, params, key=None):
+    def list(url, params=None, key=None):
         return Util(
             url=url,
             data=params,
@@ -130,17 +130,16 @@ class Operation():
     def get_delete(url, id, method, key=None):
         return Util(
             url=url + id + "/",
-            data="",
             method=method,
             key=key,
         ).json_result()
 
     @staticmethod
-    def update(url, id, body, key=None):
+    def update(url, id, body=None, key=None):
         return Util(
             url=url + id + "/",
-            data=body,
             method="PATCH",
+            data=body,
             key=key,
         ).json_result()
 
@@ -172,7 +171,7 @@ class Event:
     URL = "/events/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Event.URL, params)
 
     @staticmethod
@@ -187,7 +186,7 @@ class Customer:
     URL = "/customers/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Customer.URL, params)
 
     @staticmethod
@@ -214,7 +213,7 @@ class Transfer:
     URL = "/transfers/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Transfer.URL, params)
 
     @staticmethod
@@ -244,7 +243,7 @@ class Token:
     URL = "/tokens/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Token.URL, params)
 
     @staticmethod
@@ -264,7 +263,7 @@ class Charge:
     URL = "/charges/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Charge.URL, params)
 
     @staticmethod
@@ -295,7 +294,7 @@ class Plan:
     URL = "/plans/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Plan.URL, params)
 
     @staticmethod
@@ -322,7 +321,7 @@ class Subscription:
     URL = "/subscriptions/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Subscription.URL, params)
 
     @staticmethod
@@ -349,7 +348,7 @@ class Refund:
     URL = "/refunds/"
 
     @staticmethod
-    def list(params):
+    def list(params=None):
         return Operation.list(Refund.URL, params)
 
     @staticmethod
