@@ -8,7 +8,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 
 | Versión actual|Culqi API|
 |----|----|
-| 0.2.5 (2017-02-22) |[v2](https://culqi.com/api/#/)|
+| 0.2.6 (2017-02-27) |[v2](https://culqi.com/api/#/)|
 
 ## Requisitos
 
@@ -33,8 +33,8 @@ import culqipy
 #### Inicialización
 
 ```python
-culqipy.public_key = "pk_test_vzMuTHoueOMlgUPj"
-culqipy.secret_key = "sk_test_UTCQSGcXW8bCyU59"
+culqipy.public_key = '{LLAVE PUBLICA}'
+culqipy.secret_key = '{LLAVE SECRETA}'
 ```
 
 #### Crear Token
@@ -114,12 +114,15 @@ print(subscription)
 refund = culqipy.Refund.create(
       amount=500,
       charge_id=charge["id"],
-      reason="give me money back")
+      reason="solicitud_comprador")
 
 print(refund)
 ```
 #### Nota
 Cada metodo retona un objecto json y puede ser accedido de la siguiente forma jsonObject["key"]
+
+## Documentación
+¿Necesitas más información para integrar `culqi-python`? La documentación completa se encuentra en [https://culqi.com/docs/](https://culqi.com/docs/)
 
 ## Changelog
 
@@ -137,10 +140,11 @@ Solo debe ejecutar el siguiente comando
 python culqipy/test.py
 ```
 
-
 ## Autor
 
 Willy Aguirre ([@marti1125](https://github.com/marti1125) - Team Culqi)
+
+Nuestros [Contribuidores](https://github.com/culqi/culqi-python/graphs/contributors)
 
 ## Licencia
 

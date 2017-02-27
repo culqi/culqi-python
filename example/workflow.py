@@ -1,10 +1,11 @@
 import uuid
 import culqipy
+import os
 
 
 def main():
-    culqipy.public_key = "pk_test_vzMuTHoueOMlgUPj"
-    culqipy.secret_key = "sk_test_UTCQSGcXW8bCyU59"
+    culqipy.public_key = os.environ['LLAVE_PUBLICA']
+    culqipy.secret_key = os.environ['LLAVE_SECRETA']
 
     # CREATE TOKEN
 
@@ -17,7 +18,7 @@ def main():
 
     token = culqipy.Token.create(dir_token)
 
-    print(token["id"])
+    print(token['id'])
 
     # CREATE CHARGE
 
@@ -28,17 +29,17 @@ def main():
                   'email': 'wmuro@me.com',
                   'installments': 0,
                   'metadata': {'test': '1234'},
-                  'source_id': token["id"]}
+                  'source_id': token['id']}
 
     charge = culqipy.Charge.create(dir_charge)
 
-    print(charge["id"])
+    print(charge['id'])
 
     # CREATE PLAN
 
     dir_plan = {'amount': 1000,
                 'currency_code': 'PEN',
-                'interval': 'days',
+                'interval': 'dias',
                 'interval_count': 2,
                 'limit': 10,
                 'metadata': {'test': '1234'},
@@ -47,7 +48,7 @@ def main():
 
     plan = culqipy.Plan.create(dir_plan)
 
-    print(plan["id"])
+    print(plan['id'])
 
     # CREATE CUSTOMER
 
@@ -63,33 +64,42 @@ def main():
 
     customer = culqipy.Customer.create(dir_customer)
 
-    print(customer["id"])
+    print(customer['id'])
 
     # CREATE CARD
 
-    dir_card = {'customer_id': customer["id"],
-               'token_id': token["id"]}
+    dir_token = {'card_number': '4111111111111111',
+                 'cvv': '123',
+                 'currency_code': 'PEN',
+                 'email': 'wmuro@me.com',
+                 'expiration_month': 9,
+                 'expiration_year': 2020}
+
+    token_for_card = culqipy.Token.create(dir_token)
+
+    dir_card = {'customer_id': customer['id'],
+                'token_id': token_for_card['id']}
 
     card = culqipy.Card.create(dir_card)
 
-    print(card["id"])
+    print(card['id'])
 
     # CREATE SUBSCRIPTION
 
-    dir_subscription = {'card_id': card["id"],
-                        'plan_id': plan["id"]}
+    dir_subscription = {'card_id': card['id'],
+                        'plan_id': plan['id']}
 
     subscription = culqipy.Subscription.create(dir_subscription)
 
-    print(subscription)
+    print(subscription['id'])
 
-    # CREATE REFUNDs
+    # CREATE REFUNDS
 
-    dir_refund = {'amount': 500, 'charge_id': charge["id"], 'reason': 'give me money back'}
+    dir_refund = {'amount': 500, 'charge_id': charge['id'], 'reason': 'solicitud_comprador'}
 
     refund = culqipy.Refund.create(dir_refund)
 
-    print(refund)
+    print(refund['id'])
 
 if __name__ == "__main__":
     main()

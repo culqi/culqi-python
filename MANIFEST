@@ -3,4 +3,5 @@ setup.cfg
 setup.py
 culqipy/__init__.py
 culqipy/resource.py
+culqipy/utils.py
 test/test.py
