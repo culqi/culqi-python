@@ -10,4 +10,5 @@ setup(
   download_url = 'https://github.com/culqi/culqi-python/tarball/0.2.6',
   keywords = ['api', 'json', 'culqi', 'apiv2'],
   classifiers = [],
+  install_requires=['requests']
 )
