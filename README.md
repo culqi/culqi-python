@@ -1,8 +1,8 @@
 # Culqi Python
 
-[![License](https://poser.pugx.org/culqi/culqi-php/license)](https://github.com/culqi/culqi-python/blob/master/LICENSE.txt)
-[![Latest Unstable Version](https://poser.pugx.org/culqi/culqi-php/v/unstable)](https://pypi.python.org/pypi/culqi_py)
-[![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
+![GitHub](https://img.shields.io/github/license/culqi/culqi-python.svg?style=for-the-badge)
+![PyPI](https://img.shields.io/pypi/v/culqipy.svg?style=for-the-badge) 
+![Travis (.org) branch](https://img.shields.io/travis/culqi/culqi-python/master.svg?style=for-the-badge)
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
