@@ -14,7 +14,7 @@ class TestStringMethods(unittest.TestCase):
         dir_token = {'card_number': '4111111111111111',
                      'cvv': '123',
                      'currency_code': 'PEN',
-                     'email': 'wmuro@me.com',
+                     'email': 'richard@piedpiper.com',
                      'expiration_month': 9,
                      'expiration_year': 2020}
 
@@ -26,7 +26,7 @@ class TestStringMethods(unittest.TestCase):
                       'capture': True,
                       'currency_code': 'PEN',
                       'description': 'Venta de prueba',
-                      'email': 'wmuro@me.com',
+                      'email': 'richard@piedpiper.com',
                       'installments': 0,
                       'metadata': {'test': '1234'},
                       'source_id': self.token(self)['id']}
