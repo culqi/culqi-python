@@ -1,6 +1,11 @@
+.*
+!.gitignore
+!.pylintrc
+!.travis*
+*.py[cod]
+*.ipynb*
+*.egg*
+legacy
+build
 dist
-*.pyc
 __pycache__
-env
-.idea
-int.py

@@ -1,18 +1,3 @@
-from culqipy.resource import (
-    Token,
-    Charge,
-    Plan,
-    Subscription,
-    Refund,
-    Iins,
-    Card,
-    Event,
-    Customer,
-    Transfer,
-)
-from culqipy.utils import Util
+from .version import VERSION
 
-# Configuration variables.
-API_URL = "https://api.culqi.com/v2"
-public_key = None
-secret_key = None
+__version__ = '.'.join(VERSION)

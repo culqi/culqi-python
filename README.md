@@ -1,7 +1,7 @@
 # Culqi Python
 
 ![GitHub](https://img.shields.io/github/license/culqi/culqi-python.svg?style=for-the-badge)
-![PyPI](https://img.shields.io/pypi/v/culqipy.svg?style=for-the-badge) 
+![PyPI](https://img.shields.io/pypi/v/culqipy.svg?style=for-the-badge)
 ![Travis (.org) branch](https://img.shields.io/travis/culqi/culqi-python/master.svg?style=for-the-badge)
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
@@ -125,7 +125,6 @@ Cada metodo retona un objecto json y puede ser accedido de la siguiente forma js
 ¿Necesitas más información para integrar `culqi-python`? La documentación completa se encuentra en [https://culqi.com/docs/](https://culqi.com/docs/)
 
 ## Changelog
-
 Todos los cambios en las versiones de esta biblioteca están listados en [CHANGELOG](CHANGELOG).
 
 ## Dependencias para el desarrollo

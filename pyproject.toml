@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "culqi-python"
+version = "1.0.0"
+description = 'Biblioteca de Culqi en Python'
+authors = ["zodiacfireworks <martin.vuelta@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.22"
+
+[tool.poetry.dev-dependencies]
+jupyterlab = "^1.2"
+twine = "^3.1"
+pylint = "^2.4"
+autopep8 = "^1.4"
+coverage = "^5.0"
+pytest-cov = "^2.8"
+python-dotenv = "^0.10.3"
+mypy = "^0.761.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

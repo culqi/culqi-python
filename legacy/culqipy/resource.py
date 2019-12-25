@@ -1,7 +1,5 @@
-import culqipy
-
-from culqipy.utils import RequestMethodError, Util
-
+# pylint: disable=import-outside-toplevel
+from .utils import RequestMethodError, Util
 
 class Operation():
 
@@ -24,20 +22,20 @@ class Operation():
         ).json_result()
 
     @staticmethod
-    def get_delete(url, id, method, key=None):
+    def get_delete(url, id_, method, key=None):
         """
         Get or delete, just change the method: "GET" or "DELETE".
         """
         return Util(
-            url=url + id + "/",
+            url=url + id_ + "/",
             method=method,
             key=key,
         ).json_result()
 
     @staticmethod
-    def update(url, id, body=None, key=None):
+    def update(url, id_, body=None, key=None):
         return Util(
-            url=url + id + "/",
+            url=url + id_ + "/",
             method="PATCH",
             data=body,
             key=key,
@@ -58,16 +56,16 @@ class BaseResource:
         return Operation.create(cls.URL, body)
 
     @classmethod
-    def get(cls, id):
-        return Operation.get_delete(cls.URL, id, "GET")
+    def get(cls, id_):
+        return Operation.get_delete(cls.URL, id_, "GET")
 
     @classmethod
-    def delete(cls, id):
-        return Operation.get_delete(cls.URL, id, "DELETE")
+    def delete(cls, id_):
+        return Operation.get_delete(cls.URL, id_, "DELETE")
 
     @classmethod
-    def update(cls, id, body):
-        return Operation.update(cls.URL, id, body)
+    def update(cls, id_, body):
+        return Operation.update(cls.URL, id_, body)
 
 
 class Card(BaseResource):
@@ -84,11 +82,11 @@ class Event(BaseResource):
         raise RequestMethodError()
 
     @classmethod
-    def delete(cls, id):
+    def delete(cls, id_):
         raise RequestMethodError()
 
     @classmethod
-    def update(cls, id, body):
+    def update(cls, id_, body):
         raise RequestMethodError()
 
 
@@ -113,11 +111,13 @@ class Token(BaseResource):
 
     @staticmethod
     def create(body):
+        from . import public_key
+
         # A tokens need the public_key to be created.
-        return Operation.create(Token.URL, body, culqipy.public_key)
+        return Operation.create(Token.URL, body, public_key)
 
     @classmethod
-    def delete(cls, id):
+    def delete(cls, id_):
         raise RequestMethodError()
 
 
@@ -126,13 +126,13 @@ class Charge(BaseResource):
     URL = "/charges/"
 
     @classmethod
-    def delete(cls, id):
+    def delete(cls, id_):
         raise RequestMethodError()
 
     @staticmethod
-    def capture(id):
+    def capture(id_):
         return Util(
-            url=Charge.URL + id + "/capture/",
+            url=Charge.URL + id_ + "/capture/",
             data="",
             method="POST",
         ).json_result()
@@ -153,5 +153,5 @@ class Refund(BaseResource):
     URL = "/refunds/"
 
     @classmethod
-    def delete(cls, id):
+    def delete(cls, id_):
         raise RequestMethodError()
