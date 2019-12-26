@@ -2,6 +2,7 @@ import os
 import unittest
 from copy import deepcopy
 
+import pytest
 from dotenv import load_dotenv
 
 from culqipy import __version__
@@ -54,6 +55,7 @@ class ChargeTest(unittest.TestCase):
         assert self.charge._get_url(id_) == "https://api.culqi.com/v2/charges/{0}".format(id_)
         assert self.charge._get_url(id_, "capture") == "https://api.culqi.com/v2/charges/{0}/capture".format(id_)
 
+    @pytest.mark.vcr()
     def test_charge_create(self):
         token_data = deepcopy(self.data["token"])
         token = self.token.create(data=token_data)
@@ -64,6 +66,7 @@ class ChargeTest(unittest.TestCase):
 
         assert charge["data"]["object"] == "charge"
 
+    @pytest.mark.vcr()
     def test_charge_capture(self):
         token_data = deepcopy(self.data["token"])
         token = self.token.create(data=token_data)
@@ -76,6 +79,7 @@ class ChargeTest(unittest.TestCase):
         assert captured_charge["data"]["id"] == created_charge["data"]["id"]
         assert captured_charge['status'] == 201
 
+    @pytest.mark.vcr()
     def test_charge_retrieve(self):
         token_data = deepcopy(self.data["token"])
         token = self.token.create(data=token_data)
@@ -87,10 +91,12 @@ class ChargeTest(unittest.TestCase):
 
         assert created_charge["data"]["id"] == retrieved_charge["data"]["id"]
 
+    @pytest.mark.vcr()
     def test_charge_list(self):
         retrieved_charge_list = self.charge.list()
         assert "items" in retrieved_charge_list["data"]
 
+    @pytest.mark.vcr()
     def test_charge_update(self):
         token_data = deepcopy(self.data["token"])
         token = self.token.create(data=token_data)

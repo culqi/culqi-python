@@ -6,6 +6,7 @@
 *.ipynb*
 *.egg*
 coverage.*
+cassettes
 legacy
 build
 dist

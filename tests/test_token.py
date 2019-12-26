@@ -1,6 +1,7 @@
 import os
 import unittest
 
+import pytest
 from dotenv import load_dotenv
 
 from culqipy import __version__
@@ -37,19 +38,23 @@ class TokenTest(unittest.TestCase):
         assert self.token._get_url() == "https://api.culqi.com/v2/tokens"
         assert self.token._get_url(id_) == "https://api.culqi.com/v2/tokens/{0}".format(id_)
 
+    @pytest.mark.vcr()
     def test_token_create(self):
         token = self.token.create(data=self.data)
         assert token["data"]["object"] == "token"
 
+    @pytest.mark.vcr()
     def test_token_retrieve(self):
         created_token = self.token.create(data=self.data)
         retrieved_token = self.token.read(created_token["data"]["id"])
         assert created_token["data"]["id"] == retrieved_token["data"]["id"]
 
+    @pytest.mark.vcr()
     def test_token_list(self):
         retrieved_token_list = self.token.list()
         assert "items" in retrieved_token_list["data"]
 
+    @pytest.mark.vcr()
     def test_token_update(self):
         metadatada = {
             "metadata": self.metadata
