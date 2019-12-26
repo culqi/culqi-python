@@ -1,5 +1,5 @@
 import json
-
+from copy import deepcopy
 from types import ModuleType
 
 from requests import session
@@ -58,9 +58,15 @@ class Client:
         """Dispatches a request to the CULQUI HTTP API."""
         response = getattr(self.session, method)(url, **options)
 
+        data = response.json()
+
+        if 'data' in data:
+            data['items'] = deepcopy(data['data'])
+            del data['data']
+
         return {
             'status': response.status_code,
-            'data': response.json()
+            'data': data
         }
 
     def get(self, url, params, **options):

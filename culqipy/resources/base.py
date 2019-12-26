@@ -30,10 +30,16 @@ class Resource:
         return self.client.delete(url, data, **kwargs)
 
     def _get_url(self, *args):
-        url = urljoin(URL.BASE, URL.VERSION, self.endpoint)
-        for arg in args:
-            url = urljoin(url, str(arg))
-        return url
+        return urljoin(
+            URL.BASE,
+            '/'.join(
+                [
+                    URL.VERSION,
+                    self.endpoint,
+                    *[str(arg) for arg in args]
+                ]
+            )
+        )
 
     def create(self, data, **options):
         url = self._get_url()

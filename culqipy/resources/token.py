@@ -15,7 +15,7 @@ class Token(Resource):
     def create(self, data, **options):
         url = 'https://secure.culqi.com/v2/tokens'
         headers = {
-            'Authorization': 'Bearer {self.client.public_key}'
+            'Authorization': f'Bearer {self.client.api_key}'
         }
         if 'headers' in options:
             options['headers'].update(headers)

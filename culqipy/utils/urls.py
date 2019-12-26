@@ -1,7 +1,4 @@
-from enum import Enum
-
-
-class URL(Enum):
+class URL:
     BASE = "https://api.culqi.com"
     VERSION = "v2"
 
