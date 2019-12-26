@@ -5,6 +5,7 @@
 *.py[cod]
 *.ipynb*
 *.egg*
+coverage.*
 legacy
 build
 dist
