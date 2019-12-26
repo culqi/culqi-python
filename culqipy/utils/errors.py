@@ -59,20 +59,20 @@ class ErrorCode:
       Tarjeta Culqi. Estás utilizando una tarjeta de pruebas de Culqi para
       realizar una compra real.
     """
-    EXPIRED_CARD = 'expired_card'
-    STOLEN_CARD = 'stolen_card'
-    LOST_CARD = 'lost_card'
-    INSUFFICIENT_FUNDS = 'insufficient_funds'
-    CONTACT_ISSUER = 'contact_issuer'
-    INVALID_CVV = 'invalid_cvv'
-    INCORRECT_CVV = 'incorrect_cvv'
-    TOO_MANY_ATTEMPTS_CVV = 'too_many_attempts_cvv'
-    ISSUER_NOT_AVAILABLE = 'issuer_not_available'
-    ISSUER_DECLINE_OPERATION = 'issuer_decline_operation'
-    INVALID_CARD = 'invalid_card'
-    PROCESSING_ERROR = 'processing_error'
-    FRAUDULENT = 'fraudulent'
-    CULQI_CARD = 'culqi_card'
+    EXPIRED_CARD = "expired_card"
+    STOLEN_CARD = "stolen_card"
+    LOST_CARD = "lost_card"
+    INSUFFICIENT_FUNDS = "insufficient_funds"
+    CONTACT_ISSUER = "contact_issuer"
+    INVALID_CVV = "invalid_cvv"
+    INCORRECT_CVV = "incorrect_cvv"
+    TOO_MANY_ATTEMPTS_CVV = "too_many_attempts_cvv"
+    ISSUER_NOT_AVAILABLE = "issuer_not_available"
+    ISSUER_DECLINE_OPERATION = "issuer_decline_operation"
+    INVALID_CARD = "invalid_card"
+    PROCESSING_ERROR = "processing_error"
+    FRAUDULENT = "fraudulent"
+    CULQI_CARD = "culqi_card"
 
 
 class HTTPErrorCode:
@@ -105,19 +105,19 @@ class HTTPErrorCode:
       veces.
     """
     # HTTP 400
-    INVALID_REQUEST_ERROR = 'invalid_request_error'
+    INVALID_REQUEST_ERROR = "invalid_request_error"
     # HTTP 401
-    AUTHENTICATION_ERROR = 'authentication_error'
+    AUTHENTICATION_ERROR = "authentication_error"
     # HTTP 422
-    PARAMETER_ERROR = 'parameter_error'
+    PARAMETER_ERROR = "parameter_error"
     # HTTP 402
-    CARD_ERROR = 'card_error'
+    CARD_ERROR = "card_error"
     # HTTP 429
-    LIMIT_API_ERROR = 'limit_api_error'
+    LIMIT_API_ERROR = "limit_api_error"
     # HTTP 404
-    RESOURCE_ERROR = 'resource_error'
+    RESOURCE_ERROR = "resource_error"
     # HTTP 500 503
-    API_ERROR = 'api_error'
+    API_ERROR = "api_error"
 
 
 class ErrorMessage:

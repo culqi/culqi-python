@@ -4,7 +4,7 @@ from ..utils.urls import URL
 
 
 __all__ = [
-    'Resource'
+    "Resource"
 ]
 
 
@@ -32,7 +32,7 @@ class Resource:
     def _get_url(self, *args):
         return urljoin(
             URL.BASE,
-            '/'.join(
+            "/".join(
                 [
                     URL.VERSION,
                     self.endpoint,

@@ -5,7 +5,7 @@ from ..utils.urls import URL
 
 
 __all__ = [
-    'Transfer'
+    "Transfer"
 ]
 
 

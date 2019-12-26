@@ -5,7 +5,7 @@ from ..utils.urls import URL
 
 
 __all__ = [
-    'Charge'
+    "Charge"
 ]
 
 
@@ -16,5 +16,5 @@ class Charge(Resource):
         raise NotAllowedError(ErrorMessage.NOT_ALLOWED)
 
     def capture(self, id_, data=None, **options):
-        url = self._get_url(id_, 'capture')
+        url = self._get_url(id_, "capture")
         return self._post(url, data, **options)

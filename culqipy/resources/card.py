@@ -4,7 +4,7 @@ from ..utils.urls import URL
 
 
 __all__ = [
-    'Card'
+    "Card"
 ]
 
 

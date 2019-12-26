@@ -29,29 +29,29 @@ class Client:
 
     @staticmethod
     def _get_version():
-        return '.'.join(VERSION)
+        return ".".join(VERSION)
 
     @staticmethod
     def _update_request(data, options):
         """Updates The resource data and header options."""
         data = json.dumps(data)
 
-        if 'headers' not in options:
-            options['headers'] = {}
+        if "headers" not in options:
+            options["headers"] = {}
 
-        options['headers'].update({
-            'Content-type': 'application/json',
-            'Accept': 'application/json'
+        options["headers"].update({
+            "Content-type": "application/json",
+            "Accept": "application/json"
         })
 
         return data, options
 
     def _set_client_headers(self):
         self.session.headers.update({
-            'User-Agent': 'Culqi-API-Python/{0}'.format(self._get_version()),
-            'Authorization': 'Bearer {0}'.format(self.api_secret),
-            'Content-type': 'application/json',
-            'Accept': 'application/json'
+            "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
+            "Authorization": "Bearer {0}".format(self.api_secret),
+            "Content-type": "application/json",
+            "Accept": "application/json"
         })
 
     def request(self, method, url, **options):
@@ -60,30 +60,30 @@ class Client:
 
         data = response.json()
 
-        if 'data' in data:
-            data['items'] = deepcopy(data['data'])
-            del data['data']
+        if "data" in data:
+            data["items"] = deepcopy(data["data"])
+            del data["data"]
 
         return {
-            'status': response.status_code,
-            'data': data
+            "status": response.status_code,
+            "data": data
         }
 
     def get(self, url, params, **options):
-        return self.request('get', url, params=params, **options)
+        return self.request("get", url, params=params, **options)
 
     def post(self, url, data, **options):
         data, options = self._update_request(data, options)
-        return self.request('post', url, data=data, **options)
+        return self.request("post", url, data=data, **options)
 
     def patch(self, url, data, **options):
         data, options = self._update_request(data, options)
-        return self.request('patch', url, data=data, **options)
+        return self.request("patch", url, data=data, **options)
 
     def delete(self, url, data, **options):
         data, options = self._update_request(data, options)
-        return self.request('delete', url, data=data, **options)
+        return self.request("delete", url, data=data, **options)
 
     def put(self, url, data, **options):
         data, options = self._update_request(data, options)
-        return self.request('put', url, data=data, **options)
+        return self.request("put", url, data=data, **options)

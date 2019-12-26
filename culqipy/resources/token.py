@@ -5,7 +5,7 @@ from ..utils.urls import URL
 
 
 __all__ = [
-    'Token'
+    "Token"
 ]
 
 
@@ -13,14 +13,14 @@ class Token(Resource):
     endpoint = URL.TOKEN
 
     def create(self, data, **options):
-        url = 'https://secure.culqi.com/v2/tokens'
+        url = "https://secure.culqi.com/v2/tokens"
         headers = {
-            'Authorization': 'Bearer {0}'.format(self.client.api_key)
+            "Authorization": "Bearer {0}".format(self.client.api_key)
         }
-        if 'headers' in options:
-            options['headers'].update(headers)
+        if "headers" in options:
+            options["headers"].update(headers)
         else:
-            options['headers'] = headers
+            options["headers"] = headers
 
         return self._post(url, data, **options)
 

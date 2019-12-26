@@ -16,5 +16,5 @@ from .test_suscription import SuscriptionTest
 from .test_transfer import TransferTest
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
