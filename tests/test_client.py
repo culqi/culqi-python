@@ -27,8 +27,8 @@ class ClientTest(unittest.TestCase):
     def test_session_headers(self):
         session_headers = self.client.session.headers
         headers = {
-            'User-Agent': f'Culqi-API-Python/{self.version}',
-            'Authorization': f'Bearer {self.api_secret}',
+            'User-Agent': 'Culqi-API-Python/{0}'.format(self.version),
+            'Authorization': 'Bearer {0}'.format(self.api_secret),
             'Content-type': 'application/json',
             'Accept': 'application/json',
         }

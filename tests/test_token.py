@@ -34,8 +34,8 @@ class TokenTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = 'sample_id'
 
-        assert self.token._get_url() == f'https://api.culqi.com/v2/tokens'
-        assert self.token._get_url(id_) == f'https://api.culqi.com/v2/tokens/{id_}'
+        assert self.token._get_url() == 'https://api.culqi.com/v2/tokens'
+        assert self.token._get_url(id_) == 'https://api.culqi.com/v2/tokens/{0}'.format(id_)
 
     def test_token_create(self):
         token = self.token.create(data=self.data)
