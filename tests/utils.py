@@ -22,3 +22,13 @@ class Data:
         "reason": "solicitud_comprador",
         "charge_id": None,
     }
+
+    CUSTOMER = {
+        "address": "Avenida Lima 123213",
+        "address_city": "LIMA",
+        "country_code": "PE",
+        "email": None,
+        "first_name": "Richard",
+        "last_name": "Piedpiper",
+        "phone_number": "+51998989789",
+    }
