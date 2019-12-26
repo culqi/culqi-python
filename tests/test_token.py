@@ -1,5 +1,6 @@
 import os
 import unittest
+from copy import deepcopy
 
 import pytest
 from dotenv import load_dotenv
@@ -8,6 +9,7 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Token
 
+from .utils import Data
 
 class TokenTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
@@ -19,14 +21,7 @@ class TokenTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.token = Token(client=self.client)
 
-        self.data = {
-            "cvv": "123",
-            "card_number": "4111111111111111",
-            "expiration_year": "2020",
-            "expiration_month": "09",
-            "email": "richard@piedpiper.com",
-        }
-
+        self.token_data = deepcopy(Data.TOKEN)
         self.metadata = {
             "order_id":"0001"
         }
@@ -40,12 +35,12 @@ class TokenTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_token_create(self):
-        token = self.token.create(data=self.data)
+        token = self.token.create(data=self.token_data)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
     def test_token_retrieve(self):
-        created_token = self.token.create(data=self.data)
+        created_token = self.token.create(data=self.token_data)
         retrieved_token = self.token.read(created_token["data"]["id"])
         assert created_token["data"]["id"] == retrieved_token["data"]["id"]
 
@@ -59,7 +54,7 @@ class TokenTest(unittest.TestCase):
         metadatada = {
             "metadata": self.metadata
         }
-        created_token = self.token.create(data=self.data)
+        created_token = self.token.create(data=self.token_data)
         updated_token = self.token.update(id_=created_token["data"]["id"], data=metadatada)
 
         assert created_token["data"]["id"] == created_token["data"]["id"]

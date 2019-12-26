@@ -9,6 +9,8 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Token, Charge
 
+from .utils import Data
+
 
 class ChargeTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
@@ -21,30 +23,10 @@ class ChargeTest(unittest.TestCase):
         self.token = Token(client=self.client)
         self.charge = Charge(client=self.client)
 
-        self.data = {
-            "token": {
-                "cvv": "123",
-                "card_number": "4111111111111111",
-                "expiration_year": "2020",
-                "expiration_month": "09",
-                "email": "richard@piedpiper.com",
-            },
-            "charge": {
-                "amount": "1000",
-                "capture": False,
-                "currency_code": "PEN",
-                "description": "Venta de prueba",
-                "email": "richard@piedpiper.com",
-                "installments": 0,
-                "metadata": {
-                    "test": "charge"
-                },
-                "source_id": None
-            }
-        }
-
+        self.token_data = deepcopy(Data.TOKEN)
+        self.charge_data = deepcopy(Data.CHARGE)
         self.metadata = {
-            "order_id": "0001"
+            "order_id":"0001"
         }
 
     def test_url(self):
@@ -57,23 +39,19 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_create(self):
-        token_data = deepcopy(self.data["token"])
-        token = self.token.create(data=token_data)
+        token = self.token.create(data=self.token_data)
 
-        charge_data = deepcopy(self.data["charge"])
-        charge_data["source_id"] = token["data"]["id"]
-        charge = self.charge.create(data=charge_data)
+        self.charge_data["source_id"] = token["data"]["id"]
+        charge = self.charge.create(data=self.charge_data)
 
         assert charge["data"]["object"] == "charge"
 
     @pytest.mark.vcr()
     def test_charge_capture(self):
-        token_data = deepcopy(self.data["token"])
-        token = self.token.create(data=token_data)
+        token = self.token.create(data=self.token_data)
 
-        charge_data = deepcopy(self.data["charge"])
-        charge_data["source_id"] = token["data"]["id"]
-        created_charge = self.charge.create(data=charge_data)
+        self.charge_data["source_id"] = token["data"]["id"]
+        created_charge = self.charge.create(data=self.charge_data)
         captured_charge = self.charge.capture(id_=created_charge['data']['id'])
 
         assert captured_charge["data"]["id"] == created_charge["data"]["id"]
@@ -81,12 +59,10 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_retrieve(self):
-        token_data = deepcopy(self.data["token"])
-        token = self.token.create(data=token_data)
+        token = self.token.create(data=self.token_data)
 
-        charge_data = deepcopy(self.data["charge"])
-        charge_data["source_id"] = token["data"]["id"]
-        created_charge = self.charge.create(data=charge_data)
+        self.charge_data["source_id"] = token["data"]["id"]
+        created_charge = self.charge.create(data=self.charge_data)
         retrieved_charge = self.charge.read(created_charge["data"]["id"])
 
         assert created_charge["data"]["id"] == retrieved_charge["data"]["id"]
@@ -98,20 +74,19 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_update(self):
-        token_data = deepcopy(self.data["token"])
-        token = self.token.create(data=token_data)
+        token = self.token.create(data=self.token_data)
 
-        charge_data = deepcopy(self.data["charge"])
-        charge_data["source_id"] = token["data"]["id"]
-        created_charge = self.charge.create(data=charge_data)
+        self.charge_data["source_id"] = token["data"]["id"]
+        created_charge = self.charge.create(data=self.charge_data)
 
         metadatada = {
             "metadata": self.metadata
         }
         updated_charge = self.charge.update(id_=created_charge["data"]["id"], data=metadatada)
 
-        assert created_charge["data"]["id"] == created_charge["data"]["id"]
-        assert updated_charge["data"]["metadata"]["order_id"] == self.metadata["order_id"]
+        assert updated_charge["data"]["id"] == created_charge["data"]["id"]
+        assert updated_charge["data"]["metadata"] == self.metadata
+
 
 if __name__ == "__main__":
     unittest.main()
