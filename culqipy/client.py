@@ -64,6 +64,8 @@ class Client:
             data["items"] = deepcopy(data["data"])
             del data["data"]
 
+        print(data)
+
         return {
             "status": response.status_code,
             "data": data
