@@ -71,5 +71,6 @@ class CustomerTest(unittest.TestCase):
         assert deleted_customer["data"]["id"] == created_customer["data"]["id"]
         assert deleted_customer["status"] == 200
 
+
 if __name__ == "__main__":
     unittest.main()

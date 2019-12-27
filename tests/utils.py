@@ -8,7 +8,7 @@ class Data:
     }
 
     CHARGE = {
-        "amount": "10000",
+        "amount": 10000,
         "capture": False,
         "currency_code": "PEN",
         "description": "Venta de prueba",
@@ -31,4 +31,14 @@ class Data:
         "first_name": "Richard",
         "last_name": "Piedpiper",
         "phone_number": "+51998989789",
+    }
+
+    PLAN = {
+        "amount": 1000,
+        "currency_code": "PEN",
+        "interval": "dias",
+        "interval_count": 2,
+        "limit": 10,
+        "name": None,
+        "trial_days": 30
     }
