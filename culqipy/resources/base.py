@@ -35,8 +35,9 @@ class Resource:
             "/".join(
                 [
                     URL.VERSION,
-                    self.endpoint,
-                    *[str(arg) for arg in args]
+                    self.endpoint
+                ] + [
+                    str(arg) for arg in args
                 ]
             )
         )
