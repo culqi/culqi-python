@@ -38,7 +38,7 @@ class CardTest(unittest.TestCase):
 
         customer_data = deepcopy(Data.CUSTOMER)
         customer_data["email"] = email
-        customer = self.client.customer.create(data=self.customer_data)
+        customer = self.client.customer.create(data=customer_data)
 
         return {
             "token_id": token["data"]["id"],
