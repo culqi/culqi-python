@@ -1,7 +1,7 @@
 import os
 import unittest
-from uuid import uuid4
 from copy import deepcopy
+from uuid import uuid4
 
 import pytest
 from dotenv import load_dotenv
@@ -23,9 +23,7 @@ class SubscriptionTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.subscription = Subscription(client=self.client)
 
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     @property
     def subscription_data(self):
@@ -61,7 +59,8 @@ class SubscriptionTest(unittest.TestCase):
 
         assert self.subscription._get_url() == "https://api.culqi.com/v2/subscriptions"
         assert self.subscription._get_url(
-            id_) == "https://api.culqi.com/v2/subscriptions/{0}".format(id_)
+            id_
+        ) == "https://api.culqi.com/v2/subscriptions/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_subscription_create(self):
@@ -70,11 +69,13 @@ class SubscriptionTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_subscription_retrieve(self):
-        created_subscription = self.subscription.create(
-            data=self.subscription_data)
+        created_subscription = self.subscription.create(data=self.subscription_data)
         retrieved_subscription = self.subscription.read(
-            created_subscription["data"]["id"])
-        assert created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
+            created_subscription["data"]["id"]
+        )
+        assert (
+            created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
+        )
 
     @pytest.mark.vcr()
     def test_subscription_list(self):
@@ -83,24 +84,22 @@ class SubscriptionTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_subscription_update(self):
-        created_subscription = self.subscription.create(
-            data=self.subscription_data)
+        created_subscription = self.subscription.create(data=self.subscription_data)
 
-        metadatada = {
-            "metadata": self.metadata
-        }
+        metadatada = {"metadata": self.metadata}
         updated_subscription = self.subscription.update(
-            id_=created_subscription["data"]["id"], data=metadatada)
+            id_=created_subscription["data"]["id"], data=metadatada
+        )
 
         assert created_subscription["data"]["id"] == created_subscription["data"]["id"]
         assert updated_subscription["data"]["metadata"] == self.metadata
 
     @pytest.mark.vcr()
     def test_subscription_delete(self):
-        created_subscription = self.subscription.create(
-            data=self.subscription_data)
+        created_subscription = self.subscription.create(data=self.subscription_data)
         deleted_subscription = self.subscription.delete(
-            id_=created_subscription["data"]["id"])
+            id_=created_subscription["data"]["id"]
+        )
 
         assert deleted_subscription["data"]["deleted"]
         assert deleted_subscription["data"]["id"] == created_subscription["data"]["id"]

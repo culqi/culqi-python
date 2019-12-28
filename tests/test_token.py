@@ -23,17 +23,16 @@ class TokenTest(unittest.TestCase):
         self.token = Token(client=self.client)
 
         self.token_data = deepcopy(Data.TOKEN)
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     def test_url(self):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
         assert self.token._get_url() == "https://api.culqi.com/v2/tokens"
-        assert self.token._get_url(
-            id_) == "https://api.culqi.com/v2/tokens/{0}".format(id_)
+        assert self.token._get_url(id_) == "https://api.culqi.com/v2/tokens/{0}".format(
+            id_
+        )
 
     @pytest.mark.vcr()
     def test_token_create(self):
@@ -53,12 +52,11 @@ class TokenTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_token_update(self):
-        metadatada = {
-            "metadata": self.metadata
-        }
+        metadatada = {"metadata": self.metadata}
         created_token = self.token.create(data=self.token_data)
         updated_token = self.token.update(
-            id_=created_token["data"]["id"], data=metadatada)
+            id_=created_token["data"]["id"], data=metadatada
+        )
 
         assert created_token["data"]["id"] == created_token["data"]["id"]
         assert updated_token["data"]["metadata"] == self.metadata

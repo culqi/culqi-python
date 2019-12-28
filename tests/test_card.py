@@ -1,7 +1,7 @@
 import os
 import unittest
-from uuid import uuid4
 from copy import deepcopy
+from uuid import uuid4
 
 import pytest
 from dotenv import load_dotenv
@@ -23,9 +23,7 @@ class CardTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.card = Card(client=self.client)
 
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     @property
     def card_data(self):
@@ -50,8 +48,9 @@ class CardTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.card._get_url() == "https://api.culqi.com/v2/cards"
-        assert self.card._get_url(
-            id_) == "https://api.culqi.com/v2/cards/{0}".format(id_)
+        assert self.card._get_url(id_) == "https://api.culqi.com/v2/cards/{0}".format(
+            id_
+        )
 
     @pytest.mark.vcr()
     def test_card_create(self):
@@ -73,11 +72,8 @@ class CardTest(unittest.TestCase):
     def test_card_update(self):
         created_card = self.card.create(data=self.card_data)
 
-        metadatada = {
-            "metadata": self.metadata
-        }
-        updated_card = self.card.update(
-            id_=created_card["data"]["id"], data=metadatada)
+        metadatada = {"metadata": self.metadata}
+        updated_card = self.card.update(id_=created_card["data"]["id"], data=metadatada)
 
         assert created_card["data"]["id"] == created_card["data"]["id"]
         assert updated_card["data"]["metadata"] == self.metadata

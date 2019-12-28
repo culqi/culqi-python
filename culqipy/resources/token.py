@@ -1,12 +1,8 @@
+from ..utils.errors import ErrorMessage, NotAllowedError
+from ..utils.urls import URL
 from .base import Resource
 
-from ..utils.errors import NotAllowedError, ErrorMessage
-from ..utils.urls import URL
-
-
-__all__ = [
-    "Token"
-]
+__all__ = ["Token"]
 
 
 class Token(Resource):
@@ -14,9 +10,7 @@ class Token(Resource):
 
     def create(self, data, **options):
         url = "https://secure.culqi.com/v2/tokens"
-        headers = {
-            "Authorization": "Bearer {0}".format(self.client.api_key)
-        }
+        headers = {"Authorization": "Bearer {0}".format(self.client.api_key)}
         if "headers" in options:
             options["headers"].update(headers)
         else:

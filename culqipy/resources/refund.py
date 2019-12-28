@@ -1,12 +1,8 @@
+from ..utils.errors import ErrorMessage, NotAllowedError
+from ..utils.urls import URL
 from .base import Resource
 
-from ..utils.errors import NotAllowedError, ErrorMessage
-from ..utils.urls import URL
-
-
-__all__ = [
-    "Refund"
-]
+__all__ = ["Refund"]
 
 
 class Refund(Resource):

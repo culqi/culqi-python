@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 class ErrorCode:
-    """Codigos de Denegación de Bancos
+    """Codigos de Denegación de Bancos.
 
     - EXPIRED_CARD
       Tarjeta vencida. La tarjeta está vencida o la fecha de vencimiento
@@ -60,6 +60,7 @@ class ErrorCode:
       Tarjeta Culqi. Estás utilizando una tarjeta de pruebas de Culqi para
       realizar una compra real.
     """
+
     EXPIRED_CARD = "expired_card"
     STOLEN_CARD = "stolen_card"
     LOST_CARD = "lost_card"
@@ -77,7 +78,7 @@ class ErrorCode:
 
 
 class HTTPErrorCode:
-    """Tipos de Errores
+    """Tipos de Errores.
 
     - INVALID_REQUEST_ERROR:
       HTTP 400 - La petición tiene una sintaxis inválida.
@@ -105,6 +106,7 @@ class HTTPErrorCode:
       temporal con los servidores de Culqi) y debería de ocurrir muy pocas
       veces.
     """
+
     # HTTP 400
     INVALID_REQUEST_ERROR = "invalid_request_error"
     # HTTP 401

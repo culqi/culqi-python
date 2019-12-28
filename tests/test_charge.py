@@ -22,9 +22,7 @@ class ChargeTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.charge = Charge(client=self.client)
 
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     @property
     def charge_data(self):
@@ -43,9 +41,11 @@ class ChargeTest(unittest.TestCase):
 
         assert self.charge._get_url() == "https://api.culqi.com/v2/charges"
         assert self.charge._get_url(
-            id_) == "https://api.culqi.com/v2/charges/{0}".format(id_)
+            id_
+        ) == "https://api.culqi.com/v2/charges/{0}".format(id_)
         assert self.charge._get_url(
-            id_, "capture") == "https://api.culqi.com/v2/charges/{0}/capture".format(id_)
+            id_, "capture"
+        ) == "https://api.culqi.com/v2/charges/{0}/capture".format(id_)
 
     @pytest.mark.vcr()
     def test_charge_create(self):
@@ -56,10 +56,10 @@ class ChargeTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_charge_capture(self):
         created_charge = self.charge.create(data=self.charge_data)
-        captured_charge = self.charge.capture(id_=created_charge['data']['id'])
+        captured_charge = self.charge.capture(id_=created_charge["data"]["id"])
 
         assert captured_charge["data"]["id"] == created_charge["data"]["id"]
-        assert captured_charge['status'] == 201
+        assert captured_charge["status"] == 201
 
     @pytest.mark.vcr()
     def test_charge_retrieve(self):
@@ -77,11 +77,10 @@ class ChargeTest(unittest.TestCase):
     def test_charge_update(self):
         created_charge = self.charge.create(data=self.charge_data)
 
-        metadatada = {
-            "metadata": self.metadata
-        }
+        metadatada = {"metadata": self.metadata}
         updated_charge = self.charge.update(
-            id_=created_charge["data"]["id"], data=metadatada)
+            id_=created_charge["data"]["id"], data=metadatada
+        )
 
         assert updated_charge["data"]["id"] == created_charge["data"]["id"]
         assert updated_charge["data"]["metadata"] == self.metadata

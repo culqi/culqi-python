@@ -1,7 +1,7 @@
 import os
 import unittest
-from uuid import uuid4
 from copy import deepcopy
+from uuid import uuid4
 
 import pytest
 from dotenv import load_dotenv
@@ -23,9 +23,7 @@ class OrderTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.order = Order(client=self.client)
 
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     @property
     def order_data(self):
@@ -39,10 +37,12 @@ class OrderTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.order._get_url() == "https://api.culqi.com/v2/orders"
+        assert self.order._get_url(id_) == "https://api.culqi.com/v2/orders/{0}".format(
+            id_
+        )
         assert self.order._get_url(
-            id_) == "https://api.culqi.com/v2/orders/{0}".format(id_)
-        assert self.order._get_url(
-            id_, "confirm") == "https://api.culqi.com/v2/orders/{0}/confirm".format(id_)
+            id_, "confirm"
+        ) == "https://api.culqi.com/v2/orders/{0}/confirm".format(id_)
 
     @pytest.mark.vcr()
     def test_order_create(self):
@@ -53,10 +53,10 @@ class OrderTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_order_confirm(self):
         created_order = self.order.create(data=self.order_data)
-        confirmed_order = self.order.confirm(id_=created_order['data']['id'])
+        confirmed_order = self.order.confirm(id_=created_order["data"]["id"])
 
         assert confirmed_order["data"]["id"] == created_order["data"]["id"]
-        assert confirmed_order['status'] == 201
+        assert confirmed_order["status"] == 201
 
     @pytest.mark.vcr()
     def test_order_retrieve(self):
@@ -74,11 +74,10 @@ class OrderTest(unittest.TestCase):
     def test_order_update(self):
         created_order = self.order.create(data=self.order_data)
 
-        metadatada = {
-            "metadata": self.metadata
-        }
+        metadatada = {"metadata": self.metadata}
         updated_order = self.order.update(
-            id_=created_order["data"]["id"], data=metadatada)
+            id_=created_order["data"]["id"], data=metadatada
+        )
 
         assert updated_order["data"]["id"] == created_order["data"]["id"]
         assert updated_order["data"]["metadata"] == self.metadata

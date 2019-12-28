@@ -1,11 +1,7 @@
+from ..utils.urls import URL
 from .base import Resource
 
-from ..utils.urls import URL
-
-
-__all__ = [
-    "Plan"
-]
+__all__ = ["Plan"]
 
 
 class Plan(Resource):

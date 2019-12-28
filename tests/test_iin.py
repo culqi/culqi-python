@@ -24,8 +24,7 @@ class IinTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.iin._get_url() == "https://api.culqi.com/v2/iins"
-        assert self.iin._get_url(
-            id_) == "https://api.culqi.com/v2/iins/{0}".format(id_)
+        assert self.iin._get_url(id_) == "https://api.culqi.com/v2/iins/{0}".format(id_)
 
     # @pytest.mark.vcr()
     # def test_iin_retrieve(self):

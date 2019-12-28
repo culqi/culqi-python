@@ -1,11 +1,7 @@
+from ..utils.urls import URL
 from .base import Resource
 
-from ..utils.urls import URL
-
-
-__all__ = [
-    "Card"
-]
+__all__ = ["Card"]
 
 
 class Card(Resource):

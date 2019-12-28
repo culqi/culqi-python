@@ -1,11 +1,7 @@
+from ..utils.urls import URL
 from .base import Resource
 
-from ..utils.urls import URL
-
-
-__all__ = [
-    "Order"
-]
+__all__ = ["Order"]
 
 
 class Order(Resource):

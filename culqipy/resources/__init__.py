@@ -10,7 +10,6 @@ from .subscription import Subscription
 from .token import Token
 from .transfer import Transfer
 
-
 __all__ = [
     "Card",
     "Charge",

@@ -5,7 +5,7 @@ load-plugins=pylint.extensions.docparams, pylint.extensions.docstyle, pylint.ext
 disable=C0103, C0111, C0199, C301, C0303, C0412, C1001, E1004, I0011, R0903, W0232, W0621, W0223, C0301, W0511
 
 [DESIGN]
-max-parents=10
+max-parents=5
 max-complexity=5
 
 [SIMILARITIES]

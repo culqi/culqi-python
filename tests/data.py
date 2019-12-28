@@ -14,7 +14,7 @@ class Data:
         "description": "Venta de prueba",
         "email": "richard@piedpiper.com",
         "installments": 0,
-        "source_id": None
+        "source_id": None,
     }
 
     REFUND = {
@@ -40,7 +40,7 @@ class Data:
         "interval_count": 2,
         "limit": 10,
         "name": None,
-        "trial_days": 30
+        "trial_days": 30,
     }
 
     ORDER = {

@@ -1,7 +1,7 @@
 import os
 import unittest
-from uuid import uuid4
 from copy import deepcopy
+from uuid import uuid4
 
 import pytest
 from dotenv import load_dotenv
@@ -23,9 +23,7 @@ class PlanTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.plan = Plan(client=self.client)
 
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     @property
     def plan_data(self):
@@ -39,8 +37,9 @@ class PlanTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.plan._get_url() == "https://api.culqi.com/v2/plans"
-        assert self.plan._get_url(
-            id_) == "https://api.culqi.com/v2/plans/{0}".format(id_)
+        assert self.plan._get_url(id_) == "https://api.culqi.com/v2/plans/{0}".format(
+            id_
+        )
 
     @pytest.mark.vcr()
     def test_plan_create(self):
@@ -62,11 +61,8 @@ class PlanTest(unittest.TestCase):
     def test_plan_update(self):
         created_plan = self.plan.create(data=self.plan_data)
 
-        metadatada = {
-            "metadata": self.metadata
-        }
-        updated_plan = self.plan.update(
-            id_=created_plan["data"]["id"], data=metadatada)
+        metadatada = {"metadata": self.metadata}
+        updated_plan = self.plan.update(id_=created_plan["data"]["id"], data=metadatada)
 
         assert created_plan["data"]["id"] == created_plan["data"]["id"]
         assert updated_plan["data"]["metadata"] == self.metadata

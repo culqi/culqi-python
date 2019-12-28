@@ -2,10 +2,7 @@ from requests.compat import urljoin
 
 from ..utils.urls import URL
 
-
-__all__ = [
-    "Resource"
-]
+__all__ = ["Resource"]
 
 
 class Resource:
@@ -32,14 +29,7 @@ class Resource:
     def _get_url(self, *args):
         return urljoin(
             URL.BASE,
-            "/".join(
-                [
-                    URL.VERSION,
-                    self.endpoint
-                ] + [
-                    str(arg) for arg in args
-                ]
-            )
+            "/".join([URL.VERSION, self.endpoint] + [str(arg) for arg in args]),
         )
 
     def create(self, data, **options):

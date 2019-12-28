@@ -4,16 +4,19 @@ from types import ModuleType
 
 from requests import session
 
-from .version import VERSION
-from .utils import capitalize_camel_case
 from . import resources
-
+from .utils import capitalize_camel_case
+from .version import VERSION
 
 RESOURCE_CLASSES = {}
 
 for name, module in resources.__dict__.items():
-    if isinstance(module, ModuleType) and capitalize_camel_case(name) in module.__dict__:
-        RESOURCE_CLASSES[name] = module.__dict__[capitalize_camel_case(name)]
+    capitalized_name = capitalize_camel_case(name)
+    is_module = isinstance(module, ModuleType)
+    is_in_module = capitalized_name in module.__dict__
+
+    if is_module and is_in_module:
+        RESOURCE_CLASSES[name] = module.__dict__[capitalized_name]
 
 
 class Client:
@@ -33,29 +36,30 @@ class Client:
 
     @staticmethod
     def _update_request(data, options):
-        """Updates The resource data and header options."""
+        """Update The resource data and header options."""
         data = json.dumps(data)
 
         if "headers" not in options:
             options["headers"] = {}
 
-        options["headers"].update({
-            "Content-type": "application/json",
-            "Accept": "application/json"
-        })
+        options["headers"].update(
+            {"Content-type": "application/json", "Accept": "application/json"}
+        )
 
         return data, options
 
     def _set_client_headers(self):
-        self.session.headers.update({
-            "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
-            "Authorization": "Bearer {0}".format(self.api_secret),
-            "Content-type": "application/json",
-            "Accept": "application/json"
-        })
+        self.session.headers.update(
+            {
+                "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
+                "Authorization": "Bearer {0}".format(self.api_secret),
+                "Content-type": "application/json",
+                "Accept": "application/json",
+            }
+        )
 
     def request(self, method, url, **options):
-        """Dispatches a request to the CULQUI HTTP API."""
+        """Dispatch a request to the CULQUI HTTP API."""
         response = getattr(self.session, method)(url, **options)
 
         data = response.json()
@@ -66,10 +70,7 @@ class Client:
 
         print(data)
 
-        return {
-            "status": response.status_code,
-            "data": data
-        }
+        return {"status": response.status_code, "data": data}
 
     def get(self, url, params, **options):
         return self.request("get", url, params=params, **options)

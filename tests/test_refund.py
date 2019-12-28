@@ -22,9 +22,7 @@ class RefundTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.refund = Refund(client=self.client)
 
-        self.metadata = {
-            "order_id": "0001"
-        }
+        self.metadata = {"order_id": "0001"}
 
     @property
     def refund_data(self):
@@ -46,7 +44,8 @@ class RefundTest(unittest.TestCase):
 
         assert self.refund._get_url() == "https://api.culqi.com/v2/refunds"
         assert self.refund._get_url(
-            id_) == "https://api.culqi.com/v2/refunds/{0}".format(id_)
+            id_
+        ) == "https://api.culqi.com/v2/refunds/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_refund_create(self):
@@ -69,11 +68,10 @@ class RefundTest(unittest.TestCase):
     def test_refund_update(self):
         created_refund = self.refund.create(data=self.refund_data)
 
-        metadatada = {
-            "metadata": self.metadata
-        }
+        metadatada = {"metadata": self.metadata}
         updated_refund = self.refund.update(
-            id_=created_refund["data"]["id"], data=metadatada)
+            id_=created_refund["data"]["id"], data=metadatada
+        )
 
         assert updated_refund["data"]["id"] == created_refund["data"]["id"]
         assert updated_refund["data"]["metadata"] == self.metadata
