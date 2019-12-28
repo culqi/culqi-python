@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 from culqipy import __version__
 from culqipy.client import Client
-from culqipy.resources import Token, Charge, Refund
+from culqipy.resources import Refund
 
 from .utils import Data
 
@@ -20,16 +20,25 @@ class RefundTest(unittest.TestCase):
         self.api_key = os.environ.get("API_KEY", "sample_api_key")
         self.api_secret = os.environ.get("API_SECRET", "sample_api_secret")
         self.client = Client(self.api_key, self.api_secret)
-        self.token = Token(client=self.client)
-        self.charge = Charge(client=self.client)
         self.refund = Refund(client=self.client)
 
-        self.token_data = deepcopy(Data.TOKEN)
-        self.charge_data = deepcopy(Data.CHARGE)
-        self.refund_data = deepcopy(Data.REFUND)
         self.metadata = {
             "order_id":"0001"
         }
+
+    @property
+    def refund_data(self):
+        # pylint: disable=no-member
+        token_data = deepcopy(Data.TOKEN)
+        token = self.client.token.create(data=token_data)
+
+        charge_data = deepcopy(Data.CHARGE)
+        charge_data["source_id"] = token["data"]["id"]
+        charge = self.client.charge.create(data=charge_data)
+
+        refund_data = deepcopy(Data.REFUND)
+        refund_data["charge_id"] = charge["data"]["id"]
+        return refund_data
 
     def test_url(self):
         # pylint: disable=protected-access
@@ -40,23 +49,11 @@ class RefundTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_refund_create(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
-        charge = self.charge.create(data=self.charge_data)
-
-        self.refund_data["charge_id"] = charge["data"]["id"]
         refund = self.refund.create(data=self.refund_data)
         assert refund["data"]["object"] == "refund"
 
     @pytest.mark.vcr()
     def test_refund_retrieve(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
-        charge = self.charge.create(data=self.charge_data)
-
-        self.refund_data["charge_id"] = charge["data"]["id"]
         created_refund = self.refund.create(data=self.refund_data)
         retrieved_refund = self.refund.read(created_refund["data"]["id"])
 
@@ -64,17 +61,11 @@ class RefundTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_refund_list(self):
-        retrieved_refundharge_list = self.charge.list()
-        assert "items" in retrieved_refundharge_list["data"]
+        retrieved_refund_list = self.refund.list()
+        assert "items" in retrieved_refund_list["data"]
 
     @pytest.mark.vcr()
     def test_refund_update(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
-        charge = self.charge.create(data=self.charge_data)
-
-        self.refund_data["charge_id"] = charge["data"]["id"]
         created_refund = self.refund.create(data=self.refund_data)
 
         metadatada = {

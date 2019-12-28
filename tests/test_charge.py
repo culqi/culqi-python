@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 from culqipy import __version__
 from culqipy.client import Client
-from culqipy.resources import Token, Charge
+from culqipy.resources import Charge
 
 from .utils import Data
 
@@ -20,14 +20,22 @@ class ChargeTest(unittest.TestCase):
         self.api_key = os.environ.get("API_KEY", "sample_api_key")
         self.api_secret = os.environ.get("API_SECRET", "sample_api_secret")
         self.client = Client(self.api_key, self.api_secret)
-        self.token = Token(client=self.client)
         self.charge = Charge(client=self.client)
 
-        self.token_data = deepcopy(Data.TOKEN)
-        self.charge_data = deepcopy(Data.CHARGE)
         self.metadata = {
             "order_id":"0001"
         }
+
+    @property
+    def charge_data(self):
+        # pylint: disable=no-member
+        token_data = deepcopy(Data.TOKEN)
+        token = self.client.token.create(data=token_data)
+
+        charge_data = deepcopy(Data.CHARGE)
+        charge_data["source_id"] = token["data"]["id"]
+
+        return charge_data
 
     def test_url(self):
         # pylint: disable=protected-access
@@ -39,18 +47,12 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_create(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
         charge = self.charge.create(data=self.charge_data)
 
         assert charge["data"]["object"] == "charge"
 
     @pytest.mark.vcr()
     def test_charge_capture(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
         created_charge = self.charge.create(data=self.charge_data)
         captured_charge = self.charge.capture(id_=created_charge['data']['id'])
 
@@ -59,9 +61,6 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_retrieve(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
         created_charge = self.charge.create(data=self.charge_data)
         retrieved_charge = self.charge.read(created_charge["data"]["id"])
 
@@ -74,9 +73,6 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_update(self):
-        token = self.token.create(data=self.token_data)
-
-        self.charge_data["source_id"] = token["data"]["id"]
         created_charge = self.charge.create(data=self.charge_data)
 
         metadatada = {

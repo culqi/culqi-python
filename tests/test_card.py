@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 from culqipy import __version__
 from culqipy.client import Client
-from culqipy.resources import Token, Customer, Card
+from culqipy.resources import Card
 
 from .utils import Data
 
@@ -22,15 +22,6 @@ class CardTest(unittest.TestCase):
         self.api_secret = os.environ.get("API_SECRET", "sample_api_secret")
         self.client = Client(self.api_key, self.api_secret)
         self.card = Card(client=self.client)
-        self.token = Token(client=self.client)
-        self.customer = Customer(client=self.client)
-
-        email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
-        self.token_data = deepcopy(Data.TOKEN)
-        self.token_data["email"] = email
-
-        self.customer_data = deepcopy(Data.CUSTOMER)
-        self.customer_data["email"] = email
 
         self.metadata = {
             "order_id":"0001"
@@ -38,8 +29,16 @@ class CardTest(unittest.TestCase):
 
     @property
     def card_data(self):
-        token = self.token.create(data=self.token_data)
-        customer = self.customer.create(data=self.customer_data)
+        # pylint: disable=no-member
+        email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
+
+        token_data = deepcopy(Data.TOKEN)
+        token_data["email"] = email
+        token = self.client.token.create(data=token_data)
+
+        customer_data = deepcopy(Data.CUSTOMER)
+        customer_data["email"] = email
+        customer = self.client.customer.create(data=self.customer_data)
 
         return {
             "token_id": token["data"]["id"],
@@ -71,10 +70,11 @@ class CardTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_card_update(self):
+        created_card = self.card.create(data=self.card_data)
+
         metadatada = {
             "metadata": self.metadata
         }
-        created_card = self.card.create(data=self.card_data)
         updated_card = self.card.update(id_=created_card["data"]["id"], data=metadatada)
 
         assert created_card["data"]["id"] == created_card["data"]["id"]

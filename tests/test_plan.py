@@ -53,10 +53,11 @@ class PlanTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_plan_update(self):
+        created_plan = self.plan.create(data=self.plan_data)
+
         metadatada = {
             "metadata": self.metadata
         }
-        created_plan = self.plan.create(data=self.plan_data)
         updated_plan = self.plan.update(id_=created_plan["data"]["id"], data=metadatada)
 
         assert created_plan["data"]["id"] == created_plan["data"]["id"]
