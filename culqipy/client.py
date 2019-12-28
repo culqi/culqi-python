@@ -13,8 +13,7 @@ RESOURCE_CLASSES = {}
 for name, module in resources.__dict__.items():
     capitalized_name = capitalize_camel_case(name)
     is_module = isinstance(module, ModuleType)
-    is_in_module = capitalized_name in module.__dict__
-
+    is_in_module = capitalized_name in getattr(module, "__dict__", {})
     if is_module and is_in_module:
         RESOURCE_CLASSES[name] = module.__dict__[capitalized_name]
 
