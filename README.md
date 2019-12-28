@@ -23,16 +23,12 @@ pip install culqipy
 
 ## Ejemplo
 
-#### Imports
+#### Inicialización
 
 ```python
 from uuid import uuid4
 import culqipy
-```
 
-#### Inicialización
-
-```python
 api_key = '{LLAVE PUBLICA}'
 api_secret = '{LLAVE SECRETA}'
 
@@ -470,6 +466,8 @@ assert "items" in retrieved_iin_list["data"]
 ```
 
 #### Transferencia
+
+##### Leer
 
 ```python
 retrieved_transfer = client.transfer.read(transfer_id)
