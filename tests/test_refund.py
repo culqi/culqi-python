@@ -9,7 +9,7 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Refund
 
-from .utils import Data
+from .data import Data
 
 
 class RefundTest(unittest.TestCase):
@@ -23,7 +23,7 @@ class RefundTest(unittest.TestCase):
         self.refund = Refund(client=self.client)
 
         self.metadata = {
-            "order_id":"0001"
+            "order_id": "0001"
         }
 
     @property
@@ -45,7 +45,8 @@ class RefundTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.refund._get_url() == "https://api.culqi.com/v2/refunds"
-        assert self.refund._get_url(id_) == "https://api.culqi.com/v2/refunds/{0}".format(id_)
+        assert self.refund._get_url(
+            id_) == "https://api.culqi.com/v2/refunds/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_refund_create(self):
@@ -71,7 +72,8 @@ class RefundTest(unittest.TestCase):
         metadatada = {
             "metadata": self.metadata
         }
-        updated_refund = self.refund.update(id_=created_refund["data"]["id"], data=metadatada)
+        updated_refund = self.refund.update(
+            id_=created_refund["data"]["id"], data=metadatada)
 
         assert updated_refund["data"]["id"] == created_refund["data"]["id"]
         assert updated_refund["data"]["metadata"] == self.metadata

@@ -10,7 +10,8 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Customer
 
-from .utils import Data
+from .data import Data
+
 
 class CustomerTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
@@ -23,9 +24,10 @@ class CustomerTest(unittest.TestCase):
         self.customer = Customer(client=self.client)
 
         self.customer_data = deepcopy(Data.CUSTOMER)
-        self.customer_data["email"] = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
+        self.customer_data["email"] = "richard{0}@piedpiper.com".format(
+            uuid4().hex[:4])
         self.metadata = {
-            "order_id":"0001"
+            "order_id": "0001"
         }
 
     def test_url(self):
@@ -33,7 +35,8 @@ class CustomerTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.customer._get_url() == "https://api.culqi.com/v2/customers"
-        assert self.customer._get_url(id_) == "https://api.culqi.com/v2/customers/{0}".format(id_)
+        assert self.customer._get_url(
+            id_) == "https://api.culqi.com/v2/customers/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_customer_create(self):
@@ -58,7 +61,8 @@ class CustomerTest(unittest.TestCase):
         metadatada = {
             "metadata": self.metadata
         }
-        updated_customer = self.customer.update(id_=created_customer["data"]["id"], data=metadatada)
+        updated_customer = self.customer.update(
+            id_=created_customer["data"]["id"], data=metadatada)
 
         assert created_customer["data"]["id"] == created_customer["data"]["id"]
         assert updated_customer["data"]["metadata"] == self.metadata
@@ -66,7 +70,8 @@ class CustomerTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_customer_delete(self):
         created_customer = self.customer.create(data=self.customer_data)
-        deleted_customer = self.customer.delete(id_=created_customer["data"]["id"])
+        deleted_customer = self.customer.delete(
+            id_=created_customer["data"]["id"])
 
         assert deleted_customer["data"]["deleted"]
         assert deleted_customer["data"]["id"] == created_customer["data"]["id"]

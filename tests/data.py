@@ -42,3 +42,18 @@ class Data:
         "name": None,
         "trial_days": 30
     }
+
+    ORDER = {
+        "amount": 1000,
+        "currency_code": "PEN",
+        "description": "Venta de prueba",
+        "order_number": None,
+        "client_details": {
+            "first_name": "Richard",
+            "last_name": "Piedpiper",
+            "email": "richard@piedpiper.com",
+            "phone_number": "+51998989789",
+        },
+        "expiration_date": 1893474000,
+        "confirm": False,
+    }

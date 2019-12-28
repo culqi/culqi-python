@@ -6,7 +6,7 @@ from .iin import Iin
 from .order import Order
 from .plan import Plan
 from .refund import Refund
-from .suscription import Suscription
+from .subscription import Subscription
 from .token import Token
 from .transfer import Transfer
 
@@ -20,7 +20,7 @@ __all__ = [
     "Order",
     "Plan",
     "Refund",
-    "Suscription",
+    "Subscription",
     "Token",
     "Transfer",
 ]

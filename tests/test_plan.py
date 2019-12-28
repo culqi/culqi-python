@@ -10,7 +10,8 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Plan
 
-from .utils import Data
+from .data import Data
+
 
 class PlanTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
@@ -22,18 +23,24 @@ class PlanTest(unittest.TestCase):
         self.client = Client(self.api_key, self.api_secret)
         self.plan = Plan(client=self.client)
 
-        self.plan_data = deepcopy(Data.PLAN)
-        self.plan_data["name"] = "plan-{0}".format(uuid4().hex[:4])
         self.metadata = {
-            "order_id":"0001"
+            "order_id": "0001"
         }
+
+    @property
+    def plan_data(self):
+        plan_data = deepcopy(Data.PLAN)
+        plan_data["name"] = "plan-{0}".format(uuid4().hex[:4])
+
+        return plan_data
 
     def test_url(self):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
         assert self.plan._get_url() == "https://api.culqi.com/v2/plans"
-        assert self.plan._get_url(id_) == "https://api.culqi.com/v2/plans/{0}".format(id_)
+        assert self.plan._get_url(
+            id_) == "https://api.culqi.com/v2/plans/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_plan_create(self):
@@ -58,7 +65,8 @@ class PlanTest(unittest.TestCase):
         metadatada = {
             "metadata": self.metadata
         }
-        updated_plan = self.plan.update(id_=created_plan["data"]["id"], data=metadatada)
+        updated_plan = self.plan.update(
+            id_=created_plan["data"]["id"], data=metadatada)
 
         assert created_plan["data"]["id"] == created_plan["data"]["id"]
         assert updated_plan["data"]["metadata"] == self.metadata

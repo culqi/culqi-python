@@ -10,7 +10,7 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Card
 
-from .utils import Data
+from .data import Data
 
 
 class CardTest(unittest.TestCase):
@@ -24,7 +24,7 @@ class CardTest(unittest.TestCase):
         self.card = Card(client=self.client)
 
         self.metadata = {
-            "order_id":"0001"
+            "order_id": "0001"
         }
 
     @property
@@ -50,7 +50,8 @@ class CardTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.card._get_url() == "https://api.culqi.com/v2/cards"
-        assert self.card._get_url(id_) == "https://api.culqi.com/v2/cards/{0}".format(id_)
+        assert self.card._get_url(
+            id_) == "https://api.culqi.com/v2/cards/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_card_create(self):
@@ -75,7 +76,8 @@ class CardTest(unittest.TestCase):
         metadatada = {
             "metadata": self.metadata
         }
-        updated_card = self.card.update(id_=created_card["data"]["id"], data=metadatada)
+        updated_card = self.card.update(
+            id_=created_card["data"]["id"], data=metadatada)
 
         assert created_card["data"]["id"] == created_card["data"]["id"]
         assert updated_card["data"]["metadata"] == self.metadata

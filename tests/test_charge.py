@@ -9,7 +9,7 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Charge
 
-from .utils import Data
+from .data import Data
 
 
 class ChargeTest(unittest.TestCase):
@@ -23,7 +23,7 @@ class ChargeTest(unittest.TestCase):
         self.charge = Charge(client=self.client)
 
         self.metadata = {
-            "order_id":"0001"
+            "order_id": "0001"
         }
 
     @property
@@ -42,8 +42,10 @@ class ChargeTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.charge._get_url() == "https://api.culqi.com/v2/charges"
-        assert self.charge._get_url(id_) == "https://api.culqi.com/v2/charges/{0}".format(id_)
-        assert self.charge._get_url(id_, "capture") == "https://api.culqi.com/v2/charges/{0}/capture".format(id_)
+        assert self.charge._get_url(
+            id_) == "https://api.culqi.com/v2/charges/{0}".format(id_)
+        assert self.charge._get_url(
+            id_, "capture") == "https://api.culqi.com/v2/charges/{0}/capture".format(id_)
 
     @pytest.mark.vcr()
     def test_charge_create(self):
@@ -78,7 +80,8 @@ class ChargeTest(unittest.TestCase):
         metadatada = {
             "metadata": self.metadata
         }
-        updated_charge = self.charge.update(id_=created_charge["data"]["id"], data=metadatada)
+        updated_charge = self.charge.update(
+            id_=created_charge["data"]["id"], data=metadatada)
 
         assert updated_charge["data"]["id"] == created_charge["data"]["id"]
         assert updated_charge["data"]["metadata"] == self.metadata

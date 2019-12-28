@@ -12,7 +12,7 @@ from .test_iin import IinTest
 from .test_order import OrderTest
 from .test_plan import PlanTest
 from .test_refund import RefundTest
-from .test_suscription import SuscriptionTest
+from .test_subscription import SubscriptionTest
 from .test_transfer import TransferTest
 
 

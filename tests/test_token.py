@@ -9,7 +9,8 @@ from culqipy import __version__
 from culqipy.client import Client
 from culqipy.resources import Token
 
-from .utils import Data
+from .data import Data
+
 
 class TokenTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
@@ -23,7 +24,7 @@ class TokenTest(unittest.TestCase):
 
         self.token_data = deepcopy(Data.TOKEN)
         self.metadata = {
-            "order_id":"0001"
+            "order_id": "0001"
         }
 
     def test_url(self):
@@ -31,7 +32,8 @@ class TokenTest(unittest.TestCase):
         id_ = "sample_id"
 
         assert self.token._get_url() == "https://api.culqi.com/v2/tokens"
-        assert self.token._get_url(id_) == "https://api.culqi.com/v2/tokens/{0}".format(id_)
+        assert self.token._get_url(
+            id_) == "https://api.culqi.com/v2/tokens/{0}".format(id_)
 
     @pytest.mark.vcr()
     def test_token_create(self):
@@ -55,10 +57,12 @@ class TokenTest(unittest.TestCase):
             "metadata": self.metadata
         }
         created_token = self.token.create(data=self.token_data)
-        updated_token = self.token.update(id_=created_token["data"]["id"], data=metadatada)
+        updated_token = self.token.update(
+            id_=created_token["data"]["id"], data=metadatada)
 
         assert created_token["data"]["id"] == created_token["data"]["id"]
         assert updated_token["data"]["metadata"] == self.metadata
+
 
 if __name__ == "__main__":
     unittest.main()
