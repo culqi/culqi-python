@@ -6,14 +6,14 @@
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
-| Versión actual     | Culqi API                      |
-| ------------------ | ------------------------------ |
-| 0.2.6 (2017-02-27) | [v2](https://culqi.com/api/#/) |
+| Versión actual     | Culqi API                    |
+| ------------------ | ---------------------------- |
+| 0.2.6 (2017-02-27) | [v2](https://culqi.com/api/) |
 
 ## Requisitos
 
 - Python 2.7, 3.5, 3.6, 3.7, 3.8-dev
-- Credenciales de comercio en Culqi (1).
+- Credenciales de comercio en [Culqi](https://culqi.com).
 
 ## Instalación
 
@@ -41,7 +41,7 @@ client = Client(api_key=api_key, api_secret=api_secret)
 
 #### Token
 
-##### Create
+##### Crear
 
 ```python
 token_data = {
@@ -56,14 +56,14 @@ token = client.token.create(data=token_data)
 print(token["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_token = self.token.read(token["data"]["id"])
 print(retrieved_token["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -75,16 +75,16 @@ updated_token = self.token.update(id_=token["data"]["id"], data=metadatada)
 print(updated_token["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_token_list = self.token.list()
 assert "items" in retrieved_token_list["data"]
 ```
 
-#### Charge
+#### Cargo
 
-##### Create
+##### Crear
 
 ```python
 charge_data = {
@@ -101,21 +101,21 @@ charge = client.charge.create(data=charge_data)
 print(charge["data"])
 ```
 
-##### Capture
+##### Capturar
 
 ```python
 captured_charge = self.charge.capture(charge["data"]["id"])
 print(captured_charge["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_charge = self.charge.read(charge["data"]["id"])
 print(retrieved_charge["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -127,16 +127,16 @@ updated_charge = self.charge.update(id_=charge["data"]["id"], data=metadatada)
 print(updated_charge["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_charge_list = self.charge.list()
 assert "items" in retrieved_charge_list["data"]
 ```
 
-#### Refund
+#### Reembolso
 
-##### Create
+##### Crear
 
 ```python
 refund_data = {
@@ -149,14 +149,14 @@ refund = client.refund.create(data=refund_data)
 print(refund["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_refund = self.refund.read(refund["data"]["id"])
 print(retrieved_refund["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -168,16 +168,16 @@ updated_refund = self.refund.update(id_=refund["data"]["id"], data=metadatada)
 print(updated_refund["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_refund_list = self.refund.list()
 assert "items" in retrieved_refund_list["data"]
 ```
 
-#### Customer
+#### Cliente
 
-##### Create
+##### Crear
 
 ```python
 customer_data = {
@@ -194,14 +194,14 @@ customer = client.customer.create(data=customer_data)
 print(customer["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_customer = self.customer.read(customer["data"]["id"])
 print(retrieved_customer["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -213,23 +213,23 @@ updated_customer = self.customer.update(id_=customer["data"]["id"], data=metadat
 print(updated_customer["data"])
 ```
 
-##### Delete
+##### Eliminar
 
 ```python
 deleted_customer = self.customer.delete(id_=customer["data"]["id"])
 print(deleted_customer["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_customer_list = self.customer.list()
 assert "items" in retrieved_customer_list["data"]
 ```
 
-#### Card
+#### Tarjeta
 
-##### Create
+##### Crear
 
 ```python
 card_data = {
@@ -241,14 +241,14 @@ card = client.card.create(data=card_data)
 print(card["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_card = self.card.read(card["data"]["id"])
 print(retrieved_card["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -260,14 +260,14 @@ updated_card = self.card.update(id_=card["data"]["id"], data=metadatada)
 print(updated_card["data"])
 ```
 
-##### Delete
+##### Eliminar
 
 ```python
 deleted_card = self.card.delete(id_=card["data"]["id"])
 print(deleted_card["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_card_list = self.card.list()
@@ -276,7 +276,7 @@ assert "items" in retrieved_card_list["data"]
 
 #### Plan
 
-##### Create
+##### Crear
 
 ```python
 plan_data = {
@@ -293,14 +293,14 @@ plan = client.plan.create(data=plan_data)
 print(plan["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_plan = self.plan.read(plan["data"]["id"])
 print(retrieved_plan["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -312,23 +312,23 @@ updated_plan = self.plan.update(id_=plan["data"]["id"], data=metadatada)
 print(updated_plan["data"])
 ```
 
-##### Delete
+##### Eliminar
 
 ```python
 deleted_plan = self.plan.delete(id_=plan["data"]["id"])
 print(deleted_plan["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_plan_list = self.plan.list()
 assert "items" in retrieved_plan_list["data"]
 ```
 
-#### Subscription
+#### Suscripción
 
-##### Create
+##### Crear
 
 ```python
 subscription_data = {
@@ -340,14 +340,14 @@ subscription = client.subscription.create(data=subscription_data)
 print(subscription["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_subscription = self.subscription.read(subscription["data"]["id"])
 print(retrieved_subscription["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -359,23 +359,23 @@ updated_subscription = self.subscription.update(id_=subscription["data"]["id"], 
 print(updated_subscription["data"])
 ```
 
-##### Delete
+##### Eliminar
 
 ```python
 deleted_subscription = self.subscription.delete(id_=subscription["data"]["id"])
 print(deleted_subscription["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_subscription_list = self.subscription.list()
 assert "items" in retrieved_subscription_list["data"]
 ```
 
-#### Order
+#### Orden
 
-##### Create
+##### Crear
 
 ```python
 order_data = {
@@ -397,21 +397,21 @@ order = client.order.create(data=order_data)
 print(order["data"])
 ```
 
-##### Confirm
+##### Confirmar
 
 ```python
 confirmed_order = self.order.confirm(order["data"]["id"])
 print(confirmed_order["data"])
 ```
 
-##### Read
+##### Leer
 
 ```python
 retrieved_order = self.order.read(order["data"]["id"])
 print(retrieved_order["data"])
 ```
 
-##### Update
+##### Actualizar
 
 ```python
 metadatada = {
@@ -423,30 +423,30 @@ updated_order = self.order.update(id_=order["data"]["id"], data=metadatada)
 print(updated_order["data"])
 ```
 
-##### Delete
+##### Eliminar
 
 ```python
 deleted_order = self.order.delete(order["data"]["id"])
 print(deleted_order["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_order_list = self.order.list()
 assert "items" in retrieved_order_list["data"]
 ```
 
-#### Event
+#### Evento
 
-##### Read
+##### Leer
 
 ```python
 retrieved_event = self.event.read(event_id)
 print(retrieved_event["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_event_list = self.event.list()
@@ -455,28 +455,28 @@ assert "items" in retrieved_event_list["data"]
 
 #### Iin
 
-##### Read
+##### Leer
 
 ```python
 retrieved_iin = self.iin.read(iin_id)
 print(retrieved_iin["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_iin_list = self.iin.list()
 assert "items" in retrieved_iin_list["data"]
 ```
 
-#### Transfer
+#### Transferencia
 
 ```python
 retrieved_transfer = self.transfer.read(transfer_id)
 print(retrieved_transfer["data"])
 ```
 
-##### List
+##### Listar
 
 ```python
 retrieved_transfer_list = self.transfer.list()
@@ -503,7 +503,7 @@ realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
   La documentación completa se encuentra en [https://culqi.com/docs/](https://culqi.com/docs/)
 
-- Quieres saber mas de nuestra API
+- Quieres saber más de nuestra API
 
   Encuentra lo que necesitas en [https://www.culqi.com/api/](https://www.culqi.com/api/)
 
@@ -515,7 +515,8 @@ Todos los cambios en las versiones de esta biblioteca están listados en
 ## Desarrollo
 
 Si estas interesado en contribuir con el desarrollo y mantenimiento de este paquete
-es recomendable que emplees [poetry](https://poetry.eustace.io) para la gestión de dependencias.
+es recomendable que emplees [poetry](https://poetry.eustace.io) para la gestión de
+dependencias.
 
 #### Entorno
 
@@ -549,7 +550,7 @@ Antes de hacer tu primer commit y enviar tu pull request ejecuta
 $ poetry run pre-commit install
 ```
 
-Y relaiza tu commits de forma habitual.
+Luego relaiza tu commits de forma habitual.
 
 ## Autor
 
@@ -559,4 +560,5 @@ Nuestros [Contribuidores](https://github.com/culqi/culqi-python/graphs/contribut
 
 ## Licencia
 
-El código fuente de culqi-python está distribuido bajo MIT License, revisar el archivo [LICENSE](https://github.com/culqi/culqi-python/blob/master/LICENSE.txt).
+El código fuente de `culqi-python` está distribuido bajo MIT License, revisar el archivo
+[LICENSE.txt](LICENSE.txt).
