@@ -14,7 +14,7 @@ from .utils import Data
 
 class CustomerTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(CustomerTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
         self.api_key = os.environ.get("API_KEY", "sample_api_key")
@@ -53,10 +53,11 @@ class CustomerTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_customer_update(self):
+        created_customer = self.customer.create(data=self.customer_data)
+
         metadatada = {
             "metadata": self.metadata
         }
-        created_customer = self.customer.create(data=self.customer_data)
         updated_customer = self.customer.update(id_=created_customer["data"]["id"], data=metadatada)
 
         assert created_customer["data"]["id"] == created_customer["data"]["id"]

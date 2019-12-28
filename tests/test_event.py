@@ -10,7 +10,7 @@ from culqipy.resources import Event
 
 class EventTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(EventTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
 

@@ -9,7 +9,7 @@ from culqipy.client import Client
 
 class ClientTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(ClientTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
         self.api_key = os.environ.get("API_KEY", "sample_api_key")

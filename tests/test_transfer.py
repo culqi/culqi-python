@@ -10,7 +10,7 @@ from culqipy.resources import Transfer
 
 class TransferTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(TransferTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
 

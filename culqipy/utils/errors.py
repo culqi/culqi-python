@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 class ErrorCode:
     """Codigos de Denegación de Bancos
 
