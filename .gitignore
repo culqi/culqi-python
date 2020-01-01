@@ -1,7 +1,10 @@
 .*
+!.coveragerc
 !.gitignore
+!.isort.cfg
+!.pre-commit-config.yaml
 !.pylintrc
-!.travis*
+!.travis.yml
 *.py[cod]
 *.ipynb*
 *.egg*
