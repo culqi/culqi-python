@@ -1,10 +1,9 @@
-import culqipy
+# pylint: disable=import-outside-toplevel
 import json
 import requests
 
 
 class Util:
-
     def __init__(self, url, method, data=None, key=None):
         """
         Init the arguments for a request.
@@ -12,8 +11,9 @@ class Util:
         The key by default is the secret key. It can also be the
         public key in case we want to create a token.
         """
+        from . import API_URL, secret_key
 
-        self.url = culqipy.API_URL + url
+        self.url = API_URL + url
         # Validating the method.
         self.method = method.upper()
         if self.method not in ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']:
@@ -25,7 +25,7 @@ class Util:
         # Setting the secret_key by default.
         self.key = key
         if not key:
-            self.key = culqipy.secret_key
+            self.key = secret_key
 
     def json_result(self):
         """
@@ -80,7 +80,7 @@ class Util:
         """
         try:
             return response.json()  # Returns a dict.
-        except:
+        except:  # pylint: disable = bare-except
             # If response does not have content.
             return response
 
