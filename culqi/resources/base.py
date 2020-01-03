@@ -48,8 +48,6 @@ class Resource:
         return self._get(url, data, **options)
 
     def update(self, id_, data=None, **options):
-        if (hasattr(self, 'schema')):
-            validate(instance=data, schema=self.schema)
         url = self._get_url(id_)
         return self._patch(url, data, **options)
 
