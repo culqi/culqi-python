@@ -65,10 +65,10 @@ class OrderTest(unittest.TestCase):
 
         assert created_order["data"]["id"] == retrieved_order["data"]["id"]
 
-    #@pytest.mark.vcr()
-    #def test_order_list(self):
-    #    retrieved_order_list = self.order.list()
-    #    assert "items" in retrieved_order_list["data"]
+    @pytest.mark.vcr()
+    def test_order_list(self):
+        retrieved_order_list = self.order.list()
+        assert "items" in retrieved_order_list["data"]
 
     @pytest.mark.vcr()
     def test_order_update(self):
