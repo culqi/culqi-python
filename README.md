@@ -5,14 +5,11 @@
 [![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
 ![](https://img.shields.io/pypi/pyversions/Culqi)
 ![](https://img.shields.io/pypi/l/culqi)
+![](https://img.shields.io/pypi/v/culqi)
 
 <br/><br/>
 
-Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
-
-| Versión actual     | Culqi API                    |
-| ------------------ | ---------------------------- |
-| 1.0.2 (2020-01-03) | [v2](https://culqi.com/api/) |
+Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. 
 
 ## Requisitos
 
