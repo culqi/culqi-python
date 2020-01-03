@@ -4,8 +4,8 @@ import unittest
 import pytest
 from dotenv import load_dotenv
 
-from culqi import __version__
-from culqi.client import Culqi
+from culqi import __version__ 
+from culqi.client import Culqi 
 from culqi.resources import Iin
 
 
@@ -17,7 +17,7 @@ class IinTest(unittest.TestCase):
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
         self.culqi = Culqi(self.public_key, self.private_key)
-        self.iin = Iin(client=self.culqi)
+        self.iin = Iin(client=self.culqi) 
 
     def test_url(self):
         # pylint: disable=protected-access

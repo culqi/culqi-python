@@ -1,8 +1,8 @@
 # Culqi Python
 
-![GitHub](https://img.shields.io/github/license/culqi/culqi.svg?style=for-the-badge)
-![PyPI](https://img.shields.io/pypi/v/culqi.svg?style=for-the-badge)
-![Travis (.org) branch](https://img.shields.io/travis/culqi/culqi/master.svg?style=for-the-badge)
+
+[![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
+
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
@@ -26,13 +26,12 @@ pip install culqi
 #### Inicialización
 
 ```python
-from uuid import uuid4
 import culqi
 
 public_key = '{LLAVE PUBLICA}'
 private_key = '{LLAVE SECRETA}'
 
-client = Client(public_key=public_key, private_key=private_key)
+culqi = Culqi(public_key=public_key, private_key=private_key)
 ```
 
 #### Token

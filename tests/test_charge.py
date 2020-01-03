@@ -6,7 +6,7 @@ import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
-from culqi.client import Culqi
+from culqi.client import Culqi 
 from culqi.resources import Charge
 
 from .data import Data
@@ -20,8 +20,7 @@ class ChargeTest(unittest.TestCase):
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
         self.culqi = Culqi(self.public_key, self.private_key)
-        self.charge = Charge(client=self.culqi)
-
+        self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
 
     @property

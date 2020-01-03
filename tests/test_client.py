@@ -3,8 +3,8 @@ import unittest
 
 from dotenv import load_dotenv
 
-from culqi import __version__
-from culqi.client import Culqi
+from culqi import __version__ 
+from culqi.client import Culqi 
 
 
 class ClientTest(unittest.TestCase):
@@ -14,7 +14,7 @@ class ClientTest(unittest.TestCase):
         self.version = __version__
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
-        self.culqi = Culqi(self.public_key, self.private_key)
+        self.culqi = Culqi(self.public_key, self.private_key) 
 
     def test_version(self):
         # pylint: disable=protected-access
@@ -22,7 +22,7 @@ class ClientTest(unittest.TestCase):
 
     def test_keys(self):
         assert self.public_key == self.culqi.public_key
-        assert self.private_key == self.culqi.private_key
+        assert self.private_key == self.culqi.private_key 
 
     def test_session_headers(self):
         session_headers = self.culqi.session.headers
