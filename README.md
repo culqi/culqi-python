@@ -47,14 +47,14 @@ token_data = {
       "email": "richard@piedpiper.com",
 }
 
-response = client.token.create(data=token_data)
+response = culqi.token.create(data=token_data)
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.token.read(token["data"]["id"])
+response = culqi.token.read(token["data"]["id"])
 print(response["data"])
 ```
 
@@ -66,14 +66,14 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.token.update(id_=token["data"]["id"], data=metadatada)
+response = culqi.token.update(id_=token["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.token.list()
+response = culqi.token.list()
 assert "items" in response["data"]
 ```
 
@@ -92,21 +92,21 @@ charge_data = {
       "source_id": token["data"]["id"],
 }
 
-response = client.charge.create(data=charge_data)
+response = culqi.charge.create(data=charge_data)
 print(response["data"])
 ```
 
 ##### Capturar
 
 ```python
-response = client.charge.capture(charge["data"]["id"])
+response = culqi.charge.capture(charge["data"]["id"])
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.charge.read(charge["data"]["id"])
+response = culqi.charge.read(charge["data"]["id"])
 print(response["data"])
 ```
 
@@ -118,14 +118,14 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.charge.update(id_=charge["data"]["id"], data=metadatada)
+response = culqi.charge.update(id_=charge["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.charge.list()
+response = culqi.charge.list()
 assert "items" in response["data"]
 ```
 
@@ -140,14 +140,14 @@ refund_data = {
       "charge_id": charge["data"]["id"],
 }
 
-response = client.refund.create(data=refund_data)
+response = culqi.refund.create(data=refund_data)
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.refund.read(refund["data"]["id"])
+response = culqi.refund.read(refund["data"]["id"])
 print(response["data"])
 ```
 
@@ -159,14 +159,14 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.refund.update(id_=refund["data"]["id"], data=metadatada)
+response = culqi.refund.update(id_=refund["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.refund.list()
+response = culqi.refund.list()
 assert "items" in response["data"]
 ```
 
@@ -185,14 +185,14 @@ customer_data = {
       "phone_number": "+51998989789",
 }
 
-response = client.customer.create(data=customer_data)
+response = culqi.customer.create(data=customer_data)
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.customer.read(customer["data"]["id"])
+response = culqi.customer.read(customer["data"]["id"])
 print(response["data"])
 ```
 
@@ -204,21 +204,21 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.customer.update(id_=customer["data"]["id"], data=metadatada)
+response = culqi.customer.update(id_=customer["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-response = client.customer.delete(id_=customer["data"]["id"])
+response = culqi.customer.delete(id_=customer["data"]["id"])
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.customer.list()
+response = culqi.customer.list()
 assert "items" in response["data"]
 ```
 
@@ -232,14 +232,14 @@ card_data = {
       "customer_id": customer["data"]["id"],
 }
 
-response = client.card.create(data=card_data)
+response = culqi.card.create(data=card_data)
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.card.read(card["data"]["id"])
+response = culqi.card.read(card["data"]["id"])
 print(response["data"])
 ```
 
@@ -251,21 +251,21 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.card.update(id_=card["data"]["id"], data=metadatada)
+response = culqi.card.update(id_=card["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-response = client.card.delete(id_=card["data"]["id"])
+response = culqi.card.delete(id_=card["data"]["id"])
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.card.list()
+response = culqi.card.list()
 assert "items" in response["data"]
 ```
 
@@ -284,14 +284,14 @@ plan_data = {
       "trial_days": 30,
 }
 
-response = client.plan.create(data=plan_data)
+response = culqi.plan.create(data=plan_data)
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.plan.read(plan["data"]["id"])
+response = culqi.plan.read(plan["data"]["id"])
 print(response["data"])
 ```
 
@@ -303,21 +303,21 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.plan.update(id_=plan["data"]["id"], data=metadatada)
+response = culqi.plan.update(id_=plan["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-response = client.plan.delete(id_=plan["data"]["id"])
+response = culqi.plan.delete(id_=plan["data"]["id"])
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.plan.list()
+response = culqi.plan.list()
 assert "items" in response["data"]
 ```
 
@@ -331,14 +331,14 @@ subscription_data = {
       "plan_id": plan["data"]["id"],
 }
 
-response = client.subscription.create(data=subscription_data)
+response = culqi.subscription.create(data=subscription_data)
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.subscription.read(subscription["data"]["id"])
+response = culqi.subscription.read(subscription["data"]["id"])
 print(response["data"])
 ```
 
@@ -350,14 +350,14 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.subscription.update(id_=subscription["data"]["id"], data=metadatada)
+response = culqi.subscription.update(id_=subscription["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-response = client.subscription.delete(id_=subscription["data"]["id"])
+response = culqi.subscription.delete(id_=subscription["data"]["id"])
 print(response["data"])
 ```
 
@@ -388,21 +388,21 @@ order_data = {
       "confirm": False,
 }
 
-response = client.order.create(data=order_data)
+response = culqi.order.create(data=order_data)
 print(response["data"])
 ```
 
 ##### Confirmar
 
 ```python
-response = client.order.confirm(order["data"]["id"])
+response = culqi.order.confirm(order["data"]["id"])
 print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-response = client.order.read(order["data"]["id"])
+response = culqi.order.read(order["data"]["id"])
 print(response["data"])
 ```
 
@@ -414,21 +414,21 @@ metadatada = {
             "order_id": "0001"
       }
 }
-response = client.order.update(id_=order["data"]["id"], data=metadatada)
+response = culqi.order.update(id_=order["data"]["id"], data=metadatada)
 print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-response = client.order.delete(order["data"]["id"])
+response = culqi.order.delete(order["data"]["id"])
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.order.list()
+response = culqi.order.list()
 assert "items" in response["data"]
 ```
 
@@ -437,14 +437,14 @@ assert "items" in response["data"]
 ##### Leer
 
 ```python
-response = client.event.read(event_id)
+response = culqi.event.read(event_id)
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.event.list()
+response = culqi.event.list()
 assert "items" in response["data"]
 ```
 
@@ -453,7 +453,7 @@ assert "items" in response["data"]
 ##### Leer
 
 ```python
-response = client.iin.read(iin_id)
+response = culqi.iin.read(iin_id)
 print(response["data"])
 ```
 
@@ -469,14 +469,14 @@ assert "items" in response["data"]
 ##### Leer
 
 ```python
-response = client.transfer.read(transfer_id)
+response = culqi.transfer.read(transfer_id)
 print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-response = client.transfer.list()
+response = culqi.transfer.list()
 assert "items" in response["data"]
 ```
 
