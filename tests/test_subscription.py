@@ -6,13 +6,8 @@ from uuid import uuid4
 import pytest
 from dotenv import load_dotenv
 
-<<<<<<< HEAD
 from culqi import __version__
 from culqi.client import Culqi
-=======
-from culqi import __version__ 
-from culqi.client import Culqi 
->>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
 from culqi.resources import Subscription
 
 from .data import Data
@@ -24,16 +19,10 @@ class SubscriptionTest(unittest.TestCase):
         load_dotenv()
         self.version = __version__
         self.public_key = os.environ.get("API_PUBLIC_KEY")
-<<<<<<< HEAD
         self.private_key = os.environ.get("API_PRIVATE_KEY")
         self.culqi = Culqi(self.public_key, self.private_key)
         self.subscription = Subscription(client=self.culqi)
 
-=======
-        self.private_key = os.environ.get("API_PRIVATE_KEY") 
-        self.culqi = Culqi(self.public_key, self.private_key)
-        self.subscription = Subscription(client=self.culqi) 
->>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
         self.metadata = {"order_id": "0001"}
 
     @property
