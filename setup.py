@@ -25,7 +25,7 @@ setup(
     description="""Biblioteca de Culqi en Python""",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Willy Aguirre - Culqi Team",
+    author="Willy Aguirre, Joel Ibaceta, Martin Josemaría",
     author_email="willy.aguirre@culqi.com",
     zip_safe=False,
     keywords=["Api Client", "Payment Integration", "Culqi", "Python 3", "Python 2",],
