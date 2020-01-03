@@ -10,5 +10,5 @@ SCHEMA = {
         "limit":            {"type" : "number"},
         "metadata":         {"type" : "object"}
     },
-    "required": ["first_name", "last_name", "email", "address", "address_city", "country_code", "phone_number"]
+    "required": ["name", "amount", "currency_code", "interval", "interval_count"]
 }
