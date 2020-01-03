@@ -54,13 +54,5 @@ Todos los cambios en las versiones de esta biblioteca están listados en
 
 [Revisa nuestra guia de contribución](CONTRIBUTING.md)
 
-## Autor
+## Contribuidores
 
-Willy Aguirre ([@marti1125](https://github.com/marti1125) - Team Culqi)
-
-Nuestros [Contribuidores](https://github.com/culqi/culqi/graphs/contributors)
-
-## Licencia
-
-El código fuente de `culqi` está distribuido bajo MIT License, revisar el archivo
-[LICENSE.txt](LICENSE.txt).
