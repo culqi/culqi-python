@@ -1,6 +1,6 @@
 import unittest
 
-from culqipy import __version__
+from culqi import __version__
 
 
 class VersionTest(unittest.TestCase):
