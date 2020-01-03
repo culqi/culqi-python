@@ -14,7 +14,7 @@ SCHEMA = {
                 "phone_number":     {"type" : "string"},
             }
         },
-        "expiration_date":          {"type" : "string"},
+        "expiration_date":          {"type" : "number"},
         "confirm":                  {"type" : "boolean"},
         "metadata":                 {"type" : "object"},
     },
