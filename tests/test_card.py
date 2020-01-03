@@ -7,7 +7,7 @@ import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
-from culqi.client import Client
+from culqi.client import Culqi 
 from culqi.resources import Card
 
 from .data import Data
@@ -21,9 +21,9 @@ class CardTest(unittest.TestCase):
 
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
-
-        self.client = Client(self.public_key, self.private_key)
-        self.card = Card(client=self.client)
+ 
+        self.culqi = Culqi(self.public_key, self.private_key)
+        self.card = Card(client=self.culqi) 
 
         self.metadata = {"order_id": "0001"}
 
@@ -34,11 +34,11 @@ class CardTest(unittest.TestCase):
 
         token_data = deepcopy(Data.TOKEN)
         token_data["email"] = email
-        token = self.client.token.create(data=token_data)
+        token = self.culqi.token.create(data=token_data)
 
         customer_data = deepcopy(Data.CUSTOMER)
         customer_data["email"] = email
-        customer = self.client.customer.create(data=customer_data)
+        customer = self.culqi.customer.create(data=customer_data)
 
         return {
             "token_id": token["data"]["id"],

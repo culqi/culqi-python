@@ -6,7 +6,7 @@ import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
-from culqi.client import Client
+from culqi.client import Culqi 
 from culqi.resources import Charge
 
 from .data import Data
@@ -19,16 +19,15 @@ class ChargeTest(unittest.TestCase):
         self.version = __version__
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
-        self.client = Client(self.public_key, self.private_key)
-        self.charge = Charge(client=self.client)
-
+        self.culqi = Culqi(self.public_key, self.private_key)
+        self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
 
     @property
     def charge_data(self):
         # pylint: disable=no-member
         token_data = deepcopy(Data.TOKEN)
-        token = self.client.token.create(data=token_data)
+        token = self.culqi.token.create(data=token_data)
 
         charge_data = deepcopy(Data.CHARGE)
         charge_data["source_id"] = token["data"]["id"]

@@ -5,8 +5,8 @@ from copy import deepcopy
 import pytest
 from dotenv import load_dotenv
 
-from culqi import __version__
-from culqi.client import Client
+from culqi import __version__ 
+from culqi.client import Culqi 
 from culqi.resources import Refund
 
 from .data import Data
@@ -18,9 +18,9 @@ class RefundTest(unittest.TestCase):
         load_dotenv()
         self.version = __version__
         self.public_key = os.environ.get("API_PUBLIC_KEY")
-        self.private_key = os.environ.get("API_PRIVATE_KEY")
-        self.client = Client(self.public_key, self.private_key)
-        self.refund = Refund(client=self.client)
+        self.private_key = os.environ.get("API_PRIVATE_KEY") 
+        self.culqi = Culqi(self.public_key, self.private_key)
+        self.refund = Refund(client=self.culqi) 
 
         self.metadata = {"order_id": "0001"}
 
@@ -28,11 +28,11 @@ class RefundTest(unittest.TestCase):
     def refund_data(self):
         # pylint: disable=no-member
         token_data = deepcopy(Data.TOKEN)
-        token = self.client.token.create(data=token_data)
+        token = self.culqi.token.create(data=token_data)
 
         charge_data = deepcopy(Data.CHARGE)
         charge_data["source_id"] = token["data"]["id"]
-        charge = self.client.charge.create(data=charge_data)
+        charge = self.culqi.charge.create(data=charge_data)
 
         refund_data = deepcopy(Data.REFUND)
         refund_data["charge_id"] = charge["data"]["id"]
