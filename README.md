@@ -21,7 +21,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 pip install culqi
 ```
 
-![](/resources/carbon.svg)
+![](/resources/carbon.png)
 
 
 Cada metodo retona un diccionario con la estructura
