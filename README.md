@@ -1,7 +1,8 @@
 # Culqi Python
 
 [![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
-
+![](https://img.shields.io/pypi/pyversions/Culqi)
+![](https://img.shields.io/pypi/l/culqi)
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
