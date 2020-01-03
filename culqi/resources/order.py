@@ -1,10 +1,12 @@
 from ..utils.urls import URL
 from .base import Resource
+from ..schemas import order
 
 __all__ = ["Order"]
 
 
 class Order(Resource):
+    schema = order.SCHEMA
     endpoint = URL.ORDER
 
     def confirm(self, id_, data=None, **options):

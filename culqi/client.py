@@ -5,10 +5,12 @@ from types import ModuleType
 from requests import session
 
 from . import resources
+from . import schemas
 from .utils import capitalize_camel_case
 from .version import VERSION
 
 RESOURCE_CLASSES = {}
+SCHEMAS = {}
 
 for name, module in resources.__dict__.items():
     capitalized_name = capitalize_camel_case(name)
@@ -17,9 +19,7 @@ for name, module in resources.__dict__.items():
     if is_module and is_in_module:
         RESOURCE_CLASSES[name] = module.__dict__[capitalized_name]
 
-
 class Culqi:
-
     def __init__(self, public_key, private_key):
         self.public_key = public_key
         self.private_key = private_key

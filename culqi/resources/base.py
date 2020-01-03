@@ -1,4 +1,5 @@
 from requests.compat import urljoin
+from jsonschema import validate
 
 from ..utils.urls import URL
 
@@ -33,6 +34,8 @@ class Resource:
         )
 
     def create(self, data, **options):
+        if (hasattr(self, 'schema')):
+            validate(instance=data, schema=self.schema)
         url = self._get_url()
         return self._post(url, data, **options)
 
