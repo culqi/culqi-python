@@ -47,15 +47,15 @@ token_data = {
       "email": "richard@piedpiper.com",
 }
 
-token = client.token.create(data=token_data)
-print(token["data"])
+response = client.token.create(data=token_data)
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_token = client.token.read(token["data"]["id"])
-print(retrieved_token["data"])
+response = client.token.read(token["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -66,15 +66,15 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_token = client.token.update(id_=token["data"]["id"], data=metadatada)
-print(updated_token["data"])
+response = client.token.update(id_=token["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_token_list = client.token.list()
-assert "items" in retrieved_token_list["data"]
+response = client.token.list()
+assert "items" in response["data"]
 ```
 
 #### Cargo
@@ -92,22 +92,22 @@ charge_data = {
       "source_id": token["data"]["id"],
 }
 
-charge = client.charge.create(data=charge_data)
-print(charge["data"])
+response = client.charge.create(data=charge_data)
+print(response["data"])
 ```
 
 ##### Capturar
 
 ```python
-captured_charge = client.charge.capture(charge["data"]["id"])
-print(captured_charge["data"])
+response = client.charge.capture(charge["data"]["id"])
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_charge = client.charge.read(charge["data"]["id"])
-print(retrieved_charge["data"])
+response = client.charge.read(charge["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -118,15 +118,15 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_charge = client.charge.update(id_=charge["data"]["id"], data=metadatada)
-print(updated_charge["data"])
+response = client.charge.update(id_=charge["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_charge_list = client.charge.list()
-assert "items" in retrieved_charge_list["data"]
+response = client.charge.list()
+assert "items" in response["data"]
 ```
 
 #### Reembolso
@@ -140,15 +140,15 @@ refund_data = {
       "charge_id": charge["data"]["id"],
 }
 
-refund = client.refund.create(data=refund_data)
-print(refund["data"])
+response = client.refund.create(data=refund_data)
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_refund = client.refund.read(refund["data"]["id"])
-print(retrieved_refund["data"])
+response = client.refund.read(refund["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -159,15 +159,15 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_refund = client.refund.update(id_=refund["data"]["id"], data=metadatada)
-print(updated_refund["data"])
+response = client.refund.update(id_=refund["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_refund_list = client.refund.list()
-assert "items" in retrieved_refund_list["data"]
+response = client.refund.list()
+assert "items" in response["data"]
 ```
 
 #### Cliente
@@ -185,15 +185,15 @@ customer_data = {
       "phone_number": "+51998989789",
 }
 
-customer = client.customer.create(data=customer_data)
-print(customer["data"])
+response = client.customer.create(data=customer_data)
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_customer = client.customer.read(customer["data"]["id"])
-print(retrieved_customer["data"])
+response = client.customer.read(customer["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -204,22 +204,22 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_customer = client.customer.update(id_=customer["data"]["id"], data=metadatada)
-print(updated_customer["data"])
+response = client.customer.update(id_=customer["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-deleted_customer = client.customer.delete(id_=customer["data"]["id"])
-print(deleted_customer["data"])
+response = client.customer.delete(id_=customer["data"]["id"])
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_customer_list = client.customer.list()
-assert "items" in retrieved_customer_list["data"]
+response = client.customer.list()
+assert "items" in response["data"]
 ```
 
 #### Tarjeta
@@ -232,15 +232,15 @@ card_data = {
       "customer_id": customer["data"]["id"],
 }
 
-card = client.card.create(data=card_data)
-print(card["data"])
+response = client.card.create(data=card_data)
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_card = client.card.read(card["data"]["id"])
-print(retrieved_card["data"])
+response = client.card.read(card["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -251,22 +251,22 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_card = client.card.update(id_=card["data"]["id"], data=metadatada)
-print(updated_card["data"])
+response = client.card.update(id_=card["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-deleted_card = client.card.delete(id_=card["data"]["id"])
-print(deleted_card["data"])
+response = client.card.delete(id_=card["data"]["id"])
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_card_list = client.card.list()
-assert "items" in retrieved_card_list["data"]
+response = client.card.list()
+assert "items" in response["data"]
 ```
 
 #### Plan
@@ -284,15 +284,15 @@ plan_data = {
       "trial_days": 30,
 }
 
-plan = client.plan.create(data=plan_data)
-print(plan["data"])
+response = client.plan.create(data=plan_data)
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_plan = client.plan.read(plan["data"]["id"])
-print(retrieved_plan["data"])
+response = client.plan.read(plan["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -303,22 +303,22 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_plan = client.plan.update(id_=plan["data"]["id"], data=metadatada)
-print(updated_plan["data"])
+response = client.plan.update(id_=plan["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-deleted_plan = client.plan.delete(id_=plan["data"]["id"])
-print(deleted_plan["data"])
+response = client.plan.delete(id_=plan["data"]["id"])
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_plan_list = client.plan.list()
-assert "items" in retrieved_plan_list["data"]
+response = client.plan.list()
+assert "items" in response["data"]
 ```
 
 #### Suscripción
@@ -331,15 +331,15 @@ subscription_data = {
       "plan_id": plan["data"]["id"],
 }
 
-subscription = client.subscription.create(data=subscription_data)
-print(subscription["data"])
+response = client.subscription.create(data=subscription_data)
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_subscription = client.subscription.read(subscription["data"]["id"])
-print(retrieved_subscription["data"])
+response = client.subscription.read(subscription["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -350,22 +350,22 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_subscription = client.subscription.update(id_=subscription["data"]["id"], data=metadatada)
-print(updated_subscription["data"])
+response = client.subscription.update(id_=subscription["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-deleted_subscription = client.subscription.delete(id_=subscription["data"]["id"])
-print(deleted_subscription["data"])
+response = client.subscription.delete(id_=subscription["data"]["id"])
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_subscription_list = client.subscription.list()
-assert "items" in retrieved_subscription_list["data"]
+response = client.subscription.list()
+assert "items" in response["data"]
 ```
 
 #### Orden
@@ -388,22 +388,22 @@ order_data = {
       "confirm": False,
 }
 
-order = client.order.create(data=order_data)
-print(order["data"])
+response = client.order.create(data=order_data)
+print(response["data"])
 ```
 
 ##### Confirmar
 
 ```python
-confirmed_order = client.order.confirm(order["data"]["id"])
-print(confirmed_order["data"])
+response = client.order.confirm(order["data"]["id"])
+print(response["data"])
 ```
 
 ##### Leer
 
 ```python
-retrieved_order = client.order.read(order["data"]["id"])
-print(retrieved_order["data"])
+response = client.order.read(order["data"]["id"])
+print(response["data"])
 ```
 
 ##### Actualizar
@@ -414,22 +414,22 @@ metadatada = {
             "order_id": "0001"
       }
 }
-updated_order = client.order.update(id_=order["data"]["id"], data=metadatada)
-print(updated_order["data"])
+response = client.order.update(id_=order["data"]["id"], data=metadatada)
+print(response["data"])
 ```
 
 ##### Eliminar
 
 ```python
-deleted_order = client.order.delete(order["data"]["id"])
-print(deleted_order["data"])
+response = client.order.delete(order["data"]["id"])
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_order_list = client.order.list()
-assert "items" in retrieved_order_list["data"]
+response = client.order.list()
+assert "items" in response["data"]
 ```
 
 #### Evento
@@ -437,15 +437,15 @@ assert "items" in retrieved_order_list["data"]
 ##### Leer
 
 ```python
-retrieved_event = client.event.read(event_id)
-print(retrieved_event["data"])
+response = client.event.read(event_id)
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_event_list = client.event.list()
-assert "items" in retrieved_event_list["data"]
+response = client.event.list()
+assert "items" in response["data"]
 ```
 
 #### Iin
@@ -453,15 +453,15 @@ assert "items" in retrieved_event_list["data"]
 ##### Leer
 
 ```python
-retrieved_iin = client.iin.read(iin_id)
-print(retrieved_iin["data"])
+response = client.iin.read(iin_id)
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_iin_list = client.iin.list()
-assert "items" in retrieved_iin_list["data"]
+response = client.iin.list()
+assert "items" in response["data"]
 ```
 
 #### Transferencia
@@ -469,15 +469,15 @@ assert "items" in retrieved_iin_list["data"]
 ##### Leer
 
 ```python
-retrieved_transfer = client.transfer.read(transfer_id)
-print(retrieved_transfer["data"])
+response = client.transfer.read(transfer_id)
+print(response["data"])
 ```
 
 ##### Listar
 
 ```python
-retrieved_transfer_list = client.transfer.list()
-assert "items" in retrieved_transfer_list["data"]
+response = client.transfer.list()
+assert "items" in response["data"]
 ```
 
 #### Nota
