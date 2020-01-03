@@ -7,7 +7,11 @@ import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
+<<<<<<< HEAD
 from culqi.client import Culqi
+=======
+from culqi.client import Culqi 
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
 from culqi.resources import Card
 
 from .data import Data
@@ -21,9 +25,15 @@ class CardTest(unittest.TestCase):
 
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
+<<<<<<< HEAD
 
         self.culqi = Culqi(self.public_key, self.private_key)
         self.card = Card(client=self.culqi)
+=======
+ 
+        self.culqi = Culqi(self.public_key, self.private_key)
+        self.card = Card(client=self.culqi) 
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
 
         self.metadata = {"order_id": "0001"}
 

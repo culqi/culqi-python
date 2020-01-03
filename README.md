@@ -1,14 +1,20 @@
 # Culqi Python
 
+<<<<<<< HEAD
 ![GitHub](https://img.shields.io/github/license/culqi/culqi.svg?style=for-the-badge)
 ![PyPI](https://img.shields.io/pypi/v/culqi.svg?style=for-the-badge)
 ![Travis (.org) branch](https://img.shields.io/travis/culqi/culqi/master.svg?style=for-the-badge)
+=======
+
+[![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
+
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
 | Versión actual     | Culqi API                    |
 | ------------------ | ---------------------------- |
-| 0.2.6 (2017-02-27) | [v2](https://culqi.com/api/) |
+| 1.0.1 (2020-01-01) | [v2](https://culqi.com/api/) |
 
 ## Requisitos
 
@@ -19,6 +25,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 
 ```bash
 pip install culqi
+<<<<<<< HEAD
 ```
 
 ## Ejemplo
@@ -472,16 +479,12 @@ assert "items" in retrieved_iin_list["data"]
 ```python
 retrieved_transfer = client.transfer.read(transfer_id)
 print(retrieved_transfer["data"])
+=======
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
 ```
 
-##### Listar
+![](/resources/carbon.png)
 
-```python
-retrieved_transfer_list = client.transfer.list()
-assert "items" in retrieved_transfer_list["data"]
-```
-
-#### Nota
 
 Cada metodo retona un diccionario con la estructura
 
@@ -495,15 +498,14 @@ Cada metodo retona un diccionario con la estructura
 El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
 realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
+
 ## Documentación
 
-- ¿Necesitas más información para integrar Culqi?
+- [Referencia de API](https://www.culqi.com/api/)
+- [Ejemplos](https://github.com/culqi/culqi-python/wiki)
+- [Wiki](https://github.com/culqi/culqi-python/wiki)
 
-  La documentación completa se encuentra en [https://culqi.com/docs/](https://culqi.com/docs/)
 
-- Quieres saber más de nuestra API
-
-  Encuentra lo que necesitas en [https://www.culqi.com/api/](https://www.culqi.com/api/)
 
 ## Changelog
 
@@ -512,6 +514,7 @@ Todos los cambios en las versiones de esta biblioteca están listados en
 
 ## Desarrollo
 
+<<<<<<< HEAD
 Si estas interesado en contribuir con el desarrollo y mantenimiento de este paquete
 es recomendable que emplees [poetry](https://poetry.eustace.io) para la gestión de
 dependencias.
@@ -555,8 +558,14 @@ Luego relaiza tu commits de forma habitual.
 Willy Aguirre ([@marti1125](https://github.com/marti1125) - Team Culqi)
 
 Nuestros [Contribuidores](https://github.com/culqi/culqi/graphs/contributors)
+=======
+[Revisa nuestra guia de contribución](CONTRIBUTING.md)
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5
 
-## Licencia
+## Contribuidores
 
+<<<<<<< HEAD
 El código fuente de `culqi` está distribuido bajo MIT License, revisar el archivo
 [LICENSE.txt](LICENSE.txt).
+=======
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5

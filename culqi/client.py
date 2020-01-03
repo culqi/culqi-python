@@ -19,7 +19,13 @@ for name, module in resources.__dict__.items():
     if is_module and is_in_module:
         RESOURCE_CLASSES[name] = module.__dict__[capitalized_name]
 
+<<<<<<< HEAD:culqi/client.py
 class Culqi:
+=======
+
+class Culqi:
+
+>>>>>>> 47d2ef3b617be67c0725ae1808bf9fb7441f19e5:culqipy/client.py
     def __init__(self, public_key, private_key):
         self.public_key = public_key
         self.private_key = private_key
