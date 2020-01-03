@@ -5,4 +5,4 @@ __all__ = ["Subscription"]
 
 
 class Subscription(Resource):
-    endpoint = URL.subscription
+    endpoint = URL.SUBSCRIPTION
