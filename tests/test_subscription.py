@@ -7,7 +7,7 @@ import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
-from culqi.client import Client
+from culqi.client import Culqi
 from culqi.resources import Subscription
 
 from .data import Data
@@ -20,8 +20,8 @@ class SubscriptionTest(unittest.TestCase):
         self.version = __version__
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
-        self.client = Client(self.public_key, self.private_key)
-        self.subscription = Subscription(client=self.client)
+        self.culqi = Culqi(self.public_key, self.private_key)
+        self.subscription = Subscription(client=self.culqi)
 
         self.metadata = {"order_id": "0001"}
 
@@ -32,21 +32,21 @@ class SubscriptionTest(unittest.TestCase):
 
         token_data = deepcopy(Data.TOKEN)
         token_data["email"] = email
-        token = self.client.token.create(data=token_data)
+        token = self.culqi.token.create(data=token_data)
 
         customer_data = deepcopy(Data.CUSTOMER)
         customer_data["email"] = email
-        customer = self.client.customer.create(data=customer_data)
+        customer = self.culqi.customer.create(data=customer_data)
 
         card_data = {
             "token_id": token["data"]["id"],
             "customer_id": customer["data"]["id"],
         }
-        card = self.client.card.create(data=card_data)
+        card = self.culqi.card.create(data=card_data)
 
         plan_data = deepcopy(Data.PLAN)
         plan_data["name"] = "plan-{0}".format(uuid4().hex[:4])
-        plan = self.client.plan.create(data=plan_data)
+        plan = self.culqi.plan.create(data=plan_data)
 
         return {
             "card_id": card["data"]["id"],
