@@ -1,8 +1,8 @@
 # Culqi Python
 
-![GitHub](https://img.shields.io/github/license/culqi/culqi-python.svg?style=for-the-badge)
-![PyPI](https://img.shields.io/pypi/v/culqipy.svg?style=for-the-badge)
-![Travis (.org) branch](https://img.shields.io/travis/culqi/culqi-python/master.svg?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/culqi/culqi.svg?style=for-the-badge)
+![PyPI](https://img.shields.io/pypi/v/culqi.svg?style=for-the-badge)
+![Travis (.org) branch](https://img.shields.io/travis/culqi/culqi/master.svg?style=for-the-badge)
 
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
@@ -18,7 +18,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 ## Instalación
 
 ```bash
-pip install culqipy
+pip install culqi
 ```
 
 ## Ejemplo
@@ -27,12 +27,12 @@ pip install culqipy
 
 ```python
 from uuid import uuid4
-import culqipy
+import culqi
 
-api_key = '{LLAVE PUBLICA}'
-api_secret = '{LLAVE SECRETA}'
+public_key = '{LLAVE PUBLICA}'
+private_key = '{LLAVE SECRETA}'
 
-client = Client(api_key=api_key, api_secret=api_secret)
+client = Client(public_key=public_key, private_key=private_key)
 ```
 
 #### Token
@@ -521,8 +521,8 @@ dependencias.
 Clona el proyecto
 
 ```bash
-$ git clone https://github.com/culqi/culqi-python.git
-$ cd culqi-python
+$ git clone https://github.com/culqi/culqi.git
+$ cd culqi
 ```
 
 Instala las dependencias
@@ -554,9 +554,9 @@ Luego relaiza tu commits de forma habitual.
 
 Willy Aguirre ([@marti1125](https://github.com/marti1125) - Team Culqi)
 
-Nuestros [Contribuidores](https://github.com/culqi/culqi-python/graphs/contributors)
+Nuestros [Contribuidores](https://github.com/culqi/culqi/graphs/contributors)
 
 ## Licencia
 
-El código fuente de `culqi-python` está distribuido bajo MIT License, revisar el archivo
+El código fuente de `culqi` está distribuido bajo MIT License, revisar el archivo
 [LICENSE.txt](LICENSE.txt).

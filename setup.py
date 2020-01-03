@@ -4,9 +4,9 @@ import os
 
 from setuptools import find_packages, setup
 
-package_name = "culqipy"
+package_name = "culqi"
 package_path = os.path.abspath(os.path.dirname(__file__))
-repositorty_url = "https://github.com/culqi/culqi-python"
+repositorty_url = "https://github.com/culqi/culqi"
 long_description_file_path = os.path.join(package_path, "README.md")
 long_description = ""
 
@@ -21,7 +21,7 @@ setup(
     name=package_name,
     packages=find_packages(exclude=[".*", "docs", "scripts", "tests*", "legacy",]),
     include_package_data=True,
-    version=__import__("culqipy").__version__,
+    version=__import__("culqi").__version__,
     description="""Biblioteca de Culqi en Python""",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -45,7 +45,7 @@ setup(
     download_url="%(url)s/-/archive/%(version)s/%(package)s-%(version)s.tar.gz"
     % {
         "url": repositorty_url,
-        "version": __import__("culqipy").__version__,
+        "version": __import__("culqi").__version__,
         "package": package_name,
     },
     requires=["requests",],
