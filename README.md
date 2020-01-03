@@ -1,3 +1,5 @@
+<img src="resources/logo.png" style="float: right;" />
+
 # Culqi Python
 
 [![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
