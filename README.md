@@ -6,6 +6,8 @@
 ![](https://img.shields.io/pypi/pyversions/Culqi)
 ![](https://img.shields.io/pypi/l/culqi)
 
+<br/><br/>
+
 Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Consume el Culqi API.
 
 | Versión actual     | Culqi API                    |
