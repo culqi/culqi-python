@@ -3,8 +3,8 @@ import unittest
 
 from dotenv import load_dotenv
 
-from culqipy import __version__
-from culqipy.client import Client
+from culqi import __version__
+from culqi.client import Client
 
 
 class ClientTest(unittest.TestCase):
@@ -12,23 +12,23 @@ class ClientTest(unittest.TestCase):
         super(ClientTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.api_key = os.environ.get("API_KEY", "sample_api_key")
-        self.api_secret = os.environ.get("API_SECRET", "sample_api_secret")
-        self.client = Client(self.api_key, self.api_secret)
+        self.public_key = os.environ.get("API_PUBLIC_KEY")
+        self.private_key = os.environ.get("API_PRIVATE_KEY")
+        self.client = Client(self.public_key, self.private_key)
 
     def test_version(self):
         # pylint: disable=protected-access
         assert self.client._get_version() == self.version
 
     def test_keys(self):
-        assert self.api_key == self.client.api_key
-        assert self.api_secret == self.client.api_secret
+        assert self.public_key == self.client.public_key
+        assert self.private_key == self.client.private_key
 
     def test_session_headers(self):
         session_headers = self.client.session.headers
         headers = {
             "User-Agent": "Culqi-API-Python/{0}".format(self.version),
-            "Authorization": "Bearer {0}".format(self.api_secret),
+            "Authorization": "Bearer {0}".format(self.private_key),
             "Content-type": "application/json",
             "Accept": "application/json",
         }

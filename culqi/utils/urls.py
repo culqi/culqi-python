@@ -9,7 +9,7 @@ class URL:
     ORDER = "orders"
     PLAN = "plans"
     REFUND = "refunds"
-    subscription = "subscriptions"
+    SUBSCRIPTION = "subscriptions"
     TOKEN = "tokens"
 
     TRANSFER = "transfers"

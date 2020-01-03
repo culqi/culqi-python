@@ -26,4 +26,4 @@ repos:
     rev: 4.0.0
     hooks:
       - id: pydocstyle
-        files: ^culqipy/
+        files: ^culqi/

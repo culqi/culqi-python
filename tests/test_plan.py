@@ -6,9 +6,9 @@ from uuid import uuid4
 import pytest
 from dotenv import load_dotenv
 
-from culqipy import __version__
-from culqipy.client import Client
-from culqipy.resources import Plan
+from culqi import __version__
+from culqi.client import Client
+from culqi.resources import Plan
 
 from .data import Data
 
@@ -18,9 +18,9 @@ class PlanTest(unittest.TestCase):
         super(PlanTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.api_key = os.environ.get("API_KEY", "sample_api_key")
-        self.api_secret = os.environ.get("API_SECRET", "sample_api_secret")
-        self.client = Client(self.api_key, self.api_secret)
+        self.public_key = os.environ.get("API_PUBLIC_KEY")
+        self.private_key = os.environ.get("API_PRIVATE_KEY")
+        self.client = Client(self.public_key, self.private_key)
         self.plan = Plan(client=self.client)
 
         self.metadata = {"order_id": "0001"}

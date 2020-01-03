@@ -19,9 +19,9 @@ for name, module in resources.__dict__.items():
 
 
 class Client:
-    def __init__(self, api_key, api_secret):
-        self.api_key = api_key
-        self.api_secret = api_secret
+    def __init__(self, public_key, private_key):
+        self.public_key = public_key
+        self.private_key = private_key
         self.session = session()
 
         self._set_client_headers()
@@ -51,7 +51,7 @@ class Client:
         self.session.headers.update(
             {
                 "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
-                "Authorization": "Bearer {0}".format(self.api_secret),
+                "Authorization": "Bearer {0}".format(self.private_key),
                 "Content-type": "application/json",
                 "Accept": "application/json",
             }
