@@ -6,3 +6,4 @@ codecov<=2.0
 coverage<=5.0
 python-dotenv<=0.10.3
 pydocstyle<=5.0
+jsonschema

@@ -6,6 +6,7 @@ from uuid import uuid4
 import pytest
 from dotenv import load_dotenv
 
+
 from culqi import __version__ 
 from culqi.client import Culqi 
 from culqi.resources import Customer
@@ -18,10 +19,10 @@ class CustomerTest(unittest.TestCase):
         super(CustomerTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = os.environ.get("API_PUBLIC_KEY")
-        self.private_key = os.environ.get("API_PRIVATE_KEY") 
+        self.public_key = os.environ.get("API_PUBLIC_KEY") 
+        self.private_key = os.environ.get("API_PRIVATE_KEY")
         self.culqi = Culqi(self.public_key, self.private_key)
-        self.customer = Customer(client=self.culqi) 
+        self.customer = Customer(client=self.culqi)
 
         self.customer_data = deepcopy(Data.CUSTOMER)
         self.customer_data["email"] = "richard{0}@piedpiper.com".format(uuid4().hex[:4])

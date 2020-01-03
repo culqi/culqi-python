@@ -21,9 +21,9 @@ class CardTest(unittest.TestCase):
 
         self.public_key = os.environ.get("API_PUBLIC_KEY")
         self.private_key = os.environ.get("API_PRIVATE_KEY")
- 
+
         self.culqi = Culqi(self.public_key, self.private_key)
-        self.card = Card(client=self.culqi) 
+        self.card = Card(client=self.culqi)
 
         self.metadata = {"order_id": "0001"}
 
