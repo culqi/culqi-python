@@ -8,7 +8,7 @@ class Data:
     }
 
     CHARGE = {
-        "amount": 10000,
+        "amount": 1000,
         "capture": False,
         "currency_code": "PEN",
         "description": "Venta de prueba",
