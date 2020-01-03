@@ -7,7 +7,7 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web. Cons
 
 | Versión actual     | Culqi API                    |
 | ------------------ | ---------------------------- |
-| 1.0.1 (2020-01-01) | [v2](https://culqi.com/api/) |
+| 1.0.2 (2020-01-03) | [v2](https://culqi.com/api/) |
 
 ## Requisitos
 
