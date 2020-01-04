@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "culqi"
-version = "1.0.0"
+version = "1.0.3"
 description = 'Biblioteca de Culqi en Python'
 authors = ["zodiacfireworks <martin.vuelta@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
 requests = "^2.22"
+jsonschema = "^3.2.0"
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^1.2"

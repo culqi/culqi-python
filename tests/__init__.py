@@ -1,5 +1,6 @@
 import unittest
 
+from . import conftest
 from .test_card import CardTest
 from .test_charge import ChargeTest
 from .test_client import ClientTest

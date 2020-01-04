@@ -1,7 +1,7 @@
+from ..schemas import charge
 from ..utils.errors import ErrorMessage, NotAllowedError
 from ..utils.urls import URL
 from .base import Resource
-from ..schemas import charge
 
 __all__ = ["Charge"]
 

@@ -1,6 +1,6 @@
+from ..schemas import card
 from ..utils.urls import URL
 from .base import Resource
-from ..schemas import card
 
 __all__ = ["Card"]
 

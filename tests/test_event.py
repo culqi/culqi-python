@@ -5,7 +5,7 @@ import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
-from culqi.client import Culqi 
+from culqi.client import Culqi
 from culqi.resources import Event
 
 

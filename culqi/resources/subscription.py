@@ -1,6 +1,6 @@
+from ..schemas import subscription
 from ..utils.urls import URL
 from .base import Resource
-from ..schemas import subscription
 
 __all__ = ["Subscription"]
 

@@ -22,7 +22,7 @@ class ClientTest(unittest.TestCase):
 
     def test_keys(self):
         assert self.public_key == self.culqi.public_key
-        assert self.private_key == self.culqi.private_key 
+        assert self.private_key == self.culqi.private_key
 
     def test_session_headers(self):
         session_headers = self.culqi.session.headers

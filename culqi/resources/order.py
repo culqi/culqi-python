@@ -1,6 +1,6 @@
+from ..schemas import order
 from ..utils.urls import URL
 from .base import Resource
-from ..schemas import order
 
 __all__ = ["Order"]
 

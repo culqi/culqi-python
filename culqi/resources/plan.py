@@ -1,6 +1,6 @@
+from ..schemas import plan
 from ..utils.urls import URL
 from .base import Resource
-from ..schemas import plan
 
 __all__ = ["Plan"]
 

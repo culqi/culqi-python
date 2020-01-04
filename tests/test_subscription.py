@@ -77,10 +77,10 @@ class SubscriptionTest(unittest.TestCase):
             created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
         )
 
-#     @pytest.mark.vcr()
-#     def test_subscription_list(self):
-#         retrieved_subscription_list = self.subscription.list()
-#         assert "items" in retrieved_subscription_list["data"]
+    #     @pytest.mark.vcr()
+    #     def test_subscription_list(self):
+    #         retrieved_subscription_list = self.subscription.list()
+    #         assert "items" in retrieved_subscription_list["data"]
 
     @pytest.mark.vcr()
     def test_subscription_update(self):

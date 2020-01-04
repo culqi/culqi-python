@@ -1,0 +1,1300 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer culiq_api_key]
+      Connection: [keep-alive]
+      Content-type: [application/json]
+      User-Agent: [Culqi-API-Python/1.0.3]
+    method: GET
+    uri: https://api.culqi.com/v2/charges
+  response:
+    body: {string: "{\"data\":[{\"duplicated\":false,\"object\":\"charge\",\"id\"\
+        :\"chr_test_MUg8Ed8IpJz9TH7r\",\"creation_date\":1578103064000,\"amount\"\
+        :1000,\"amount_refunded\":0,\"current_amount\":1000,\"installments\":1,\"\
+        installments_amount\":1000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\"\
+        ,\"description\":\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\"\
+        :\"tkn_test_SsWgviViEyMa4Aig\",\"type\":\"card\",\"creation_date\":1578103062000,\"\
+        email\":\"richard@piedpiper.com\",\"card_number\":\"411111******1111\",\"\
+        last_four\":\"1111\",\"active\":true,\"iin\":{\"object\":\"iin\",\"bin\":\"\
+        411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"ItIvANGT6i\",\"authorization_code\":\"LfZmfI\",\"metadata\":{},\"total_fee\"\
+        :47,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":40}},\"total_fee_taxes\":7,\"transfer_amount\"\
+        :953,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":null},{\"duplicated\":false,\"object\":\"\
+        charge\",\"id\":\"chr_test_i9th2W2ZNMJamX7s\",\"creation_date\":1578103057000,\"\
+        amount\":1000,\"amount_refunded\":0,\"current_amount\":1000,\"installments\"\
+        :1,\"installments_amount\":1000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\"\
+        ,\"description\":\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\"\
+        :\"tkn_test_rtXiicDZGK3pz71C\",\"type\":\"card\",\"creation_date\":1578103055000,\"\
+        email\":\"richard@piedpiper.com\",\"card_number\":\"411111******1111\",\"\
+        last_four\":\"1111\",\"active\":true,\"iin\":{\"object\":\"iin\",\"bin\":\"\
+        411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":2.0,\"dispute\":false,\"capture\":true,\"reference_code\"\
+        :\"WbmNXI0FtN\",\"authorization_code\":\"XDlkP7\",\"metadata\":{},\"total_fee\"\
+        :47,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":40}},\"total_fee_taxes\":7,\"transfer_amount\"\
+        :953,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":1578103060000},{\"duplicated\":false,\"object\"\
+        :\"charge\",\"id\":\"chr_test_SW4QFKRTGQ9zQDBz\",\"creation_date\":1578103050000,\"\
+        amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"installments\"\
+        :1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"email\":\"richard40f0@piedpiper.com\"\
+        ,\"description\":\"Validacion de tarjeta\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_MEFINweGWzXv5Wlx\",\"type\":\"card\",\"creation_date\"\
+        :1578103048000,\"email\":\"richard40f0@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":true,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\"\
+        ,\"country_code\":null,\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"t2LoF32WAn\"\
+        ,\"authorization_code\":\"eLW7AT\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_PJYglaBZKURFVCfe\",\"creation_date\"\
+        :1578103053000,\"amount\":300,\"operation_id\":745401}],\"capture_date\":1578103050000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_UhsNi63pQHUctb3Y\"\
+        ,\"creation_date\":1578103043000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richardfc89@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_NXzOhjOQy7YLPc6q\"\
+        ,\"type\":\"card\",\"creation_date\":1578103041000,\"email\":\"richardfc89@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"yen1MSfBnD\"\
+        ,\"authorization_code\":\"dAGjig\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_CdvmvFwAmsCS4hDy\",\"creation_date\"\
+        :1578103046000,\"amount\":300,\"operation_id\":745400}],\"capture_date\":1578103043000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_q4JeCMSOqYstwleH\"\
+        ,\"creation_date\":1578103032000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richardc055@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_5b3abaNJxGREC5HL\"\
+        ,\"type\":\"card\",\"creation_date\":1578103029000,\"email\":\"richardc055@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"e6nLWtZBsv\"\
+        ,\"authorization_code\":\"Jwv4mj\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_j9IBW6pwFkNz5NYU\",\"creation_date\"\
+        :1578103034000,\"amount\":300,\"operation_id\":745399}],\"capture_date\":1578103032000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_y0aSbHetOQRADFbw\"\
+        ,\"creation_date\":1578103025000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richardeb54@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_MHlDz54OdrAw6WeT\"\
+        ,\"type\":\"card\",\"creation_date\":1578103018000,\"email\":\"richardeb54@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"48mcEGxwwv\"\
+        ,\"authorization_code\":\"XIjsoa\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_8apG0DgsgC6FNvMS\",\"creation_date\"\
+        :1578103028000,\"amount\":300,\"operation_id\":745398}],\"capture_date\":1578103025000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_kRpGWwQAV9MzFKcz\"\
+        ,\"creation_date\":1578102955000,\"amount\":1000,\"amount_refunded\":0,\"\
+        current_amount\":1000,\"installments\":1,\"installments_amount\":1000,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_V3PidHXNXRoMKJtc\",\"\
+        type\":\"card\",\"creation_date\":1578102953000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":3.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"3VrnLJ7o3m\",\"authorization_code\":\"YGizqb\",\"metadata\":{},\"total_fee\"\
+        :47,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":40}},\"total_fee_taxes\":7,\"transfer_amount\"\
+        :953,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":null},{\"duplicated\":false,\"object\":\"\
+        charge\",\"id\":\"chr_test_XtBsWEqkSUpgBymQ\",\"creation_date\":1578102947000,\"\
+        amount\":1000,\"amount_refunded\":0,\"current_amount\":1000,\"installments\"\
+        :1,\"installments_amount\":1000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\"\
+        ,\"description\":\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\"\
+        :\"tkn_test_SG5ZYUzxOLNFBQmL\",\"type\":\"card\",\"creation_date\":1578102945000,\"\
+        email\":\"richard@piedpiper.com\",\"card_number\":\"411111******1111\",\"\
+        last_four\":\"1111\",\"active\":true,\"iin\":{\"object\":\"iin\",\"bin\":\"\
+        411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"dispute\":false,\"capture\":true,\"reference_code\"\
+        :\"iaPdjzy4Mn\",\"authorization_code\":\"Ov2dBj\",\"metadata\":{},\"total_fee\"\
+        :47,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":40}},\"total_fee_taxes\":7,\"transfer_amount\"\
+        :953,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":1578102951000},{\"duplicated\":false,\"object\"\
+        :\"charge\",\"id\":\"chr_test_zPPWL9kxrXpHfrKM\",\"creation_date\":1578102940000,\"\
+        amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"installments\"\
+        :1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"email\":\"richard5e74@piedpiper.com\"\
+        ,\"description\":\"Validacion de tarjeta\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_ELoDiSUrNQNodjN4\",\"type\":\"card\",\"creation_date\"\
+        :1578102938000,\"email\":\"richard5e74@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":true,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\"\
+        ,\"country_code\":null,\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"3CaZE2rrjC\"\
+        ,\"authorization_code\":\"RwRFkl\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_98B2uQs2kJypwxba\",\"creation_date\"\
+        :1578102943000,\"amount\":300,\"operation_id\":745395}],\"capture_date\":1578102940000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_8N8tvGv6uqcRPq9Q\"\
+        ,\"creation_date\":1578102933000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richardf002@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_2hhWn5uie2jVC0mv\"\
+        ,\"type\":\"card\",\"creation_date\":1578102931000,\"email\":\"richardf002@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"aesikLInT4\"\
+        ,\"authorization_code\":\"R1hDbc\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_fqZzoMHDI3ldotyQ\",\"creation_date\"\
+        :1578102936000,\"amount\":300,\"operation_id\":745394}],\"capture_date\":1578102933000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_sEsDusElLRbkyKTI\"\
+        ,\"creation_date\":1578102922000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard8e42@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_0urvwU1xAb560ELN\"\
+        ,\"type\":\"card\",\"creation_date\":1578102919000,\"email\":\"richard8e42@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"lrXI8zjDNp\"\
+        ,\"authorization_code\":\"qgedPy\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_4FEjMk199rcFrbTf\",\"creation_date\"\
+        :1578102925000,\"amount\":300,\"operation_id\":745393}],\"capture_date\":1578102922000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_HK1N6uCypSF4D5BU\"\
+        ,\"creation_date\":1578102915000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard89e2@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_tizrc6qR7GDeEVZO\"\
+        ,\"type\":\"card\",\"creation_date\":1578102912000,\"email\":\"richard89e2@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"qYIbJeyyPN\"\
+        ,\"authorization_code\":\"rHqx4i\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\"\
+        :0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_T2rHPheTQHbnzHWU\",\"creation_date\"\
+        :1578102918000,\"amount\":300,\"operation_id\":745392}],\"capture_date\":1578102915000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_OzQ2PnvUp97zYT73\"\
+        ,\"creation_date\":1577977913000,\"amount\":14500,\"amount_refunded\":0,\"\
+        current_amount\":14500,\"installments\":1,\"installments_amount\":14500,\"\
+        currency_code\":\"PEN\",\"email\":\"admin@example.com\",\"description\":null,\"\
+        source\":{\"object\":\"token\",\"id\":\"tkn_test_c7M2cvrPaEhXg9MT\",\"type\"\
+        :\"card\",\"creation_date\":1577977912000,\"email\":\"admin@example.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"190.232.74.18\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"jaime\",\"last_name\"\
+        :\"llocclla\",\"address\":\"Avenida la Molina 648\",\"address_city\":\"Lima\"\
+        ,\"country_code\":\"PE\",\"phone\":\"51993294732\",\"object\":\"client\"},\"\
+        dispute\":false,\"capture\":true,\"reference_code\":\"4g26oQFzUP\",\"authorization_code\"\
+        :\"AlDhwK\",\"metadata\":{\"country\":\"PE\",\"city\":\"Lima\",\"ip\":\"190.232.74.18\"\
+        ,\"last_name\":\"llocclla\",\"city_area\":\"Lima\",\"street_address_1\":\"\
+        Avenida la Molina 648\",\"street_address_2\":\"Estacion Agricola de la Molina\"\
+        ,\"country_area\":\"Lima\",\"phone\":\"+51993294732\",\"postal_code\":\"15024\"\
+        ,\"order_id\":\"86\",\"first_name\":\"jaime\",\"email\":\"admin@example.com\"\
+        },\"total_fee\":683,\"fee_details\":{\"fixed_fee\":{\"amount\":1890,\"currency_code\"\
+        :\"USD\",\"exchange_rate\":3,\"exchange_rate_currency_code\":\"PEN\",\"total\"\
+        :6273},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\":0.0399,\"\
+        total\":579}},\"total_fee_taxes\":104,\"transfer_amount\":13817,\"paid\":false,\"\
+        statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\":[],\"\
+        capture_date\":1577977913000},{\"duplicated\":false,\"object\":\"charge\"\
+        ,\"id\":\"chr_test_YxHz2hbP6KfwyduX\",\"creation_date\":1577819907000,\"amount\"\
+        :300,\"amount_refunded\":300,\"current_amount\":0,\"installments\":1,\"installments_amount\"\
+        :300,\"currency_code\":\"PEN\",\"email\":\"richard6f93@piedpiper.com\",\"\
+        description\":\"Validacion de tarjeta\",\"source\":{\"object\":\"token\",\"\
+        id\":\"tkn_test_Q3T0hmDNuUFpSLlh\",\"type\":\"card\",\"creation_date\":1577819904000,\"\
+        email\":\"richard6f93@piedpiper.com\",\"card_number\":\"411111******1111\"\
+        ,\"last_four\":\"1111\",\"active\":false,\"iin\":{\"object\":\"iin\",\"bin\"\
+        :\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"cyq2F2hUhM\"\
+        ,\"authorization_code\":\"9QN0YJ\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_h371hk0gjz0NysEV\",\"creation_date\":1577819910000,\"amount\":300,\"\
+        operation_id\":743027}],\"capture_date\":1577819907000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_0rvFYsSd21wW03sF\",\"creation_date\"\
+        :1577819897000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard27f4@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_ySjhgYyzhfbvHMSt\",\"\
+        type\":\"card\",\"creation_date\":1577819895000,\"email\":\"richard27f4@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"vKgelOFYCV\"\
+        ,\"authorization_code\":\"hWoBnY\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_u0BH1PhPTY3326Q1\",\"creation_date\":1577819900000,\"amount\":300,\"\
+        operation_id\":743026}],\"capture_date\":1577819897000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_qqS71znWB3UzA2eO\",\"creation_date\"\
+        :1577819884000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard0573@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_mxtMB6w2i1diwJIB\",\"\
+        type\":\"card\",\"creation_date\":1577819882000,\"email\":\"richard0573@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"2H3Eja9qIL\"\
+        ,\"authorization_code\":\"hwELT4\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_J4x00nk0HpyTUQ3G\",\"creation_date\":1577819887000,\"amount\":300,\"\
+        operation_id\":743025}],\"capture_date\":1577819884000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_ENrkrLtozL62HEcB\",\"creation_date\"\
+        :1577819876000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard0f9b@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_J1hNBKOQmQnadvIZ\",\"\
+        type\":\"card\",\"creation_date\":1577819874000,\"email\":\"richard0f9b@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"H9ozdvQeZe\"\
+        ,\"authorization_code\":\"6dTaSm\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_Yropvu2enM0GonIS\",\"creation_date\":1577819879000,\"amount\":300,\"\
+        operation_id\":743024}],\"capture_date\":1577819876000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_WtJIhJYKuyDg2eTA\",\"creation_date\"\
+        :1577819869000,\"amount\":10000,\"amount_refunded\":100,\"current_amount\"\
+        :9900,\"installments\":1,\"installments_amount\":10000,\"currency_code\":\"\
+        PEN\",\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_MZ9MkciA0tjcMHUR\",\"\
+        type\":\"card\",\"creation_date\":1577819867000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"IkilbN8iP1\",\"authorization_code\":\"RPS7f2\",\"metadata\":{},\"total_fee\"\
+        :466,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":395}},\"total_fee_taxes\":71,\"transfer_amount\"\
+        :9434,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_m7Y3WbdcfbU2HdgQ\"\
+        ,\"creation_date\":1577819872000,\"amount\":100,\"operation_id\":743023}],\"\
+        capture_date\":null},{\"duplicated\":false,\"object\":\"charge\",\"id\":\"\
+        chr_test_EOAJQsTIDfj54H7N\",\"creation_date\":1577819861000,\"amount\":10000,\"\
+        amount_refunded\":100,\"current_amount\":9900,\"installments\":1,\"installments_amount\"\
+        :10000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\"\
+        :\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_G5OfC9a9Gd2Qmy0F\"\
+        ,\"type\":\"card\",\"creation_date\":1577819860000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"jiFhz4sUwy\",\"authorization_code\":\"tlTSwr\",\"metadata\":{},\"total_fee\"\
+        :466,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":395}},\"total_fee_taxes\":71,\"transfer_amount\"\
+        :9434,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_kLTiFn8RcQJKMvgu\"\
+        ,\"creation_date\":1577819865000,\"amount\":100,\"operation_id\":743022}],\"\
+        capture_date\":null},{\"duplicated\":false,\"object\":\"charge\",\"id\":\"\
+        chr_test_6IFE56JLRearWXST\",\"creation_date\":1577819852000,\"amount\":10000,\"\
+        amount_refunded\":100,\"current_amount\":9900,\"installments\":1,\"installments_amount\"\
+        :10000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\"\
+        :\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_C15LItvf1vYNtc1F\"\
+        ,\"type\":\"card\",\"creation_date\":1577819850000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"n5S4jvhsAN\",\"authorization_code\":\"sGDtj4\",\"metadata\":{},\"total_fee\"\
+        :466,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":395}},\"total_fee_taxes\":71,\"transfer_amount\"\
+        :9434,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_xgroPX0zu6xjb9mL\"\
+        ,\"creation_date\":1577819856000,\"amount\":100,\"operation_id\":743021}],\"\
+        capture_date\":null},{\"duplicated\":false,\"object\":\"charge\",\"id\":\"\
+        chr_test_qsm2L0Y1zh38xJlN\",\"creation_date\":1577819794000,\"amount\":10000,\"\
+        amount_refunded\":0,\"current_amount\":10000,\"installments\":1,\"installments_amount\"\
+        :10000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\"\
+        :\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_dV8JJEPAEOL28l4R\"\
+        ,\"type\":\"card\",\"creation_date\":1577819792000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"YpgYF9yVDN\",\"authorization_code\":\"6bpC3g\",\"metadata\":{\"order_id\"\
+        :\"0001\"},\"total_fee\":471,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":399}},\"total_fee_taxes\"\
+        :72,\"transfer_amount\":9529,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[],\"capture_date\":null},{\"duplicated\"\
+        :false,\"object\":\"charge\",\"id\":\"chr_test_MFadN6I7gZzhAcMH\",\"creation_date\"\
+        :1577819788000,\"amount\":10000,\"amount_refunded\":0,\"current_amount\":10000,\"\
+        installments\":1,\"installments_amount\":10000,\"currency_code\":\"PEN\",\"\
+        email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\",\"source\"\
+        :{\"object\":\"token\",\"id\":\"tkn_test_Pkqo5OVHVXD9LDUm\",\"type\":\"card\"\
+        ,\"creation_date\":1577819785000,\"email\":\"richard@piedpiper.com\",\"card_number\"\
+        :\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"iin\":{\"\
+        object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"nIDV6UGsyo\",\"authorization_code\":\"Cnr165\",\"metadata\":{},\"total_fee\"\
+        :471,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":399}},\"total_fee_taxes\":72,\"transfer_amount\"\
+        :9529,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":null},{\"duplicated\":false,\"object\":\"\
+        charge\",\"id\":\"chr_test_b7TQ2Ve5l1gUtQdX\",\"creation_date\":1577819778000,\"\
+        amount\":10000,\"amount_refunded\":0,\"current_amount\":10000,\"installments\"\
+        :1,\"installments_amount\":10000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\"\
+        ,\"description\":\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\"\
+        :\"tkn_test_6AkJeRK5OWeNE3JH\",\"type\":\"card\",\"creation_date\":1577819776000,\"\
+        email\":\"richard@piedpiper.com\",\"card_number\":\"411111******1111\",\"\
+        last_four\":\"1111\",\"active\":false,\"iin\":{\"object\":\"iin\",\"bin\"\
+        :\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":4.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"3EUOUV2NEb\",\"authorization_code\":\"3X1hGz\",\"metadata\":{},\"total_fee\"\
+        :471,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":399}},\"total_fee_taxes\":72,\"transfer_amount\"\
+        :9529,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":null},{\"duplicated\":false,\"object\":\"\
+        charge\",\"id\":\"chr_test_n9PUZWRepsdPye2u\",\"creation_date\":1577819770000,\"\
+        amount\":10000,\"amount_refunded\":0,\"current_amount\":10000,\"installments\"\
+        :1,\"installments_amount\":10000,\"currency_code\":\"PEN\",\"email\":\"richard@piedpiper.com\"\
+        ,\"description\":\"Venta de prueba\",\"source\":{\"object\":\"token\",\"id\"\
+        :\"tkn_test_VZPY25f5ippRJrab\",\"type\":\"card\",\"creation_date\":1577819768000,\"\
+        email\":\"richard@piedpiper.com\",\"card_number\":\"411111******1111\",\"\
+        last_four\":\"1111\",\"active\":false,\"iin\":{\"object\":\"iin\",\"bin\"\
+        :\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":3.0,\"dispute\":false,\"capture\":true,\"reference_code\"\
+        :\"zm6yGvSna4\",\"authorization_code\":\"5LFXT6\",\"metadata\":{},\"total_fee\"\
+        :471,\"fee_details\":{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"\
+        USD\",\"exchange_rate\":3,\"exchange_rate_currency_code\":\"PEN\",\"total\"\
+        :6273},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\":0.0399,\"\
+        total\":399}},\"total_fee_taxes\":72,\"transfer_amount\":9529,\"paid\":false,\"\
+        statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\":[],\"\
+        capture_date\":1577819773000},{\"duplicated\":false,\"object\":\"charge\"\
+        ,\"id\":\"chr_test_eryIXtcKe2kgXAFL\",\"creation_date\":1577819763000,\"amount\"\
+        :300,\"amount_refunded\":300,\"current_amount\":0,\"installments\":1,\"installments_amount\"\
+        :300,\"currency_code\":\"PEN\",\"email\":\"richard99e1@piedpiper.com\",\"\
+        description\":\"Validacion de tarjeta\",\"source\":{\"object\":\"token\",\"\
+        id\":\"tkn_test_Vgzh2Joc72IfITwM\",\"type\":\"card\",\"creation_date\":1577819761000,\"\
+        email\":\"richard99e1@piedpiper.com\",\"card_number\":\"411111******1111\"\
+        ,\"last_four\":\"1111\",\"active\":false,\"iin\":{\"object\":\"iin\",\"bin\"\
+        :\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"Qu15t6kVhX\"\
+        ,\"authorization_code\":\"UhEPtd\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_VN9NPhFv0ROUl76h\",\"creation_date\":1577819766000,\"amount\":300,\"\
+        operation_id\":743015}],\"capture_date\":1577819763000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_pPMmBNyZaekSdUMJ\",\"creation_date\"\
+        :1577819756000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard55b3@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_cTKHZdmXfuKsR5Ha\",\"\
+        type\":\"card\",\"creation_date\":1577819754000,\"email\":\"richard55b3@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"cetiHbnLJ7\"\
+        ,\"authorization_code\":\"yBocwW\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_DCuHAHUtlI3QaeB8\",\"creation_date\":1577819759000,\"amount\":300,\"\
+        operation_id\":743014}],\"capture_date\":1577819756000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_MhC51RxoUnqLiZl8\",\"creation_date\"\
+        :1577819744000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richarde13e@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_l1j0o6VMOWPFJ8X6\",\"\
+        type\":\"card\",\"creation_date\":1577819742000,\"email\":\"richarde13e@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"KuBSrMVQDR\"\
+        ,\"authorization_code\":\"5ezA6v\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_6p77rmTEQiaWBGrj\",\"creation_date\":1577819747000,\"amount\":300,\"\
+        operation_id\":743013}],\"capture_date\":1577819744000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_CEfdkCR4V5XQtC7b\",\"creation_date\"\
+        :1577819737000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richardd966@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_427ysoXx3HS4nirO\",\"\
+        type\":\"card\",\"creation_date\":1577819735000,\"email\":\"richardd966@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"ZZYbiHzpQw\"\
+        ,\"authorization_code\":\"OTN9vD\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_e3qZgCQdMiGdfCFj\",\"creation_date\":1577819740000,\"amount\":300,\"\
+        operation_id\":743012}],\"capture_date\":1577819737000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_JCaeF5JtGJahBpQq\",\"creation_date\"\
+        :1577819718000,\"amount\":10000,\"amount_refunded\":0,\"current_amount\":10000,\"\
+        installments\":1,\"installments_amount\":10000,\"currency_code\":\"PEN\",\"\
+        email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\",\"source\"\
+        :{\"object\":\"token\",\"id\":\"tkn_test_Jx5mMVSoccqOTJbm\",\"type\":\"card\"\
+        ,\"creation_date\":1577819717000,\"email\":\"richard@piedpiper.com\",\"card_number\"\
+        :\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"iin\":{\"\
+        object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"VB2lSg327b\",\"authorization_code\":\"eApROK\",\"metadata\":{},\"total_fee\"\
+        :471,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\"\
+        :\"PEN\",\"commision\":0.0399,\"total\":399}},\"total_fee_taxes\":72,\"transfer_amount\"\
+        :9529,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[],\"capture_date\":null},{\"duplicated\":false,\"object\":\"\
+        charge\",\"id\":\"chr_test_8sxYSNjrqfjJIlWx\",\"creation_date\":1577819712000,\"\
+        amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"installments\"\
+        :1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"email\":\"richardce31@piedpiper.com\"\
+        ,\"description\":\"Validacion de tarjeta\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_BwO4ttoxk0uxyh1H\",\"type\":\"card\",\"creation_date\"\
+        :1577819710000,\"email\":\"richardce31@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":false,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\"\
+        ,\"country_code\":null,\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"YMdEYtmtLE\"\
+        ,\"authorization_code\":\"0YVJF3\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_asMGsdnCOqY8IIhJ\",\"creation_date\":1577819715000,\"amount\":300,\"\
+        operation_id\":743009}],\"capture_date\":1577819712000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_lvveLNl6KIJThUWl\",\"creation_date\"\
+        :1577819705000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard8f69@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_GvjmjFA57DioqZiw\",\"\
+        type\":\"card\",\"creation_date\":1577819703000,\"email\":\"richard8f69@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"Yvyuv23RW7\"\
+        ,\"authorization_code\":\"4edvTh\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_EHMYBpsJZh5NIBTt\",\"creation_date\":1577819708000,\"amount\":300,\"\
+        operation_id\":743008}],\"capture_date\":1577819705000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_cGrDylhwlz4Uas5f\",\"creation_date\"\
+        :1577819693000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard1e85@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_mqB6bPQdNyViN3wR\",\"\
+        type\":\"card\",\"creation_date\":1577819690000,\"email\":\"richard1e85@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\"\
+        ,\"ip_country\":null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\"\
+        :null,\"device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"nRudQCeWmX\"\
+        ,\"authorization_code\":\"Xbklsp\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_amKIFnxAkzwCwlSd\",\"creation_date\":1577819696000,\"amount\":300,\"\
+        operation_id\":743006}],\"capture_date\":1577819693000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_oXs2dlfKPpgOSDqK\",\"creation_date\"\
+        :1577730249000,\"amount\":15190,\"amount_refunded\":0,\"current_amount\":15190,\"\
+        installments\":1,\"installments_amount\":15190,\"currency_code\":\"PEN\",\"\
+        email\":\"admin@example.com\",\"description\":null,\"source\":{\"object\"\
+        :\"token\",\"id\":\"tkn_test_p18EAHAacEZQlIA3\",\"type\":\"card\",\"creation_date\"\
+        :1577730247000,\"email\":\"admin@example.com\",\"card_number\":\"411111******1111\"\
+        ,\"last_four\":\"1111\",\"active\":false,\"iin\":{\"object\":\"iin\",\"bin\"\
+        :\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"190.237.93.69\",\"ip_country\":null,\"ip_country_code\"\
+        :\"PE\",\"browser\":null,\"device_fingerprint\":null,\"device_type\":null},\"\
+        metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\",\"code\":\"AUT0000\"\
+        ,\"merchant_message\":\"La operaci\xF3n de venta ha sido autorizada exitosamente\"\
+        ,\"user_message\":\"Su compra ha sido exitosa.\"},\"fraud_score\":1.0,\"antifraud_details\"\
+        :{\"first_name\":\"jaime\",\"last_name\":\"llocclla\",\"address\":\"Avenida\
+        \ la Molina 648\",\"address_city\":\"Lima\",\"country_code\":\"PE\",\"phone\"\
+        :\"51993294732\",\"object\":\"client\"},\"dispute\":false,\"capture\":true,\"\
+        reference_code\":\"AfExFMutNQ\",\"authorization_code\":\"oljqaP\",\"metadata\"\
+        :{\"country\":\"PE\",\"city\":\"Lima\",\"ip\":\"190.237.93.69\",\"last_name\"\
+        :\"llocclla\",\"city_area\":\"Lima\",\"street_address_1\":\"Avenida la Molina\
+        \ 648\",\"street_address_2\":\"Estacion Agricola de la Molina\",\"country_area\"\
+        :\"Lima\",\"phone\":\"+51993294732\",\"postal_code\":\"15024\",\"order_id\"\
+        :\"85\",\"first_name\":\"jaime\",\"email\":\"admin@example.com\"},\"total_fee\"\
+        :715,\"fee_details\":{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"\
+        USD\",\"exchange_rate\":3,\"exchange_rate_currency_code\":\"PEN\",\"total\"\
+        :6273},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\":0.0399,\"\
+        total\":606}},\"total_fee_taxes\":109,\"transfer_amount\":14475,\"paid\":false,\"\
+        statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\":[],\"\
+        capture_date\":1577730249000},{\"duplicated\":false,\"object\":\"charge\"\
+        ,\"id\":\"chr_test_WLDkQo7DiOd6nEYu\",\"creation_date\":1577729146000,\"amount\"\
+        :31090,\"amount_refunded\":0,\"current_amount\":31090,\"installments\":1,\"\
+        installments_amount\":31089,\"currency_code\":\"PEN\",\"email\":\"sheyla.brena@softbutterfly.io\"\
+        ,\"description\":null,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_rzfOCS39ZX4HRpN1\"\
+        ,\"type\":\"card\",\"creation_date\":1577729144000,\"email\":\"sheyla.brena@softbutterfly.io\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"190.237.93.69\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Sheyla\",\"\
+        last_name\":\"Brena\",\"address\":\"Samoa 377\",\"address_city\":\"Lima\"\
+        ,\"country_code\":\"PE\",\"phone\":\"51982042088\",\"object\":\"client\"},\"\
+        dispute\":false,\"capture\":true,\"reference_code\":\"48F6pvJFMr\",\"authorization_code\"\
+        :\"1TuusP\",\"metadata\":{\"country\":\"PE\",\"city\":\"Lima\",\"ip\":\"190.237.93.69\"\
+        ,\"last_name\":\"Brena\",\"city_area\":\"La Molina\",\"street_address_1\"\
+        :\"Samoa 377\",\"street_address_2\":\"Sol de la Molina Tercera Etapa\",\"\
+        country_area\":\"Lima\",\"phone\":\"+51982042088\",\"postal_code\":\"15026\"\
+        ,\"order_id\":\"84\",\"first_name\":\"Sheyla\",\"email\":\"sheyla.brena@softbutterfly.io\"\
+        },\"total_fee\":1463,\"fee_details\":{\"fixed_fee\":{\"amount\":1890,\"currency_code\"\
+        :\"USD\",\"exchange_rate\":3,\"exchange_rate_currency_code\":\"PEN\",\"total\"\
+        :6273},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\":0.0399,\"\
+        total\":1240}},\"total_fee_taxes\":223,\"transfer_amount\":29627,\"paid\"\
+        :false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\"\
+        :[],\"capture_date\":1577729146000},{\"duplicated\":false,\"object\":\"charge\"\
+        ,\"id\":\"chr_test_fwBO0gfAKiHwkP4j\",\"creation_date\":1577571971000,\"amount\"\
+        :300,\"amount_refunded\":300,\"current_amount\":0,\"installments\":1,\"installments_amount\"\
+        :300,\"currency_code\":\"PEN\",\"email\":\"richard3588@piedpiper.com\",\"\
+        description\":\"Validacion de tarjeta\",\"source\":{\"object\":\"token\",\"\
+        id\":\"tkn_test_6poZD6Q8Q2qOSZkc\",\"type\":\"card\",\"creation_date\":1577571969000,\"\
+        email\":\"richard3588@piedpiper.com\",\"card_number\":\"411111******1111\"\
+        ,\"last_four\":\"1111\",\"active\":false,\"iin\":{\"object\":\"iin\",\"bin\"\
+        :\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\"\
+        :null,\"website\":null,\"phone_number\":null},\"installments_allowed\":null},\"\
+        client\":{\"ip\":\"35.196.72.151\",\"ip_country\":null,\"ip_country_code\"\
+        :\"PE\",\"browser\":null,\"device_fingerprint\":null,\"device_type\":null},\"\
+        metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\",\"code\":\"AUT0000\"\
+        ,\"merchant_message\":\"La operaci\xF3n de venta ha sido autorizada exitosamente\"\
+        ,\"user_message\":\"Su compra ha sido exitosa.\"},\"fraud_score\":1.0,\"antifraud_details\"\
+        :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
+        \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
+        :\"51998989789\",\"object\":\"client\"},\"dispute\":false,\"capture\":true,\"\
+        reference_code\":\"1VbhIeLqxf\",\"authorization_code\":\"olC4X5\",\"metadata\"\
+        :{},\"total_fee\":0,\"fee_details\":{\"fixed_fee\":{\"amount\":1890,\"currency_code\"\
+        :\"USD\",\"exchange_rate\":3,\"exchange_rate_currency_code\":\"PEN\",\"total\"\
+        :6273},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\":0.0399,\"\
+        total\":0}},\"total_fee_taxes\":0,\"transfer_amount\":0,\"paid\":false,\"\
+        statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"operations\":[{\"\
+        type\":\"devoluci\xF3n\",\"id\":\"ref_test_hRxT9c2LgodxpV2U\",\"creation_date\"\
+        :1577571974000,\"amount\":300,\"operation_id\":741976}],\"capture_date\":1577571971000},{\"\
+        duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_A1yyfdamIOkT4Qc8\"\
+        ,\"creation_date\":1577571966000,\"amount\":300,\"amount_refunded\":300,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":300,\"currency_code\"\
+        :\"PEN\",\"email\":\"richarda2f2@piedpiper.com\",\"description\":\"Validacion\
+        \ de tarjeta\",\"source\":{\"object\":\"token\",\"id\":\"tkn_test_vebeDzLexbiyr1V8\"\
+        ,\"type\":\"card\",\"creation_date\":1577571964000,\"email\":\"richarda2f2@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"35.192.10.37\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"0tfCEaYVpe\"\
+        ,\"authorization_code\":\"6DxDWy\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_DckRBD6mHW6LSN7i\",\"creation_date\":1577571969000,\"amount\":300,\"\
+        operation_id\":741974}],\"capture_date\":1577571966000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_AWYAyjQsnkXCQtUB\",\"creation_date\"\
+        :1577571966000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richardef85@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_dcvI4FKEOKbe2WN7\",\"\
+        type\":\"card\",\"creation_date\":1577571964000,\"email\":\"richardef85@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"34.66.200.49\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"dwFnNOcaBI\"\
+        ,\"authorization_code\":\"k3zhAF\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_bOSY5xlmzAdbCPD9\",\"creation_date\":1577571969000,\"amount\":300,\"\
+        operation_id\":741975}],\"capture_date\":1577571966000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_hfLNdKjyNeDKulkT\",\"creation_date\"\
+        :1577571964000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard08ec@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_wN8eD6DVpfcHqbse\",\"\
+        type\":\"card\",\"creation_date\":1577571962000,\"email\":\"richard08ec@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"104.196.57.92\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"3IK8iXn0kE\"\
+        ,\"authorization_code\":\"joOtQO\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_zIBqLLOzlakbwLZE\",\"creation_date\":1577571967000,\"amount\":300,\"\
+        operation_id\":741973}],\"capture_date\":1577571964000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_jNZEKnawCsFHXhUV\",\"creation_date\"\
+        :1577571958000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard3934@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_q5cyjtqT9w0QrcxJ\",\"\
+        type\":\"card\",\"creation_date\":1577571956000,\"email\":\"richard3934@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"35.192.91.101\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"30buoYJMCe\"\
+        ,\"authorization_code\":\"n59fkj\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_fJoIaZ9ds9ZRqLwH\",\"creation_date\":1577571961000,\"amount\":300,\"\
+        operation_id\":741971}],\"capture_date\":1577571958000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_4W4YZ8bUMooOgrlq\",\"creation_date\"\
+        :1577571958000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richarddf9b@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_dp5cKpyUCQmiIjzt\",\"\
+        type\":\"card\",\"creation_date\":1577571957000,\"email\":\"richarddf9b@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"34.66.50.208\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"ePYI3UejOI\"\
+        ,\"authorization_code\":\"WJqf4E\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_oJJoa67Y3QOOGPWt\",\"creation_date\":1577571961000,\"amount\":300,\"\
+        operation_id\":741972}],\"capture_date\":1577571958000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_F7S5xYZqvMEkNRYT\",\"creation_date\"\
+        :1577571953000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard7890@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_EroRO6b2smZ38LlR\",\"\
+        type\":\"card\",\"creation_date\":1577571951000,\"email\":\"richard7890@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"35.237.56.208\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"2GJqDw9UQs\"\
+        ,\"authorization_code\":\"W2zq04\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_cI9H4S59cLUIz0Ej\",\"creation_date\":1577571956000,\"amount\":300,\"\
+        operation_id\":741970}],\"capture_date\":1577571953000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_E67nYG9G8nvugmM0\",\"creation_date\"\
+        :1577571948000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard0d1b@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_puyMUTJGqdlqFXWP\",\"\
+        type\":\"card\",\"creation_date\":1577571946000,\"email\":\"richard0d1b@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"104.197.122.201\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"qnxAnMnz4t\"\
+        ,\"authorization_code\":\"web2mf\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_U5BIUKUsqyHNLUdz\",\"creation_date\":1577571950000,\"amount\":300,\"\
+        operation_id\":741969}],\"capture_date\":1577571948000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_XFyVpKwLZ8XeIsxp\",\"creation_date\"\
+        :1577571947000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard05e8@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_cWwK2ZQhudF6ZcCS\",\"\
+        type\":\"card\",\"creation_date\":1577571945000,\"email\":\"richard05e8@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"34.66.50.208\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"3VxSz1Kgeb\"\
+        ,\"authorization_code\":\"E8vPGf\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_jqsfAisbMs9ZGKFV\",\"creation_date\":1577571950000,\"amount\":300,\"\
+        operation_id\":741968}],\"capture_date\":1577571947000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_uU42D6cqTfEmNcZc\",\"creation_date\"\
+        :1577571946000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard7be9@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_8H5AOwztSV6ai0cf\",\"\
+        type\":\"card\",\"creation_date\":1577571944000,\"email\":\"richard7be9@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"104.196.57.92\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"yupUBBHV8T\"\
+        ,\"authorization_code\":\"0I8ywr\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_1UBuKC0WZWh3IalQ\",\"creation_date\":1577571949000,\"amount\":300,\"\
+        operation_id\":741967}],\"capture_date\":1577571946000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_Md2T3D282kwiJYrm\",\"creation_date\"\
+        :1577571940000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richard6c97@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_bwV9arOqR9EXc6Mj\",\"\
+        type\":\"card\",\"creation_date\":1577571938000,\"email\":\"richard6c97@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"34.66.50.208\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"bgR7eBquYY\"\
+        ,\"authorization_code\":\"CWylwA\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_JZHgM2Obry8a2Yyn\",\"creation_date\":1577571943000,\"amount\":300,\"\
+        operation_id\":741965}],\"capture_date\":1577571940000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_mzkfSYtk0hNWLV8B\",\"creation_date\"\
+        :1577571940000,\"amount\":300,\"amount_refunded\":300,\"current_amount\":0,\"\
+        installments\":1,\"installments_amount\":300,\"currency_code\":\"PEN\",\"\
+        email\":\"richardda4d@piedpiper.com\",\"description\":\"Validacion de tarjeta\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_COyoGChOZawK3I1D\",\"\
+        type\":\"card\",\"creation_date\":1577571938000,\"email\":\"richardda4d@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"34.66.50.208\",\"ip_country\"\
+        :null,\"ip_country_code\":\"PE\",\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":1.0,\"antifraud_details\":{\"first_name\":\"Richard\",\"\
+        last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"51998989789\",\"object\":\"\
+        client\"},\"dispute\":false,\"capture\":true,\"reference_code\":\"g16X90H3ct\"\
+        ,\"authorization_code\":\"TCYo2R\",\"metadata\":{},\"total_fee\":0,\"fee_details\"\
+        :{\"fixed_fee\":{\"amount\":1890,\"currency_code\":\"USD\",\"exchange_rate\"\
+        :3,\"exchange_rate_currency_code\":\"PEN\",\"total\":6273},\"variable_fee\"\
+        :{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\"\
+        :0,\"transfer_amount\":0,\"paid\":false,\"statement_descriptor\":\"CULQI*\"\
+        ,\"transfer_id\":null,\"operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"\
+        ref_test_gms7h8DFHHhEh050\",\"creation_date\":1577571943000,\"amount\":300,\"\
+        operation_id\":741966}],\"capture_date\":1577571940000},{\"duplicated\":false,\"\
+        object\":\"charge\",\"id\":\"chr_test_nnjR8Ed0XaYF4wud\",\"creation_date\"\
+        :1577571939000,\"amount\":10000,\"amount_refunded\":10000,\"current_amount\"\
+        :0,\"installments\":1,\"installments_amount\":10000,\"currency_code\":\"PEN\"\
+        ,\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\",\"\
+        source\":{\"object\":\"token\",\"id\":\"tkn_test_JV2Gf8TMRMWA1fBs\",\"type\"\
+        :\"card\",\"creation_date\":1577571937000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"35.196.72.151\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":6.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"riUQjAQT4Y\",\"authorization_code\":\"flPhTY\",\"metadata\":{},\"total_fee\"\
+        :0,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"\
+        PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\"\
+        :0,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_FsjDfYChSMBX01Hi\"\
+        ,\"creation_date\":1577571943000,\"amount\":100,\"operation_id\":741964},{\"\
+        type\":\"devoluci\xF3n\",\"id\":\"ref_test_iWCyE8ncogKFNgMx\",\"creation_date\"\
+        :1578016872000,\"amount\":9900,\"operation_id\":741964}],\"capture_date\"\
+        :null},{\"duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_T4JYO7gY8l5aLBuS\"\
+        ,\"creation_date\":1577571933000,\"amount\":10000,\"amount_refunded\":10000,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":10000,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_ZqblbDe8T57zpuc9\",\"\
+        type\":\"card\",\"creation_date\":1577571931000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"35.227.97.188\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":6.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"5xtEUzKPVo\",\"authorization_code\":\"ptc0Et\",\"metadata\":{},\"total_fee\"\
+        :0,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"\
+        PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\"\
+        :0,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_krqmdXiZp9Rzz5Fm\"\
+        ,\"creation_date\":1577571936000,\"amount\":100,\"operation_id\":741961},{\"\
+        type\":\"devoluci\xF3n\",\"id\":\"ref_test_SrHTd68jTCt3VrVM\",\"creation_date\"\
+        :1578016871000,\"amount\":9900,\"operation_id\":741961}],\"capture_date\"\
+        :null},{\"duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_9CDhSpcZCEWP4O8p\"\
+        ,\"creation_date\":1577571933000,\"amount\":10000,\"amount_refunded\":10000,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":10000,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_IT74ih4vF86YkGY4\",\"\
+        type\":\"card\",\"creation_date\":1577571931000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"35.192.91.101\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":5.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"9UY41XIZTk\",\"authorization_code\":\"Nvc7yO\",\"metadata\":{},\"total_fee\"\
+        :0,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"\
+        PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\"\
+        :0,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_l1HEf8rnj6anzXht\"\
+        ,\"creation_date\":1577571937000,\"amount\":100,\"operation_id\":741962},{\"\
+        type\":\"devoluci\xF3n\",\"id\":\"ref_test_ZOPQfMj1afpdJY8h\",\"creation_date\"\
+        :1578016871000,\"amount\":9900,\"operation_id\":741962}],\"capture_date\"\
+        :null},{\"duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_igOL29cP5ky5gCpG\"\
+        ,\"creation_date\":1577571933000,\"amount\":10000,\"amount_refunded\":10000,\"\
+        current_amount\":0,\"installments\":1,\"installments_amount\":10000,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_Urv876HZGbmSpUOp\",\"\
+        type\":\"card\",\"creation_date\":1577571931000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":false,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":null,\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":null},\"client\":{\"ip\":\"104.197.122.201\",\"ip_country\"\
+        :null,\"ip_country_code\":null,\"browser\":null,\"device_fingerprint\":null,\"\
+        device_type\":null},\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\"\
+        ,\"code\":\"AUT0000\",\"merchant_message\":\"La operaci\xF3n de venta ha sido\
+        \ autorizada exitosamente\",\"user_message\":\"Su compra ha sido exitosa.\"\
+        },\"fraud_score\":7.0,\"dispute\":false,\"capture\":false,\"reference_code\"\
+        :\"jCVuBH7sRe\",\"authorization_code\":\"mNpD9u\",\"metadata\":{},\"total_fee\"\
+        :0,\"fee_details\":{\"fixed_fee\":{},\"variable_fee\":{\"currency_code\":\"\
+        PEN\",\"commision\":0.0399,\"total\":0}},\"total_fee_taxes\":0,\"transfer_amount\"\
+        :0,\"paid\":false,\"statement_descriptor\":\"CULQI*\",\"transfer_id\":null,\"\
+        operations\":[{\"type\":\"devoluci\xF3n\",\"id\":\"ref_test_cdsgk1gPXUe9MSqs\"\
+        ,\"creation_date\":1577571937000,\"amount\":100,\"operation_id\":741963},{\"\
+        type\":\"devoluci\xF3n\",\"id\":\"ref_test_63vM7ACSrpbp0xHe\",\"creation_date\"\
+        :1578016872000,\"amount\":9900,\"operation_id\":741963}],\"capture_date\"\
+        :null}],\"paging\":{\"previous\":\"https://api.culqi.com/v2/charges?limit=50&before=chr_test_MUg8Ed8IpJz9TH7r\"\
+        ,\"next\":\"https://api.culqi.com/v2/charges?limit=50&after=chr_test_igOL29cP5ky5gCpG\"\
+        ,\"cursors\":{\"before\":\"chr_test_MUg8Ed8IpJz9TH7r\",\"after\":\"chr_test_igOL29cP5ky5gCpG\"\
+        },\"remaining_items\":642}}"}
+    headers:
+      connection: [keep-alive]
+      content-length: ['87468']
+      content-type: [application/json;charset=UTF-8]
+      date: ['Sat, 04 Jan 2020 01:57:50 GMT']
+      set-cookie: [JSESSIONID=B6939970F1EB2E388F77BA1ECD15E927; Path=/api; HttpOnly]
+      vary: [Accept-Encoding]
+      via: [1.1 24bae83ecbea498237310499b260f273.cloudfront.net (CloudFront)]
+      x-amz-apigw-id: [FwKcNEWfIAMFxDA=]
+      x-amz-cf-id: [YgVap-mf_-h5Cgq0wfeOSZ51W8WXcCaum5SJ315Smj5oRiKuy7-rww==]
+      x-amz-cf-pop: [IAH50-C4]
+      x-amzn-requestid: [9fce28c6-fe0d-4975-9f24-794408a22a8e]
+      x-amzn-trace-id: [Root=1-5e0ff11a-73f64800f019680056976000;Sampled=0]
+      x-cache: [Miss from cloudfront]
+      x-culqi-environment: [test]
+      x-culqi-tracking-id: ['6183888']
+      x-culqi-version: [2.0.0]
+      x-proxy-cache: [MISS]
+    status: {code: 200, message: OK}
+version: 1

@@ -1,6 +1,6 @@
+from ..schemas import customer
 from ..utils.urls import URL
 from .base import Resource
-from ..schemas import customer
 
 __all__ = ["Customer"]
 

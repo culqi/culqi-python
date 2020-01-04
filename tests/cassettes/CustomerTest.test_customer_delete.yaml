@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: !!python/unicode '{"first_name": "Richard", "email": "richard7a92@piedpiper.com",
+      "address": "Avenida Lima 123213", "phone_number": "+51998989789", "address_city":
+      "LIMA", "country_code": "PE", "last_name": "Piedpiper"}'
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer culiq_api_key]
+      Connection: [keep-alive]
+      Content-Length: ['201']
+      Content-type: [application/json]
+      User-Agent: [Culqi-API-Python/1.0.3]
+    method: POST
+    uri: https://api.culqi.com/v2/customers
+  response:
+    body: {string: !!python/unicode '{"object":"customer","id":"cus_test_1bpjcV873dxEZ2GJ","creation_date":1578103085651,"email":"richard7a92@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'}
+    headers:
+      connection: [keep-alive]
+      content-length: ['318']
+      content-type: [application/json;charset=UTF-8]
+      date: ['Sat, 04 Jan 2020 01:58:05 GMT']
+      set-cookie: [JSESSIONID=B8F77299ACED786F59FA437C3E677CEF; Path=/api/; HttpOnly]
+      via: [1.1 b729fd175985735cfe99dcbef152dcff.cloudfront.net (CloudFront)]
+      x-amz-apigw-id: [FwKfHF9RoAMFyog=]
+      x-amz-cf-id: [J3vxWo-iTM0KdVzZNEn4aTUtXPFSvp76eS_T9QdxyivVkJw1LqTD8g==]
+      x-amz-cf-pop: [IAH50-C3]
+      x-amzn-remapped-connection: [keep-alive]
+      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:05 GMT']
+      x-amzn-remapped-server: [nginx, ':']
+      x-amzn-requestid: [476d8eb1-b0f6-48aa-88f8-3c7b74a1e457]
+      x-cache: [Miss from cloudfront]
+      x-culqi-environment: [test]
+      x-culqi-tracking-id: ['6183896']
+      x-culqi-version: [2.0.0]
+    status: {code: 201, message: Created}
+- request:
+    body: !!python/unicode 'null'
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer culiq_api_key]
+      Connection: [keep-alive]
+      Content-Length: ['4']
+      Content-type: [application/json]
+      User-Agent: [Culqi-API-Python/1.0.3]
+    method: DELETE
+    uri: https://api.culqi.com/v2/customers/cus_test_1bpjcV873dxEZ2GJ
+  response:
+    body: {string: "{\"id\":\"cus_test_1bpjcV873dxEZ2GJ\",\"deleted\":true,\"merchant_message\"\
+        :\"Se elimin\xF3 el cliente con ID cus_test_1bpjcV873dxEZ2GJ exitosamente.\"\
+        }"}
+    headers:
+      connection: [keep-alive]
+      content-length: ['140']
+      content-type: [application/json;charset=UTF-8]
+      date: ['Sat, 04 Jan 2020 01:58:06 GMT']
+      set-cookie: [JSESSIONID=6073D4774C25B7A9C773A6EAA2F87EFB; Path=/api/; HttpOnly]
+      via: [1.1 b729fd175985735cfe99dcbef152dcff.cloudfront.net (CloudFront)]
+      x-amz-apigw-id: [FwKfMFj2IAMF6FA=]
+      x-amz-cf-id: [UQxOI3NctBI8xhJuOl6YXVbOtBWFn0ZlhlH_vh1wRPts98Wqk5xhwg==]
+      x-amz-cf-pop: [IAH50-C3]
+      x-amzn-remapped-connection: [keep-alive]
+      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:06 GMT']
+      x-amzn-remapped-server: [nginx, ':']
+      x-amzn-requestid: [8f75e496-e9fa-4180-9d96-097acfdfb5ab]
+      x-cache: [Miss from cloudfront]
+      x-culqi-environment: [test]
+      x-culqi-tracking-id: ['6183897']
+      x-culqi-version: [2.0.0]
+    status: {code: 200, message: OK}
+version: 1

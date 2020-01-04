@@ -1,5 +1,5 @@
-from requests.compat import urljoin
 from jsonschema import validate
+from requests.compat import urljoin
 
 from ..utils.urls import URL
 
@@ -8,6 +8,7 @@ __all__ = ["Resource"]
 
 class Resource:
     endpoint = None
+    schema = None
 
     def __init__(self, client=None):
         self.client = client
@@ -34,7 +35,7 @@ class Resource:
         )
 
     def create(self, data, **options):
-        if (hasattr(self, 'schema')):
+        if hasattr(self, "schema"):
             validate(instance=data, schema=self.schema)
         url = self._get_url()
         return self._post(url, data, **options)
