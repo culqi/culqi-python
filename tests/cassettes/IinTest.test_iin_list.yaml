@@ -1,0 +1,213 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: [application/json]
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer culiq_api_key]
+      Connection: [keep-alive]
+      Content-type: [application/json]
+      User-Agent: [Culqi-API-Python/1.0.3]
+    method: GET
+    uri: https://api.culqi.com/v2/iins
+  response:
+    body: {string: "{\"data\":[{\"object\":\"iin\",\"bin\":\"465859\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"debito\",\"card_category\":null,\"issuer\":{\"name\"\
+        :\"BARCLAYS BANK PLC\",\"country\":\"UNITED KINGDOM\",\"country_code\":\"\
+        GB\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"361005\",\"card_brand\":\"Diners\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"\",\"country\"\
+        :\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"494386\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"issuer\":{\"\
+        name\":\"SCOTIABANK PERU S.A.A.\",\"country\":\"PERU\",\"country_code\":\"\
+        PE\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"491660\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"BANK OF AMERICA,\
+        \ N.A.\",\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\"\
+        ,\"bin\":\"436545\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"SOUTHEAST ASIA COMMERCIAL JSB\",\"country\":\"\
+        VIETNAM\",\"country_code\":\"VN\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"447677\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"debito\",\"card_category\":null,\"issuer\":{\"name\"\
+        :\"U.S. BANK, N.A.\",\"country\":\"UNITED STATES\",\"country_code\":\"US\"\
+        ,\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"520000\",\"card_brand\":\"MasterCard\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"PUBLIC BANK BERHAD\"\
+        ,\"country\":\"MALAYSIA\",\"country_code\":\"MY\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"342323\"\
+        ,\"card_brand\":\"Amex\",\"card_type\":\"credito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"\",\"country\":\"UNITED STATES\",\"country_code\":\"\
+        US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"456576\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"SEG F.C.U.\",\"\
+        country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"435456\"\
+        ,\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"\",\"country\":\"UNITED STATES\",\"country_code\":\"\
+        US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"423232\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"SUMMIT F.C.U.\"\
+        ,\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\"\
+        :\"434111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"SELFRELIANCE UKRAINIAN AMERICAN F.C.U.\",\"country\"\
+        :\"UNITED STATES\",\"country_code\":\"US\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"444333\"\
+        ,\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"JPMORGAN CHASE BANK, N.A.\",\"country\":\"UNITED STATES\"\
+        ,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :[]},{\"object\":\"iin\",\"bin\":\"432222\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"TULSA TEACHERS C.U.\"\
+        ,\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\"\
+        :\"512456\",\"card_brand\":\"MasterCard\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"ARMBUSINESSBANK CLOSED JOINT STOCK COMPANY\"\
+        ,\"country\":\"ARMENIA\",\"country_code\":\"AM\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"342432\"\
+        ,\"card_brand\":\"Amex\",\"card_type\":\"credito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"\",\"country\":\"UNITED STATES\",\"country_code\":\"\
+        US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"454545\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"CARD SERVICES FOR\
+        \ CREDIT UNIONS, INC.\",\"country\":\"UNITED STATES\",\"country_code\":\"\
+        US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"516003\",\"card_brand\":\"MasterCard\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"SCOTIABANK PERU\
+        \ S.A.A.\",\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\"\
+        :\"377753\",\"card_brand\":\"Amex\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"INTERBANK\",\"country\":\"PERU\",\"country_code\"\
+        :\"PE\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"451521\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"\",\"country\"\
+        :\"CANADA\",\"country_code\":\"CA\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"453432\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"issuer\":{\"\
+        name\":\"DC CARD CO., LTD.\",\"country\":\"JAPAN\",\"country_code\":\"JP\"\
+        ,\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"451534\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"\",\"country\"\
+        :\"HONG KONG\",\"country_code\":\"HK\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"451525\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"issuer\":{\"\
+        name\":\"\",\"country\":\"HONG KONG\",\"country_code\":\"HK\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\"\
+        ,\"bin\":\"491995\",\"card_brand\":\"Visa\",\"card_type\":\"debito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"ITS BANK\",\"country\":\"UNITED STATES\",\"country_code\"\
+        :\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"491905\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"NORTHEAST ARKANSAS\
+        \ F.C.U.\",\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\"\
+        ,\"bin\":\"538459\",\"card_brand\":\"MasterCard\",\"card_type\":\"debito\"\
+        ,\"card_category\":null,\"issuer\":{\"name\":\"TRAVELEX CARD SERVICES LIMITED\"\
+        ,\"country\":\"BRAZIL\",\"country_code\":\"BR\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"421111\"\
+        ,\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"BC CARD\",\"country\":\"KOREA, REPUBLIC OF\",\"country_code\"\
+        :\"KR\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"455895\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"UNIBANCA, S.A.\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"400657\"\
+        ,\"card_brand\":\"Visa\",\"card_type\":\"debito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"UNIBANCA, S.A.\",\"country\":\"PERU\",\"country_code\"\
+        :\"PE\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"379383\",\"card_brand\":\"Amex\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"AMERICAN EXPRESS\
+        \ US\",\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\"\
+        :\"379474\",\"card_brand\":\"Amex\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"AMERICAN EXPRESS US (CARS)\",\"country\":\"UNITED\
+        \ STATES\",\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"371728\",\"card_brand\"\
+        :\"Amex\",\"card_type\":\"credito\",\"card_category\":null,\"issuer\":{\"\
+        name\":\"AMERICAN EXPRESS US CONSUMER\",\"country\":\"UNITED STATES\",\"country_code\"\
+        :\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"378473\",\"card_brand\":\"Amex\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"AMERICAN EXPRESS\
+        \ US CONSUMER\",\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\"\
+        ,\"bin\":\"303900\",\"card_brand\":\"Diners\",\"card_type\":\"credito\",\"\
+        card_category\":null,\"issuer\":{\"name\":\"\",\"country\":\"CHINA\",\"country_code\"\
+        :\"CN\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"345554\",\"card_brand\":\"Amex\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"\",\"country\"\
+        :\"UNITED STATES\",\"country_code\":\"US\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"498442\"\
+        ,\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"BANCO DO BRASIL, S.A.\",\"country\":\"BRAZIL\",\"country_code\"\
+        :\"BR\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"411144\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"STANDARD CHARTERED\
+        \ BANK\",\"country\":\"BANGLADESH\",\"country_code\":\"BD\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\"\
+        :\"525474\",\"card_brand\":\"MasterCard\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BANCO RIPLEY S.A.\",\"country\":\"PERU\",\"country_code\"\
+        :\"PE\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"223668\",\"card_brand\":\"MasterCard\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":null,\"country\"\
+        :null,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :[]},{\"object\":\"iin\",\"bin\":\"465942\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"HSBC BANK PLC\"\
+        ,\"country\":\"UNITED KINGDOM\",\"country_code\":\"GB\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\"\
+        :\"491573\",\"card_brand\":\"Visa\",\"card_type\":\"credito\",\"card_category\"\
+        :null,\"issuer\":{\"name\":\"BANCO SANTANDER MEXICANO, S.A.\",\"country\"\
+        :\"MEXICO\",\"country_code\":\"MX\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"453282\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"debito\",\"card_category\":null,\"issuer\":{\"name\"\
+        :\"WELLS FARGO BANK, N.A.\",\"country\":\"UNITED STATES\",\"country_code\"\
+        :\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\":[]},{\"\
+        object\":\"iin\",\"bin\":\"386221\",\"card_brand\":\"Diners\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":null,\"country\"\
+        :null,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :[]},{\"object\":\"iin\",\"bin\":\"400000\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":null,\"country\"\
+        :null,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :[]},{\"object\":\"iin\",\"bin\":\"343934\",\"card_brand\":\"Amex\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":null,\"country\"\
+        :null,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :[]},{\"object\":\"iin\",\"bin\":\"555320\",\"card_brand\":\"MasterCard\"\
+        ,\"card_type\":\"credito\",\"card_category\":null,\"issuer\":{\"name\":null,\"\
+        country\":null,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"473767\",\"card_brand\"\
+        :\"Visa\",\"card_type\":\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\"\
+        :{\"name\":\"BBVA\",\"country\":\"PERU\",\"country_code\":\"PE\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[]},{\"object\":\"iin\"\
+        ,\"bin\":\"540625\",\"card_brand\":\"MasterCard\",\"card_type\":\"credito\"\
+        ,\"card_category\":null,\"issuer\":{\"name\":\"BANCO DE OCCIDENTE, S.A.\"\
+        ,\"country\":\"COLOMBIA\",\"country_code\":\"CO\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[]},{\"object\":\"iin\",\"bin\":\"455137\"\
+        ,\"card_brand\":\"Visa\",\"card_type\":\"debito\",\"card_category\":null,\"\
+        issuer\":{\"name\":\"FLORENCE SAVINGS BANK\",\"country\":\"UNITED STATES\"\
+        ,\"country_code\":\"US\",\"website\":null,\"phone_number\":null},\"installments_allowed\"\
+        :[]},{\"object\":\"iin\",\"bin\":\"414049\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"debito\",\"card_category\":null,\"issuer\":{\"name\":\"BANCA TRANSILVANIA,\
+        \ S.A.\",\"country\":\"ROMANIA\",\"country_code\":\"RO\",\"website\":null,\"\
+        phone_number\":null},\"installments_allowed\":[]}],\"paging\":{\"previous\"\
+        :\"https://api.culqi.com/v2/iins?limit=50&before=465859\",\"next\":\"https://api.culqi.com/v2/iins?limit=50&after=414049\"\
+        ,\"cursors\":{\"before\":\"465859\",\"after\":\"414049\"},\"remaining_items\"\
+        :null}}"}
+    headers:
+      connection: [keep-alive]
+      content-length: ['11971']
+      content-type: [application/json;charset=UTF-8]
+      date: ['Sat, 04 Jan 2020 01:58:12 GMT']
+      set-cookie: [JSESSIONID=BC3E6EFDA3915CBD83ACFA400F933111; Path=/api/; HttpOnly]
+      via: [1.1 4bb318647697ada204caea69d135927a.cloudfront.net (CloudFront)]
+      x-amz-apigw-id: [FwKgLHUMIAMFy0A=]
+      x-amz-cf-id: [1YCn4lfts_sclkpl06FrQ13cPSEORgMVTf80NF0kL8eM0Xa2VHOgEQ==]
+      x-amz-cf-pop: [IAH50-C3]
+      x-amzn-remapped-connection: [keep-alive]
+      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:12 GMT']
+      x-amzn-remapped-server: [nginx, ':']
+      x-amzn-requestid: [0b55ad5c-563b-4749-8772-d6e6a066b3f7]
+      x-cache: [Miss from cloudfront]
+      x-culqi-environment: [test]
+      x-culqi-tracking-id: ['6183904']
+      x-culqi-version: [2.0.0]
+    status: {code: 200, message: OK}
+version: 1
