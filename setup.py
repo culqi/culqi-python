@@ -47,6 +47,6 @@ setup(
         "version": __import__("culqi").__version__,
         "package": package_name,
     },
-    requires=["requests",],
-    install_requires=["requests",],
+    requires=["requests", "jsonschema"],
+    install_requires=["requests", "jsonschema"],
 )
