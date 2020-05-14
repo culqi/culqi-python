@@ -2,717 +2,543 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.3
     method: GET
     uri: https://api.culqi.com/v2/customers
   response:
-    body: {string: "{\"data\":[{\"object\":\"customer\",\"id\":\"cus_test_GaLKH7k4L4h9lJjB\"\
-        ,\"creation_date\":1578103084000,\"email\":\"richard8e77@piedpiper.com\",\"\
+    body:
+      string: "{\"data\":[{\"object\":\"customer\",\"id\":\"cus_test_16YD9q01NcG7Qr9K\"\
+        ,\"creation_date\":1589341083000,\"email\":\"richard1b0e@piedpiper.com\",\"\
         antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
         :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_I2PorlMmrcG4U1aR\"\
-        ,\"creation_date\":1578103049000,\"email\":\"richard40f0@piedpiper.com\",\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_XekAHlkhtWfYheCw\"\
+        ,\"creation_date\":1589341040000,\"email\":\"richard1e62@piedpiper.com\",\"\
         antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
         :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_jadM22HWEt3NVQY0\",\"active\":true,\"creation_date\"\
-        :1578103054000,\"customer_id\":\"cus_test_I2PorlMmrcG4U1aR\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_MEFINweGWzXv5Wlx\",\"type\":\"card\"\
-        ,\"creation_date\":1578103048000,\"email\":\"richard40f0@piedpiper.com\",\"\
+        :\"card\",\"id\":\"crd_test_rtfc5bBu8UNavJEy\",\"active\":true,\"creation_date\"\
+        :1589341045000,\"customer_id\":\"cus_test_XekAHlkhtWfYheCw\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_I73bxz74EgKKmShf\",\"type\":\"card\"\
+        ,\"creation_date\":1589341039000,\"email\":\"richard1e62@piedpiper.com\",\"\
         card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\"\
-        :\"0001\"}}],\"metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_hgxqCKizf3biDOTz\"\
-        ,\"creation_date\":1578103042000,\"email\":\"richardfc89@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_n4eC4iihfmmHdWuT\",\"active\":true,\"creation_date\"\
-        :1578103047000,\"customer_id\":\"cus_test_hgxqCKizf3biDOTz\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_NXzOhjOQy7YLPc6q\",\"type\":\"card\"\
-        ,\"creation_date\":1578103041000,\"email\":\"richardfc89@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        :{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\":\"0001\"}}],\"metadata\"\
+        :{}},{\"object\":\"customer\",\"id\":\"cus_test_fIrnn6GRZXUvacF5\",\"creation_date\"\
+        :1589341031000,\"email\":\"richard2a35@piedpiper.com\",\"antifraud_details\"\
+        :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
+        \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
+        :\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"\
+        id\":\"crd_test_bbUJQnWpeGLEDc0k\",\"active\":true,\"creation_date\":1589341037000,\"\
+        customer_id\":\"cus_test_fIrnn6GRZXUvacF5\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_0rnDwdBXx3fYHUkO\",\"type\":\"card\",\"creation_date\"\
+        :1589341030000,\"email\":\"richard2a35@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":true,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\":{\"ip\":\"\
+        190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"PE\",\"browser\"\
+        :\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"Escritorio\"},\"\
+        metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\":\"customer\"\
+        ,\"id\":\"cus_test_juDHorLdk6ePkyA8\",\"creation_date\":1589341018000,\"email\"\
+        :\"richardc9a8@piedpiper.com\",\"antifraud_details\":{\"first_name\":\"Richard\"\
+        ,\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\",\"object\":\"\
+        client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_K1CyQsga8C6jlZ2c\"\
+        ,\"active\":false,\"creation_date\":1589341023000,\"customer_id\":\"cus_test_juDHorLdk6ePkyA8\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_0Fudf5nlXzFKZqI0\",\"\
+        type\":\"card\",\"creation_date\":1589341017000,\"email\":\"richardc9a8@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_KflE6JJBVb9lTFjH\"\
-        ,\"creation_date\":1578103031000,\"email\":\"richardc055@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_CuBn2akA8SfuLn5j\",\"active\":false,\"creation_date\"\
-        :1578103035000,\"customer_id\":\"cus_test_KflE6JJBVb9lTFjH\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_5b3abaNJxGREC5HL\",\"type\":\"card\"\
-        ,\"creation_date\":1578103029000,\"email\":\"richardc055@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        :{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_rMP2wkRXZeZ1rthC\",\"creation_date\":1589341011000,\"\
+        email\":\"richardadf6@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
+        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
+        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_SevqN2Spqz9j6xXE\"\
+        ,\"active\":true,\"creation_date\":1589341016000,\"customer_id\":\"cus_test_rMP2wkRXZeZ1rthC\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_nTsxnrSMfc74bBfL\",\"\
+        type\":\"card\",\"creation_date\":1589341010000,\"email\":\"richardadf6@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_bOHV1StJOcFzZCIu\"\
-        ,\"creation_date\":1578103024000,\"email\":\"richardeb54@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        :{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_AEnP9YjJVzrTFozC\",\"creation_date\":1589340643000,\"\
+        email\":\"richardc55a@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
+        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
+        ,\"object\":\"client\"},\"cards\":[],\"metadata\":{}},{\"object\":\"customer\"\
+        ,\"id\":\"cus_test_BFNUj1y20QNb6zGf\",\"creation_date\":1589340637000,\"email\"\
+        :\"richard52ed@piedpiper.com\",\"antifraud_details\":{\"first_name\":\"Richard\"\
+        ,\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\",\"object\":\"\
+        client\"},\"cards\":[],\"metadata\":{}},{\"object\":\"customer\",\"id\":\"\
+        cus_test_UakiY7R5mEY8GPxo\",\"creation_date\":1589340631000,\"email\":\"richard09d5@piedpiper.com\"\
+        ,\"antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_rdfZbf1KZTZJ7ANV\",\"active\":true,\"creation_date\"\
-        :1578103028000,\"customer_id\":\"cus_test_bOHV1StJOcFzZCIu\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_MHlDz54OdrAw6WeT\",\"type\":\"card\"\
-        ,\"creation_date\":1578103018000,\"email\":\"richardeb54@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_xXWAYuefaWsyenNu\"\
-        ,\"creation_date\":1578102940000,\"email\":\"richard5e74@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_LhV7tU5SpqTC2bPK\",\"active\":true,\"creation_date\"\
-        :1578102944000,\"customer_id\":\"cus_test_xXWAYuefaWsyenNu\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_ELoDiSUrNQNodjN4\",\"type\":\"card\"\
-        ,\"creation_date\":1578102938000,\"email\":\"richard5e74@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\"\
-        :\"0001\"}}],\"metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_HoMQ4EVqsTcA52ob\"\
-        ,\"creation_date\":1578102932000,\"email\":\"richardf002@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_KE33lmCZRtFChoTf\",\"active\":true,\"creation_date\"\
-        :1578102937000,\"customer_id\":\"cus_test_HoMQ4EVqsTcA52ob\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_2hhWn5uie2jVC0mv\",\"type\":\"card\"\
-        ,\"creation_date\":1578102931000,\"email\":\"richardf002@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_L6jhNqkqwvpCkwb9\"\
-        ,\"creation_date\":1578102921000,\"email\":\"richard8e42@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_mbJFLvCSWXFyyrjL\",\"active\":false,\"creation_date\"\
-        :1578102925000,\"customer_id\":\"cus_test_L6jhNqkqwvpCkwb9\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_0urvwU1xAb560ELN\",\"type\":\"card\"\
-        ,\"creation_date\":1578102919000,\"email\":\"richard8e42@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_z3tg6lXYQHi2qECx\"\
-        ,\"creation_date\":1578102914000,\"email\":\"richard89e2@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_Q6lYR2SBUNCwodqC\",\"active\":true,\"creation_date\"\
-        :1578102918000,\"customer_id\":\"cus_test_z3tg6lXYQHi2qECx\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_tizrc6qR7GDeEVZO\",\"type\":\"card\"\
-        ,\"creation_date\":1578102912000,\"email\":\"richard89e2@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_H4iVDHfyWNZSyiDY\"\
-        ,\"creation_date\":1577819906000,\"email\":\"richard6f93@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_KZLOL6hXMpTjCAc6\",\"active\":true,\"creation_date\"\
-        :1577819910000,\"customer_id\":\"cus_test_H4iVDHfyWNZSyiDY\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_Q3T0hmDNuUFpSLlh\",\"type\":\"card\"\
-        ,\"creation_date\":1577819904000,\"email\":\"richard6f93@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_nCKkiG1YWTsoity7\"\
-        ,\"creation_date\":1577819896000,\"email\":\"richard27f4@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_sF3ZvkvLly7T7I9Q\",\"active\":true,\"creation_date\"\
-        :1577819901000,\"customer_id\":\"cus_test_nCKkiG1YWTsoity7\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_ySjhgYyzhfbvHMSt\",\"type\":\"card\"\
-        ,\"creation_date\":1577819895000,\"email\":\"richard27f4@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_wRYXcUrXHmzkxQCb\"\
-        ,\"creation_date\":1577819883000,\"email\":\"richard0573@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_0LFNp4KrUPysnISZ\",\"active\":true,\"creation_date\"\
-        :1577819888000,\"customer_id\":\"cus_test_wRYXcUrXHmzkxQCb\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_mxtMB6w2i1diwJIB\",\"type\":\"card\"\
-        ,\"creation_date\":1577819882000,\"email\":\"richard0573@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_xVykhDSomwQXfc5o\"\
-        ,\"creation_date\":1577819875000,\"email\":\"richard0f9b@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_eH8IWDA64DAC3qUQ\",\"active\":true,\"creation_date\"\
-        :1577819879000,\"customer_id\":\"cus_test_xVykhDSomwQXfc5o\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_J1hNBKOQmQnadvIZ\",\"type\":\"card\"\
-        ,\"creation_date\":1577819874000,\"email\":\"richard0f9b@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_R6Zc8zjfdqcaKTst\"\
-        ,\"creation_date\":1577819804000,\"email\":\"richard095e@piedpiper.com\",\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_JnMztk59KdjWOyNx\"\
+        ,\"creation_date\":1589340625000,\"email\":\"richardee6f@piedpiper.com\",\"\
         antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
         :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{\"order_id\":\"0001\"}},{\"object\":\"customer\",\"id\":\"cus_test_VZANIhKF5H4z8ldK\"\
-        ,\"creation_date\":1577819803000,\"email\":\"richard1849@piedpiper.com\",\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_ik5Sj3eIBFLmVi98\"\
+        ,\"creation_date\":1589340565000,\"email\":\"richard7770@piedpiper.com\",\"\
         antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
         :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_jHizc5gn7HpIPig6\"\
-        ,\"creation_date\":1577819798000,\"email\":\"richard332d@piedpiper.com\",\"\
+        metadata\":{\"order_id\":\"0001\"}},{\"object\":\"customer\",\"id\":\"cus_test_AMhwmFZYwg903szQ\"\
+        ,\"creation_date\":1589340564000,\"email\":\"richard100b@piedpiper.com\",\"\
         antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
         :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_3TJSGZajA0lQ0eKQ\"\
-        ,\"creation_date\":1577819762000,\"email\":\"richard99e1@piedpiper.com\",\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_aoyXqN5AEf0WyGZh\"\
+        ,\"creation_date\":1589340560000,\"email\":\"richardd4ae@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_RHEkoOM8VGHGNoWk\"\
+        ,\"creation_date\":1589340531000,\"email\":\"richard06b6@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_QK8p3Ibn6bhsr8Ao\"\
+        ,\"creation_date\":1589340526000,\"email\":\"richardb3dd@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_N0oz3kUROncg3src\"\
+        ,\"creation_date\":1589340516000,\"email\":\"richard9100@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_ASLQAlqgWqvlsw3A\"\
+        ,\"creation_date\":1589340506000,\"email\":\"richard1e7f@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_Yqf1tjudab4XTsHr\"\
+        ,\"creation_date\":1589339703000,\"email\":\"richarda234@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_nJA6I8qlSrJqqtAO\"\
+        ,\"creation_date\":1589339697000,\"email\":\"richard4928@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_uFSdSsBrOOh1y1Wa\"\
+        ,\"creation_date\":1589339691000,\"email\":\"richard8a9a@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_D465nBUFH7CUtx8S\"\
+        ,\"creation_date\":1589339686000,\"email\":\"richarda500@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_wu4i5T9iSGPvmRYc\"\
+        ,\"creation_date\":1589339654000,\"email\":\"richard356d@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{\"order_id\":\"0001\"}},{\"object\":\"customer\",\"id\":\"cus_test_XYu6uCcYc1xqMQse\"\
+        ,\"creation_date\":1589339653000,\"email\":\"richard42ca@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_1DbmGaJ7TP80wEsl\"\
+        ,\"creation_date\":1589339649000,\"email\":\"richardd0b4@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_Pd6LX7pWdClI6NMS\"\
+        ,\"creation_date\":1589339616000,\"email\":\"richard55c3@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_7g1mXFvDcsmUbGge\"\
+        ,\"creation_date\":1589339611000,\"email\":\"richard8307@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_XQ2RMvgnSydVE64o\"\
+        ,\"creation_date\":1589339601000,\"email\":\"richard5d2a@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_GMprQAzwSoNZe2uG\"\
+        ,\"creation_date\":1589339596000,\"email\":\"richard81f7@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_rmhgaiBeipvYCsJf\"\
+        ,\"creation_date\":1581524717000,\"email\":\"richard9995@piedpiper.com\",\"\
         antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
         ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
         :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_LsZK7uI1V0p7NauH\",\"active\":true,\"creation_date\"\
-        :1577819766000,\"customer_id\":\"cus_test_3TJSGZajA0lQ0eKQ\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_Vgzh2Joc72IfITwM\",\"type\":\"card\"\
-        ,\"creation_date\":1577819761000,\"email\":\"richard99e1@piedpiper.com\",\"\
+        :\"card\",\"id\":\"crd_test_rzjS4xeDD0Vfs90o\",\"active\":true,\"creation_date\"\
+        :1581524721000,\"customer_id\":\"cus_test_rmhgaiBeipvYCsJf\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_wDpFlN8j7lROrh1C\",\"type\":\"card\"\
+        ,\"creation_date\":1581524715000,\"email\":\"richard9995@piedpiper.com\",\"\
         card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\"\
-        :\"0001\"}}],\"metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_EeXaisxzdDTKvBtg\"\
-        ,\"creation_date\":1577819755000,\"email\":\"richard55b3@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_pA3I62iNuviodEzo\",\"active\":true,\"creation_date\"\
-        :1577819759000,\"customer_id\":\"cus_test_EeXaisxzdDTKvBtg\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_cTKHZdmXfuKsR5Ha\",\"type\":\"card\"\
-        ,\"creation_date\":1577819754000,\"email\":\"richard55b3@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_GSoBdbBMe6cTwjeV\"\
-        ,\"creation_date\":1577819743000,\"email\":\"richarde13e@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_sZSeiGM8maZzn3t0\",\"active\":false,\"creation_date\"\
-        :1577819747000,\"customer_id\":\"cus_test_GSoBdbBMe6cTwjeV\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_l1j0o6VMOWPFJ8X6\",\"type\":\"card\"\
-        ,\"creation_date\":1577819742000,\"email\":\"richarde13e@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_sJeyid8RWyxypPAJ\"\
-        ,\"creation_date\":1577819737000,\"email\":\"richardd966@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_tyD8VfChSGV3nfbG\",\"active\":true,\"creation_date\"\
-        :1577819741000,\"customer_id\":\"cus_test_sJeyid8RWyxypPAJ\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_427ysoXx3HS4nirO\",\"type\":\"card\"\
-        ,\"creation_date\":1577819735000,\"email\":\"richardd966@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_9KJFK29pfAc77pGd\"\
-        ,\"creation_date\":1577819711000,\"email\":\"richardce31@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_aWom1qZfNgt4Ed3Q\",\"active\":true,\"creation_date\"\
-        :1577819715000,\"customer_id\":\"cus_test_9KJFK29pfAc77pGd\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_BwO4ttoxk0uxyh1H\",\"type\":\"card\"\
-        ,\"creation_date\":1577819710000,\"email\":\"richardce31@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\"\
-        :\"0001\"}}],\"metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_bqEJD0sUaXuIMCTH\"\
-        ,\"creation_date\":1577819704000,\"email\":\"richard8f69@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_lzd0NKF4z9zbkscL\",\"active\":true,\"creation_date\"\
-        :1577819708000,\"customer_id\":\"cus_test_bqEJD0sUaXuIMCTH\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_GvjmjFA57DioqZiw\",\"type\":\"card\"\
-        ,\"creation_date\":1577819703000,\"email\":\"richard8f69@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_1yjPXbde1p16zA1D\"\
-        ,\"creation_date\":1577819692000,\"email\":\"richard1e85@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_JzXb5sPrJNV71thE\",\"active\":false,\"creation_date\"\
-        :1577819696000,\"customer_id\":\"cus_test_1yjPXbde1p16zA1D\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_mqB6bPQdNyViN3wR\",\"type\":\"card\"\
-        ,\"creation_date\":1577819690000,\"email\":\"richard1e85@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_JOdTiKV3na4ytIod\"\
-        ,\"creation_date\":1577571970000,\"email\":\"richard3588@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_BTDEgGXFqRDy7Ujt\",\"active\":true,\"creation_date\"\
-        :1577571974000,\"customer_id\":\"cus_test_JOdTiKV3na4ytIod\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_6poZD6Q8Q2qOSZkc\",\"type\":\"card\"\
-        ,\"creation_date\":1577571969000,\"email\":\"richard3588@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"35.196.72.151\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_Q1QV5P2MlAFINika\",\"creation_date\":1577571965000,\"\
-        email\":\"richardef85@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :{\"ip\":\"190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_rGzA1nfHEMKgOKr4\",\"creation_date\":1581524700000,\"\
+        email\":\"richardb73c@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
         :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
         ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_IR7snLjTxdbtp7pT\"\
-        ,\"active\":true,\"creation_date\":1577571969000,\"customer_id\":\"cus_test_Q1QV5P2MlAFINika\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_dcvI4FKEOKbe2WN7\",\"\
-        type\":\"card\",\"creation_date\":1577571964000,\"email\":\"richardef85@piedpiper.com\"\
+        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_Ne8KOmT0YRMLwA1f\"\
+        ,\"active\":true,\"creation_date\":1581524704000,\"customer_id\":\"cus_test_rGzA1nfHEMKgOKr4\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_cAjgonAqvSWtYORE\",\"\
+        type\":\"card\",\"creation_date\":1581524698000,\"email\":\"richardb73c@piedpiper.com\"\
         ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.200.49\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_3V5SDvfQewqprMTf\",\"creation_date\":1577571965000,\"\
-        email\":\"richarda2f2@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :{\"ip\":\"190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_akOwwfihgz59064D\",\"creation_date\":1581524691000,\"\
+        email\":\"richard3f49@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
         :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
         ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_Hsdi3gstXYPAbHJv\"\
-        ,\"active\":true,\"creation_date\":1577571969000,\"customer_id\":\"cus_test_3V5SDvfQewqprMTf\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_vebeDzLexbiyr1V8\",\"\
-        type\":\"card\",\"creation_date\":1577571964000,\"email\":\"richarda2f2@piedpiper.com\"\
+        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_RV4BHIzg8TjEzxGH\"\
+        ,\"active\":true,\"creation_date\":1581524695000,\"customer_id\":\"cus_test_akOwwfihgz59064D\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_nvB0NLIdiRpStQfU\",\"\
+        type\":\"card\",\"creation_date\":1581524689000,\"email\":\"richard3f49@piedpiper.com\"\
         ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"35.192.10.37\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_Ldzw3hXpAzrt0kcP\",\"creation_date\":1577571963000,\"\
-        email\":\"richard08ec@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :{\"ip\":\"190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_mI3ZC0Rjbj1jNHV9\",\"creation_date\":1581524682000,\"\
+        email\":\"richardda03@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
         :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
         ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_83RITtlJDMDa8ozB\"\
-        ,\"active\":true,\"creation_date\":1577571967000,\"customer_id\":\"cus_test_Ldzw3hXpAzrt0kcP\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_wN8eD6DVpfcHqbse\",\"\
-        type\":\"card\",\"creation_date\":1577571962000,\"email\":\"richard08ec@piedpiper.com\"\
+        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_ey7VFbqlJ81jQ7Dp\"\
+        ,\"active\":true,\"creation_date\":1581524686000,\"customer_id\":\"cus_test_mI3ZC0Rjbj1jNHV9\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_zdTr3ky6TbDHCUTi\",\"\
+        type\":\"card\",\"creation_date\":1581524679000,\"email\":\"richardda03@piedpiper.com\"\
         ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"104.196.57.92\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_wOLPN4HbhSMT1GE0\",\"creation_date\":1577571957000,\"\
-        email\":\"richarddf9b@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_SMwEXg4RdBXMGDA5\"\
-        ,\"active\":true,\"creation_date\":1577571962000,\"customer_id\":\"cus_test_wOLPN4HbhSMT1GE0\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_dp5cKpyUCQmiIjzt\",\"\
-        type\":\"card\",\"creation_date\":1577571957000,\"email\":\"richarddf9b@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.50.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_nt3x6DsHdv7NxonF\",\"creation_date\":1577571957000,\"\
-        email\":\"richard3934@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_32btrtxnWpfbNNjR\"\
-        ,\"active\":true,\"creation_date\":1577571961000,\"customer_id\":\"cus_test_nt3x6DsHdv7NxonF\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_q5cyjtqT9w0QrcxJ\",\"\
-        type\":\"card\",\"creation_date\":1577571956000,\"email\":\"richard3934@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"35.192.91.101\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_lhZh1VZV2SU44YND\",\"creation_date\":1577571952000,\"\
-        email\":\"richard7890@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_peVEfruV9WvLDkVz\"\
-        ,\"active\":true,\"creation_date\":1577571956000,\"customer_id\":\"cus_test_lhZh1VZV2SU44YND\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_EroRO6b2smZ38LlR\",\"\
-        type\":\"card\",\"creation_date\":1577571951000,\"email\":\"richard7890@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"35.237.56.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_bIwgK334LvDrOKoO\",\"creation_date\":1577571947000,\"\
-        email\":\"richard0d1b@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_JhCPbIBkBZlxIWtu\"\
-        ,\"active\":true,\"creation_date\":1577571951000,\"customer_id\":\"cus_test_bIwgK334LvDrOKoO\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_puyMUTJGqdlqFXWP\",\"\
-        type\":\"card\",\"creation_date\":1577571946000,\"email\":\"richard0d1b@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"104.197.122.201\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_NrEK3BWD26S3V0Vc\",\"creation_date\":1577571946000,\"\
-        email\":\"richard05e8@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_9meijiJplvSlAafh\"\
-        ,\"active\":true,\"creation_date\":1577571950000,\"customer_id\":\"cus_test_NrEK3BWD26S3V0Vc\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_cWwK2ZQhudF6ZcCS\",\"\
-        type\":\"card\",\"creation_date\":1577571945000,\"email\":\"richard05e8@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.50.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_THpyuuxw7Xql0D69\",\"creation_date\":1577571945000,\"\
-        email\":\"richard7be9@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_t5WgpMbELwLkO0ac\"\
-        ,\"active\":true,\"creation_date\":1577571949000,\"customer_id\":\"cus_test_THpyuuxw7Xql0D69\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_8H5AOwztSV6ai0cf\",\"\
-        type\":\"card\",\"creation_date\":1577571944000,\"email\":\"richard7be9@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"104.196.57.92\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_PMUTm3dtj8JfZdK8\",\"creation_date\":1577571939000,\"\
-        email\":\"richard6c97@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_TxRUHSMUVUwqMB0r\"\
-        ,\"active\":true,\"creation_date\":1577571943000,\"customer_id\":\"cus_test_PMUTm3dtj8JfZdK8\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_bwV9arOqR9EXc6Mj\",\"\
-        type\":\"card\",\"creation_date\":1577571938000,\"email\":\"richard6c97@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.50.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_1u6fZSzgjcA4nlr8\",\"creation_date\":1577571939000,\"\
-        email\":\"richardda4d@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_NQut2S8XegJQIngT\"\
-        ,\"active\":true,\"creation_date\":1577571943000,\"customer_id\":\"cus_test_1u6fZSzgjcA4nlr8\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_COyoGChOZawK3I1D\",\"\
-        type\":\"card\",\"creation_date\":1577571938000,\"email\":\"richardda4d@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.50.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_OcStNC5BVk1lGZAy\",\"creation_date\":1577571888000,\"\
-        email\":\"richardf4b9@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :{\"ip\":\"190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_to8gcLalbJWBDYkB\",\"creation_date\":1581524602000,\"\
+        email\":\"richard5871@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
         :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
         ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
         ,\"object\":\"client\"},\"cards\":[],\"metadata\":{\"order_id\":\"0001\"}},{\"\
-        object\":\"customer\",\"id\":\"cus_test_W6C2BhPlPX23MWTW\",\"creation_date\"\
-        :1577571887000,\"email\":\"richard32ce@piedpiper.com\",\"antifraud_details\"\
+        object\":\"customer\",\"id\":\"cus_test_9u2ooCMDquIfQypk\",\"creation_date\"\
+        :1581524601000,\"email\":\"richard87c7@piedpiper.com\",\"antifraud_details\"\
         :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
         \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
         :\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"metadata\":{}},{\"\
-        object\":\"customer\",\"id\":\"cus_test_AVm5tusv5xG3RF6y\",\"creation_date\"\
-        :1577571885000,\"email\":\"richard10c9@piedpiper.com\",\"antifraud_details\"\
+        object\":\"customer\",\"id\":\"cus_test_JthSzalvvoVJPYKJ\",\"creation_date\"\
+        :1581524596000,\"email\":\"richarddcbd@piedpiper.com\",\"antifraud_details\"\
         :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
         \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
         :\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"metadata\":{}},{\"\
-        object\":\"customer\",\"id\":\"cus_test_1cLKWRL3Bt9doIrG\",\"creation_date\"\
-        :1577571881000,\"email\":\"richardfea6@piedpiper.com\",\"antifraud_details\"\
+        object\":\"customer\",\"id\":\"cus_test_GH1378aumRQFQfEq\",\"creation_date\"\
+        :1581524554000,\"email\":\"richardc8d6@piedpiper.com\",\"antifraud_details\"\
         :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
         \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
-        :\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"metadata\":{\"order_id\"\
-        :\"0001\"}},{\"object\":\"customer\",\"id\":\"cus_test_YZzobwOccKGQaBJJ\"\
-        ,\"creation_date\":1577571880000,\"email\":\"richardeea0@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_433GdpFzr9XGXxz0\"\
-        ,\"creation_date\":1577571879000,\"email\":\"richardb03e@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_9PdGULHR2SwKJB48\"\
-        ,\"creation_date\":1577571879000,\"email\":\"richarda649@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{\"order_id\":\"0001\"}},{\"object\":\"customer\",\"id\":\"cus_test_ANW3qNkk5fVJriT7\"\
-        ,\"creation_date\":1577571878000,\"email\":\"richard1db3@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_0ngrxE7sQeY9uJfA\"\
-        ,\"creation_date\":1577571877000,\"email\":\"richard1083@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_mPFURjXpl7u9vXi9\"\
-        ,\"creation_date\":1577571854000,\"email\":\"richard5f14@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_UaayHtoi7XBVgbm1\",\"active\":true,\"creation_date\"\
-        :1577571858000,\"customer_id\":\"cus_test_mPFURjXpl7u9vXi9\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_FjVAghIhOYIOUIKQ\",\"type\":\"card\"\
-        ,\"creation_date\":1577571853000,\"email\":\"richard5f14@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"35.196.158.85\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\":\"0001\"}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_FjEt0XapbZqEZp6r\"\
-        ,\"creation_date\":1577571848000,\"email\":\"richard57c3@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_nCvIzMSHQBk56pYy\",\"active\":true,\"creation_date\"\
-        :1577571852000,\"customer_id\":\"cus_test_FjEt0XapbZqEZp6r\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_Y4qgoejFCsSrkypA\",\"type\":\"card\"\
-        ,\"creation_date\":1577571847000,\"email\":\"richard57c3@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"35.196.158.85\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_nifmS8hWcB8E1ixx\",\"creation_date\":1577571847000,\"\
-        email\":\"richard44f0@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
-        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
-        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_hnNA9IT0LMpCabix\"\
-        ,\"active\":true,\"creation_date\":1577571851000,\"customer_id\":\"cus_test_nifmS8hWcB8E1ixx\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_xST0OQwuTU1OTaUW\",\"\
-        type\":\"card\",\"creation_date\":1577571846000,\"email\":\"richard44f0@piedpiper.com\"\
+        :\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"\
+        id\":\"crd_test_xJleD8x3uThi1MCZ\",\"active\":true,\"creation_date\":1581524558000,\"\
+        customer_id\":\"cus_test_GH1378aumRQFQfEq\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_3uCuuyW76J0Nmcl9\",\"type\":\"card\",\"creation_date\"\
+        :1581524552000,\"email\":\"richardc8d6@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":true,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\":{\"ip\":\"\
+        190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"PE\",\"browser\"\
+        :\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"Escritorio\"},\"\
+        metadata\":{}},\"metadata\":{\"order_id\":\"0001\"}}],\"metadata\":{}},{\"\
+        object\":\"customer\",\"id\":\"cus_test_mb9j4HKuiB01DVlh\",\"creation_date\"\
+        :1581524546000,\"email\":\"richardbb89@piedpiper.com\",\"antifraud_details\"\
+        :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
+        \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
+        :\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"\
+        id\":\"crd_test_kbrU5M4FXjdP47ep\",\"active\":true,\"creation_date\":1581524550000,\"\
+        customer_id\":\"cus_test_mb9j4HKuiB01DVlh\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_Qx7tBAnK25ZievYZ\",\"type\":\"card\",\"creation_date\"\
+        :1581524545000,\"email\":\"richardbb89@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":true,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\":{\"ip\":\"\
+        190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"PE\",\"browser\"\
+        :\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"Escritorio\"},\"\
+        metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\":\"customer\"\
+        ,\"id\":\"cus_test_AFODFpuzQbzs6ikr\",\"creation_date\":1581524533000,\"email\"\
+        :\"richard95b1@piedpiper.com\",\"antifraud_details\":{\"first_name\":\"Richard\"\
+        ,\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\",\"address_city\"\
+        :\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\",\"object\":\"\
+        client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_RBqMoyQnGYXRrZRU\"\
+        ,\"active\":false,\"creation_date\":1581524537000,\"customer_id\":\"cus_test_AFODFpuzQbzs6ikr\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_LjpXsIEznylNFW2t\",\"\
+        type\":\"card\",\"creation_date\":1581524531000,\"email\":\"richard95b1@piedpiper.com\"\
         ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.50.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\":\"0001\"}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_CeYvRbqRKygGQ2Rb\"\
-        ,\"creation_date\":1577571847000,\"email\":\"richard0064@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_ZZaS3t7ieDA6dZLB\",\"active\":true,\"creation_date\"\
-        :1577571851000,\"customer_id\":\"cus_test_CeYvRbqRKygGQ2Rb\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_EzGMJepb2h2PSfsD\",\"type\":\"card\"\
-        ,\"creation_date\":1577571846000,\"email\":\"richard0064@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"104.197.122.201\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\":\"0001\"}}],\"\
-        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_aLGHL6y9PnJIcwTE\"\
-        ,\"creation_date\":1577571841000,\"email\":\"richarda828@piedpiper.com\",\"\
-        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
-        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
-        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
-        :\"card\",\"id\":\"crd_test_3CwUVpBhxVlis9rh\",\"active\":true,\"creation_date\"\
-        :1577571845000,\"customer_id\":\"cus_test_aLGHL6y9PnJIcwTE\",\"source\":{\"\
-        object\":\"token\",\"id\":\"tkn_test_95wpg0EnNxiCeHs2\",\"type\":\"card\"\
-        ,\"creation_date\":1577571840000,\"email\":\"richarda828@piedpiper.com\",\"\
-        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"104.197.122.201\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
-        :\"customer\",\"id\":\"cus_test_4pgCFSS59talXZqk\",\"creation_date\":1577571841000,\"\
-        email\":\"richard41aa@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :{\"ip\":\"190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_ddaEHNhPEb4GO7pJ\",\"creation_date\":1581524526000,\"\
+        email\":\"richard049e@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
         :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
         ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
-        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_SMAdy4IdDZrZnQzG\"\
-        ,\"active\":true,\"creation_date\":1577571845000,\"customer_id\":\"cus_test_4pgCFSS59talXZqk\"\
-        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_ZlfYvD8LJ7J8XfyB\",\"\
-        type\":\"card\",\"creation_date\":1577571840000,\"email\":\"richard41aa@piedpiper.com\"\
+        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_sCc1wu8DjzdIAihz\"\
+        ,\"active\":true,\"creation_date\":1581524530000,\"customer_id\":\"cus_test_ddaEHNhPEb4GO7pJ\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_kmcBR2lHscYbgEIc\",\"\
+        type\":\"card\",\"creation_date\":1581524524000,\"email\":\"richard049e@piedpiper.com\"\
         ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
         iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
         :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
         ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
         :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"34.66.50.208\",\"ip_country\":\"United States\",\"ip_country_code\"\
-        :\"US\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
-        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}}],\"paging\"\
-        :{\"previous\":\"https://api.culqi.com/v2/customers?limit=50&before=cus_test_GaLKH7k4L4h9lJjB\"\
-        ,\"next\":\"https://api.culqi.com/v2/customers?limit=50&after=cus_test_4pgCFSS59talXZqk\"\
-        ,\"cursors\":{\"before\":\"cus_test_GaLKH7k4L4h9lJjB\",\"after\":\"cus_test_4pgCFSS59talXZqk\"\
-        },\"remaining_items\":null}}"}
+        :{\"ip\":\"190.237.93.247\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_8lleYltOBiLEGG1T\",\"creation_date\":1579898173000,\"\
+        email\":\"richard7ac5@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
+        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
+        ,\"object\":\"client\"},\"cards\":[],\"metadata\":{\"order_id\":\"0001\"}},{\"\
+        object\":\"customer\",\"id\":\"cus_test_1dXo2tSil5ZLkFi2\",\"creation_date\"\
+        :1579646835000,\"email\":\"richardf9c7@piedpiper.com\",\"antifraud_details\"\
+        :{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida\
+        \ Lima 123213\",\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\"\
+        :\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"\
+        id\":\"crd_test_QrJtvjkjbADyRtHd\",\"active\":true,\"creation_date\":1579646839000,\"\
+        customer_id\":\"cus_test_1dXo2tSil5ZLkFi2\",\"source\":{\"object\":\"token\"\
+        ,\"id\":\"tkn_test_D19tV0GFGyz3yRYD\",\"type\":\"card\",\"creation_date\"\
+        :1579646834000,\"email\":\"richardf9c7@piedpiper.com\",\"card_number\":\"\
+        411111******1111\",\"last_four\":\"1111\",\"active\":true,\"iin\":{\"object\"\
+        :\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\":\"credito\"\
+        ,\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\",\"country\"\
+        :\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\":null},\"\
+        installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\":{\"ip\":\"\
+        2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\",\"ip_country_code\"\
+        :\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
+        :\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"metadata\":{}},{\"object\"\
+        :\"customer\",\"id\":\"cus_test_7eom1lYHqaNREhLM\",\"creation_date\":1579646827000,\"\
+        email\":\"richarddc91@piedpiper.com\",\"antifraud_details\":{\"first_name\"\
+        :\"Richard\",\"last_name\":\"Piedpiper\",\"address\":\"Avenida Lima 123213\"\
+        ,\"address_city\":\"LIMA\",\"country_code\":\"PE\",\"phone\":\"+51998989789\"\
+        ,\"object\":\"client\"},\"cards\":[{\"object\":\"card\",\"id\":\"crd_test_CzU16gcgGVHnRpkw\"\
+        ,\"active\":true,\"creation_date\":1579646831000,\"customer_id\":\"cus_test_7eom1lYHqaNREhLM\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_vDviHAyZ9YQ3rOya\",\"\
+        type\":\"card\",\"creation_date\":1579646825000,\"email\":\"richarddc91@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_nEF9Cj38TEaZZ3Ic\"\
+        ,\"creation_date\":1579646818000,\"email\":\"richardc20d@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
+        :\"card\",\"id\":\"crd_test_a4DdpvURB3f7FuWj\",\"active\":true,\"creation_date\"\
+        :1579646822000,\"customer_id\":\"cus_test_nEF9Cj38TEaZZ3Ic\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_o0U0f77EnUaoWTlM\",\"type\":\"card\"\
+        ,\"creation_date\":1579646817000,\"email\":\"richardc20d@piedpiper.com\",\"\
+        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_obxM9wskqkXwzmVK\"\
+        ,\"creation_date\":1579646810000,\"email\":\"richard53b6@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
+        :\"card\",\"id\":\"crd_test_1liAfDrgufabedml\",\"active\":true,\"creation_date\"\
+        :1579646815000,\"customer_id\":\"cus_test_obxM9wskqkXwzmVK\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_o48ZC6Dy243nv9YH\",\"type\":\"card\"\
+        ,\"creation_date\":1579646808000,\"email\":\"richard53b6@piedpiper.com\",\"\
+        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_xIUg4aAL781ybaxu\"\
+        ,\"creation_date\":1579646743000,\"email\":\"richard602a@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{\"order_id\":\"0001\"}},{\"object\":\"customer\",\"id\":\"cus_test_VFTufkHl5Gw9WZfd\"\
+        ,\"creation_date\":1579646741000,\"email\":\"richardac32@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_u8eyPBH94g85yo7x\"\
+        ,\"creation_date\":1579646737000,\"email\":\"richard6a67@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_z8DtAa4x7hvOuSMy\"\
+        ,\"creation_date\":1579646701000,\"email\":\"richard7560@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
+        :\"card\",\"id\":\"crd_test_8iHfXk4PN1Oz94GQ\",\"active\":true,\"creation_date\"\
+        :1579646706000,\"customer_id\":\"cus_test_z8DtAa4x7hvOuSMy\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_NykF2xBQceem4bTM\",\"type\":\"card\"\
+        ,\"creation_date\":1579646700000,\"email\":\"richard7560@piedpiper.com\",\"\
+        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{\"order_id\"\
+        :\"0001\"}}],\"metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_itmfQIVIO7u1xLC6\"\
+        ,\"creation_date\":1579646694000,\"email\":\"richardc7ce@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
+        :\"card\",\"id\":\"crd_test_798MXaewx6Vqmo4H\",\"active\":true,\"creation_date\"\
+        :1579646698000,\"customer_id\":\"cus_test_itmfQIVIO7u1xLC6\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_h3f5LLHdrZUMr522\",\"type\":\"card\"\
+        ,\"creation_date\":1579646693000,\"email\":\"richardc7ce@piedpiper.com\",\"\
+        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_ABQGeqA0zyGydDZg\"\
+        ,\"creation_date\":1579646682000,\"email\":\"richard4b48@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
+        :\"card\",\"id\":\"crd_test_pdGFmJcnjjpNtF2F\",\"active\":false,\"creation_date\"\
+        :1579646686000,\"customer_id\":\"cus_test_ABQGeqA0zyGydDZg\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_DpZRMAZsPoyOj1zP\",\"type\":\"card\"\
+        ,\"creation_date\":1579646680000,\"email\":\"richard4b48@piedpiper.com\",\"\
+        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
+        metadata\":{}},{\"object\":\"customer\",\"id\":\"cus_test_0omml6S0ZkoyWNWo\"\
+        ,\"creation_date\":1579646675000,\"email\":\"richard490b@piedpiper.com\",\"\
+        antifraud_details\":{\"first_name\":\"Richard\",\"last_name\":\"Piedpiper\"\
+        ,\"address\":\"Avenida Lima 123213\",\"address_city\":\"LIMA\",\"country_code\"\
+        :\"PE\",\"phone\":\"+51998989789\",\"object\":\"client\"},\"cards\":[{\"object\"\
+        :\"card\",\"id\":\"crd_test_ljcJx3eDp90pTTxk\",\"active\":true,\"creation_date\"\
+        :1579646679000,\"customer_id\":\"cus_test_0omml6S0ZkoyWNWo\",\"source\":{\"\
+        object\":\"token\",\"id\":\"tkn_test_Mag2dGzKIpE1XXhC\",\"type\":\"card\"\
+        ,\"creation_date\":1579646673000,\"email\":\"richard490b@piedpiper.com\",\"\
+        card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
+        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
+        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}},\"metadata\":{}}],\"\
+        metadata\":{}}],\"paging\":{\"previous\":\"https://api.culqi.com/v2/customers?limit=50&before=cus_test_16YD9q01NcG7Qr9K\"\
+        ,\"next\":\"https://api.culqi.com/v2/customers?limit=50&after=cus_test_0omml6S0ZkoyWNWo\"\
+        ,\"cursors\":{\"before\":\"cus_test_16YD9q01NcG7Qr9K\",\"after\":\"cus_test_0omml6S0ZkoyWNWo\"\
+        },\"remaining_items\":null}}"
     headers:
-      connection: [keep-alive]
-      content-length: ['46323']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:07 GMT']
-      set-cookie: [JSESSIONID=38A916EAFAE95D6821B36A002E22386D; Path=/api/; HttpOnly]
-      via: [1.1 80652b3b088ec5207f8c5a781c121a79.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKfVEOKIAMFUvg=]
-      x-amz-cf-id: [aLa8gI4aenKBVftpdBkwHNzpgzZ72nnyiUX4_RsnnajJTV8vd8MXYw==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:07 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [e617714f-1ae8-4657-b537-6ed0d114b4cf]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183898']
-      x-culqi-version: [2.0.0]
-    status: {code: 200, message: OK}
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32667'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 13 May 2020 03:38:06 GMT
+      Via:
+      - 1.1 75e2ec75b84b884e854a2fc819f11264.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - LOutmzJ-F0wQLKcpxoUwtw8DE7EbKFP1FrNFuIVZ2oxJWImDENO5Eg==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ebb6b9d-c71a6bbc6284f535c3109836;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=FEFDA327F9813A9EC8059E26477B67B1; Path=/api; HttpOnly
+      vary:
+      - Accept-Encoding
+      x-amz-apigw-id:
+      - Mc3AnHP0oAMF3vw=
+      x-amzn-RequestId:
+      - 95dcab56-3483-4635-bc1d-fd0257ccda76
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '6892524'
+      x-culqi-version:
+      - 2.0.0
+      x-proxy-cache:
+      - MISS
+    status:
+      code: 200
+      message: OK
 version: 1

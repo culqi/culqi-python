@@ -2,213 +2,240 @@ interactions:
 - request:
     body: null
     headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.3
     method: GET
     uri: https://api.culqi.com/v2/plans
   response:
-    body: {string: "{\"data\":[{\"object\":\"plan\",\"id\":\"pln_test_Zi4V0KE6v514oozG\"\
-        ,\"creation_date\":1578103126000,\"name\":\"plan-d9d2\",\"amount\":1000,\"\
+    body:
+      string: "{\"data\":[{\"object\":\"plan\",\"id\":\"pln_test_tgA2xeGwyydI8sKS\"\
+        ,\"creation_date\":1589341101000,\"name\":\"plan-4d87\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
         :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_Ap229NlXEh9fHwKT\",\"creation_date\":1577819911000,\"\
-        name\":\"plan-6694\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :\"plan\",\"id\":\"pln_test_G8W62A3r8AwcVDjT\",\"creation_date\":1589340646000,\"\
+        name\":\"plan-7377\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
         :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_iuS06dTicyn2WQTT\"\
-        ,\"creation_date\":1577819901000,\"name\":\"plan-09bf\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_eMevG7DKOo7XKTB2\",\"creation_date\":1577819888000,\"\
-        name\":\"plan-ff6d\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_eUK3Jb71YgKjsPwv\"\
-        ,\"creation_date\":1577819880000,\"name\":\"plan-dca2\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_0iJ0jtLacbjXAoIU\",\"creation_date\":1577819849000,\"\
-        name\":\"plan-9395\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{\"order_id\":\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_ru7OOUa4AoidsVBQ\"\
-        ,\"creation_date\":1577819847000,\"name\":\"plan-96a7\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_IwTTToJqoLfb2x0a\"\
+        ,\"creation_date\":1589340640000,\"name\":\"plan-b247\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
         :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_64IrEaGrKqynGc5B\",\"creation_date\":1577819844000,\"\
-        name\":\"plan-27d7\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :\"plan\",\"id\":\"pln_test_fd134FHOVuQKLtUW\",\"creation_date\":1589340635000,\"\
+        name\":\"plan-3a3a\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
         :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_Q6lGibLIvYW6k1Mr\"\
-        ,\"creation_date\":1577571974000,\"name\":\"plan-b718\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_n73WXuaGfQlGkve8\"\
+        ,\"creation_date\":1589340629000,\"name\":\"plan-3a2f\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_EtQWeu4S2gGwPTgY\",\"creation_date\":1577571970000,\"\
-        name\":\"plan-5f38\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_WTUP7M1pYZo9INpB\",\"creation_date\":1589340598000,\"\
+        name\":\"plan-2318\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
         :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_9FRTRF0WAt6CMzBz\"\
-        ,\"creation_date\":1577571969000,\"name\":\"plan-9c8f\",\"amount\":1000,\"\
+        :0,\"metadata\":{\"order_id\":\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_dSqEGNhXlUCPYzQH\"\
+        ,\"creation_date\":1589340590000,\"name\":\"plan-9d35\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_i5IXSbMMiWxdthVY\",\"creation_date\":1577571967000,\"\
-        name\":\"plan-7108\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_L2YWnvztMZ1V4SSz\",\"creation_date\":1589340581000,\"\
+        name\":\"plan-9300\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
         :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_mVXDwD1oC1Yd58dR\"\
-        ,\"creation_date\":1577571962000,\"name\":\"plan-c1f9\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_PKWsMAPTfoIhWc5Y\"\
+        ,\"creation_date\":1589339705000,\"name\":\"plan-3f33\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_ZUiLo0TgewgLGRP0\",\"creation_date\":1577571962000,\"\
-        name\":\"plan-b6d8\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_PrlLFiOJtfAth13d\",\"creation_date\":1589339700000,\"\
+        name\":\"plan-eb0a\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
         :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_4QVIvgiMFbdxGOpe\"\
-        ,\"creation_date\":1577571956000,\"name\":\"plan-f48a\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_ByI2szaSzqR6OFfZ\"\
+        ,\"creation_date\":1589339695000,\"name\":\"plan-b84a\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_COOm5w55C79Hrp3W\",\"creation_date\":1577571951000,\"\
-        name\":\"plan-6866\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_Qu47g2UszzPwoelu\",\"creation_date\":1589339689000,\"\
+        name\":\"plan-ad18\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
         :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_nIT3248FjjcSfQa5\"\
-        ,\"creation_date\":1577571951000,\"name\":\"plan-fe56\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_yGYPbZd78S6bzcaz\",\"creation_date\":1577571950000,\"\
-        name\":\"plan-5661\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_6NWi9BsTzI0V8OUS\"\
-        ,\"creation_date\":1577571944000,\"name\":\"plan-5f9c\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_eOvpVLqyDCYgCktw\",\"creation_date\":1577571944000,\"\
-        name\":\"plan-e17b\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_1R2FumpGImlE98fO\"\
-        ,\"creation_date\":1577571922000,\"name\":\"plan-f8e6\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_uMi7aBXc4zZT9KEZ\"\
+        ,\"creation_date\":1589339669000,\"name\":\"plan-5c21\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
         :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
-        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_sV3nBAzX6o5Ua8lY\",\"creation_date\"\
-        :1577571921000,\"name\":\"plan-678e\",\"amount\":1000,\"currency_code\":\"\
+        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_b54Wax58UvWBfa31\",\"creation_date\"\
+        :1589339667000,\"name\":\"plan-61cf\",\"amount\":1000,\"currency_code\":\"\
         PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
         :30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\":\"plan\",\"id\"\
-        :\"pln_test_2I93uIwsZWLCAfWt\",\"creation_date\":1577571919000,\"name\":\"\
-        plan-3b88\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
+        :\"pln_test_XOh34LHWqMz3IpUW\",\"creation_date\":1589339664000,\"name\":\"\
+        plan-0740\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
         interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_jHOXvGCNpJBShLU0\"\
-        ,\"creation_date\":1577571916000,\"name\":\"plan-d39c\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_OAt0yUoQgk4yvD4P\"\
+        ,\"creation_date\":1581524722000,\"name\":\"plan-2f5e\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_X7zZbe7E41CAQ2on\",\"creation_date\":1581524705000,\"\
+        name\":\"plan-a76b\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_51uNakApTLtPMU1m\"\
+        ,\"creation_date\":1581524695000,\"name\":\"plan-8cb3\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_TOhogqbFeL9QAZgy\",\"creation_date\":1581524687000,\"\
+        name\":\"plan-693b\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_lR02KzK669cmz2Jh\"\
+        ,\"creation_date\":1581524647000,\"name\":\"plan-d032\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
         :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
-        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_w11wgO8jYj5MKmhk\",\"creation_date\"\
-        :1577571916000,\"name\":\"plan-1c8c\",\"amount\":1000,\"currency_code\":\"\
-        PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
-        :30,\"total_subscriptions\":0,\"metadata\":{\"order_id\":\"0001\"}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_LKM0aZe7kTjoV19W\",\"creation_date\":1577571915000,\"\
-        name\":\"plan-ae62\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_n6tMTNVlYOJFdSaq\"\
-        ,\"creation_date\":1577571915000,\"name\":\"plan-8048\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_0ypBS8tI2Mvtu47x\",\"creation_date\":1577571912000,\"\
-        name\":\"plan-c106\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_yMbQkzpkcHTFJL7V\"\
-        ,\"creation_date\":1577571912000,\"name\":\"plan-2463\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_9RAbtNVoSbc7pfIx\",\"creation_date\":1577556261000,\"\
-        name\":\"plan-ee21\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_Y2RSNIMnji5XIphK\"\
-        ,\"creation_date\":1577556254000,\"name\":\"plan-a650\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_Zk8zPb891t9FMtQ5\",\"creation_date\":1577556254000,\"\
-        name\":\"plan-cce4\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_MgHZH7h0B8rlnM7W\"\
-        ,\"creation_date\":1577556248000,\"name\":\"plan-874e\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_3ezZnVfdU2OThdpj\",\"creation_date\":1577556247000,\"\
-        name\":\"plan-c8f8\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_SeEizLQbKtszjcZQ\"\
-        ,\"creation_date\":1577556243000,\"name\":\"plan-6780\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_RPHI3yA3SYcnvaFq\",\"creation_date\":1577556242000,\"\
-        name\":\"plan-0084\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_BbmN7vo6JUdQL6uS\"\
-        ,\"creation_date\":1577556237000,\"name\":\"plan-7434\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_0kQ296sfMS9kDHW7\",\"creation_date\":1577556237000,\"\
-        name\":\"plan-a8d5\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_xu7W7yA6xr7exeQh\"\
-        ,\"creation_date\":1577556232000,\"name\":\"plan-b522\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_SVKYHs0ny8qqLves\",\"creation_date\":1577556230000,\"\
-        name\":\"plan-f770\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_LwHVAqvsZLMGid0l\"\
-        ,\"creation_date\":1577556225000,\"name\":\"plan-9fc7\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_NZONnLXiDZ35uWGw\",\"creation_date\":1577556210000,\"\
-        name\":\"plan-b9eb\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{\"order_id\":\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_HYfTMPiXtJfAF3bB\"\
-        ,\"creation_date\":1577556209000,\"name\":\"plan-87dd\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
-        :\"plan\",\"id\":\"pln_test_mOTE0RHlPeokKUJU\",\"creation_date\":1577556207000,\"\
-        name\":\"plan-fa28\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
-        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_9uIauiLtR8yfhtcN\"\
-        ,\"creation_date\":1577556203000,\"name\":\"plan-74b3\",\"amount\":1000,\"\
-        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
-        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
-        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_FwKhEocVAARIj2si\",\"creation_date\"\
-        :1577556203000,\"name\":\"plan-aae6\",\"amount\":1000,\"currency_code\":\"\
+        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_cGokdxMiLxCNx8aO\",\"creation_date\"\
+        :1581524646000,\"name\":\"plan-04c6\",\"amount\":1000,\"currency_code\":\"\
         PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
         :30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\":\"plan\",\"id\"\
-        :\"pln_test_OA6ON4kLY7jqZiKv\",\"creation_date\":1577556200000,\"name\":\"\
-        plan-7814\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
+        :\"pln_test_1ChjSaDA4AqTx9UR\",\"creation_date\":1581524642000,\"name\":\"\
+        plan-8d08\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
         interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_aA8x1kmw2JsRvlgE\"\
-        ,\"creation_date\":1577556198000,\"name\":\"plan-af89\",\"amount\":1000,\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_iOaqwe2q2EEKk3va\"\
+        ,\"creation_date\":1579898178000,\"name\":\"plan-6595\",\"amount\":1000,\"\
         currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
         :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
-        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_gJb1g9H7Ig0rugv7\",\"creation_date\"\
-        :1577556197000,\"name\":\"plan-dd65\",\"amount\":1000,\"currency_code\":\"\
+        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_cz7x3Q9tJ3RXUDIa\",\"creation_date\"\
+        :1579898100000,\"name\":\"plan-a478\",\"amount\":1000,\"currency_code\":\"\
         PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
         :30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\":\"plan\",\"id\"\
-        :\"pln_test_i28QMEKe1VYOUwHu\",\"creation_date\":1577556195000,\"name\":\"\
-        plan-8fe7\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
+        :\"pln_test_jsdudRgTEwg9Lrv5\",\"creation_date\":1579646839000,\"name\":\"\
+        plan-3d8b\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
         interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
-        :0,\"metadata\":{}}],\"paging\":{\"previous\":\"https://api.culqi.com/v2/plans?limit=50&before=pln_test_Zi4V0KE6v514oozG\"\
-        ,\"next\":\"https://api.culqi.com/v2/plans?limit=50&after=pln_test_i28QMEKe1VYOUwHu\"\
-        ,\"cursors\":{\"before\":\"pln_test_Zi4V0KE6v514oozG\",\"after\":\"pln_test_i28QMEKe1VYOUwHu\"\
-        },\"remaining_items\":168}}"}
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_ZfCKUeWMC95At4iC\"\
+        ,\"creation_date\":1579646831000,\"name\":\"plan-187c\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_xaVVnCV6wZ54rDvt\",\"creation_date\":1579646823000,\"\
+        name\":\"plan-ec85\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_pgORahiDxncTdqwk\"\
+        ,\"creation_date\":1579646815000,\"name\":\"plan-5568\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_IRJAeoiNzC9rOwCo\",\"creation_date\":1579646783000,\"\
+        name\":\"plan-1c48\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :0,\"metadata\":{\"order_id\":\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_azMhYvreajjxb4Kh\"\
+        ,\"creation_date\":1579646782000,\"name\":\"plan-ac1e\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_Mhek2wmCYaV0F0KX\",\"creation_date\":1579646778000,\"\
+        name\":\"plan-7a70\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_7tpRxbGMBGy1UAux\"\
+        ,\"creation_date\":1579355755000,\"name\":\"plan-5e1f\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_QSFmJGxhtbDe05ea\",\"creation_date\":1579355747000,\"\
+        name\":\"plan-0661\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_WUOIFFG0quooJWi9\"\
+        ,\"creation_date\":1579355739000,\"name\":\"plan-06f4\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_8LQrfjw4cOXJ75EK\",\"creation_date\":1579355731000,\"\
+        name\":\"plan-7580\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_cqRSRxwWSsFWcsgT\"\
+        ,\"creation_date\":1579355700000,\"name\":\"plan-5adc\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
+        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_FPV9bEFmGwyRBz2x\",\"creation_date\"\
+        :1579355698000,\"name\":\"plan-db46\",\"amount\":1000,\"currency_code\":\"\
+        PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
+        :30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\":\"plan\",\"id\"\
+        :\"pln_test_YjGJDak8FlnGXFOc\",\"creation_date\":1579355695000,\"name\":\"\
+        plan-cf1c\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
+        interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_52BzOl97VlyatN8Z\"\
+        ,\"creation_date\":1578203747000,\"name\":\"plan-ae31\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_Ua2boh69CKeXNCHw\",\"creation_date\":1578203737000,\"\
+        name\":\"plan-08ed\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_ZzaUbCryMBVQ2DYG\"\
+        ,\"creation_date\":1578203718000,\"name\":\"plan-42fb\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_7oNgqQpA0Q9VZPlB\",\"creation_date\":1578203692000,\"\
+        name\":\"plan-d676\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_vLREXBwJAMTInds9\"\
+        ,\"creation_date\":1578203615000,\"name\":\"plan-29e3\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
+        :\"0001\"}},{\"object\":\"plan\",\"id\":\"pln_test_wTueIlK39rH5x7pn\",\"creation_date\"\
+        :1578203613000,\"name\":\"plan-1357\",\"amount\":1000,\"currency_code\":\"\
+        PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
+        :30,\"total_subscriptions\":0,\"metadata\":{}},{\"object\":\"plan\",\"id\"\
+        :\"pln_test_AHKfTFgm2GAyXKqT\",\"creation_date\":1578203608000,\"name\":\"\
+        plan-07b6\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\":2,\"\
+        interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :0,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_VAc73BXlz2dpj1wJ\"\
+        ,\"creation_date\":1578103194000,\"name\":\"plan-1df3\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_jTbRwHRsixUZyAbu\",\"creation_date\":1578103185000,\"\
+        name\":\"plan-a56e\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_HBcxWMhW7EjstYYr\"\
+        ,\"creation_date\":1578103176000,\"name\":\"plan-c7c3\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":1,\"metadata\":{}},{\"object\"\
+        :\"plan\",\"id\":\"pln_test_iWVFjVtAC4hb1dFd\",\"creation_date\":1578103168000,\"\
+        name\":\"plan-0ff2\",\"amount\":1000,\"currency_code\":\"PEN\",\"interval_count\"\
+        :2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\":30,\"total_subscriptions\"\
+        :1,\"metadata\":{}},{\"object\":\"plan\",\"id\":\"pln_test_j7NqlajA3QDSGAfV\"\
+        ,\"creation_date\":1578103132000,\"name\":\"plan-9b5a\",\"amount\":1000,\"\
+        currency_code\":\"PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\"\
+        :10,\"trial_days\":30,\"total_subscriptions\":0,\"metadata\":{\"order_id\"\
+        :\"0001\"}}],\"paging\":{\"previous\":\"https://api.culqi.com/v2/plans?limit=50&before=pln_test_tgA2xeGwyydI8sKS\"\
+        ,\"next\":\"https://api.culqi.com/v2/plans?limit=50&after=pln_test_j7NqlajA3QDSGAfV\"\
+        ,\"cursors\":{\"before\":\"pln_test_tgA2xeGwyydI8sKS\",\"after\":\"pln_test_j7NqlajA3QDSGAfV\"\
+        },\"remaining_items\":219}}"
     headers:
-      connection: [keep-alive]
-      content-length: ['12364']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:49 GMT']
-      set-cookie: [JSESSIONID=0D560CB024ABE058A14B48C3E878F929; Path=/api/; HttpOnly]
-      via: [1.1 38ffc136fbbbe1481c6e10814531f56b.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKl7FIoIAMFvXg=]
-      x-amz-cf-id: [wVLP43fhwIeRZUkZmtdeUea5X85A4DUKQk1eoWEFYubKHu3i60sewg==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:49 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [32e139d7-9340-4b74-aa68-f572a8120821]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183916']
-      x-culqi-version: [2.0.0]
-    status: {code: 200, message: OK}
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '12381'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 13 May 2020 03:38:23 GMT
+      Via:
+      - 1.1 53a359a477247df8211e2ebca618600b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ucH8M4Y25yusBCmf9WFG8MHHKFx4vWmk30yMzN_tV6WYkgd57ZF9xA==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ebb6baf-4e3b350ee2c6835e734606fe;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=80A7133A08B0DCF667B75D29248851D9; Path=/api; HttpOnly
+      vary:
+      - Accept-Encoding
+      x-amz-apigw-id:
+      - Mc3DeGPzoAMFyUg=
+      x-amzn-RequestId:
+      - ff321971-a481-4ec8-b8c2-d4b90765b309
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '6892546'
+      x-culqi-version:
+      - 2.0.0
+      x-proxy-cache:
+      - MISS
+    status:
+      code: 200
+      message: OK
 version: 1

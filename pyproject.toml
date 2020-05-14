@@ -5,7 +5,7 @@ description = 'Biblioteca de Culqi en Python'
 authors = ["zodiacfireworks <martin.vuelta@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 requests = "^2.22"
 jsonschema = "^3.2.0"
 

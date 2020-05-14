@@ -27,7 +27,7 @@ class SubscriptionTest(unittest.TestCase):
 
     @property
     def subscription_data(self):
-        # pylint: disable=no-member
+        # pylint-x: disable=no-member
         email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
 
         token_data = deepcopy(Data.TOKEN)

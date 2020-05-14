@@ -1,73 +1,121 @@
 interactions:
 - request:
-    body: !!python/unicode '{"interval": "dias", "name": "plan-7dbe", "currency_code":
-      "PEN", "interval_count": 2, "amount": 1000, "trial_days": 30, "limit": 10}'
+    body: '{"amount": 1000, "currency_code": "PEN", "interval": "dias", "interval_count":
+      2, "limit": 10, "name": "plan-e2f8", "trial_days": 30}'
     headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-Length: ['133']
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '133'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.3
     method: POST
     uri: https://api.culqi.com/v2/plans
   response:
-    body: {string: "{\"object\":\"plan\",\"id\":\"pln_test_nuTNVbgcVntEk4Tm\",\"creation_date\"\
-        :1578103127000,\"name\":\"plan-7dbe\",\"amount\":1000,\"currency_code\":\"\
+    body:
+      string: "{\"object\":\"plan\",\"id\":\"pln_test_WFsCaTqzJG7zfO3z\",\"creation_date\"\
+        :1589341102000,\"name\":\"plan-e2f8\",\"amount\":1000,\"currency_code\":\"\
         PEN\",\"interval_count\":2,\"interval\":\"D\xEDas\",\"limit\":10,\"trial_days\"\
-        :30,\"total_subscriptions\":0,\"metadata\":{}}"}
+        :30,\"total_subscriptions\":0,\"metadata\":{}}"
     headers:
-      connection: [keep-alive]
-      content-length: ['238']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:47 GMT']
-      set-cookie: [JSESSIONID=7A56C01E0051CA32ACBA9A1CFF16176B; Path=/api/; HttpOnly]
-      via: [1.1 e1a572b80f9ca8e29740d17fe0a46a6f.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKluEJHIAMFrbA=]
-      x-amz-cf-id: [sr98ZDNUnFa0HXJXss4fW9-MyBK_vRUCEQ2R1k2K-EQt_W3yL71G3g==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:47 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [d8840b7f-3345-46cd-a067-7f07fef68f85]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183914']
-      x-culqi-version: [2.0.0]
-    status: {code: 201, message: Created}
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '238'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 13 May 2020 03:38:22 GMT
+      Via:
+      - 1.1 75e2ec75b84b884e854a2fc819f11264.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - gA_wHchHvMNw3iN2GLm0al2P2wYmAM97j73hyjBOEW5WeqvPjDpxqA==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ebb6bad-bebd2c5007f23670deaa1d50;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=E47321804AC98D0D25CEE685B1F20B0E; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - Mc3DME9KIAMFb9Q=
+      x-amzn-RequestId:
+      - 9114aa51-04fb-49d7-897e-bee7ad72206b
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '6892544'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
 - request:
-    body: !!python/unicode 'null'
+    body: 'null'
     headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-Length: ['4']
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.3
     method: DELETE
-    uri: https://api.culqi.com/v2/plans/pln_test_nuTNVbgcVntEk4Tm
+    uri: https://api.culqi.com/v2/plans/pln_test_WFsCaTqzJG7zfO3z
   response:
-    body: {string: "{\"id\":\"pln_test_nuTNVbgcVntEk4Tm\",\"deleted\":true,\"merchant_message\"\
-        :\"Se elimin\xF3 el plan con ID pln_test_nuTNVbgcVntEk4Tm exitosamente.\"}"}
+    body:
+      string: "{\"id\":\"pln_test_WFsCaTqzJG7zfO3z\",\"deleted\":true,\"merchant_message\"\
+        :\"Se elimin\xF3 el plan con ID pln_test_WFsCaTqzJG7zfO3z exitosamente.\"}"
     headers:
-      connection: [keep-alive]
-      content-length: ['137']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:48 GMT']
-      set-cookie: [JSESSIONID=266C523551101A4D87C5323A7427F208; Path=/api/; HttpOnly]
-      via: [1.1 e1a572b80f9ca8e29740d17fe0a46a6f.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKlzHGeoAMFW8w=]
-      x-amz-cf-id: [S3qotEkjXuIyj4UU1a2lfVSIXyaYES4l90KwVhd-5GXesZ55UQ53mg==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:48 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [ea75a770-d8f6-4d5d-93e7-c31ff415dbf4]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183915']
-      x-culqi-version: [2.0.0]
-    status: {code: 200, message: OK}
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '137'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 13 May 2020 03:38:23 GMT
+      Set-Cookie:
+      - JSESSIONID=41269237B009D254776736B917095B72; Path=/api/; HttpOnly
+      Via:
+      - 1.1 75e2ec75b84b884e854a2fc819f11264.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - DHO7g65O2tU-gBCsuYxSTnNgdIHEnzYBYMdupFzkajWFIljHcrM8Ig==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-CULQI-ENVIRONMENT:
+      - test
+      X-CULQI-TRACKING-ID:
+      - '6892545'
+      X-CULQI-VERSION:
+      - 2.0.0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - Mc3DVFWmoAMFufQ=
+      x-amzn-Remapped-Date:
+      - Wed, 13 May 2020 03:38:22 GMT
+      x-amzn-Remapped-Server:
+      - Apache-Coyote/1.1
+      x-amzn-RequestId:
+      - eefb717c-8ccd-418b-8468-4082e2a52c23
+    status:
+      code: 200
+      message: OK
 version: 1

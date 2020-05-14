@@ -26,7 +26,7 @@ class RefundTest(unittest.TestCase):
 
     @property
     def refund_data(self):
-        # pylint: disable=no-member
+        # pylint-x: disable=no-member
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
 

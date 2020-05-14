@@ -1,71 +1,118 @@
 interactions:
 - request:
-    body: !!python/unicode '{"first_name": "Richard", "email": "richard0a66@piedpiper.com",
-      "address": "Avenida Lima 123213", "phone_number": "+51998989789", "address_city":
-      "LIMA", "country_code": "PE", "last_name": "Piedpiper"}'
+    body: '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
+      "PE", "email": "richard8822@piedpiper.com", "first_name": "Richard", "last_name":
+      "Piedpiper", "phone_number": "+51998989789"}'
     headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-Length: ['201']
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '201'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.3
     method: POST
     uri: https://api.culqi.com/v2/customers
   response:
-    body: {string: !!python/unicode '{"object":"customer","id":"cus_test_j3gGyaErhkG6hKUG","creation_date":1578103088845,"email":"richard0a66@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
-        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'}
+    body:
+      string: '{"object":"customer","id":"cus_test_slxXgyER5LxP7Vj8","creation_date":1589341087209,"email":"richard8822@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
     headers:
-      connection: [keep-alive]
-      content-length: ['318']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:08 GMT']
-      set-cookie: [JSESSIONID=3E3A091399DB42408D8BC71DECD654DF; Path=/api/; HttpOnly]
-      via: [1.1 d1f6ab4688185707019fd4a26343fc63.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKfnEyjIAMFsYQ=]
-      x-amz-cf-id: [0aAofqeBkABjDP2KdBhxBxrLW9aiOlvsMFzEKiJQVyW-9CQ5oAiQ_A==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:08 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [f139579e-58cc-4586-8a0c-65ec0eb88e48]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183899']
-      x-culqi-version: [2.0.0]
-    status: {code: 201, message: Created}
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '318'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 13 May 2020 03:38:07 GMT
+      Via:
+      - 1.1 42f50de03fc388e1ae7e52e9547df903.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - EKcc4dpbHw7zrew4KIN_7hvGpcxNzLKzifYpbSyLE6dUooLApPROGg==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ebb6b9f-a674c08e5d9185f07babf237;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=25645A78A2F3C0605359318831CFCBF4; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - Mc3A3FgZoAMFSWg=
+      x-amzn-RequestId:
+      - 0b8a54b9-66a9-42e1-83fc-14d4fdb9e6f5
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '6892525'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
 - request:
     body: null
     headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.3
     method: GET
-    uri: https://api.culqi.com/v2/customers/cus_test_j3gGyaErhkG6hKUG
+    uri: https://api.culqi.com/v2/customers/cus_test_slxXgyER5LxP7Vj8
   response:
-    body: {string: !!python/unicode '{"object":"customer","id":"cus_test_j3gGyaErhkG6hKUG","creation_date":1578103088000,"email":"richard0a66@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
-        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"cards":[],"metadata":{}}'}
+    body:
+      string: '{"object":"customer","id":"cus_test_slxXgyER5LxP7Vj8","creation_date":1589341087000,"email":"richard8822@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"cards":[],"metadata":{}}'
     headers:
-      connection: [keep-alive]
-      content-length: ['329']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:09 GMT']
-      set-cookie: [JSESSIONID=FAE87E3C21CAAF9B921B8C6144F2955D; Path=/api/; HttpOnly]
-      via: [1.1 d1f6ab4688185707019fd4a26343fc63.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKfsG2nIAMFutw=]
-      x-amz-cf-id: [dxopDGPqQFl5wJXPOSDysTydU_-xk7MZT8qjyJA0Is_4tUfdqZw7AQ==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:09 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [1a74c92b-7e3b-44bd-90eb-a93d0f1fbf12]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183900']
-      x-culqi-version: [2.0.0]
-    status: {code: 200, message: OK}
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '329'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 13 May 2020 03:38:07 GMT
+      Set-Cookie:
+      - JSESSIONID=2B43882BBA61CC85B216E84D8504D6D0; Path=/api/; HttpOnly
+      Via:
+      - 1.1 42f50de03fc388e1ae7e52e9547df903.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - IEOM8Z6yV844qII4vRMbrYmqBtGSU23QBVgBEC9T_rSzg_XNb5fl7g==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-CULQI-ENVIRONMENT:
+      - test
+      X-CULQI-TRACKING-ID:
+      - '6892526'
+      X-CULQI-VERSION:
+      - 2.0.0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - Mc3A-FGboAMFulw=
+      x-amzn-Remapped-Date:
+      - Wed, 13 May 2020 03:38:07 GMT
+      x-amzn-Remapped-Server:
+      - Apache-Coyote/1.1
+      x-amzn-RequestId:
+      - adf5ef1e-dad9-4dbc-aa7b-73b6612ddc5f
+    status:
+      code: 200
+      message: OK
 version: 1
