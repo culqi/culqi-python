@@ -13,7 +13,7 @@ interactions:
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: GET
       uri: https://api.culqi.com/v2/plans
     response:
@@ -205,7 +205,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '12381'
+          - "12381"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -231,7 +231,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892546'
+          - "6892546"
         x-culqi-version:
           - 2.0.0
         x-proxy-cache:

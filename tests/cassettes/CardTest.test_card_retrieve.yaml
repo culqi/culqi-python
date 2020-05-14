@@ -13,11 +13,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '140'
+          - "140"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://secure.culqi.com/v2/tokens
     response:
@@ -39,7 +39,7 @@ interactions:
         Content-Encoding:
           - UTF-8
         Content-Length:
-          - '617'
+          - "617"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -57,7 +57,7 @@ interactions:
         x-amz-apigw-id:
           - Mc23_FEcIAMFy6A=
         x-amzn-Remapped-Content-Length:
-          - '617'
+          - "617"
         x-amzn-RequestId:
           - e81fd1cd-b39b-418e-8eaf-b1f933c709c3
       status:
@@ -78,11 +78,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '201'
+          - "201"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/customers
     response:
@@ -94,7 +94,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '318'
+          - "318"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -118,7 +118,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892497'
+          - "6892497"
         x-culqi-version:
           - 2.0.0
       status:
@@ -136,11 +136,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '85'
+          - "85"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/cards
     response:
@@ -162,7 +162,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '787'
+          - "787"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -186,7 +186,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892498'
+          - "6892498"
         x-culqi-version:
           - 2.0.0
       status:
@@ -206,7 +206,7 @@ interactions:
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: GET
       uri: https://api.culqi.com/v2/cards/crd_test_bbUJQnWpeGLEDc0k
     response:
@@ -228,7 +228,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '777'
+          - "777"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -244,7 +244,7 @@ interactions:
         X-CULQI-ENVIRONMENT:
           - test
         X-CULQI-TRACKING-ID:
-          - '6892501'
+          - "6892501"
         X-CULQI-VERSION:
           - 2.0.0
         X-Cache:

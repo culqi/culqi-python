@@ -13,11 +13,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '133'
+          - "133"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/plans
     response:
@@ -31,7 +31,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '238'
+          - "238"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -55,7 +55,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892547'
+          - "6892547"
         x-culqi-version:
           - 2.0.0
       status:
@@ -75,7 +75,7 @@ interactions:
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: GET
       uri: https://api.culqi.com/v2/plans/pln_test_RMr3N2Zaz5nhBShD
     response:
@@ -89,7 +89,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '238'
+          - "238"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -105,7 +105,7 @@ interactions:
         X-CULQI-ENVIRONMENT:
           - test
         X-CULQI-TRACKING-ID:
-          - '6892549'
+          - "6892549"
         X-CULQI-VERSION:
           - 2.0.0
         X-Cache:

@@ -13,11 +13,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '136'
+          - "136"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://secure.culqi.com/v2/tokens
     response:
@@ -39,7 +39,7 @@ interactions:
         Content-Encoding:
           - UTF-8
         Content-Length:
-          - '613'
+          - "613"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -57,7 +57,7 @@ interactions:
         x-amz-apigw-id:
           - Mc3NyFgxIAMF8gg=
         x-amzn-Remapped-Content-Length:
-          - '613'
+          - "613"
         x-amzn-RequestId:
           - 057d09ea-1348-4205-af3c-0cec48c01f9a
       status:
@@ -77,7 +77,7 @@ interactions:
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: GET
       uri: https://api.culqi.com/v2/tokens/tkn_test_BXaKlPBLZf1u3zHq
     response:
@@ -97,7 +97,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '613'
+          - "613"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -113,7 +113,7 @@ interactions:
         X-CULQI-ENVIRONMENT:
           - test
         X-CULQI-TRACKING-ID:
-          - '6892604'
+          - "6892604"
         X-CULQI-VERSION:
           - 2.0.0
         X-Cache:

@@ -13,7 +13,7 @@ interactions:
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: GET
       uri: https://api.culqi.com/v2/events
     response:
@@ -23,7 +23,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '109'
+          - "109"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -39,7 +39,7 @@ interactions:
         X-CULQI-ENVIRONMENT:
           - test
         X-CULQI-TRACKING-ID:
-          - '6892529'
+          - "6892529"
         X-CULQI-VERSION:
           - 2.0.0
         X-Cache:

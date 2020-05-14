@@ -13,11 +13,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '140'
+          - "140"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://secure.culqi.com/v2/tokens
     response:
@@ -39,7 +39,7 @@ interactions:
         Content-Encoding:
           - UTF-8
         Content-Length:
-          - '617'
+          - "617"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -57,7 +57,7 @@ interactions:
         x-amz-apigw-id:
           - Mc3HoEwHIAMFz7g=
         x-amzn-Remapped-Content-Length:
-          - '617'
+          - "617"
         x-amzn-RequestId:
           - 057a2c3b-1951-4ad1-8e24-74e80d121dd1
       status:
@@ -78,11 +78,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '201'
+          - "201"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/customers
     response:
@@ -94,7 +94,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '318'
+          - "318"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -118,7 +118,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892570'
+          - "6892570"
         x-culqi-version:
           - 2.0.0
       status:
@@ -136,11 +136,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '85'
+          - "85"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/cards
     response:
@@ -162,7 +162,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '787'
+          - "787"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -186,7 +186,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892571'
+          - "6892571"
         x-culqi-version:
           - 2.0.0
       status:
@@ -206,11 +206,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '133'
+          - "133"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/plans
     response:
@@ -224,7 +224,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '238'
+          - "238"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -248,7 +248,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892574'
+          - "6892574"
         x-culqi-version:
           - 2.0.0
       status:
@@ -266,11 +266,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '80'
+          - "80"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/subscriptions
     response:
@@ -301,7 +301,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '1432'
+          - "1432"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -317,7 +317,7 @@ interactions:
         X-CULQI-ENVIRONMENT:
           - test
         X-CULQI-TRACKING-ID:
-          - '6892575'
+          - "6892575"
         X-CULQI-VERSION:
           - 2.0.0
         X-Cache:

@@ -1,4 +1,4 @@
-### 1.1.0 In progress
+### 1.0.4 In progress
 
 - Support for python 3.8.x
 - Updated dependecies

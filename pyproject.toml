@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "culqi"
-version = "1.1.0"
+version = "1.0.4"
 description = 'Biblioteca de Culqi en Python'
 authors = ["zodiacfireworks <martin.vuelta@gmail.com>"]
 

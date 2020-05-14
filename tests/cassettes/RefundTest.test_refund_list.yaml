@@ -13,7 +13,7 @@ interactions:
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: GET
       uri: https://api.culqi.com/v2/refunds
     response:
@@ -173,7 +173,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '10173'
+          - "10173"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -199,7 +199,7 @@ interactions:
         x-culqi-environment:
           - test
         x-culqi-tracking-id:
-          - '6892558'
+          - "6892558"
         x-culqi-version:
           - 2.0.0
         x-proxy-cache:

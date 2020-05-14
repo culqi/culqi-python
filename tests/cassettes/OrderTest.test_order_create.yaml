@@ -15,11 +15,11 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '290'
+          - "290"
         Content-type:
           - application/json
         User-Agent:
-          - Culqi-API-Python/1.1.0
+          - Culqi-API-Python/1.0.4
       method: POST
       uri: https://api.culqi.com/v2/orders
     response:
@@ -31,7 +31,7 @@ interactions:
         Connection:
           - keep-alive
         Content-Length:
-          - '362'
+          - "362"
         Content-Type:
           - application/json;charset=UTF-8
         Date:
@@ -47,7 +47,7 @@ interactions:
         X-CULQI-ENVIRONMENT:
           - test
         X-CULQI-TRACKING-ID:
-          - '6892535'
+          - "6892535"
         X-CULQI-VERSION:
           - 2.0.0
         X-Cache:
