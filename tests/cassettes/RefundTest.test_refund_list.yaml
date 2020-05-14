@@ -1,209 +1,210 @@
 interactions:
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer culiq_api_key
-      Connection:
-      - keep-alive
-      Content-type:
-      - application/json
-      User-Agent:
-      - Culqi-API-Python/1.0.3
-    method: GET
-    uri: https://api.culqi.com/v2/refunds
-  response:
-    body:
-      string: "{\"data\":[{\"object\":\"refund\",\"id\":\"ref_test_SL8TtdYLrRg0qYVN\"\
-        ,\"charge_id\":\"chr_test_7rje5SJhNW0VC3OL\",\"creation_date\":1589341113000,\"\
-        amount\":100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_5XDnb6uKy0PiodCn\",\"charge_id\"\
-        :\"chr_test_auWWAFYVFkWlE7O9\",\"creation_date\":1589341045000,\"amount\"\
-        :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_t4ef5HPq10ghEjsu\",\"charge_id\"\
-        :\"chr_test_NbUXEfa48QBhNQyS\",\"creation_date\":1589341037000,\"amount\"\
-        :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_adn45nfJD9FmoKE7\",\"charge_id\"\
-        :\"chr_test_DCy0faleo7hh8OGv\",\"creation_date\":1589341022000,\"amount\"\
-        :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_4HVBau99mjiMqiHh\",\"charge_id\"\
-        :\"chr_test_f6Dv8KwYEJfRljS6\",\"creation_date\":1589341016000,\"amount\"\
-        :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_1r0qkAJhsPxbngxX\",\"charge_id\"\
-        :\"chr_test_pEj6qgXp1iUBpHJc\",\"creation_date\":1588871665000,\"amount\"\
-        :9900,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_QTokAu6IcnL5imkq\",\"charge_id\"\
-        :\"chr_test_KWvuWD4QodYgRZZz\",\"creation_date\":1588718350000,\"amount\"\
-        :5600,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_BSJSvXS7ojZSftLZ\",\"charge_id\"\
-        :\"chr_test_hvOs7N36RaagGZRZ\",\"creation_date\":1588700986000,\"amount\"\
-        :6600,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_i4t3EnBrJ2ZliWer\",\"charge_id\"\
-        :\"chr_test_JshqZyflhFlePBC3\",\"creation_date\":1588456025000,\"amount\"\
-        :7900,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_1SV442m1KuUiFyYz\",\"charge_id\"\
-        :\"chr_test_sB4iRqsGrrsLkw7u\",\"creation_date\":1583765161000,\"amount\"\
-        :920,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_L85QwrwXYlPlhO27\",\"charge_id\"\
-        :\"chr_test_AA8dvKKZLorKXFZi\",\"creation_date\":1583765139000,\"amount\"\
-        :3830,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_Lgw0Ocu71rz00byX\",\"charge_id\"\
-        :\"chr_test_q8W89jHOka0XrFwk\",\"creation_date\":1583765018000,\"amount\"\
-        :3830,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_S4ubRYuE3LMf9GB0\",\"charge_id\"\
-        :\"chr_test_WYw16dpj30HrCV3o\",\"creation_date\":1583754010000,\"amount\"\
-        :4330,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_4phEraWGINzz4qnS\",\"charge_id\"\
-        :\"chr_test_ww3zvnOe9yKJWw7X\",\"creation_date\":1582574936000,\"amount\"\
-        :19000,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_N99ugV7r6Lhf9Z3k\",\"charge_id\"\
-        :\"chr_test_uEBPRBA5gdvSR1Dw\",\"creation_date\":1582148660000,\"amount\"\
-        :4500,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_I5YwGQBJb8VJqQXz\",\"charge_id\"\
-        :\"chr_test_GVsagePGH1ljVIOq\",\"creation_date\":1581904811000,\"amount\"\
-        :900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
-        object\":\"refund\",\"id\":\"ref_test_h1wBV9vqPITggLAT\",\"charge_id\":\"\
-        chr_test_m9nPzKGSdj9nU1Mn\",\"creation_date\":1581904810000,\"amount\":900,\"\
-        reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_C94oEdE3yKw8Tdvo\",\"charge_id\":\"chr_test_jAQtRaTTCYuI7EM8\"\
-        ,\"creation_date\":1581904810000,\"amount\":900,\"reason\":\"Expiraci\xF3\
-        n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_ODgX0qEllH7KXr0p\"\
-        ,\"charge_id\":\"chr_test_S6rGyV08Tu4vv8OO\",\"creation_date\":1581904810000,\"\
-        amount\":1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_7rFKUzuhUr4vXQNq\",\"charge_id\"\
-        :\"chr_test_z8RSeeBotBogXxc8\",\"creation_date\":1581904810000,\"amount\"\
-        :1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
-        object\":\"refund\",\"id\":\"ref_test_aKELzQq4ymN32g5S\",\"charge_id\":\"\
-        chr_test_TfocZvBvOUb8JeWM\",\"creation_date\":1581904810000,\"amount\":1000,\"\
-        reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_O1CPn7tqAmtvQOsc\",\"charge_id\":\"chr_test_hfCskClaMjAkVKQS\"\
-        ,\"creation_date\":1581524721000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_vtQrkGF75wIzxxmw\",\"charge_id\":\"chr_test_2q9bbu3KSZKQQF90\"\
-        ,\"creation_date\":1581524704000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_hT4fTN2CU9OHKjW2\",\"charge_id\":\"chr_test_hoG7RmsZtjNryRca\"\
-        ,\"creation_date\":1581524694000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_0QmMMOaWmMHhBjZ3\",\"charge_id\":\"chr_test_yWcAEDfHzbvSLZIm\"\
-        ,\"creation_date\":1581524686000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_agMddiidBgezS47E\",\"charge_id\":\"chr_test_GVsagePGH1ljVIOq\"\
-        ,\"creation_date\":1581524672000,\"amount\":100,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{\"order_id\":\"0001\"}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_6r2T2F3RlJFWadNC\",\"charge_id\":\"chr_test_m9nPzKGSdj9nU1Mn\"\
-        ,\"creation_date\":1581524665000,\"amount\":100,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_Faq53Zmd4yUAHbvn\",\"charge_id\":\"chr_test_jAQtRaTTCYuI7EM8\"\
-        ,\"creation_date\":1581524656000,\"amount\":100,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_RbTjCuS4mYoLG9cF\",\"charge_id\":\"chr_test_kTDuyd0BG56KmhnL\"\
-        ,\"creation_date\":1581524558000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_L5fV5it67Fc7aO4H\",\"charge_id\":\"chr_test_AWOcSxHopBhiwpq3\"\
-        ,\"creation_date\":1581524550000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_PvdKv66UJQ39Rvg9\",\"charge_id\":\"chr_test_krG2Xc5nMEBbadfo\"\
-        ,\"creation_date\":1581524537000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_PWGcGL5ctSuFPkbq\",\"charge_id\":\"chr_test_IOnzFNyKexSMuzXK\"\
-        ,\"creation_date\":1581524530000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_ZXAjYDJRIZClEVFn\",\"charge_id\":\"chr_test_zVHtDOSWtUvVuTML\"\
-        ,\"creation_date\":1580004013000,\"amount\":900,\"reason\":\"Expiraci\xF3\
-        n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_YNzPbI934SVN5uxX\"\
-        ,\"charge_id\":\"chr_test_NHaN4Ukg1eOORuj3\",\"creation_date\":1580004012000,\"\
-        amount\":900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_1GORUWofiePNt8sg\",\"charge_id\"\
-        :\"chr_test_WGjrAYauTADrmOnN\",\"creation_date\":1580004012000,\"amount\"\
-        :900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
-        object\":\"refund\",\"id\":\"ref_test_c9k6VeMUYyoGv8qc\",\"charge_id\":\"\
-        chr_test_GHLAY8cIgJr7TGIO\",\"creation_date\":1580004012000,\"amount\":1000,\"\
-        reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_wvT6nytq7HQSqhEu\",\"charge_id\":\"chr_test_J1BYxwMqxPINcLjw\"\
-        ,\"creation_date\":1580004012000,\"amount\":1000,\"reason\":\"Expiraci\xF3\
-        n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_wcvU8MxVkExERsXD\"\
-        ,\"charge_id\":\"chr_test_qDLsTkvNV2wngV0K\",\"creation_date\":1580004012000,\"\
-        amount\":1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_MRIDLgbVTjOODkJU\",\"charge_id\"\
-        :\"chr_test_kKohCIgURT1o1xAp\",\"creation_date\":1579744813000,\"amount\"\
-        :900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
-        object\":\"refund\",\"id\":\"ref_test_AsLWAUSzykEkrtuG\",\"charge_id\":\"\
-        chr_test_9nfXL21Xa88wYAUA\",\"creation_date\":1579744813000,\"amount\":900,\"\
-        reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_7eHkWjcAiQPVlO9P\",\"charge_id\":\"chr_test_QKhjMn9hZsPhL8Si\"\
-        ,\"creation_date\":1579744813000,\"amount\":900,\"reason\":\"Expiraci\xF3\
-        n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_gZQSjyjz3ZMg7V7h\"\
-        ,\"charge_id\":\"chr_test_OymjRnqFRpyA8A2o\",\"creation_date\":1579744812000,\"\
-        amount\":1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
-        :{}},{\"object\":\"refund\",\"id\":\"ref_test_SGOlOnXKqFp7rBxC\",\"charge_id\"\
-        :\"chr_test_gYaNTcPmoiVZZzIa\",\"creation_date\":1579744812000,\"amount\"\
-        :1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
-        object\":\"refund\",\"id\":\"ref_test_AwYxIm1goWs9bRsH\",\"charge_id\":\"\
-        chr_test_eW7nIWx1eCvrbmi9\",\"creation_date\":1579744812000,\"amount\":1000,\"\
-        reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_Qld1iMEFBgpwqLzm\",\"charge_id\":\"chr_test_wqmiZ1umMd6tAwJ8\"\
-        ,\"creation_date\":1579646838000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_7yS0i37X9K6lReBC\",\"charge_id\":\"chr_test_bbJ6qgr72K9hrQd6\"\
-        ,\"creation_date\":1579646830000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_EJG5eJwCqUCBQ5pk\",\"charge_id\":\"chr_test_SSBMMgLhqwMOkS2t\"\
-        ,\"creation_date\":1579646822000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_AMSS2NnExhmUcV9r\",\"charge_id\":\"chr_test_fRyxszj2ZeJJevjJ\"\
-        ,\"creation_date\":1579646814000,\"amount\":300,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
-        id\":\"ref_test_tiAqIGxzWMkw5hUo\",\"charge_id\":\"chr_test_zVHtDOSWtUvVuTML\"\
-        ,\"creation_date\":1579646806000,\"amount\":100,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{\"order_id\":\"0001\"}},{\"object\"\
-        :\"refund\",\"id\":\"ref_test_5DCITSU0pkwcDOwd\",\"charge_id\":\"chr_test_NHaN4Ukg1eOORuj3\"\
-        ,\"creation_date\":1579646799000,\"amount\":100,\"reason\":\"Devoluci\xF3\
-        n solicitada por el comercio\",\"metadata\":{}}],\"paging\":{\"previous\"\
-        :\"https://api.culqi.com/v2/refunds?limit=50&before=ref_test_SL8TtdYLrRg0qYVN\"\
-        ,\"next\":\"https://api.culqi.com/v2/refunds?limit=50&after=ref_test_5DCITSU0pkwcDOwd\"\
-        ,\"cursors\":{\"before\":\"ref_test_SL8TtdYLrRg0qYVN\",\"after\":\"ref_test_5DCITSU0pkwcDOwd\"\
-        },\"remaining_items\":null}}"
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '10173'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 13 May 2020 03:38:35 GMT
-      Via:
-      - 1.1 9c07f09e84d67c7e2eff177190d321f6.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - CPqL2VREwTjdW9Qf0zUj1TgtQhMF5wLAZmknTRAqpq2wAz362shp8g==
-      X-Amz-Cf-Pop:
-      - SCL50-C1
-      X-Amzn-Trace-Id:
-      - Root=1-5ebb6bb9-bb47dd58b5dafb78cd0dc9a0;Sampled=0
-      X-Cache:
-      - Miss from cloudfront
-      set-cookie:
-      - JSESSIONID=6B08F413A49E4F4EC7F4977636F47D37; Path=/api; HttpOnly
-      vary:
-      - Accept-Encoding
-      x-amz-apigw-id:
-      - Mc3FEH0LIAMFd5w=
-      x-amzn-RequestId:
-      - 86142393-51e2-4721-baad-619215ca625a
-      x-culqi-environment:
-      - test
-      x-culqi-tracking-id:
-      - '6892558'
-      x-culqi-version:
-      - 2.0.0
-      x-proxy-cache:
-      - MISS
-    status:
-      code: 200
-      message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.1.0
+      method: GET
+      uri: https://api.culqi.com/v2/refunds
+    response:
+      body:
+        string:
+          "{\"data\":[{\"object\":\"refund\",\"id\":\"ref_test_SL8TtdYLrRg0qYVN\"\
+          ,\"charge_id\":\"chr_test_7rje5SJhNW0VC3OL\",\"creation_date\":1589341113000,\"\
+          amount\":100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_5XDnb6uKy0PiodCn\",\"charge_id\"\
+          :\"chr_test_auWWAFYVFkWlE7O9\",\"creation_date\":1589341045000,\"amount\"\
+          :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_t4ef5HPq10ghEjsu\",\"charge_id\"\
+          :\"chr_test_NbUXEfa48QBhNQyS\",\"creation_date\":1589341037000,\"amount\"\
+          :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_adn45nfJD9FmoKE7\",\"charge_id\"\
+          :\"chr_test_DCy0faleo7hh8OGv\",\"creation_date\":1589341022000,\"amount\"\
+          :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_4HVBau99mjiMqiHh\",\"charge_id\"\
+          :\"chr_test_f6Dv8KwYEJfRljS6\",\"creation_date\":1589341016000,\"amount\"\
+          :100,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_1r0qkAJhsPxbngxX\",\"charge_id\"\
+          :\"chr_test_pEj6qgXp1iUBpHJc\",\"creation_date\":1588871665000,\"amount\"\
+          :9900,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_QTokAu6IcnL5imkq\",\"charge_id\"\
+          :\"chr_test_KWvuWD4QodYgRZZz\",\"creation_date\":1588718350000,\"amount\"\
+          :5600,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_BSJSvXS7ojZSftLZ\",\"charge_id\"\
+          :\"chr_test_hvOs7N36RaagGZRZ\",\"creation_date\":1588700986000,\"amount\"\
+          :6600,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_i4t3EnBrJ2ZliWer\",\"charge_id\"\
+          :\"chr_test_JshqZyflhFlePBC3\",\"creation_date\":1588456025000,\"amount\"\
+          :7900,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_1SV442m1KuUiFyYz\",\"charge_id\"\
+          :\"chr_test_sB4iRqsGrrsLkw7u\",\"creation_date\":1583765161000,\"amount\"\
+          :920,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_L85QwrwXYlPlhO27\",\"charge_id\"\
+          :\"chr_test_AA8dvKKZLorKXFZi\",\"creation_date\":1583765139000,\"amount\"\
+          :3830,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_Lgw0Ocu71rz00byX\",\"charge_id\"\
+          :\"chr_test_q8W89jHOka0XrFwk\",\"creation_date\":1583765018000,\"amount\"\
+          :3830,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_S4ubRYuE3LMf9GB0\",\"charge_id\"\
+          :\"chr_test_WYw16dpj30HrCV3o\",\"creation_date\":1583754010000,\"amount\"\
+          :4330,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_4phEraWGINzz4qnS\",\"charge_id\"\
+          :\"chr_test_ww3zvnOe9yKJWw7X\",\"creation_date\":1582574936000,\"amount\"\
+          :19000,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_N99ugV7r6Lhf9Z3k\",\"charge_id\"\
+          :\"chr_test_uEBPRBA5gdvSR1Dw\",\"creation_date\":1582148660000,\"amount\"\
+          :4500,\"reason\":\"Devoluci\xF3n solicitada por el comercio\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_I5YwGQBJb8VJqQXz\",\"charge_id\"\
+          :\"chr_test_GVsagePGH1ljVIOq\",\"creation_date\":1581904811000,\"amount\"\
+          :900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
+          object\":\"refund\",\"id\":\"ref_test_h1wBV9vqPITggLAT\",\"charge_id\":\"\
+          chr_test_m9nPzKGSdj9nU1Mn\",\"creation_date\":1581904810000,\"amount\":900,\"\
+          reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_C94oEdE3yKw8Tdvo\",\"charge_id\":\"chr_test_jAQtRaTTCYuI7EM8\"\
+          ,\"creation_date\":1581904810000,\"amount\":900,\"reason\":\"Expiraci\xF3\
+          n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_ODgX0qEllH7KXr0p\"\
+          ,\"charge_id\":\"chr_test_S6rGyV08Tu4vv8OO\",\"creation_date\":1581904810000,\"\
+          amount\":1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_7rFKUzuhUr4vXQNq\",\"charge_id\"\
+          :\"chr_test_z8RSeeBotBogXxc8\",\"creation_date\":1581904810000,\"amount\"\
+          :1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
+          object\":\"refund\",\"id\":\"ref_test_aKELzQq4ymN32g5S\",\"charge_id\":\"\
+          chr_test_TfocZvBvOUb8JeWM\",\"creation_date\":1581904810000,\"amount\":1000,\"\
+          reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_O1CPn7tqAmtvQOsc\",\"charge_id\":\"chr_test_hfCskClaMjAkVKQS\"\
+          ,\"creation_date\":1581524721000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_vtQrkGF75wIzxxmw\",\"charge_id\":\"chr_test_2q9bbu3KSZKQQF90\"\
+          ,\"creation_date\":1581524704000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_hT4fTN2CU9OHKjW2\",\"charge_id\":\"chr_test_hoG7RmsZtjNryRca\"\
+          ,\"creation_date\":1581524694000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_0QmMMOaWmMHhBjZ3\",\"charge_id\":\"chr_test_yWcAEDfHzbvSLZIm\"\
+          ,\"creation_date\":1581524686000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_agMddiidBgezS47E\",\"charge_id\":\"chr_test_GVsagePGH1ljVIOq\"\
+          ,\"creation_date\":1581524672000,\"amount\":100,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{\"order_id\":\"0001\"}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_6r2T2F3RlJFWadNC\",\"charge_id\":\"chr_test_m9nPzKGSdj9nU1Mn\"\
+          ,\"creation_date\":1581524665000,\"amount\":100,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_Faq53Zmd4yUAHbvn\",\"charge_id\":\"chr_test_jAQtRaTTCYuI7EM8\"\
+          ,\"creation_date\":1581524656000,\"amount\":100,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_RbTjCuS4mYoLG9cF\",\"charge_id\":\"chr_test_kTDuyd0BG56KmhnL\"\
+          ,\"creation_date\":1581524558000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_L5fV5it67Fc7aO4H\",\"charge_id\":\"chr_test_AWOcSxHopBhiwpq3\"\
+          ,\"creation_date\":1581524550000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_PvdKv66UJQ39Rvg9\",\"charge_id\":\"chr_test_krG2Xc5nMEBbadfo\"\
+          ,\"creation_date\":1581524537000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_PWGcGL5ctSuFPkbq\",\"charge_id\":\"chr_test_IOnzFNyKexSMuzXK\"\
+          ,\"creation_date\":1581524530000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_ZXAjYDJRIZClEVFn\",\"charge_id\":\"chr_test_zVHtDOSWtUvVuTML\"\
+          ,\"creation_date\":1580004013000,\"amount\":900,\"reason\":\"Expiraci\xF3\
+          n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_YNzPbI934SVN5uxX\"\
+          ,\"charge_id\":\"chr_test_NHaN4Ukg1eOORuj3\",\"creation_date\":1580004012000,\"\
+          amount\":900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_1GORUWofiePNt8sg\",\"charge_id\"\
+          :\"chr_test_WGjrAYauTADrmOnN\",\"creation_date\":1580004012000,\"amount\"\
+          :900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
+          object\":\"refund\",\"id\":\"ref_test_c9k6VeMUYyoGv8qc\",\"charge_id\":\"\
+          chr_test_GHLAY8cIgJr7TGIO\",\"creation_date\":1580004012000,\"amount\":1000,\"\
+          reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_wvT6nytq7HQSqhEu\",\"charge_id\":\"chr_test_J1BYxwMqxPINcLjw\"\
+          ,\"creation_date\":1580004012000,\"amount\":1000,\"reason\":\"Expiraci\xF3\
+          n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_wcvU8MxVkExERsXD\"\
+          ,\"charge_id\":\"chr_test_qDLsTkvNV2wngV0K\",\"creation_date\":1580004012000,\"\
+          amount\":1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_MRIDLgbVTjOODkJU\",\"charge_id\"\
+          :\"chr_test_kKohCIgURT1o1xAp\",\"creation_date\":1579744813000,\"amount\"\
+          :900,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
+          object\":\"refund\",\"id\":\"ref_test_AsLWAUSzykEkrtuG\",\"charge_id\":\"\
+          chr_test_9nfXL21Xa88wYAUA\",\"creation_date\":1579744813000,\"amount\":900,\"\
+          reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_7eHkWjcAiQPVlO9P\",\"charge_id\":\"chr_test_QKhjMn9hZsPhL8Si\"\
+          ,\"creation_date\":1579744813000,\"amount\":900,\"reason\":\"Expiraci\xF3\
+          n de autorizaci\xF3n\",\"metadata\":{}},{\"object\":\"refund\",\"id\":\"ref_test_gZQSjyjz3ZMg7V7h\"\
+          ,\"charge_id\":\"chr_test_OymjRnqFRpyA8A2o\",\"creation_date\":1579744812000,\"\
+          amount\":1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\"\
+          :{}},{\"object\":\"refund\",\"id\":\"ref_test_SGOlOnXKqFp7rBxC\",\"charge_id\"\
+          :\"chr_test_gYaNTcPmoiVZZzIa\",\"creation_date\":1579744812000,\"amount\"\
+          :1000,\"reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"\
+          object\":\"refund\",\"id\":\"ref_test_AwYxIm1goWs9bRsH\",\"charge_id\":\"\
+          chr_test_eW7nIWx1eCvrbmi9\",\"creation_date\":1579744812000,\"amount\":1000,\"\
+          reason\":\"Expiraci\xF3n de autorizaci\xF3n\",\"metadata\":{}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_Qld1iMEFBgpwqLzm\",\"charge_id\":\"chr_test_wqmiZ1umMd6tAwJ8\"\
+          ,\"creation_date\":1579646838000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_7yS0i37X9K6lReBC\",\"charge_id\":\"chr_test_bbJ6qgr72K9hrQd6\"\
+          ,\"creation_date\":1579646830000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_EJG5eJwCqUCBQ5pk\",\"charge_id\":\"chr_test_SSBMMgLhqwMOkS2t\"\
+          ,\"creation_date\":1579646822000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_AMSS2NnExhmUcV9r\",\"charge_id\":\"chr_test_fRyxszj2ZeJJevjJ\"\
+          ,\"creation_date\":1579646814000,\"amount\":300,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}},{\"object\":\"refund\",\"\
+          id\":\"ref_test_tiAqIGxzWMkw5hUo\",\"charge_id\":\"chr_test_zVHtDOSWtUvVuTML\"\
+          ,\"creation_date\":1579646806000,\"amount\":100,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{\"order_id\":\"0001\"}},{\"object\"\
+          :\"refund\",\"id\":\"ref_test_5DCITSU0pkwcDOwd\",\"charge_id\":\"chr_test_NHaN4Ukg1eOORuj3\"\
+          ,\"creation_date\":1579646799000,\"amount\":100,\"reason\":\"Devoluci\xF3\
+          n solicitada por el comercio\",\"metadata\":{}}],\"paging\":{\"previous\"\
+          :\"https://api.culqi.com/v2/refunds?limit=50&before=ref_test_SL8TtdYLrRg0qYVN\"\
+          ,\"next\":\"https://api.culqi.com/v2/refunds?limit=50&after=ref_test_5DCITSU0pkwcDOwd\"\
+          ,\"cursors\":{\"before\":\"ref_test_SL8TtdYLrRg0qYVN\",\"after\":\"ref_test_5DCITSU0pkwcDOwd\"\
+          },\"remaining_items\":null}}"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '10173'
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:38:35 GMT
+        Via:
+          - 1.1 9c07f09e84d67c7e2eff177190d321f6.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - CPqL2VREwTjdW9Qf0zUj1TgtQhMF5wLAZmknTRAqpq2wAz362shp8g==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-Amzn-Trace-Id:
+          - Root=1-5ebb6bb9-bb47dd58b5dafb78cd0dc9a0;Sampled=0
+        X-Cache:
+          - Miss from cloudfront
+        set-cookie:
+          - JSESSIONID=6B08F413A49E4F4EC7F4977636F47D37; Path=/api; HttpOnly
+        vary:
+          - Accept-Encoding
+        x-amz-apigw-id:
+          - Mc3FEH0LIAMFd5w=
+        x-amzn-RequestId:
+          - 86142393-51e2-4721-baad-619215ca625a
+        x-culqi-environment:
+          - test
+        x-culqi-tracking-id:
+          - '6892558'
+        x-culqi-version:
+          - 2.0.0
+        x-proxy-cache:
+          - MISS
+      status:
+        code: 200
+        message: OK
 version: 1

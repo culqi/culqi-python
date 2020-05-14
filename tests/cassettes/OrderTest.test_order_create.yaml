@@ -1,64 +1,66 @@
 interactions:
-- request:
-    body: '{"amount": 1000, "currency_code": "PEN", "description": "Venta de prueba",
-      "order_number": "order-a28f", "client_details": {"first_name": "Richard", "last_name":
-      "Piedpiper", "email": "richard@piedpiper.com", "phone_number": "+51998989789"},
-      "expiration_date": 1893474000, "confirm": false}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer culiq_api_key
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '290'
-      Content-type:
-      - application/json
-      User-Agent:
-      - Culqi-API-Python/1.0.3
-    method: POST
-    uri: https://api.culqi.com/v2/orders
-  response:
-    body:
-      string: '{"object":"order","id":"ord_test_HmJZjESwPWIEo4wz","amount":1000,"payment_code":null,"currency_code":"PEN","description":"Venta
-        de prueba","order_number":"order-a28f","state":"created","total_fee":null,"net_amount":null,"fee_details":null,"creation_date":1589341093,"expiration_date":1893474000,"updated_at":null,"paid_at":null,"available_on":null,"metadata":{}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '362'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 13 May 2020 03:38:13 GMT
-      Set-Cookie:
-      - JSESSIONID=EBFB24DF960FEFB2612F72381BDF9052; Path=/api/; HttpOnly
-      Via:
-      - 1.1 bd11400f2be95e5b98d25238ed7da10f.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - 8oU67x4SQW2c2gqtDjefvkBU0YD1tELAdEzIMNSSDkEI4ax9KR0QOA==
-      X-Amz-Cf-Pop:
-      - SCL50-C1
-      X-CULQI-ENVIRONMENT:
-      - test
-      X-CULQI-TRACKING-ID:
-      - '6892535'
-      X-CULQI-VERSION:
-      - 2.0.0
-      X-Cache:
-      - Miss from cloudfront
-      x-amz-apigw-id:
-      - Mc3B5FdSIAMFtaw=
-      x-amzn-Remapped-Date:
-      - Wed, 13 May 2020 03:38:13 GMT
-      x-amzn-Remapped-Server:
-      - Apache-Coyote/1.1
-      x-amzn-RequestId:
-      - 9785d0c9-50e4-414e-93dc-9491d8bef93f
-    status:
-      code: 201
-      message: Created
+  - request:
+      body:
+        '{"amount": 1000, "currency_code": "PEN", "description": "Venta de prueba",
+        "order_number": "order-a28f", "client_details": {"first_name": "Richard", "last_name":
+        "Piedpiper", "email": "richard@piedpiper.com", "phone_number": "+51998989789"},
+        "expiration_date": 1893474000, "confirm": false}'
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '290'
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.1.0
+      method: POST
+      uri: https://api.culqi.com/v2/orders
+    response:
+      body:
+        string:
+          '{"object":"order","id":"ord_test_HmJZjESwPWIEo4wz","amount":1000,"payment_code":null,"currency_code":"PEN","description":"Venta
+          de prueba","order_number":"order-a28f","state":"created","total_fee":null,"net_amount":null,"fee_details":null,"creation_date":1589341093,"expiration_date":1893474000,"updated_at":null,"paid_at":null,"available_on":null,"metadata":{}}'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '362'
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:38:13 GMT
+        Set-Cookie:
+          - JSESSIONID=EBFB24DF960FEFB2612F72381BDF9052; Path=/api/; HttpOnly
+        Via:
+          - 1.1 bd11400f2be95e5b98d25238ed7da10f.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - 8oU67x4SQW2c2gqtDjefvkBU0YD1tELAdEzIMNSSDkEI4ax9KR0QOA==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-CULQI-ENVIRONMENT:
+          - test
+        X-CULQI-TRACKING-ID:
+          - '6892535'
+        X-CULQI-VERSION:
+          - 2.0.0
+        X-Cache:
+          - Miss from cloudfront
+        x-amz-apigw-id:
+          - Mc3B5FdSIAMFtaw=
+        x-amzn-Remapped-Date:
+          - Wed, 13 May 2020 03:38:13 GMT
+        x-amzn-Remapped-Server:
+          - Apache-Coyote/1.1
+        x-amzn-RequestId:
+          - 9785d0c9-50e4-414e-93dc-9491d8bef93f
+      status:
+        code: 201
+        message: Created
 version: 1

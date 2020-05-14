@@ -1,120 +1,123 @@
 interactions:
-- request:
-    body: '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
-      "PE", "email": "richardbc10@piedpiper.com", "first_name": "Richard", "last_name":
-      "Piedpiper", "phone_number": "+51998989789"}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer culiq_api_key
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '201'
-      Content-type:
-      - application/json
-      User-Agent:
-      - Culqi-API-Python/1.0.3
-    method: POST
-    uri: https://api.culqi.com/v2/customers
-  response:
-    body:
-      string: '{"object":"customer","id":"cus_test_7dlvwTMmjsHvw6fy","creation_date":1589341088981,"email":"richardbc10@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
-        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '318'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 13 May 2020 03:38:09 GMT
-      Via:
-      - 1.1 f34144fb5b49a9a388448959976b46e4.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - z3yLPTapg7LQKPnsejyzfJ9EvOYop29_Ccffr3afG66Nyizu8ngRHg==
-      X-Amz-Cf-Pop:
-      - SCL50-C1
-      X-Amzn-Trace-Id:
-      - Root=1-5ebb6ba0-c30b52597253104459021876;Sampled=0
-      X-Cache:
-      - Miss from cloudfront
-      set-cookie:
-      - JSESSIONID=C66CC579A40A65B00152F3CAB94F1D04; Path=/api; HttpOnly
-      x-amz-apigw-id:
-      - Mc3BHGtPoAMFfFQ=
-      x-amzn-RequestId:
-      - 8997ebf6-7719-45bb-bce6-3868bfb47989
-      x-culqi-environment:
-      - test
-      x-culqi-tracking-id:
-      - '6892527'
-      x-culqi-version:
-      - 2.0.0
-    status:
-      code: 201
-      message: Created
-- request:
-    body: '{"metadata": {"order_id": "0001"}}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer culiq_api_key
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '34'
-      Content-type:
-      - application/json
-      User-Agent:
-      - Culqi-API-Python/1.0.3
-    method: PATCH
-    uri: https://api.culqi.com/v2/customers/cus_test_7dlvwTMmjsHvw6fy
-  response:
-    body:
-      string: '{"object":"customer","id":"cus_test_7dlvwTMmjsHvw6fy","creation_date":1589341088000,"email":"richardbc10@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
-        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{"order_id":"0001"}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '335'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 13 May 2020 03:38:09 GMT
-      Set-Cookie:
-      - JSESSIONID=0AEFAEF09B3C7D7E59F9A3DCA8CFFCA2; Path=/api/; HttpOnly
-      Via:
-      - 1.1 f34144fb5b49a9a388448959976b46e4.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - qMiO8TcKUbuIRJFGf89hyURlcIjfXk_4xoDvGEL7dKT7VZCr6BGD7g==
-      X-Amz-Cf-Pop:
-      - SCL50-C1
-      X-CULQI-ENVIRONMENT:
-      - test
-      X-CULQI-TRACKING-ID:
-      - '6892528'
-      X-CULQI-VERSION:
-      - 2.0.0
-      X-Cache:
-      - Miss from cloudfront
-      x-amz-apigw-id:
-      - Mc3BREY0IAMF2kA=
-      x-amzn-Remapped-Date:
-      - Wed, 13 May 2020 03:38:09 GMT
-      x-amzn-Remapped-Server:
-      - Apache-Coyote/1.1
-      x-amzn-RequestId:
-      - 3d6b984c-ee4a-4fa2-98eb-d6484664bbd5
-    status:
-      code: 200
-      message: OK
+  - request:
+      body:
+        '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
+        "PE", "email": "richardbc10@piedpiper.com", "first_name": "Richard", "last_name":
+        "Piedpiper", "phone_number": "+51998989789"}'
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '201'
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.1.0
+      method: POST
+      uri: https://api.culqi.com/v2/customers
+    response:
+      body:
+        string:
+          '{"object":"customer","id":"cus_test_7dlvwTMmjsHvw6fy","creation_date":1589341088981,"email":"richardbc10@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+          Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '318'
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:38:09 GMT
+        Via:
+          - 1.1 f34144fb5b49a9a388448959976b46e4.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - z3yLPTapg7LQKPnsejyzfJ9EvOYop29_Ccffr3afG66Nyizu8ngRHg==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-Amzn-Trace-Id:
+          - Root=1-5ebb6ba0-c30b52597253104459021876;Sampled=0
+        X-Cache:
+          - Miss from cloudfront
+        set-cookie:
+          - JSESSIONID=C66CC579A40A65B00152F3CAB94F1D04; Path=/api; HttpOnly
+        x-amz-apigw-id:
+          - Mc3BHGtPoAMFfFQ=
+        x-amzn-RequestId:
+          - 8997ebf6-7719-45bb-bce6-3868bfb47989
+        x-culqi-environment:
+          - test
+        x-culqi-tracking-id:
+          - '6892527'
+        x-culqi-version:
+          - 2.0.0
+      status:
+        code: 201
+        message: Created
+  - request:
+      body: '{"metadata": {"order_id": "0001"}}'
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '34'
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.1.0
+      method: PATCH
+      uri: https://api.culqi.com/v2/customers/cus_test_7dlvwTMmjsHvw6fy
+    response:
+      body:
+        string:
+          '{"object":"customer","id":"cus_test_7dlvwTMmjsHvw6fy","creation_date":1589341088000,"email":"richardbc10@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+          Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{"order_id":"0001"}}'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '335'
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:38:09 GMT
+        Set-Cookie:
+          - JSESSIONID=0AEFAEF09B3C7D7E59F9A3DCA8CFFCA2; Path=/api/; HttpOnly
+        Via:
+          - 1.1 f34144fb5b49a9a388448959976b46e4.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - qMiO8TcKUbuIRJFGf89hyURlcIjfXk_4xoDvGEL7dKT7VZCr6BGD7g==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-CULQI-ENVIRONMENT:
+          - test
+        X-CULQI-TRACKING-ID:
+          - '6892528'
+        X-CULQI-VERSION:
+          - 2.0.0
+        X-Cache:
+          - Miss from cloudfront
+        x-amz-apigw-id:
+          - Mc3BREY0IAMF2kA=
+        x-amzn-Remapped-Date:
+          - Wed, 13 May 2020 03:38:09 GMT
+        x-amzn-Remapped-Server:
+          - Apache-Coyote/1.1
+        x-amzn-RequestId:
+          - 3d6b984c-ee4a-4fa2-98eb-d6484664bbd5
+      status:
+        code: 200
+        message: OK
 version: 1

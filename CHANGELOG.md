@@ -1,9 +1,10 @@
-### In progress
+### 1.1.0 In progress
 
 - Support for python 3.8.x
+- Updated dependecies
+- Fixed conflict with pylint E1101 (no-member) error message
 - Added tests for distinct cards
 - Added tests for error responses
-- Update dependecies
 
 ### 1.0.0 to 1.0.3 03-01-2020
 

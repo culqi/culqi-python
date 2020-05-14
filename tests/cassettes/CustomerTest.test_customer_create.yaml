@@ -1,61 +1,63 @@
 interactions:
-- request:
-    body: '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
-      "PE", "email": "richard1b0e@piedpiper.com", "first_name": "Richard", "last_name":
-      "Piedpiper", "phone_number": "+51998989789"}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer culiq_api_key
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '201'
-      Content-type:
-      - application/json
-      User-Agent:
-      - Culqi-API-Python/1.0.3
-    method: POST
-    uri: https://api.culqi.com/v2/customers
-  response:
-    body:
-      string: '{"object":"customer","id":"cus_test_16YD9q01NcG7Qr9K","creation_date":1589341083146,"email":"richard1b0e@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
-        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '318'
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 13 May 2020 03:38:03 GMT
-      Via:
-      - 1.1 7ac9c8ac72e3482403dd503d970050b5.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - PtfHigw1zFeXmOvbIhgdvkhmHu9E5yH-Ypwy4tFYLGXjf6WQU0dr2g==
-      X-Amz-Cf-Pop:
-      - SCL50-C1
-      X-Amzn-Trace-Id:
-      - Root=1-5ebb6b9a-c96203b63d5c1b21782a1e26;Sampled=0
-      X-Cache:
-      - Miss from cloudfront
-      set-cookie:
-      - JSESSIONID=FE5FC0CB4DCB18ABFB4F2D4EA307205A; Path=/api; HttpOnly
-      x-amz-apigw-id:
-      - Mc3AOF1aIAMF58w=
-      x-amzn-RequestId:
-      - 95e2f995-b487-484d-948f-efa72dcc91df
-      x-culqi-environment:
-      - test
-      x-culqi-tracking-id:
-      - '6892521'
-      x-culqi-version:
-      - 2.0.0
-    status:
-      code: 201
-      message: Created
+  - request:
+      body:
+        '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
+        "PE", "email": "richard1b0e@piedpiper.com", "first_name": "Richard", "last_name":
+        "Piedpiper", "phone_number": "+51998989789"}'
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '201'
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.1.0
+      method: POST
+      uri: https://api.culqi.com/v2/customers
+    response:
+      body:
+        string:
+          '{"object":"customer","id":"cus_test_16YD9q01NcG7Qr9K","creation_date":1589341083146,"email":"richard1b0e@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+          Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '318'
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:38:03 GMT
+        Via:
+          - 1.1 7ac9c8ac72e3482403dd503d970050b5.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - PtfHigw1zFeXmOvbIhgdvkhmHu9E5yH-Ypwy4tFYLGXjf6WQU0dr2g==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-Amzn-Trace-Id:
+          - Root=1-5ebb6b9a-c96203b63d5c1b21782a1e26;Sampled=0
+        X-Cache:
+          - Miss from cloudfront
+        set-cookie:
+          - JSESSIONID=FE5FC0CB4DCB18ABFB4F2D4EA307205A; Path=/api; HttpOnly
+        x-amz-apigw-id:
+          - Mc3AOF1aIAMF58w=
+        x-amzn-RequestId:
+          - 95e2f995-b487-484d-948f-efa72dcc91df
+        x-culqi-environment:
+          - test
+        x-culqi-tracking-id:
+          - '6892521'
+        x-culqi-version:
+          - 2.0.0
+      status:
+        code: 201
+        message: Created
 version: 1
