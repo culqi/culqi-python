@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"card_number": "5111111111111118", "expiration_month": "06", "expiration_year":
+      "2025", "cvv": "039", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: "{\"object\":\"token\",\"id\":\"tkn_test_MPvAkiATz1ubdp2t\",\"type\"\
+        :\"card\",\"creation_date\":1589955044000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"511111******1118\",\"last_four\":\"1118\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"511111\",\"card_brand\":\"MasterCard\"\
+        ,\"card_type\":\"debito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"\
+        name\":\"INTERBANK\",\"country\":\"PERU\",\"country_code\":\"PE\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[24,2,3,4,5,6,7,8,9,12,48]},\"\
+        client\":{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\"\
+        :\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\"\
+        :\"Escritorio\"},\"metadata\":{}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '620'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:10:44 GMT
+      Via:
+      - 1.1 295436c328732642848d67dafd07b971.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - cNMswjUgVx6MBgJsg_wa0ACNevk7RebUlyD4ct3RVN1UtGCaYCZJLg==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c9e4-954f036e2244a960f6881de3;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0R7qHHAIAMFoTA=
+      x-amzn-Remapped-Content-Length:
+      - '620'
+      x-amzn-RequestId:
+      - 9b091ab0-9694-46d4-96f4-52945d4eca1e
+    status:
+      code: 201
+      message: Created
+version: 1

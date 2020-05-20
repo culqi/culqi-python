@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"card_number": "4000040000000008", "expiration_month": "03", "expiration_year":
+      "2025", "cvv": "295", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_c5plVk8Qv2wZFnNb","type":"card","creation_date":1589955031000,"email":"richard@piedpiper.com","card_number":"400004******0008","last_four":"0008","active":true,"iin":{"object":"iin","bin":"400004","card_brand":"Visa","card_type":"debito","card_category":null,"issuer":{"name":"","country":"UNITED
+        STATES","country_code":"US","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '584'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:10:32 GMT
+      Via:
+      - 1.1 d2360e021992e2c02abac93270dfe4cb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - c3v6iJwo6Mg-madl4xuHB-5sD0MRhAQx6ZPw5inEc8IlAwo-xgahYA==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c9d7-9c187a1cc92e0c0e3a43a96c;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0R5tHsQoAMFU7w=
+      x-amzn-Remapped-Content-Length:
+      - '584'
+      x-amzn-RequestId:
+      - 95ac747c-69cf-48fc-b4e8-13c352cfc27a
+    status:
+      code: 201
+      message: Created
+version: 1

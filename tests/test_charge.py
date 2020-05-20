@@ -14,6 +14,7 @@ from .data import Data
 
 
 class ChargeTest(unittest.TestCase):
+    # pylint: disable = too-many-public-methods
     def __init__(self, *args, **kwargs):
         super(ChargeTest, self).__init__(*args, **kwargs)
         load_dotenv()
@@ -94,6 +95,114 @@ class ChargeTest(unittest.TestCase):
             self.charge.delete(charge["data"]["id"])
 
         assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_charge_create__successful__visa(self):
+        charge_data = self.get_charge_data("successful", "visa")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "charge"
+
+    @pytest.mark.vcr()
+    def test_charge_create__successful__master_card(self):
+        charge_data = self.get_charge_data("successful", "master_card")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "charge"
+
+    @pytest.mark.vcr()
+    def test_charge_create__successful__american_express(self):
+        charge_data = self.get_charge_data("successful", "american_express")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "charge"
+
+    @pytest.mark.vcr()
+    def test_charge_create__successful__diners_club(self):
+        charge_data = self.get_charge_data("successful", "diners_club")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "charge"
+
+    @pytest.mark.vcr()
+    def test_charge_create__stolen_card__visa(self):
+        charge_data = self.get_charge_data("stolen_card", "visa")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "stolen_card"
+
+    @pytest.mark.vcr()
+    def test_charge_create__lost_card__visa(self):
+        charge_data = self.get_charge_data("lost_card", "visa")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "lost_card"
+
+    @pytest.mark.vcr()
+    def test_charge_create__insufficient_funds__visa(self):
+        charge_data = self.get_charge_data("insufficient_funds", "visa")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "insufficient_funds"
+
+    @pytest.mark.vcr()
+    def test_charge_create__contact_issuer__master_card(self):
+        charge_data = self.get_charge_data("contact_issuer", "master_card")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "contact_issuer"
+
+    @pytest.mark.vcr()
+    def test_charge_create__incorrect_cvv__master_card(self):
+        charge_data = self.get_charge_data("incorrect_cvv", "master_card")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "incorrect_cvv"
+
+    @pytest.mark.vcr()
+    def test_charge_create__issuer_not_available__american_express(self):
+        charge_data = self.get_charge_data("issuer_not_available", "american_express")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "issuer_not_available"
+
+    @pytest.mark.vcr()
+    def test_charge_create__issuer_decline_operation__american_express(self):
+        charge_data = self.get_charge_data(
+            "issuer_decline_operation", "american_express"
+        )
+        charge = self.charge.create(data=charge_data)
+
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "issuer_decline_operation"
+
+    @pytest.mark.vcr()
+    def test_charge_create__invalid_card__diners_club(self):
+        charge_data = self.get_charge_data("invalid_card", "diners_club")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "invalid_card"
+
+    @pytest.mark.vcr()
+    def test_charge_create__processing_error__diners_club(self):
+        charge_data = self.get_charge_data("processing_error", "diners_club")
+        charge = self.charge.create(data=charge_data)
+        assert charge["data"]["object"] == "error"
+        assert charge["data"]["code"] == "card_declined"
+        assert charge["data"]["decline_code"] == "processing_error"
+
+    # This fail due to Internal server error in Culqi
+    # @pytest.mark.vcr()
+    # def test_charge_create__fraudulent__diners_club(self):
+    #     charge_data = self.get_charge_data(# "fraudulent", "diners_club")
+    #     charge = self.charge.create(data=charge_data)
+    #     assert charge["data"]["object"] == "error"
+    #     assert charge["data"]["code"] == "card_declined"
+    #     assert charge["data"]["decline_code"] == "fraudulent"
 
 
 if __name__ == "__main__":

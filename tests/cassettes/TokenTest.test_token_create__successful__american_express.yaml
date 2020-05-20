@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"card_number": "371212121212122", "expiration_month": "11", "expiration_year":
+      "2025", "cvv": "2841", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_ZAUyPURqxtiODzE4","type":"card","creation_date":1589955041000,"email":"richard@piedpiper.com","card_number":"371212*****2122","last_four":"2122","active":true,"iin":{"object":"iin","bin":"371212","card_brand":"Amex","card_type":"credito","card_category":null,"issuer":{"name":"AMERICAN
+        EXPRESS COMPANY","country":"UNITED STATES","country_code":"US","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '608'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:10:42 GMT
+      Via:
+      - 1.1 9c07f09e84d67c7e2eff177190d321f6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 3qwKJO4BYgsTRkJppi1cijto735uh8PdAGho7fkKyggUTEPMOSNh2w==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c9e1-af6832682fc5b3a55e72f05d;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0R7SHitoAMF-HQ=
+      x-amzn-Remapped-Content-Length:
+      - '608'
+      x-amzn-RequestId:
+      - b2b482ca-207a-4614-9bf8-7a4c312fc816
+    status:
+      code: 201
+      message: Created
+version: 1

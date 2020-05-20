@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"card_number": "370001000000000", "expiration_month": "04", "expiration_year":
+      "2025", "cvv": "2511", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_8TngcNEe2W6ZxCuM","type":"card","creation_date":1589955036000,"email":"richard@piedpiper.com","card_number":"370001*****0000","last_four":"0000","active":true,"iin":{"object":"iin","bin":"370001","card_brand":"Amex","card_type":"credito","card_category":null,"issuer":{"name":"AMERICAN
+        EXPRESS COMPANY","country":"INDIA","country_code":"IN","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '600'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:10:36 GMT
+      Via:
+      - 1.1 fd7441fafdf8d6a01b5f14f818907820.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - dxWTdPTQ2jK3qj2c1nmpysGo4N6deCJkv6aJfP5G8Kc2ivmqphkbZg==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c9db-71a31da07bf0595e2279c61e;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0R6YHK9IAMF5lQ=
+      x-amzn-Remapped-Content-Length:
+      - '600'
+      x-amzn-RequestId:
+      - 28ccec26-e2bd-4e46-8fa8-b2b7fe2df501
+    status:
+      code: 201
+      message: Created
+version: 1
