@@ -5,6 +5,7 @@
 - Fixed conflict with pylint E1101 (no-member) error message
 - Added tests for distinct cards
 - Added tests for error responses
+- Added pylint and bandit for code quality tests
 
 ### 1.0.0 to 1.0.3 03-01-2020
 

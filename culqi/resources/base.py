@@ -6,7 +6,7 @@ from ..utils.urls import URL
 __all__ = ["Resource"]
 
 
-class Resource:
+class Resource(object):
     endpoint = None
     schema = None
 
@@ -22,8 +22,9 @@ class Resource:
     def _post(self, url, data, **kwargs):
         return self.client.post(url, data, **kwargs)
 
-    def _put(self, url, data, **kwargs):
-        return self.client.put(url, data, **kwargs)
+    # PUT method is never used in Culqi resources
+    # def _put(self, url, data, **kwargs):
+    #     return self.client.put(url, data, **kwargs)
 
     def _delete(self, url, data, **kwargs):
         return self.client.delete(url, data, **kwargs)
@@ -35,8 +36,10 @@ class Resource:
         )
 
     def create(self, data, **options):
-        if hasattr(self, "schema"):
-            validate(instance=data, schema=self.schema)
+        # All resources have a schema, they will be always validated
+        # if hasattr(self, "schema"):
+        #     validate(instance=data, schema=self.schema)
+        validate(instance=data, schema=self.schema)
         url = self._get_url()
         return self._post(url, data, **options)
 

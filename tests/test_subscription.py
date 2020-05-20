@@ -30,7 +30,7 @@ class SubscriptionTest(unittest.TestCase):
         # pylint-x: disable=no-member
         email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
 
-        token_data = deepcopy(Data.TOKEN)
+        token_data = deepcopy(Data.CARD["successful"]["visa"])
         token_data["email"] = email
         token = self.culqi.token.create(data=token_data)
 

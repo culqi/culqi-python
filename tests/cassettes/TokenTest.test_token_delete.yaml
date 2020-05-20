@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"brand": "Visa", "card_number": "4111111111111111", "expiration_month":
+      "09", "expiration_year": "2025", "cvv": "123", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '153'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: "{\"object\":\"token\",\"id\":\"tkn_test_ogSsnP5j3XzgArpd\",\"type\"\
+        :\"card\",\"creation_date\":1589951809000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '613'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:16:49 GMT
+      Via:
+      - 1.1 0e3695dd181942a4e786f01e5f9e8b30.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ttVtM-jk2GMjB8YUam-OBlZi4WhtL_9SZO1azdmOSjuKzfsK1-YveQ==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4bd41-cb2906ca0f637c916a2abe1d;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0KCLFNgoAMFszw=
+      x-amzn-Remapped-Content-Length:
+      - '613'
+      x-amzn-RequestId:
+      - 56c8bd91-ead5-4013-afc9-bc99945a80e3
+    status:
+      code: 201
+      message: Created
+version: 1

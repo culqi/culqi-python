@@ -1,10 +1,11 @@
 import os
 import unittest
 
+import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
-from culqi.client import Culqi
+from culqi.client import RESOURCE_PREFIX, Culqi
 
 
 class ClientTest(unittest.TestCase):
@@ -37,6 +38,17 @@ class ClientTest(unittest.TestCase):
         assert headers["Authorization"] == session_headers["Authorization"]
         assert headers["Content-type"] == session_headers["Content-type"]
         assert headers["Accept"] == session_headers["Accept"]
+
+    def test_non_injected_property(self):
+        attribute_name = "dummy_attribute"
+        message = (
+            "'Culqi' object has no attribute '%sdummy_attribute'" % RESOURCE_PREFIX
+        )
+
+        with pytest.raises(AttributeError) as excinfo:
+            getattr(self.culqi, attribute_name)
+
+        assert message in str(excinfo.value)
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Charge
+from culqi.utils.errors import ErrorMessage, NotAllowedError
 
 from .data import Data
 
@@ -23,10 +24,8 @@ class ChargeTest(unittest.TestCase):
         self.charge = Charge(client=self.culqi)
         self.metadata = {"order_id": "0001"}
 
-    @property
-    def charge_data(self):
-        # pylint-x: disable=no-member
-        token_data = deepcopy(Data.TOKEN)
+    def get_charge_data(self, code, provider):
+        token_data = deepcopy(Data.CARD[code][provider])
         token = self.culqi.token.create(data=token_data)
 
         charge_data = deepcopy(Data.CHARGE)
@@ -48,21 +47,23 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_create(self):
-        charge = self.charge.create(data=self.charge_data)
+        charge_data = self.get_charge_data("successful", "visa")
+        charge = self.charge.create(data=charge_data)
 
         assert charge["data"]["object"] == "charge"
 
     @pytest.mark.vcr()
     def test_charge_capture(self):
-        created_charge = self.charge.create(data=self.charge_data)
+        charge_data = self.get_charge_data("successful", "visa")
+        created_charge = self.charge.create(data=charge_data)
         captured_charge = self.charge.capture(id_=created_charge["data"]["id"])
 
         assert captured_charge["data"]["id"] == created_charge["data"]["id"]
-        assert captured_charge["status"] == 201
 
     @pytest.mark.vcr()
     def test_charge_retrieve(self):
-        created_charge = self.charge.create(data=self.charge_data)
+        charge_data = self.get_charge_data("successful", "visa")
+        created_charge = self.charge.create(data=charge_data)
         retrieved_charge = self.charge.read(created_charge["data"]["id"])
 
         assert created_charge["data"]["id"] == retrieved_charge["data"]["id"]
@@ -74,7 +75,8 @@ class ChargeTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_charge_update(self):
-        created_charge = self.charge.create(data=self.charge_data)
+        charge_data = self.get_charge_data("successful", "visa")
+        created_charge = self.charge.create(data=charge_data)
 
         metadatada = {"metadata": self.metadata}
         updated_charge = self.charge.update(
@@ -83,6 +85,15 @@ class ChargeTest(unittest.TestCase):
 
         assert updated_charge["data"]["id"] == created_charge["data"]["id"]
         assert updated_charge["data"]["metadata"] == self.metadata
+
+    @pytest.mark.vcr()
+    def test_charge_delete(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            charge_data = self.get_charge_data("successful", "visa")
+            charge = self.charge.create(data=charge_data)
+            self.charge.delete(charge["data"]["id"])
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
 
 
 if __name__ == "__main__":

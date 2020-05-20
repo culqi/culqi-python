@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-class ErrorCode:
+class ErrorCode(object):
     """Codigos de Denegación de Bancos.
 
     - EXPIRED_CARD
@@ -77,7 +77,7 @@ class ErrorCode:
     CULQI_CARD = "culqi_card"
 
 
-class HTTPErrorCode:
+class HTTPErrorCode(object):
     """Tipos de Errores.
 
     - INVALID_REQUEST_ERROR:
@@ -123,7 +123,7 @@ class HTTPErrorCode:
     API_ERROR = "api_error"
 
 
-class ErrorMessage:
+class ErrorMessage(object):
     NOT_ALLOWED = "You can't perform this action."
 
 

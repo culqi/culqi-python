@@ -20,7 +20,7 @@ for name, module in resources.__dict__.items():
         RESOURCE_CLASSES[name] = module.__dict__[capitalized_name]
 
 
-class Culqi:
+class Culqi(object):
     def __init__(self, public_key, private_key):
         self.public_key = public_key
         self.private_key = private_key
@@ -92,9 +92,10 @@ class Culqi:
         data, options = self._update_request(data, options)
         return self.request("delete", url, data=data, **options)
 
-    def put(self, url, data, **options):
-        data, options = self._update_request(data, options)
-        return self.request("put", url, data=data, **options)
+    # PUT method is never used in Culqi resources
+    # def put(self, url, data, **options):
+    #     data, options = self._update_request(data, options)
+    #     return self.request("put", url, data=data, **options)
 
     def __getattr__(self, name):
         # This method will be called if the standar accesos for a property

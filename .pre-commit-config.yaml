@@ -22,8 +22,29 @@ repos:
     hooks:
       - id: isort
 
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.6.2
+    hooks:
+      - id: bandit
+        args: [-c, .bandit, -r, culqi]
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.6.2
+    hooks:
+      - id: bandit
+        args: [-c, .bandit, -r, tests]
+
   - repo: https://github.com/pycqa/pydocstyle
     rev: 4.0.0
     hooks:
       - id: pydocstyle
         files: ^culqi/
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: [--rcfile, .pylintrc.local]

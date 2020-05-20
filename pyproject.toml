@@ -6,27 +6,28 @@ authors = ["zodiacfireworks <martin.vuelta@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-requests = "^2.22"
 jsonschema = "^3.2.0"
+requests = "^2.22"
 
 [tool.poetry.dev-dependencies]
-jupyterlab = "^1.2"
-twine = "^3.1"
-pylint = "^2.4"
 autopep8 = "^1.4"
-coverage = "^5.0"
-pytest-cov = "^2.8"
-python-dotenv = "^0.10.3"
-mypy = "^0.761.0"
-tox = "^3.14"
-codecov = "^2.0"
-flake8 = "^3.7"
-pytest = "^5.3"
-pytest-vcr = "^1.0"
+bandit = "^1.6.2"
 black = "19.10b0"
-pydocstyle = "^5.0"
-pre-commit = "^1.21.0"
+codecov = "^2.0"
+coverage = "^5.0"
+flake8 = "^3.7"
 flake8-black = "^0.1.1"
+jupyterlab = "^1.2"
+mypy = "^0.761.0"
+pre-commit = "^1.21.0"
+pydocstyle = "^5.0"
+pylint = "^2.4"
+pytest = "^5.3"
+pytest-cov = "^2.8"
+pytest-vcr = "^1.0"
+python-dotenv = "^0.10.3"
+tox = "^3.14"
+twine = "^3.1"
 
 [tool.black]
 target_version = ['py35', 'py36', 'py37', 'py38']

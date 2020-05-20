@@ -6,6 +6,7 @@ atomicwrites==1.4.0; sys_platform == "win32"
 attrs==19.3.0
 autopep8==1.5.2
 backcall==0.1.0
+bandit==1.6.2
 black==19.10b0
 bleach==3.1.5
 certifi==2020.4.5.1
@@ -25,6 +26,8 @@ entrypoints==0.3
 filelock==3.0.12
 flake8==3.8.1
 flake8-black==0.1.1
+gitdb==4.0.5
+gitpython==3.1.2
 identify==1.4.15
 idna==2.9
 ipykernel==5.2.1
@@ -57,6 +60,7 @@ packaging==20.3
 pandocfilters==1.4.2
 parso==0.7.0
 pathspec==0.8.0
+pbr==5.4.5
 pexpect==4.8.0; sys_platform != "win32"
 pickleshare==0.7.5
 pkginfo==1.5.0.1
@@ -91,7 +95,9 @@ requests-toolbelt==0.9.1
 secretstorage==3.1.2; sys_platform == "linux"
 send2trash==1.5.0
 six==1.14.0
+smmap==3.0.4
 snowballstemmer==2.0.0
+stevedore==1.32.0
 terminado==0.8.3
 testpath==0.4.4
 toml==0.10.1
