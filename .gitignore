@@ -1,9 +1,11 @@
 .*
+!.bandit
 !.coveragerc
 !.gitignore
 !.isort.cfg
 !.pre-commit-config.yaml
 !.pylintrc
+!.pylintrc.local
 !.travis.yml
 *.py[cod]
 *.ipynb*
