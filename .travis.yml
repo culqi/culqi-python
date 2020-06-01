@@ -1,15 +1,16 @@
 language: python
 python:
-  - '2.7'
-  - '3.5'
-  - '3.6'
-  - '3.7'
-  - '3.8'
+  - "2.7"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
 install:
   - pip install tox-travis
 script:
   - tox
+  - if [ "$TRAVIS_PYTHON_VERSION" = "3.8" ]; then tox -e black; tox -e flake8; tox -e pydocstyle; fi
 matrix:
   allow_failures:
-    - python: '3.7'
-    - python: '3.8'
+    - python: "3.7"
+    - python: "3.8"
