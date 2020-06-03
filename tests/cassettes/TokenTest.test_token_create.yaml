@@ -1,41 +1,66 @@
 interactions:
-- request:
-    body: !!python/unicode '{"email": "richard@piedpiper.com", "cvv": "123", "expiration_year":
-      "2020", "card_number": "4111111111111111", "expiration_month": "09"}'
-    headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-Length: ['136']
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
-    method: POST
-    uri: https://secure.culqi.com/v2/tokens
-  response:
-    body: {string: "{\"object\":\"token\",\"id\":\"tkn_test_O99LnZmJkjNfbITE\",\"\
-        type\":\"card\",\"creation_date\":1578103196000,\"email\":\"richard@piedpiper.com\"\
-        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
-        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
-        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
-        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
-        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
-        :{\"ip\":\"2800:200:e208:17e:6229:ea16:607c:4d74\",\"ip_country\":\"Peru\"\
-        ,\"ip_country_code\":\"PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\"\
-        :null,\"device_type\":\"Escritorio\"},\"metadata\":{}}"}
-    headers:
-      connection: [keep-alive]
-      content-encoding: [UTF-8]
-      content-length: ['636']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:59:57 GMT']
-      via: [1.1 2d64784a9c03401d2f7f505cbef3c986.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKweHVYIAMF5ug=]
-      x-amz-cf-id: [lEazlHAIG0b_ma_ZFo8fkzJjxXWUz5wEYvTrqDhQxd99hM4SD-MY_A==]
-      x-amz-cf-pop: [IAH50-C2]
-      x-amzn-remapped-content-length: ['636']
-      x-amzn-requestid: [d40d25af-64f5-4b1e-af3a-82a30c458b56]
-      x-amzn-trace-id: [Root=1-5e0ff19c-e716af088a33cd92ef6a5aa6;Sampled=0]
-      x-cache: [Miss from cloudfront]
-    status: {code: 201, message: Created}
+  - request:
+      body:
+        '{"cvv": "123", "card_number": "4111111111111111", "expiration_year": "2025",
+        "expiration_month": "09", "email": "richard@piedpiper.com"}'
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "136"
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.0.4
+      method: POST
+      uri: https://secure.culqi.com/v2/tokens
+    response:
+      body:
+        string:
+          "{\"object\":\"token\",\"id\":\"tkn_test_jbdoJHEuYm8vkq7L\",\"type\"\
+          :\"card\",\"creation_date\":1589341166000,\"email\":\"richard@piedpiper.com\"\
+          ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+          iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+          :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+          ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+          :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+          :{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+          PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+          Escritorio\"},\"metadata\":{}}"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - UTF-8
+        Content-Length:
+          - "613"
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:39:26 GMT
+        Via:
+          - 1.1 d083f48319163c88d60fbeb2218dbf65.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - pW6BHXi8N43foQNIEKtNuEDzT97RKpXAjsAF2ImmJwQzdCmV1Uz4_w==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-Amzn-Trace-Id:
+          - Root=1-5ebb6bee-5a8b9d8ffc3e5f7057af9c4e;Sampled=0
+        X-Cache:
+          - Miss from cloudfront
+        x-amz-apigw-id:
+          - Mc3NPG36IAMF-HQ=
+        x-amzn-Remapped-Content-Length:
+          - "613"
+        x-amzn-RequestId:
+          - 12296899-1bd0-4fa0-9610-dc65dfded693
+      status:
+        code: 201
+        message: Created
 version: 1

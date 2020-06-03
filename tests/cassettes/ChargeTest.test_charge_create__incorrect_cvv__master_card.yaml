@@ -1,0 +1,119 @@
+interactions:
+- request:
+    body: '{"card_number": "5400020000000003", "expiration_month": "07", "expiration_year":
+      "2025", "cvv": "203", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_pdXSISDn77ETB3Yn","type":"card","creation_date":1589954293000,"email":"richard@piedpiper.com","card_number":"540002******0003","last_four":"0003","active":true,"iin":{"object":"iin","bin":"540002","card_brand":"MasterCard","card_type":"credito","card_category":null,"issuer":{"name":"BARCLAYS
+        BANK PLC","country":"UNITED KINGDOM","country_code":"GB","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '609'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:58:14 GMT
+      Via:
+      - 1.1 1dc9ec3cd7c2ae5d76a5d787825f0165.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - wUlCWmjVSw_kWD_JIzGhWvNf2rA-vHyNmyrftlm3kFLs0Qvt_R7wDQ==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c6f5-c07cfaf590c8662ff3449524;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0QGYFXtoAMFy6A=
+      x-amzn-Remapped-Content-Length:
+      - '609'
+      x-amzn-RequestId:
+      - eee3ac1c-8a51-4058-a7f1-dc447562b2ea
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"amount": 1000, "capture": false, "currency_code": "PEN", "description":
+      "Venta de prueba", "email": "richard@piedpiper.com", "installments": 0, "source_id":
+      "tkn_test_pdXSISDn77ETB3Yn"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '187'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/charges
+  response:
+    body:
+      string: "{\"object\":\"error\",\"type\":\"card_error\",\"charge_id\":\"chr_test_m3kfEaK4h8WNGL8V\"\
+        ,\"code\":\"card_declined\",\"decline_code\":\"incorrect_cvv\",\"merchant_message\"\
+        :\"CVV incorrecto. El c\xF3digo de seguridad (CVV2, CVC2, CID) de la tarjeta\
+        \ es incorrecto.\",\"user_message\":\"El c\xF3digo de seguridad (CVV) es incorrecto.\
+        \ Verifica tu tarjeta e ingresa los d\xEDgitos correctamente. Si es denegada\
+        \ nuevamente, cont\xE1ctate con el banco emisor de tu tarjeta. \"}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '435'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:58:17 GMT
+      Via:
+      - 1.1 c46150c601905fd316c924fd100bc1e7.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Zk_Y9u4zNQjzcx4jWPytFxyxd52sdCuj0dEBser487AhPYoS83EePg==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c6f6-a101b5a5e0cd951e4d9e0098;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      set-cookie:
+      - JSESSIONID=65FAEA49FA31FB2E4A6EE0F14B575307; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0QGmFFqIAMF0Rw=
+      x-amzn-RequestId:
+      - d1df2ead-b1f7-4963-9010-2dd45ff68983
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213314'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 402
+      message: Payment Required
+version: 1

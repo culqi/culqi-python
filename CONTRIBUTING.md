@@ -1,13 +1,16 @@
+# Cómo contribuir a este proyecto
+
 > Si estas interesado en contribuir con el desarrollo y mantenimiento de este paquete
-es recomendable que emplees [poetry](https://poetry.eustace.io) para la gestión de
-dependencias.
+> es recomendable que emplees [poetry](https://poetry.eustace.io) para la gestión de
+> dependencias y [pyenv](https://github.com/pyenv/pyenv) para la gestión de versiones
+> de python.
 
 ## Entorno
 
 Clona el proyecto
 
 ```bash
-$ git clone https://github.com/culqi/culqi.git
+$ git clone https://github.com/culqi/culqi-python.git
 $ cd culqi
 ```
 
@@ -25,6 +28,8 @@ Puedes ejecutar los tests con poetry
 poetry run pytest --cov --cov-report=
 poetry run coverage report
 ```
+
+En caso quieras ejecutar las pruebas en todas las versiones puedes emplear tox
 
 ## ¿Quieres enviar un PR?
 

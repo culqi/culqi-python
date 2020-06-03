@@ -1,12 +1,13 @@
 import os
 import unittest
 
-# import pytest
+import pytest
 from dotenv import load_dotenv
 
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Transfer
+from culqi.utils.errors import ErrorMessage, NotAllowedError
 
 
 class TransferTest(unittest.TestCase):
@@ -27,6 +28,29 @@ class TransferTest(unittest.TestCase):
         assert self.transfer._get_url(
             id_
         ) == "https://api.culqi.com/v2/transfers/{0}".format(id_)
+
+    @pytest.mark.vcr()
+    def test_transfer_create(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            transfer_data = {}
+            self.transfer.create(data=transfer_data)
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_transfer_update(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            transfer_data = {}
+            self.transfer.update("sample_id", data=transfer_data)
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_transfer_delete(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            self.transfer.delete("sample_id")
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
 
     # @pytest.mark.vcr()
     # def test_transfer_retrieve(self):

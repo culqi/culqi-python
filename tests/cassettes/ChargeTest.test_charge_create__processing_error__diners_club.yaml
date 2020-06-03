@@ -1,0 +1,118 @@
+interactions:
+- request:
+    body: '{"card_number": "36000100000007", "expiration_month": "12", "expiration_year":
+      "2025", "cvv": "820", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '134'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_fqqEYmeKlMUvAafG","type":"card","creation_date":1589954252000,"email":"richard@piedpiper.com","card_number":"360001****0007","last_four":"0007","active":true,"iin":{"object":"iin","bin":"360001","card_brand":"Diners","card_type":"credito","card_category":null,"issuer":{"name":"","country":"NICARAGUA","country_code":"NI","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '581'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:57:32 GMT
+      Via:
+      - 1.1 c46150c601905fd316c924fd100bc1e7.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Yw0IrwNZV1zZQmKwyNLyRoYhRcenAaszxmiWi1Hiutv50c_oOBd4aQ==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c6cb-1480c132bdf19fd240d135ae;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0P_5FHYIAMFssA=
+      x-amzn-Remapped-Content-Length:
+      - '581'
+      x-amzn-RequestId:
+      - 6ffc39e0-400b-4df8-95cc-20ce4dcb9790
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"amount": 1000, "capture": false, "currency_code": "PEN", "description":
+      "Venta de prueba", "email": "richard@piedpiper.com", "installments": 0, "source_id":
+      "tkn_test_fqqEYmeKlMUvAafG"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '187'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/charges
+  response:
+    body:
+      string: "{\"object\":\"error\",\"type\":\"card_error\",\"charge_id\":\"chr_test_FKF86TfaxdyqSrgu\"\
+        ,\"code\":\"card_declined\",\"decline_code\":\"processing_error\",\"merchant_message\"\
+        :\"Error de procesamiento. Ocurri\xF3 un error mientras procesabamos la compra.\
+        \ Cont\xE1ctate con culqi.com/soporte para que te demos una soluci\xF3n.\"\
+        ,\"user_message\":\"Ocurri\xF3 un error mientras procesabamos tu compra. Cont\xE1\
+        ctate con culqi.com/soporte para que te demos una soluci\xF3n.\"}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '433'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:57:36 GMT
+      Via:
+      - 1.1 911166aa22b0bbe41c177450fede1a7b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - DhtKyLFSxUaANU5BRfj2J5xc5Kh-rUNh2496fVeIHCUiizmzOY4Xow==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c6cd-aca605a8d4dcae9044b2b328;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      set-cookie:
+      - JSESSIONID=8CCD7DC1BA7D0239AD24E461B810CEBC; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0QAIGESoAMFqWQ=
+      x-amzn-RequestId:
+      - 1afdfde7-1e7c-438a-8466-7f53aa3e551e
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213308'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 402
+      message: Payment Required
+version: 1

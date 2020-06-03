@@ -1,4 +1,4 @@
-class URL:
+class URL(object):
     BASE = "https://api.culqi.com"
     VERSION = "v2"
 
@@ -10,7 +10,8 @@ class URL:
     PLAN = "plans"
     REFUND = "refunds"
     SUBSCRIPTION = "subscriptions"
-    TOKEN = "tokens"
+    # Disable false positive for Bandit's rule B105
+    TOKEN = "tokens"  # noqa
 
     TRANSFER = "transfers"
     IIN = "iins"

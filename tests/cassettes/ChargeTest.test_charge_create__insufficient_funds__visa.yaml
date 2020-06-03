@@ -1,0 +1,119 @@
+interactions:
+- request:
+    body: '{"card_number": "4000040000000008", "expiration_month": "03", "expiration_year":
+      "2025", "cvv": "295", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_JSaaswgFCnVNVLQy","type":"card","creation_date":1589954379000,"email":"richard@piedpiper.com","card_number":"400004******0008","last_four":"0008","active":true,"iin":{"object":"iin","bin":"400004","card_brand":"Visa","card_type":"debito","card_category":null,"issuer":{"name":"","country":"UNITED
+        STATES","country_code":"US","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '584'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:59:39 GMT
+      Via:
+      - 1.1 d46b7521718ba1ecd6db2ceb1c50f1f8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - swf-PapdIFGIGKDsyt3cIa9CQXlhsIgT5C685BzSanKi3usy43rGig==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c74a-ef729afc32ee9e86ea9605d2;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0QTuHo1IAMF5gQ=
+      x-amzn-Remapped-Content-Length:
+      - '584'
+      x-amzn-RequestId:
+      - c94a0f62-e579-4450-97e4-debe149ef82e
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"amount": 1000, "capture": false, "currency_code": "PEN", "description":
+      "Venta de prueba", "email": "richard@piedpiper.com", "installments": 0, "source_id":
+      "tkn_test_JSaaswgFCnVNVLQy"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '187'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/charges
+  response:
+    body:
+      string: "{\"object\":\"error\",\"type\":\"card_error\",\"charge_id\":\"chr_test_5lV3IV6ssSs9xMi9\"\
+        ,\"code\":\"card_declined\",\"decline_code\":\"insufficient_funds\",\"merchant_message\"\
+        :\"Fondos insuficientes. La tarjeta no tiene fondos suficientes para realizar\
+        \ la compra.\",\"user_message\":\"Su tarjeta no tiene fondos suficientes.\
+        \ Para realizar la compra, verifica tus fondos disponibles con el banco emisor\
+        \ o int\xE9nta nuevamente con otra tarjeta.\"}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '418'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:59:42 GMT
+      Via:
+      - 1.1 251d722e3d568afacb1911e219d34f4d.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - IqQskNfnOX_44ms4ETn9FXVg-90qQ8qp1nZANntESA1QTx7lEgh6Jw==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c74c-527eed8437e9cfacb2a06ce4;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      set-cookie:
+      - JSESSIONID=A7FB1965DB96D5BD472F4784EF57CD6A; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0QT6HYEIAMFdvg=
+      x-amzn-RequestId:
+      - 1e7c70d9-9c8d-4cc4-b78d-d5a6e64f6009
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213323'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 402
+      message: Payment Required
+version: 1

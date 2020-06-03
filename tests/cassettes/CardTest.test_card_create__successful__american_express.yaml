@@ -1,0 +1,172 @@
+interactions:
+- request:
+    body: '{"card_number": "371212121212122", "expiration_month": "11", "expiration_year":
+      "2025", "cvv": "2841", "email": "richard1235@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '140'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_mGrz3gNRr6HMaSu1","type":"card","creation_date":1589954822000,"email":"richard1235@piedpiper.com","card_number":"371212*****2122","last_four":"2122","active":true,"iin":{"object":"iin","bin":"371212","card_brand":"Amex","card_type":"credito","card_category":null,"issuer":{"name":"AMERICAN
+        EXPRESS COMPANY","country":"UNITED STATES","country_code":"US","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:07:03 GMT
+      Via:
+      - 1.1 76c5d392ef84c77d3b4f4a4ef8f367b3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - W7lWklPRfFpxcoCKRTZSXBlLXHXHuK4ekeCYo0T0JTTV7eda8nEtWQ==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c906-b19d72f84886e7f0b2c193c2;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0RZCEE_oAMFiIA=
+      x-amzn-Remapped-Content-Length:
+      - '612'
+      x-amzn-RequestId:
+      - d5fa3c58-b532-4f6a-9ecb-2c0e1f5ff53f
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
+      "PE", "email": "richard1235@piedpiper.com", "first_name": "Richard", "last_name":
+      "Piedpiper", "phone_number": "+51998989789"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '201'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/customers
+  response:
+    body:
+      string: '{"object":"customer","id":"cus_test_u9u7s9aqyLjxaPpl","creation_date":1589954824587,"email":"richard1235@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '318'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:07:04 GMT
+      Via:
+      - 1.1 2509c279ef82edf811c5e24c01e81d3b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - UQmAH-eBotGfr66heXZ9jo7lx8HbjAgZc3RlNdOjqV3_yuiJgFpnkw==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c908-12ecb28e59a792848321e48a;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=FD33A4A6177BD671CCAFBA0F8D8475A0; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0RZTEy9oAMFqgg=
+      x-amzn-RequestId:
+      - 31875839-c5f6-42cf-bb3d-200a0a5b71d2
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213371'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"token_id": "tkn_test_mGrz3gNRr6HMaSu1", "customer_id": "cus_test_u9u7s9aqyLjxaPpl"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/cards
+  response:
+    body:
+      string: '{"object":"card","id":"crd_test_z75mPb8PO8JaNXuf","active":true,"creation_date":1589954831143,"customer_id":"cus_test_u9u7s9aqyLjxaPpl","source":{"object":"token","id":"tkn_test_mGrz3gNRr6HMaSu1","type":"card","creation_date":1589954822000,"email":"richard1235@piedpiper.com","card_number":"371212*****2122","last_four":"2122","active":true,"iin":{"object":"iin","bin":"371212","card_brand":"Amex","card_type":"credito","card_category":null,"issuer":{"name":"AMERICAN
+        EXPRESS COMPANY","country":"UNITED STATES","country_code":"US","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}},"metadata":{"ZDA":true}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '782'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:07:11 GMT
+      Via:
+      - 1.1 2509c279ef82edf811c5e24c01e81d3b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - NLtb_9j8J4QMc9X1Ln87-5yRxCWqCjIvSV0OFWC46w5wuLUtIOwvLw==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c909-896f049e0b5eb6e05e5462b6;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=3687E7D82538718D86A6EE78C3B7DCB7; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0RZcHM9IAMF-WQ=
+      x-amzn-RequestId:
+      - c3977a95-b8b1-48d5-bd43-419a06d0b3ee
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213372'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
+version: 1

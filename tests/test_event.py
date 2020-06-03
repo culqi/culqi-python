@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Event
+from culqi.utils.errors import ErrorMessage, NotAllowedError
 
 
 class EventTest(unittest.TestCase):
@@ -37,6 +38,29 @@ class EventTest(unittest.TestCase):
     def test_event_list(self):
         retrieved_event_list = self.event.list()
         assert "items" in retrieved_event_list["data"]
+
+    @pytest.mark.vcr()
+    def test_event_create(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            event_data = {}
+            self.event.create(data=event_data)
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_event_update(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            event_data = {}
+            self.event.update("sample_id", data=event_data)
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_event_delete(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            self.event.delete("sample_id")
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
 
 
 if __name__ == "__main__":

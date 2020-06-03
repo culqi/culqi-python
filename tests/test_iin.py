@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Iin
+from culqi.utils.errors import ErrorMessage, NotAllowedError
 
 
 class IinTest(unittest.TestCase):
@@ -35,6 +36,29 @@ class IinTest(unittest.TestCase):
     def test_iin_list(self):
         retrieved_iin_list = self.iin.list()
         assert "items" in retrieved_iin_list["data"]
+
+    @pytest.mark.vcr()
+    def test_iin_create(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            iin_data = {}
+            self.iin.create(data=iin_data)
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_iin_update(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            iin_data = {}
+            self.iin.update("sample_id", data=iin_data)
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
+
+    @pytest.mark.vcr()
+    def test_iin_delete(self):
+        with pytest.raises(NotAllowedError) as excinfo:
+            self.iin.delete("sample_id")
+
+        assert ErrorMessage.NOT_ALLOWED in str(excinfo.value)
 
 
 if __name__ == "__main__":

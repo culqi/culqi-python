@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"card_number": "5400020000000003", "expiration_month": "07", "expiration_year":
+      "2025", "cvv": "203", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_qec8mVqWxbEA3Ero","type":"card","creation_date":1589955030000,"email":"richard@piedpiper.com","card_number":"540002******0003","last_four":"0003","active":true,"iin":{"object":"iin","bin":"540002","card_brand":"MasterCard","card_type":"credito","card_category":null,"issuer":{"name":"BARCLAYS
+        BANK PLC","country":"UNITED KINGDOM","country_code":"GB","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '609'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:10:31 GMT
+      Via:
+      - 1.1 bd11400f2be95e5b98d25238ed7da10f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - U7ZJY2TQnVet8YWDEync2nmpfcmdGQ9UTPIHBRySiGJf01AIEtx18Q==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c9d6-7eb7d5e6b57d63c2ada8c464;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0R5iHrpIAMFYNg=
+      x-amzn-Remapped-Content-Length:
+      - '609'
+      x-amzn-RequestId:
+      - 14e2ea3a-b39c-4171-9e83-7ca7f4382109
+    status:
+      code: 201
+      message: Created
+version: 1

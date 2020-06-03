@@ -1,0 +1,134 @@
+interactions:
+- request:
+    body: '{"card_number": "371212121212122", "expiration_month": "11", "expiration_year":
+      "2025", "cvv": "2841", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_7cexyeNjrKKLCxZY","type":"card","creation_date":1589954470000,"email":"richard@piedpiper.com","card_number":"371212*****2122","last_four":"2122","active":true,"iin":{"object":"iin","bin":"371212","card_brand":"Amex","card_type":"credito","card_category":null,"issuer":{"name":"AMERICAN
+        EXPRESS COMPANY","country":"UNITED STATES","country_code":"US","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '608'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:01:11 GMT
+      Via:
+      - 1.1 75e2ec75b84b884e854a2fc819f11264.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - EbSQSsj7ww9E2UenPRRoZVuI8nSVEOk4l3TzQRZF7XUVRnxifv4b4w==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c7a6-2d676b8f433687acb9c10666;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0QiEH3iIAMFo_A=
+      x-amzn-Remapped-Content-Length:
+      - '608'
+      x-amzn-RequestId:
+      - 42b4d879-cb94-4b87-9e68-3fba98a1fe47
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"amount": 1000, "capture": false, "currency_code": "PEN", "description":
+      "Venta de prueba", "email": "richard@piedpiper.com", "installments": 0, "source_id":
+      "tkn_test_7cexyeNjrKKLCxZY"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '187'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/charges
+  response:
+    body:
+      string: "{\"duplicated\":false,\"object\":\"charge\",\"id\":\"chr_test_Yc0aT0eMFXEX3jSm\"\
+        ,\"creation_date\":1589954473000,\"amount\":1000,\"amount_refunded\":0,\"\
+        current_amount\":1000,\"installments\":1,\"installments_amount\":1000,\"currency_code\"\
+        :\"PEN\",\"email\":\"richard@piedpiper.com\",\"description\":\"Venta de prueba\"\
+        ,\"source\":{\"object\":\"token\",\"id\":\"tkn_test_7cexyeNjrKKLCxZY\",\"\
+        type\":\"card\",\"creation_date\":1589954470000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"371212*****2122\",\"last_four\":\"2122\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"371212\",\"card_brand\":\"Amex\",\"card_type\"\
+        :\"credito\",\"card_category\":null,\"issuer\":{\"name\":\"AMERICAN EXPRESS\
+        \ COMPANY\",\"country\":\"UNITED STATES\",\"country_code\":\"US\",\"website\"\
+        :null,\"phone_number\":null},\"installments_allowed\":[]},\"client\":{\"ip\"\
+        :\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"PE\",\"\
+        browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"Escritorio\"\
+        },\"metadata\":{}},\"outcome\":{\"type\":\"venta_exitosa\",\"code\":\"AUT0000\"\
+        ,\"merchant_message\":\"La operaci\xF3n de venta ha sido autorizada exitosamente\"\
+        ,\"user_message\":\"Su compra ha sido exitosa.\"},\"fraud_score\":38.0,\"\
+        dispute\":false,\"capture\":false,\"reference_code\":\"V1qa1q2yVk\",\"authorization_code\"\
+        :\"oDWi40\",\"metadata\":{},\"total_fee\":47,\"fee_details\":{\"fixed_fee\"\
+        :{},\"variable_fee\":{\"currency_code\":\"PEN\",\"commision\":0.0399,\"total\"\
+        :40}},\"total_fee_taxes\":7,\"transfer_amount\":953,\"paid\":false,\"statement_descriptor\"\
+        :\"CULQI*\",\"transfer_id\":null,\"capture_date\":null}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1443'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:01:14 GMT
+      Via:
+      - 1.1 7e3976a866c063e64606fe6681dab899.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ODP-K8cNSy9CItvVGHjVl3l4LXSBi9HuoJTizYT_1ZluHv2-vxf7rA==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c7a8-22060336a9237756c10ae08e;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=7E82AC1624B387DEF4B66BD94835EB2D; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0QiSHZSIAMFS1A=
+      x-amzn-RequestId:
+      - 590fa5b7-a280-4010-aed0-d41970827f8f
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213340'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
+version: 1

@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"card_number": "36000200000006", "expiration_month": "01", "expiration_year":
+      "2025", "cvv": "230", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '134'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"timestamp":"2020-05-20T06:01:08.432+0000","status":500,"error":"Internal
+        Server Error","message":"query did not return a unique result: 2; nested exception
+        is javax.persistence.NonUniqueResultException: query did not return a unique
+        result: 2","path":"/v2/tokens"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '266'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:01:08 GMT
+      Via:
+      - 1.1 1a362649b081f20cd62ffd514913be08.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - XhcOALSwYI5lf-sW-K8IuK6IBeMQN30FD49YrCH98HaiDpGKIoukqQ==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c7a4-594ef110a0e45d0823e5a268;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - M0QhrEb8IAMF2kg=
+      x-amzn-RequestId:
+      - 97fb00df-d538-4f6a-9629-06d1c4c44245
+    status:
+      code: 500
+      message: Internal Server Error
+version: 1

@@ -27,12 +27,10 @@ class CardTest(unittest.TestCase):
 
         self.metadata = {"order_id": "0001"}
 
-    @property
-    def card_data(self):
-        # pylint: disable=no-member
+    def get_card_data(self, code, provider):
         email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
 
-        token_data = deepcopy(Data.TOKEN)
+        token_data = deepcopy(Data.CARD[code][provider])
         token_data["email"] = email
         token = self.culqi.token.create(data=token_data)
 
@@ -56,12 +54,14 @@ class CardTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_card_create(self):
-        card = self.card.create(data=self.card_data)
+        card_data = self.get_card_data("successful", "visa")
+        card = self.card.create(data=card_data)
         assert card["data"]["object"] == "card"
 
     @pytest.mark.vcr()
     def test_card_retrieve(self):
-        created_card = self.card.create(data=self.card_data)
+        card_data = self.get_card_data("successful", "visa")
+        created_card = self.card.create(data=card_data)
         retrieved_card = self.card.read(created_card["data"]["id"])
         assert created_card["data"]["id"] == retrieved_card["data"]["id"]
 
@@ -72,7 +72,8 @@ class CardTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_card_update(self):
-        created_card = self.card.create(data=self.card_data)
+        card_data = self.get_card_data("successful", "visa")
+        created_card = self.card.create(data=card_data)
 
         metadatada = {"metadata": self.metadata}
         updated_card = self.card.update(id_=created_card["data"]["id"], data=metadatada)
@@ -82,12 +83,118 @@ class CardTest(unittest.TestCase):
 
     @pytest.mark.vcr()
     def test_card_delete(self):
-        created_card = self.card.create(data=self.card_data)
+        card_data = self.get_card_data("successful", "visa")
+        created_card = self.card.create(data=card_data)
         deleted_card = self.card.delete(id_=created_card["data"]["id"])
 
         assert deleted_card["data"]["deleted"]
         assert deleted_card["data"]["id"] == created_card["data"]["id"]
         assert deleted_card["status"] == 200
+
+    @pytest.mark.vcr()
+    def test_card_create__successful__visa(self):
+        card_data = self.get_card_data("successful", "visa")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "card"
+
+    @pytest.mark.vcr()
+    def test_card_create__successful__master_card(self):
+        card_data = self.get_card_data("successful", "master_card")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "card"
+
+    @pytest.mark.vcr()
+    def test_card_create__successful__american_express(self):
+        card_data = self.get_card_data("successful", "american_express")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "card"
+
+    @pytest.mark.vcr()
+    def test_card_create__successful__diners_club(self):
+        card_data = self.get_card_data("successful", "diners_club")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "card"
+
+    @pytest.mark.vcr()
+    def test_card_create__stolen_card__visa(self):
+        card_data = self.get_card_data("stolen_card", "visa")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "stolen_card"
+
+    @pytest.mark.vcr()
+    def test_card_create__lost_card__visa(self):
+        card_data = self.get_card_data("lost_card", "visa")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "lost_card"
+
+    @pytest.mark.vcr()
+    def test_card_create__insufficient_funds__visa(self):
+        card_data = self.get_card_data("insufficient_funds", "visa")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "insufficient_funds"
+
+    @pytest.mark.vcr()
+    def test_card_create__contact_issuer__master_card(self):
+        card_data = self.get_card_data("contact_issuer", "master_card")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "contact_issuer"
+
+    @pytest.mark.vcr()
+    def test_card_create__incorrect_cvv__master_card(self):
+        card_data = self.get_card_data("incorrect_cvv", "master_card")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "incorrect_cvv"
+
+    @pytest.mark.vcr()
+    def test_card_create__issuer_not_available__american_express(self):
+        card_data = self.get_card_data("issuer_not_available", "american_express")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "issuer_not_available"
+
+    @pytest.mark.vcr()
+    def test_card_create__issuer_decline_operation__american_express(self):
+        card_data = self.get_card_data("issuer_decline_operation", "american_express")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "issuer_decline_operation"
+
+    @pytest.mark.vcr()
+    def test_card_create__invalid_card__diners_club(self):
+        card_data = self.get_card_data("invalid_card", "diners_club")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "invalid_card"
+
+    @pytest.mark.vcr()
+    def test_card_create__processing_error__diners_club(self):
+        card_data = self.get_card_data("processing_error", "diners_club")
+        card = self.card.create(data=card_data)
+        assert card["data"]["object"] == "error"
+        assert card["data"]["code"] == "card_declined"
+        assert card["data"]["decline_code"] == "processing_error"
+
+    # This fail due to Internal server error in Culqi
+    # @pytest.mark.vcr()
+    # def test_card_create__fraudulent__diners_club(self):
+    #     card_data = self.get_card_data(# "fraudulent", "diners_club")
+    #     card = self.card.create(data=card_data)
+    #     assert card["data"]["object"] == "error"
+    #     assert card["data"]["code"] == "card_declined"
+    #     assert card["data"]["decline_code"] == "fraudulent"
 
 
 if __name__ == "__main__":

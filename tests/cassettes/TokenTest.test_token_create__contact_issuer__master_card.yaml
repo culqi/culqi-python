@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"card_number": "5400000000000005", "expiration_month": "01", "expiration_year":
+      "2025", "cvv": "492", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_V15reDL7Xqk0b5Xw","type":"card","creation_date":1589955029000,"email":"richard@piedpiper.com","card_number":"540000******0005","last_four":"0005","active":true,"iin":{"object":"iin","bin":"540000","card_brand":"MasterCard","card_type":"credito","card_category":"Oro","issuer":{"name":"SAMBA
+        FINANCIAL GROUP","country":"SAUDI ARABIA","country_code":"SA","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:10:29 GMT
+      Via:
+      - 1.1 1156b00a32ef474e9b51a603424ddb97.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Cv15qD13MqfamHsgWdxXGaCVhTacLAK0xZK7sZsixioeouDFhTrJrg==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c9d4-3c739e0fd3e31b68ccc2b66d;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0R5SGmKIAMFQYg=
+      x-amzn-Remapped-Content-Length:
+      - '612'
+      x-amzn-RequestId:
+      - 76f1928c-1b72-4119-a754-66c038b5bd56
+    status:
+      code: 201
+      message: Created
+version: 1

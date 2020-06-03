@@ -1,0 +1,120 @@
+interactions:
+- request:
+    body: '{"card_number": "370001000000000", "expiration_month": "04", "expiration_year":
+      "2025", "cvv": "2511", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '136'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_sChCXpCBRap5LZY7","type":"card","creation_date":1589954298000,"email":"richard@piedpiper.com","card_number":"370001*****0000","last_four":"0000","active":true,"iin":{"object":"iin","bin":"370001","card_brand":"Amex","card_type":"credito","card_category":null,"issuer":{"name":"AMERICAN
+        EXPRESS COMPANY","country":"INDIA","country_code":"IN","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '600'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:58:18 GMT
+      Via:
+      - 1.1 c46150c601905fd316c924fd100bc1e7.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Gn1CsuQoIvEbaHEtnKpFir3R3b0tcdePu8KMmocPy8yXpc5ZTTOmLA==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c6fa-e4565290ff6ed28077c6453e;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0QHIHTooAMFr1g=
+      x-amzn-Remapped-Content-Length:
+      - '600'
+      x-amzn-RequestId:
+      - 4a74228a-0d97-4532-bbde-b604f57c2d4e
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"amount": 1000, "capture": false, "currency_code": "PEN", "description":
+      "Venta de prueba", "email": "richard@piedpiper.com", "installments": 0, "source_id":
+      "tkn_test_sChCXpCBRap5LZY7"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '187'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/charges
+  response:
+    body:
+      string: "{\"object\":\"error\",\"type\":\"card_error\",\"charge_id\":\"chr_test_QbUEw62Eju6hqKWw\"\
+        ,\"code\":\"card_declined\",\"decline_code\":\"issuer_not_available\",\"merchant_message\"\
+        :\"Emisor no disponible. El banco que emiti\xF3 la tarjeta no responde. El\
+        \ cliente debe realizar el pago nuevamente.\",\"user_message\":\"El banco\
+        \ emisor de tu tarjeta no responde y la operaci\xF3n no pudo ser completada.\
+        \ Vuelve a realizar el pago en unos minutos o intenta nuevamente con otra\
+        \ tarjeta.\"}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '452'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:58:22 GMT
+      Via:
+      - 1.1 72f61d7588953b12c687a6cea57ac5c5.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - p9Pg6WzKipgsCPaK1x6xrngTECfipL6n88wcTMpWEI0v4OyTUsbJOA==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c6fb-fa7af1c4d5305e2c5b8660b4;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      set-cookie:
+      - JSESSIONID=3C2BA172CAB69183A8FA1E9B4E66253F; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0QHWFJRoAMFx7Q=
+      x-amzn-RequestId:
+      - bb0080b1-d34b-45cb-8c9e-9fd3341e5e57
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213316'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 402
+      message: Payment Required
+version: 1

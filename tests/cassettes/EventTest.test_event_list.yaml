@@ -1,34 +1,58 @@
 interactions:
-- request:
-    body: null
-    headers:
-      Accept: [application/json]
-      Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer culiq_api_key]
-      Connection: [keep-alive]
-      Content-type: [application/json]
-      User-Agent: [Culqi-API-Python/1.0.3]
-    method: GET
-    uri: https://api.culqi.com/v2/events
-  response:
-    body: {string: !!python/unicode '{"data":[],"paging":{"previous":null,"next":null,"cursors":{"before":null,"after":null},"remaining_items":0}}'}
-    headers:
-      connection: [keep-alive]
-      content-length: ['109']
-      content-type: [application/json;charset=UTF-8]
-      date: ['Sat, 04 Jan 2020 01:58:11 GMT']
-      set-cookie: [JSESSIONID=8809D2C6463029DF965AF287188A227D; Path=/api/; HttpOnly]
-      via: [1.1 d1f6ab4688185707019fd4a26343fc63.cloudfront.net (CloudFront)]
-      x-amz-apigw-id: [FwKgBECwoAMF4OA=]
-      x-amz-cf-id: [rQaeL9RWsOXiCukXgD0RJnpH2ZWsZ_w0GFdANG5qNvnQH9nVOxUNPw==]
-      x-amz-cf-pop: [IAH50-C3]
-      x-amzn-remapped-connection: [keep-alive]
-      x-amzn-remapped-date: ['Sat, 04 Jan 2020 01:58:11 GMT']
-      x-amzn-remapped-server: [nginx, ':']
-      x-amzn-requestid: [43baf36d-3b6e-4c3f-b755-3b72bbfb6044]
-      x-cache: [Miss from cloudfront]
-      x-culqi-environment: [test]
-      x-culqi-tracking-id: ['6183903']
-      x-culqi-version: [2.0.0]
-    status: {code: 200, message: OK}
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/json
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - Bearer culiq_api_key
+        Connection:
+          - keep-alive
+        Content-type:
+          - application/json
+        User-Agent:
+          - Culqi-API-Python/1.0.4
+      method: GET
+      uri: https://api.culqi.com/v2/events
+    response:
+      body:
+        string: '{"data":[],"paging":{"previous":null,"next":null,"cursors":{"before":null,"after":null},"remaining_items":0}}'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "109"
+        Content-Type:
+          - application/json;charset=UTF-8
+        Date:
+          - Wed, 13 May 2020 03:38:10 GMT
+        Set-Cookie:
+          - JSESSIONID=D26793F3979E24F66DE686530C87C93B; Path=/api/; HttpOnly
+        Via:
+          - 1.1 a63e706ec0cc4cfd2d2032bf4b7c2ce6.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - oxkRag2unRCQ35fBXLltsJlTnV1haqSut7AXh256VZjj3Zx1joQGSQ==
+        X-Amz-Cf-Pop:
+          - SCL50-C1
+        X-CULQI-ENVIRONMENT:
+          - test
+        X-CULQI-TRACKING-ID:
+          - "6892529"
+        X-CULQI-VERSION:
+          - 2.0.0
+        X-Cache:
+          - Miss from cloudfront
+        x-amz-apigw-id:
+          - Mc3BXG3HoAMFjTw=
+        x-amzn-Remapped-Date:
+          - Wed, 13 May 2020 03:38:10 GMT
+        x-amzn-Remapped-Server:
+          - Apache-Coyote/1.1
+        x-amzn-RequestId:
+          - cc929af9-1dfc-4475-9915-08b1e8ab8c15
+      status:
+        code: 200
+        message: OK
 version: 1

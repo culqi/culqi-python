@@ -27,10 +27,10 @@ class SubscriptionTest(unittest.TestCase):
 
     @property
     def subscription_data(self):
-        # pylint: disable=no-member
+        # pylint-x: disable=no-member
         email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
 
-        token_data = deepcopy(Data.TOKEN)
+        token_data = deepcopy(Data.CARD["successful"]["visa"])
         token_data["email"] = email
         token = self.culqi.token.create(data=token_data)
 
@@ -77,10 +77,10 @@ class SubscriptionTest(unittest.TestCase):
             created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
         )
 
-    #     @pytest.mark.vcr()
-    #     def test_subscription_list(self):
-    #         retrieved_subscription_list = self.subscription.list()
-    #         assert "items" in retrieved_subscription_list["data"]
+    @pytest.mark.vcr()
+    def test_subscription_list(self):
+        retrieved_subscription_list = self.subscription.list()
+        assert "items" in retrieved_subscription_list["data"]
 
     @pytest.mark.vcr()
     def test_subscription_update(self):

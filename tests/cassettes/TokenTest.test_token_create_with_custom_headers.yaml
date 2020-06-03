@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"brand": "Visa", "card_number": "4111111111111111", "expiration_month":
+      "09", "expiration_year": "2025", "cvv": "123", "email": "richard@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '153'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122
+        Safari/537.36
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: "{\"object\":\"token\",\"id\":\"tkn_test_8Hi0NkCSJ1z8WKse\",\"type\"\
+        :\"card\",\"creation_date\":1589951808000,\"email\":\"richard@piedpiper.com\"\
+        ,\"card_number\":\"411111******1111\",\"last_four\":\"1111\",\"active\":true,\"\
+        iin\":{\"object\":\"iin\",\"bin\":\"411111\",\"card_brand\":\"Visa\",\"card_type\"\
+        :\"credito\",\"card_category\":\"Cl\xE1sica\",\"issuer\":{\"name\":\"BBVA\"\
+        ,\"country\":\"PERU\",\"country_code\":\"PE\",\"website\":null,\"phone_number\"\
+        :null},\"installments_allowed\":[2,4,6,8,10,12,3,5,7,9,24,48]},\"client\"\
+        :{\"ip\":\"190.237.22.191\",\"ip_country\":\"Peru\",\"ip_country_code\":\"\
+        PE\",\"browser\":\"UNKNOWN\",\"device_fingerprint\":null,\"device_type\":\"\
+        Escritorio\"},\"metadata\":{}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '613'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 05:16:48 GMT
+      Via:
+      - 1.1 a6694d5ca059a1b8b902a7765e513e5c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 2yn6iDhpCCLKAHVaelU9pIIXSVen4R8xU770xqwWpbZZFjfUtsi6Ig==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4bd3f-ecb4d57c20e576c8521e3412;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0KB_EApIAMFkyw=
+      x-amzn-Remapped-Content-Length:
+      - '613'
+      x-amzn-RequestId:
+      - 2df5b562-4a76-4ee7-9fa7-42f00ba013ac
+    status:
+      code: 201
+      message: Created
+version: 1

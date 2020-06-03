@@ -1,0 +1,172 @@
+interactions:
+- request:
+    body: '{"card_number": "36001212121210", "expiration_month": "04", "expiration_year":
+      "2025", "cvv": "964", "email": "richardbdb0@piedpiper.com"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '138'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://secure.culqi.com/v2/tokens
+  response:
+    body:
+      string: '{"object":"token","id":"tkn_test_dK0ExmtmJBZji1rV","type":"card","creation_date":1589954832000,"email":"richardbdb0@piedpiper.com","card_number":"360012****1210","last_four":"1210","active":true,"iin":{"object":"iin","bin":"360012","card_brand":"Diners","card_type":"debito","card_category":null,"issuer":{"name":"BERLINER
+        BANK AG","country":"Germany","country_code":"PE","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - UTF-8
+      Content-Length:
+      - '598'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:07:12 GMT
+      Via:
+      - 1.1 1c66d149957c72960a1113727d42d47c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - zd8uQ5o6kxfKGou5o7XoWWKZP71rk0208bVCFR6cRDX6XuTl3vLznw==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c90f-42dcc4e8fe0fe065f78fa599;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - M0RahF4DIAMF-vw=
+      x-amzn-Remapped-Content-Length:
+      - '598'
+      x-amzn-RequestId:
+      - 6a982f25-1e7d-4bcf-b401-6f4a999b1789
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"address": "Avenida Lima 123213", "address_city": "LIMA", "country_code":
+      "PE", "email": "richardbdb0@piedpiper.com", "first_name": "Richard", "last_name":
+      "Piedpiper", "phone_number": "+51998989789"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '201'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/customers
+  response:
+    body:
+      string: '{"object":"customer","id":"cus_test_ppGhkncLbs897Sqr","creation_date":1589954833865,"email":"richardbdb0@piedpiper.com","antifraud_details":{"first_name":"Richard","last_name":"Piedpiper","address":"Avenida
+        Lima 123213","address_city":"LIMA","country_code":"PE","phone":"+51998989789","object":"client"},"metadata":{}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '318'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:07:13 GMT
+      Via:
+      - 1.1 1a362649b081f20cd62ffd514913be08.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - fAowNm28YKNe8dzpzLAL32A5KDvpS56f3e3jf_1lL1D6iviqRdEESw==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c911-3c974dcfa92ea8149db753b8;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=4148A68642D9790867D4FBB6ABFF98DF; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0RaxGemIAMF_zQ=
+      x-amzn-RequestId:
+      - f5c3158f-0cbe-44c9-b358-0974c01a2160
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213379'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"token_id": "tkn_test_dK0ExmtmJBZji1rV", "customer_id": "cus_test_ppGhkncLbs897Sqr"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: POST
+    uri: https://api.culqi.com/v2/cards
+  response:
+    body:
+      string: '{"object":"card","id":"crd_test_1qZDDAT4NwfK62HT","active":true,"creation_date":1589954841050,"customer_id":"cus_test_ppGhkncLbs897Sqr","source":{"object":"token","id":"tkn_test_dK0ExmtmJBZji1rV","type":"card","creation_date":1589954832000,"email":"richardbdb0@piedpiper.com","card_number":"360012****1210","last_four":"1210","active":true,"iin":{"object":"iin","bin":"360012","card_brand":"Diners","card_type":"debito","card_category":null,"issuer":{"name":"BERLINER
+        BANK AG","country":"Germany","country_code":"PE","website":null,"phone_number":null},"installments_allowed":[]},"client":{"ip":"190.237.22.191","ip_country":"Peru","ip_country_code":"PE","browser":"UNKNOWN","device_fingerprint":null,"device_type":"Escritorio"},"metadata":{}},"metadata":{"ZDA":true}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '768'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 20 May 2020 06:07:21 GMT
+      Via:
+      - 1.1 1a362649b081f20cd62ffd514913be08.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - _T-G4K_3VUd9qJFFDb_HIQRTGfe6VNv_i2yDGkiGTYXQSSdNko1Aig==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Amzn-Trace-Id:
+      - Root=1-5ec4c912-d064207240674d90fd842ad4;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      set-cookie:
+      - JSESSIONID=0BFB25CFDF7BD34A669C4323ACA776FD; Path=/api; HttpOnly
+      x-amz-apigw-id:
+      - M0Ra6HvkoAMFszw=
+      x-amzn-RequestId:
+      - 7014aa50-8714-4f95-b1f0-f5d9b2d269f3
+      x-culqi-environment:
+      - test
+      x-culqi-tracking-id:
+      - '7213380'
+      x-culqi-version:
+      - 2.0.0
+    status:
+      code: 201
+      message: Created
+version: 1

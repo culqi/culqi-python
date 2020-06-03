@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer culiq_api_key
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      User-Agent:
+      - Culqi-API-Python/1.0.4
+    method: GET
+    uri: https://api.culqi.com/v2/transfers
+  response:
+    body:
+      string: '{"message": "Endpoint request timed out"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '41'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 20 May 2020 06:16:33 GMT
+      Via:
+      - 1.1 92ba29cedd0d1df680527e0b728cdc51.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - epxXLaePlVCLrD4b_mjdimJ6YIM9rfKSM-46_sB1zPwAcfDxRGJO6w==
+      X-Amz-Cf-Pop:
+      - SCL50-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - M0SttHMLIAMFkxg=
+      x-amzn-ErrorType:
+      - InternalServerErrorException
+      x-amzn-RequestId:
+      - 6208905d-1fd1-4f8f-8160-4e2521c0ca81
+    status:
+      code: 504
+      message: Gateway Timeout
+version: 1
