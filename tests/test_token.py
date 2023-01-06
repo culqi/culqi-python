@@ -23,6 +23,7 @@ class TokenTest(unittest.TestCase):
         self.token = Token(client=self.culqi)
 
         self.token_data = deepcopy(Data.TOKEN)
+        self.yape_data = deepcopy(Data.YAPE)
         self.metadata = {"order_id": "0001"}
 
     def test_url(self):
@@ -37,6 +38,11 @@ class TokenTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_token_create(self):
         token = self.token.create(data=self.token_data)
+        assert token["data"]["object"] == "token"
+
+    @pytest.mark.vcr()
+    def test_token_createtoken(self):
+        token = self.token.createyape(data=self.yape_data)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
