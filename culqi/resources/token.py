@@ -19,5 +19,15 @@ class Token(Resource):
 
         return self._post(url, data, **options)
 
+    def createyape(self, data, **options):
+        url = "https://secure.culqi.com/v2/tokens/yape"
+
+        headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
+        if "headers" in options:
+            options["headers"].update(headers)
+        else:
+            options["headers"] = headers
+
+        return self._post(url, data, **options)
     def delete(self, id_, data=None, **options):
         raise NotAllowedError(ErrorMessage.NOT_ALLOWED)
