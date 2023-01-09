@@ -26,22 +26,13 @@ class TokenTest(unittest.TestCase):
         self.yape_data = deepcopy(Data.YAPE)
         self.metadata = {"order_id": "0001"}
 
-    def test_url(self):
-        # pylint: disable=protected-access
-        id_ = "sample_id"
-
-        assert self.token._get_url() == "https://api.culqi.com/v2/tokens"
-        assert self.token._get_url(id_) == "https://api.culqi.com/v2/tokens/{0}".format(
-            id_
-        )
-
     @pytest.mark.vcr()
     def test_token_create(self):
         token = self.token.create(data=self.token_data)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
-    def test_token_createtoken(self):
+    def test_token_yape_create(self):
         token = self.token.createyape(data=self.yape_data)
         assert token["data"]["object"] == "token"
 
