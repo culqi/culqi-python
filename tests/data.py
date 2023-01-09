@@ -34,7 +34,7 @@ class Data:
         "address": "Avenida Lima 123213",
         "address_city": "LIMA",
         "country_code": "PE",
-        "email": None,
+        "email": "usuario@culqi.com",
         "first_name": "Richard",
         "last_name": "Piedpiper",
         "phone_number": "+51998989789",

@@ -19,8 +19,8 @@ class CustomerTest(unittest.TestCase):
         super(CustomerTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = os.environ.get("API_PUBLIC_KEY") 
-        self.private_key = os.environ.get("API_PRIVATE_KEY")
+        self.public_key = os.environ.get("pk_test_90667d0a57d45c48")
+        self.private_key = os.environ.get("sk_test_1573b0e8079863ff")
         self.culqi = Culqi(self.public_key, self.private_key)
         self.customer = Customer(client=self.culqi)
 
