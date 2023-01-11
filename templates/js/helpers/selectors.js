@@ -1,0 +1,13 @@
+export const loadingElement = document.getElementById("loading");
+export const paymentSuccessElement = document.getElementById("payment-success");
+export const paymentFailElement = document.getElementById("payment-fail");
+export const authenticationFailElement = document.getElementById("authentication-fail");
+export const customerCreationFailElement = document.getElementById("customer-creation-fail");
+export const paymentButtonElement = document.getElementById("btn_payment");
+export const radioButtonElements = document.querySelectorAll("input[type='radio'][name=payment_type]");
+export const customersNameElement = document.getElementById("customers_name");
+export const customersLastNameElement = document.getElementById("customers_lname");
+export const customersEmailElement = document.getElementById("customers_email");
+export const customersAddressElement = document.getElementById("customers_address");
+export const customersPhoneElement = document.getElementById("customers_phone");
+export const customerFormElement = document.getElementById("customer-form");

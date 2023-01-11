@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 from flask_restful import Resource, Api
 from copy import deepcopy
 from uuid import uuid4
-from data import Data
+
 from pathlib import Path
 import sys
 from flask import json
@@ -24,6 +24,17 @@ port = 5100
 if sys.argv.__len__() > 1:
     port = sys.argv[1]
 print("Api running on port : {} ".format(port))
+
+@app.route('/',  methods=['GET', 'POST'])
+def home():
+    return render_template('index.html')
+
+@app.route('/card')
+def card():
+    return render_template('index-card.html')
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=port)
 
 @app.route('/')
 def home():
@@ -160,3 +171,4 @@ api.add_resource(customers, '/culqi/generateCustomer')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=port)
+
