@@ -10,7 +10,6 @@ class Token(Resource):
 
     def create(self, data, **options):
         url = "https://secure.culqi.com/v2/tokens"
-        print("hola mundo")
         print(self.client.public_key)
         headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
         if "headers" in options:
