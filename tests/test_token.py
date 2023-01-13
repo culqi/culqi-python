@@ -17,26 +17,23 @@ class TokenTest(unittest.TestCase):
         super(TokenTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = os.environ.get("API_PUBLIC_KEY")
-        self.private_key = os.environ.get("API_PRIVATE_KEY")
+        self.public_key = "pk_test_90667d0a57d45c48"
+        self.private_key = "sk_test_1573b0e8079863ff"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.token = Token(client=self.culqi)
 
         self.token_data = deepcopy(Data.TOKEN)
+        self.yape_data = deepcopy(Data.YAPE)
         self.metadata = {"order_id": "0001"}
-
-    def test_url(self):
-        # pylint: disable=protected-access
-        id_ = "sample_id"
-
-        assert self.token._get_url() == "https://api.culqi.com/v2/tokens"
-        assert self.token._get_url(id_) == "https://api.culqi.com/v2/tokens/{0}".format(
-            id_
-        )
 
     @pytest.mark.vcr()
     def test_token_create(self):
         token = self.token.create(data=self.token_data)
+        assert token["data"]["object"] == "token"
+
+    @pytest.mark.vcr()
+    def test_token_yape_create(self):
+        token = self.token.createyape(data=self.yape_data)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()

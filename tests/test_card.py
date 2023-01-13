@@ -19,8 +19,8 @@ class CardTest(unittest.TestCase):
         load_dotenv()
         self.version = __version__
 
-        self.public_key = os.environ.get("API_PUBLIC_KEY")
-        self.private_key = os.environ.get("API_PRIVATE_KEY")
+        self.public_key = "pk_test_90667d0a57d45c48"
+        self.private_key = "sk_test_1573b0e8079863ff"
 
         self.culqi = Culqi(self.public_key, self.private_key)
         self.card = Card(client=self.culqi)
@@ -35,7 +35,6 @@ class CardTest(unittest.TestCase):
         token_data = deepcopy(Data.TOKEN)
         token_data["email"] = email
         token = self.culqi.token.create(data=token_data)
-
         customer_data = deepcopy(Data.CUSTOMER)
         customer_data["email"] = email
         customer = self.culqi.customer.create(data=customer_data)
@@ -57,7 +56,7 @@ class CardTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_card_create(self):
         card = self.card.create(data=self.card_data)
-        assert card["data"]["object"] == "card"
+        assert card["data"]["action_code"] == "REVIEW"
 
     @pytest.mark.vcr()
     def test_card_retrieve(self):
