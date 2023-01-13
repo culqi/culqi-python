@@ -18,8 +18,8 @@ class PlanTest(unittest.TestCase):
         super(PlanTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = os.environ.get("API_PUBLIC_KEY")
-        self.private_key = os.environ.get("API_PRIVATE_KEY")
+        self.public_key = "INSERTE_SU_LLAVE_PUBLICA"
+        self.private_key = "INSERTE_SU_LLAVE_PRIVADA"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.plan = Plan(client=self.culqi)
 
