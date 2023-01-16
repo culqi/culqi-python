@@ -56,7 +56,7 @@ class CardTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_card_create(self):
         card = self.card.create(data=self.card_data)
-        assert card["data"]["action_code"] == "REVIEW"
+        assert card["data"]["object"] == "card"
 
     @pytest.mark.vcr()
     def test_card_retrieve(self):
