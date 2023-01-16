@@ -1,3 +1,8 @@
+### 15-01-2023
+
+- Added support forn orderconfirmtipo
+- Added support for create token yape
+
 ### In progress
 
 - Drop support for python 3.4
