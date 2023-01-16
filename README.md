@@ -32,18 +32,6 @@ py -m pip install jsonschema
 
 ```
 
-![](/resources/carbon.png)
-
-
-Cada metodo retona un diccionario con la estructura
-
-```python
-{
-      "status": status_code,
-      "data": data
-}
-```
-
 El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
 realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
