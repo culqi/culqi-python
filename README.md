@@ -19,7 +19,11 @@ Biblioteca de CULQI para el lenguaje Python, pagos simples en tu sitio web.
 ## Instalación
 
 ```bash
-pip install culqi 
+py -m pip install pytest
+py -m pip install python-dotenv
+py -m pip install culqi
+py -m pip install jsonschema
+
 ```
 
 ![](/resources/carbon.png)
