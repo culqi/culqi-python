@@ -12,11 +12,11 @@ export const generateCardImpl = async ({ customerId, email, tokenId, deviceId, p
     amount : config.TOTAL_AMOUNT,
     currency_code : config.CURRENCY,
     email : email,
-    source_id : tokenId,
+    token_id : tokenId,
     customer_id : customerId,
     antifraud_details : data_fraud
     };
-    console.log("json");
+    console.log("json jdd");
     console.log(data);
 
   return service.createCard(parameters3DS ? { ...data, authentication_3DS: { ...parameters3DS } } : data);

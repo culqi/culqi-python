@@ -66,7 +66,7 @@ const validationInit3DS = ({ statusCode, email, tokenId }) => {
     Culqi3DS.settings = {
       charge: {
         totalAmount: config.TOTAL_AMOUNT,
-        returnUrl: "file:///Users/apple/Downloads/culqi-tarjeta-examplev4__3ds/index-card.html"
+        returnUrl: "http://localhost:5100/card"
       },
       card: {
         email: email,

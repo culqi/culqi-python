@@ -18,15 +18,16 @@ window.addEventListener("message", async function (event) {
 
     if (parameters3DS) {
       let statusCode = null;
-      const responseCharge = await generateChargeImpl({ tokenId });
+      const email = Culqi.token.email;
+      const responseCharge = await generateChargeImpl({ tokenId, email, parameters3DS });
       statusCode = responseCharge.statusCode;
 
       if (statusCode === 200) {
-        resultdivCard("TARJETA CREADA CON ÉXITO");
+        resultdivCard("CARGO CREADO CON ÉXITO");
         Culqi3DS.reset();
 
       } else {
-        resultdivCard("CREACIÓN DE TARJETA FALLIDA");
+        resultdivCard("CARGO FALLIDA");
         Culqi3DS.reset();
       }
     }
@@ -63,7 +64,7 @@ const validationInit3DS = ({ statusCode, email, tokenId }) => {
     Culqi3DS.settings = {
       charge: {
         totalAmount: config.TOTAL_AMOUNT,
-        returnUrl: "file:///Users/apple/Downloads/culqi-tarjeta-examplev4__3ds/index-card.html"
+        returnUrl: "http://localhost:5100/"
       },
       card: {
         email: email,

@@ -19,7 +19,7 @@ $('#crearCustomer').on('click', function (e) {
   console.log(data);
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:3000/culqi/generateCustomer',
+    url: 'http://localhost:5100/culqi/generateCustomer',
     data: JSON.stringify(data),
     contentType: "application/json",
     datatype: 'json',

@@ -12,16 +12,8 @@ class Service {
     try {
       const response = await fetch(`${this.#BASE_URL}/${endPoint}`,
         {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded', ...headers },
-          body: new URLSearchParams({
-            amount: body.amount,
-            currency_code: body.currency_code,
-            email: body.email,
-            token: body.source_id,
-            customer_id: body.customer_id,
-            deviceId: body.antifraud_details.device_finger_print_id,
-            ...authentication_3DS,
-          }),
+          headers: { 'Content-Type': 'application/json', ...headers },
+          body: JSON.stringify(body),
           method
         });
       const responseJSON = await response;
