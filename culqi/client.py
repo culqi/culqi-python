@@ -5,7 +5,6 @@ from types import ModuleType
 from requests import session
 
 from . import resources
-from . import schemas
 from .utils import capitalize_camel_case
 from .version import VERSION
 
