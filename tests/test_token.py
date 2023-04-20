@@ -17,8 +17,8 @@ class TokenTest(unittest.TestCase):
         super(TokenTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = "pk_test_90667d0a57d45c48"
-        self.private_key = "sk_test_1573b0e8079863ff"
+        self.public_key = ""
+        self.private_key = ""
         self.culqi = Culqi(self.public_key, self.private_key)
         self.token = Token(client=self.culqi)
 
@@ -26,14 +26,34 @@ class TokenTest(unittest.TestCase):
         self.yape_data = deepcopy(Data.YAPE)
         self.metadata = {"order_id": "0001"}
 
+        #ecnrypt variables
+        self.rsa_public_key = ""
+        self.rsa_id = ""
+
     @pytest.mark.vcr()
     def test_token_create(self):
         token = self.token.create(data=self.token_data)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
+    def test_token_create_encrypt(self):
+        options = {}
+        options["rsa_public_key"] = self.rsa_public_key
+        options["rsa_id"] = self.rsa_id
+        token = self.token.create(data=self.token_data, **options)
+        assert token["data"]["object"] == "token"
+
+    @pytest.mark.vcr()
     def test_token_yape_create(self):
         token = self.token.createyape(data=self.yape_data)
+        assert token["data"]["object"] == "token"
+
+    @pytest.mark.vcr()
+    def test_token_yape_create_encrypt(self):
+        options = {}
+        options["rsa_public_key"] = self.rsa_public_key
+        options["rsa_id"] = self.rsa_id
+        token = self.token.createyape(data=self.yape_data, **options)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()

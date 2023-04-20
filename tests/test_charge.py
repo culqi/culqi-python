@@ -9,7 +9,7 @@ from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Charge
 
-from .data import Data
+from tests.data import Data
 
 
 class ChargeTest(unittest.TestCase):
@@ -17,11 +17,15 @@ class ChargeTest(unittest.TestCase):
         super(ChargeTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = "pk_test_90667d0a57d45c48"
-        self.private_key = "sk_test_1573b0e8079863ff"
+        self.public_key = ""
+        self.private_key = ""
         self.culqi = Culqi(self.public_key, self.private_key)
         self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
+
+        #ecnrypt variables
+        self.rsa_public_key = ""
+        self.rsa_id = ""
 
     @property
     def charge_data(self):
@@ -49,6 +53,16 @@ class ChargeTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_charge_create(self):
         charge = self.charge.create(data=self.charge_data)
+
+        assert charge["data"]["object"] == "charge"
+
+    @pytest.mark.vcr()
+    def test_charge_create_encrypt(self):
+        options = {}
+        options["rsa_public_key"] = self.rsa_public_key
+        options["rsa_id"] = self.rsa_id
+
+        charge = self.charge.create(data=self.charge_data, **options)
 
         assert charge["data"]["object"] == "charge"
 
