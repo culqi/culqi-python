@@ -29,6 +29,7 @@ py -m pip install pytest
 py -m pip install python-dotenv
 py -m pip install culqi
 py -m pip install jsonschema
+py -m pip install pycryptodome
 
 ```
 
