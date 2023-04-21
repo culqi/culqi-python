@@ -17,22 +17,22 @@ class ChargeTest(unittest.TestCase):
         super(ChargeTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = ""
-        self.private_key = ""
+        self.public_key = "INSERTE_SU_LLAVE_PUBLICA"
+        self.private_key = "INSERTE_SU_LLAVE_PRIVADA"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
 
         #ecnrypt variables
-        self.rsa_public_key = ""
-        self.rsa_id = ""
+        self.rsa_public_key = "INSERTE_SU_LLAVE_RSA"
+        self.rsa_id = "INSERTE_SU_RSA_ID"
 
     @property
     def charge_data(self):
         # pylint: disable=no-member
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
-
+        print(token)
         charge_data = deepcopy(Data.CHARGE)
         charge_data["source_id"] = token["data"]["id"]
 
@@ -53,7 +53,6 @@ class ChargeTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_charge_create(self):
         charge = self.charge.create(data=self.charge_data)
-
         assert charge["data"]["object"] == "charge"
 
     @pytest.mark.vcr()

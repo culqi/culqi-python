@@ -1,9 +1,9 @@
 class Data:
     TOKEN = {
         "cvv": "111",
-        "card_number": "4456530000001005",
-        "expiration_year": "2023",
-        "expiration_month": "07",
+        "card_number": "411111111111111",
+        "expiration_year": "2025",
+        "expiration_month": "03",
         "email": "richard@piedpiper.com",
     }
 
