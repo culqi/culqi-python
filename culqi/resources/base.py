@@ -32,6 +32,11 @@ class Resource:
             URL.BASE,
             "/".join([URL.VERSION, self.endpoint] + [str(arg) for arg in args]),
         )
+    def _get_url_secure(self, *args):
+        return urljoin(
+            URL.BASE_SECURE,
+            "/".join([URL.VERSION, self.endpoint] + [str(arg) for arg in args]),
+        )
     
     def _encrypt(self, data, public_key):
         return self.client.encrypt(data, public_key)

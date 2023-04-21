@@ -17,22 +17,27 @@ class ChargeTest(unittest.TestCase):
         super(ChargeTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = ""
-        self.private_key = ""
+        self.public_key = "pk_test_da33560a681ff246"
+        self.private_key = "sk_test_93fd5e4babc0f7a6"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
 
         #ecnrypt variables
-        self.rsa_public_key = ""
-        self.rsa_id = ""
+        self.rsa_public_key = "-----BEGIN PUBLIC KEY-----\n" + \
+                              "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDuCmwMoEzvBk++m4rZUlZL4pDD\n" + \
+                              "W++NV1tSjAOJsRv5Ermg3/ygjINNhi1gfMbfSiWloc85tJBZhXzD7JpOd7JxOOg7\n" + \
+                              "CicgbZKGF/sq2geoVw4+n4j4vUZx0+a1PgStwR+BeZn2I+eAn9xOrHJD6/baJqIO\n" + \
+                              "/ifGJ1e5jHeQXIR4IwIDAQAB\n" + \
+                              "-----END PUBLIC KEY-----"
+        self.rsa_id = "30b83fd0-8709-4fe4-86c1-fef042c3c2c3"
 
     @property
     def charge_data(self):
         # pylint: disable=no-member
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
-
+        print(token)
         charge_data = deepcopy(Data.CHARGE)
         charge_data["source_id"] = token["data"]["id"]
 
@@ -53,7 +58,6 @@ class ChargeTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_charge_create(self):
         charge = self.charge.create(data=self.charge_data)
-
         assert charge["data"]["object"] == "charge"
 
     @pytest.mark.vcr()

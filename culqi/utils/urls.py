@@ -1,5 +1,6 @@
 class URL:
     BASE = "https://api.culqi.com"
+    BASE_SECURE = "https://secure.culqi.com"
     VERSION = "v2"
 
     CARD = "cards"
