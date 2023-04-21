@@ -13,7 +13,6 @@ from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import base64
-import requests
 
 RESOURCE_CLASSES = {}
 SCHEMAS = {}
