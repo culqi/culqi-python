@@ -54,7 +54,7 @@ class Data:
         "amount": 1000,
         "currency_code": "PEN",
         "description": "Venta de prueba",
-        "order_number": None,
+        "order_number": '12346shsbs',
         "client_details": {
             "first_name": "Richard",
             "last_name": "Piedpiper",

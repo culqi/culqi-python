@@ -18,16 +18,16 @@ class OrderTest(unittest.TestCase):
         super(OrderTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = ""
-        self.private_key = ""
+        self.public_key = "INSERTE_SU_LLAVE_PUBLICA"
+        self.private_key = "INSERTE_SU_LLAVE_PRIVADA"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.order = Order(client=self.culqi)
 
         self.metadata = {"order_id": "0001"}
 
         #ecnrypt variables
-        self.rsa_public_key = ""
-        self.rsa_id = ""
+        self.rsa_public_key = "INSERTE_SU_LLAVE_RSA\n"
+        self.rsa_id = "INSERTE_SU_RSA_ID"
 
     @property
     def order_data(self):
