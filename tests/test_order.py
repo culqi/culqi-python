@@ -18,16 +18,21 @@ class OrderTest(unittest.TestCase):
         super(OrderTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = ""
-        self.private_key = ""
+        self.public_key = "pk_live_889113cd74ecfc55"
+        self.private_key = "sk_live_34a07dcb6d4c7e39"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.order = Order(client=self.culqi)
 
         self.metadata = {"order_id": "0001"}
 
         #ecnrypt variables
-        self.rsa_public_key = ""
-        self.rsa_id = ""
+        self.rsa_public_key = "-----BEGIN PUBLIC KEY-----\n"+\
+        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDYp0451xITpczkBrl5Goxkh7m1\n"+\
+        "oynj8eDHypIn7HmbyoNJd8cS4OsT850hIDBwYmFuwmxF1YAJS8Cd2nes7fjCHh+7\n"+\
+        "oNqgNKxM2P2NLaeo4Uz6n9Lu4KKSxTiIT7BHiSryC0+Dic91XLH7ZTzrfryxigsc\n"+\
+        "+ZNndv0fQLOW2i6OhwIDAQAB\n"+\
+        "-----END PUBLIC KEY-----\n"
+        self.rsa_id = "508fc232-0a9d-4fc0-a192-364a0b782b89"
 
     @property
     def order_data(self):

@@ -3,6 +3,7 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
+from Crypto.Hash import SHA256
 import base64
 
 class RsaAesEncoder:
@@ -32,7 +33,7 @@ class RsaAesEncoder:
         encrypted_message = base64.b64encode(ciphertext).decode('utf-8')
 
         # Encrypt the key with the public key
-        cipher = PKCS1_OAEP.new(RSA.import_key(public_key))
+        cipher = PKCS1_OAEP.new(RSA.import_key(public_key), hashAlgo=SHA256)
         ciphertext_key = cipher.encrypt(key)
 
         # Encrypt the iv with the public key
