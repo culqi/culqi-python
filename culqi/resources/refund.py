@@ -1,6 +1,6 @@
-from ..utils.errors import ErrorMessage, NotAllowedError
-from ..utils.urls import URL
-from .base import Resource
+from culqi.utils.errors import ErrorMessage, NotAllowedError
+from culqi.utils.urls import URL
+from culqi.resources.base import Resource
 
 __all__ = ["Refund"]
 

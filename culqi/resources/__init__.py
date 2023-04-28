@@ -1,14 +1,14 @@
-from .card import Card
-from .charge import Charge
-from .customer import Customer
-from .event import Event
-from .iin import Iin
-from .order import Order
-from .plan import Plan
-from .refund import Refund
-from .subscription import Subscription
-from .token import Token
-from .transfer import Transfer
+from culqi.resources.card import Card
+from culqi.resources.charge import Charge
+from culqi.resources.customer import Customer
+from culqi.resources.event import Event
+from culqi.resources.iin import Iin
+from culqi.resources.order import Order
+from culqi.resources.plan import Plan
+from culqi.resources.refund import Refund
+from culqi.resources.subscription import Subscription
+from culqi.resources.token import Token
+from culqi.resources.transfer import Transfer
 
 __all__ = [
     "Card",
