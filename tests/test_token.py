@@ -26,9 +26,22 @@ class TokenTest(unittest.TestCase):
         self.yape_data = deepcopy(Data.YAPE)
         self.metadata = {"order_id": "0001"}
 
+        #ecnrypt variables
+        self.rsa_public_key = "INSERTE_SU_LLAVE_RSA"
+        self.rsa_id = "INSERTE_SU_RSA_ID"
+
     @pytest.mark.vcr()
     def test_token_create(self):
         token = self.token.create(data=self.token_data)
+        print(token)
+        assert token["data"]["object"] == "token"
+
+    @pytest.mark.vcr()
+    def test_token_create_encrypt(self):
+        options = {}
+        options["rsa_public_key"] = self.rsa_public_key
+        options["rsa_id"] = self.rsa_id
+        token = self.token.create(data=self.token_data, **options)
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
@@ -37,9 +50,18 @@ class TokenTest(unittest.TestCase):
         assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
+    def test_token_yape_create_encrypt(self):
+        options = {}
+        options["rsa_public_key"] = self.rsa_public_key
+        options["rsa_id"] = self.rsa_id
+        token = self.token.createyape(data=self.yape_data, **options)
+        assert token["data"]["object"] == "token"
+
+    @pytest.mark.vcr()
     def test_token_retrieve(self):
         created_token = self.token.create(data=self.token_data)
         retrieved_token = self.token.read(created_token["data"]["id"])
+        print(retrieved_token)
         assert created_token["data"]["id"] == retrieved_token["data"]["id"]
 
     @pytest.mark.vcr()

@@ -1,5 +1,5 @@
-from ..utils.urls import URL
-from .base import Resource
+from culqi.utils.urls import URL
+from culqi.resources.base import Resource
 
 
 __all__ = ["Order"]

@@ -9,7 +9,7 @@ from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Charge
 
-from .data import Data
+from tests.data import Data
 
 
 class ChargeTest(unittest.TestCase):
@@ -23,12 +23,16 @@ class ChargeTest(unittest.TestCase):
         self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
 
+        #ecnrypt variables
+        self.rsa_public_key = "INSERTE_SU_LLAVE_RSA"
+        self.rsa_id = "INSERTE_SU_RSA_ID"
+
     @property
     def charge_data(self):
         # pylint: disable=no-member
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
-
+        print(token)
         charge_data = deepcopy(Data.CHARGE)
         charge_data["source_id"] = token["data"]["id"]
 
@@ -49,6 +53,15 @@ class ChargeTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_charge_create(self):
         charge = self.charge.create(data=self.charge_data)
+        assert charge["data"]["object"] == "charge"
+
+    @pytest.mark.vcr()
+    def test_charge_create_encrypt(self):
+        options = {}
+        options["rsa_public_key"] = self.rsa_public_key
+        options["rsa_id"] = self.rsa_id
+
+        charge = self.charge.create(data=self.charge_data, **options)
 
         assert charge["data"]["object"] == "charge"
 

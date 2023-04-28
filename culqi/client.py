@@ -1,12 +1,14 @@
 import json
+import logging
 from copy import deepcopy
 from types import ModuleType
 
 from requests import session
 
 from . import resources
-from .utils import capitalize_camel_case
-from .version import VERSION
+from culqi.utils import capitalize_camel_case
+from culqi.version import VERSION
+import culqi.utils.encryption.rsa_aes.encoder as encoder
 
 RESOURCE_CLASSES = {}
 SCHEMAS = {}
@@ -17,6 +19,14 @@ for name, module in resources.__dict__.items():
     is_in_module = capitalized_name in getattr(module, "__dict__", {})
     if is_module and is_in_module:
         RESOURCE_CLASSES[name] = module.__dict__[capitalized_name]
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+try:
+    rsa_aes_encoder = encoder.RsaAesEncoder()
+except Exception as e:
+    logger.error('Unable to create an instance of Base64Decoder class.', exc_info=True)
 
 class Culqi:
     def __init__(self, public_key, private_key):
@@ -57,9 +67,9 @@ class Culqi:
             }
         )
 
-    def request(self, method, url, **options):
+    def request(self, method, url, data, **options):
         """Dispatch a request to the CULQUI HTTP API."""
-        response = getattr(self.session, method)(url, **options)
+        response = getattr(self.session, method)(url, data, **options)
 
         data = response.json()
 
@@ -67,18 +77,18 @@ class Culqi:
             data["items"] = deepcopy(data["data"])
             del data["data"]
 
-        print(data)
-
         return {"status": response.status_code, "data": data}
 
     def get(self, url, params, **options):
         return self.request("get", url, params=params, **options)
 
     def post(self, url, data, **options):
-        data, options = self._update_request(data, options)
-        return self.request("post", url, data=data, **options)
+        data, options = rsa_aes_encoder.encrypt_validation(data, options)
+        data, options = self._update_request(data, options) 
+        return self.request("post", url, data, **options)
 
     def patch(self, url, data, **options):
+        data, options = rsa_aes_encoder.encrypt_validation(data, options)
         data, options = self._update_request(data, options)
         return self.request("patch", url, data=data, **options)
 
