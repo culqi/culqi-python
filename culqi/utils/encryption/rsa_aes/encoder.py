@@ -37,7 +37,7 @@ class RsaAesEncoder:
         ciphertext_key = cipher.encrypt(key)
 
         # Encrypt the iv with the public key
-        cipher = PKCS1_OAEP.new(RSA.import_key(public_key))
+        cipher = PKCS1_OAEP.new(RSA.import_key(public_key), hashAlgo=SHA256)
         ciphertext_iv = cipher.encrypt(iv)
 
         # Convert the encrypted message to a string
