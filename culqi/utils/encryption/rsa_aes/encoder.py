@@ -16,19 +16,12 @@ class RsaAesEncoder:
         # Message to be encrypted
         message = json.dumps(data).encode('utf-8')
 
-        # Pad the message to a multiple of 16 bytes using PKCS#7 padding
-        block_size = 16
-        padding_length = block_size - len(message) % block_size
-        padding = bytes([padding_length] * padding_length)
-        padded_message = message + padding
-
-
         # Initialize the cipher with the key and IV
-        cipher = AES.new(key, AES.MODE_CBC, iv)
+        cipher = AES.new(key, AES.MODE_GCM, iv)
 
         # Encrypt the message
         # Note that the message length must be a multiple of 16 bytes
-        ciphertext = cipher.encrypt(padded_message)
+        ciphertext = cipher.encrypt(message)
         
         encrypted_message = base64.b64encode(ciphertext).decode('utf-8')
 
