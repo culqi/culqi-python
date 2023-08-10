@@ -36,6 +36,21 @@ py -m pip install pycryptodome
 El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
 realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
+## Encriptar payload
+
+Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
+
+Luego declara variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
+
+Ejemplo
+
+```python
+options = {}
+options["rsa_public_key"] = "la llave pública RSA"
+options["rsa_id"] = "el id de tu llave"
+token = self.token.create(data=self.token_data, **options)
+
+```
 
 ## Documentación
 
