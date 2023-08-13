@@ -36,6 +36,102 @@ py -m pip install pycryptodome
 El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
 realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
+## Ejemplos
+
+### Inicialización
+
+```python
+
+from dotenv import load_dotenv
+from culqi2 import __version__
+from culqi2.client import Culqi
+
+self.public_key = "pk_test_90667d0a57d45c48"
+self.private_key = "sk_test_1573b0e8079863ff"
+self.culqi = Culqi(self.public_key, self.private_key)
+
+```
+
+### Crear Token
+
+```python
+
+token = self.token.create(data=self.token_data)
+
+```
+
+### Crear Cargo
+
+```python
+
+charge = self.charge.create(data=self.charge_data)
+
+```
+
+### Crear Plan
+
+```python
+plan = self.plan.create(data=self.plan_data)
+
+```
+
+### Crear Customer
+
+```python
+customer = self.customer.create(data=self.customer_data)
+
+```
+
+### Actualizar Customer
+
+```python
+ updated_customer = self.customer.update(
+            id_=created_customer["data"]["id"], data=metadatada
+        )
+```
+
+### Obtener Customer
+
+```python
+ retrieved_customer = self.customer.read(created_customer["data"]["id"])
+```
+
+### Crear Card
+
+```python
+ card = self.card.create(data=self.card_data)
+
+```
+
+### Crear Suscripción
+
+```python
+subscription = self.subscription.create(data=self.subscription_data)
+
+```
+
+### Crear Reembolso
+
+```python
+refund = self.refund.create(data=self.refund_data)
+
+```
+
+### Encriptar payload
+
+Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
+
+Luego declara en variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
+
+Ejemplo
+
+```python
+options = {}
+options["rsa_public_key"] = "la llave pública RSA"
+options["rsa_id"] = "el id de tu llave"
+token = self.token.create(data=self.token_data, **options)
+
+```
 
 ## Documentación
 
