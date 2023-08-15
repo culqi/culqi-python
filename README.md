@@ -144,13 +144,6 @@ refund = self.refund.create(data=self.refund_data)
 
 ```
 
-
-## Documentación
-
-- [Referencia de API](https://www.culqi.com/api/)
-- [Demo Checkout V4 + Culqi 3DS](https://github.com/culqi/culqi-python-demo-checkoutv4-culqi3ds)
-- [Wiki](https://github.com/culqi/culqi-python/wiki)
-
 ## Pruebas
 
 En la caperta **/test** econtraras ejemplo para crear un token, charge,plan, órdenes, card, suscupciones, etc.
@@ -188,12 +181,20 @@ En la caperta **/test** econtraras ejemplo para crear un token, charge,plan, ór
         assert charge["data"]["object"] == "charge"
 ```
 
+## Documentación
+
+- [Referencia de API](https://www.culqi.com/api/)
+- [Demo Checkout V4 + Culqi 3DS](https://github.com/culqi/culqi-python-demo-checkoutv4-culqi3ds)
+- [Wiki](https://github.com/culqi/culqi-python/wiki)
+
 ## Changelog
 
 Todos los cambios en las versiones de esta biblioteca están listados en
 [CHANGELOG.md](CHANGELOG.md).
 
-## Desarrollo
-[Revisa nuestra guia de contribución](CONTRIBUTING.md)
+## Autor
+Team Culqi
 
-## Contribuidores
+## Licencia
+El código fuente de culqi-python está distribuido bajo MIT License, revisar el archivo LICENSE.
+
