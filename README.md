@@ -36,9 +36,7 @@ py -m pip install pycryptodome
 El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
 realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
-## Ejemplos
-
-### Inicialización
+## Configuracion
 
 ```python
 
@@ -47,10 +45,32 @@ from culqi2 import __version__
 from culqi2.client import Culqi
 
 self.public_key = "INSERTE_SU_LLAVE_PUBLICA"
-self.private_key = "INSERTE_SU_LLAVE_PRIVADA"
-self.culqi = Culqi(self.public_key, self.private_key)
+        self.private_key = "INSERTE_SU_LLAVE_PRIVADA"
+        self.culqi = Culqi(self.public_key, self.private_key)
+
+        #ecnrypt variables
+        self.rsa_public_key = "INSERTE_SU_LLAVE_RSA"
+        self.rsa_id = "INSERTE_SU_RSA_ID"
 
 ```
+
+### Encriptar payload
+
+Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
+
+Luego declara en variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
+
+Ejemplo
+
+```python
+options = {}
+options["rsa_public_key"] = "la llave pública RSA"
+options["rsa_id"] = "el id de tu llave"
+token = self.token.create(data=self.token_data, **options)
+
+```
+
+## Ejemplos
 
 ### Crear Token
 
@@ -117,21 +137,6 @@ refund = self.refund.create(data=self.refund_data)
 
 ```
 
-### Encriptar payload
-
-Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
-
-Luego declara en variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
-
-Ejemplo
-
-```python
-options = {}
-options["rsa_public_key"] = "la llave pública RSA"
-options["rsa_id"] = "el id de tu llave"
-token = self.token.create(data=self.token_data, **options)
-
-```
 
 ## Documentación
 
