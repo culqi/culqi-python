@@ -155,6 +155,37 @@ En la caperta **/test** econtraras ejemplo para crear un token, charge,plan, ór
 
 > Recuerda que si quieres probar tu integración, puedes utilizar nuestras [tarjetas de prueba.](https://docs.culqi.com/es/documentacion/pagos-online/tarjetas-de-prueba/)
 
+### Ejemplo Prueba Token
+
+```python
+ @pytest.mark.vcr()
+    def test_token_create(self):
+        token = self.token.create(data=self.token_data)
+        print(token)
+        assert token["data"]["object"] == "token"
+
+```
+
+### Ejemplo Prueba Cargo
+```python
+ @property
+    def charge_data(self):
+        # pylint: disable=no-member
+        token_data = deepcopy(Data.TOKEN)
+        token = self.culqi.token.create(data=token_data)
+        print(token)
+        charge_data = deepcopy(Data.CHARGE)
+        charge_data["source_id"] = token["data"]["id"]
+
+        return charge_data
+
+ @pytest.mark.vcr()
+    def test_charge_create(self):
+        charge = self.charge.create(data=self.charge_data)
+        print (charge)
+        assert charge["data"]["object"] == "charge"
+```
+
 ## Changelog
 
 Todos los cambios en las versiones de esta biblioteca están listados en
