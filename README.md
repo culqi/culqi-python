@@ -8,17 +8,21 @@
 
 Nuestra Biblioteca PYTHON oficial de CULQI, es compatible con la v2.0 del Culqi API, con el cual tendrás la posibilidad de realizar cobros con tarjetas de débito y crédito, Yape, PagoEfectivo, billeteras móviles y Cuotéalo con solo unos simples pasos de configuración.
 
+Nuestra biblioteca te da la posibilidad de capturar el `status_code` de la solicitud HTTP que se realiza al API de Culqi, asi como el `response` que contiene el cuerpo de la respuesta obtenida.
+
 ## Requisitos
 
 - Python 2.7+
 * Afiliate [aquí](https://afiliate.culqi.com/).
-* Si vas a realizar pruebas obtén tus llaves desde [aquí](https://integ-panel.culqi.com/#/registro), si vas a realizar transacciones reales obtén tus llaves desde [aquí](https://panel.culqi.com/#/registro) (1).
+* Si vas a realizar pruebas obtén tus llaves desde [aquí](https://integ-panel.culqi.com/#/registro), si vas a realizar transacciones reales obtén tus llaves desde [aquí](https://panel.culqi.com/#/registro).
 
 > Recuerda que para obtener tus llaves debes ingresar a tu CulqiPanel > Desarrollo > ***API Keys***.
 
 ![alt tag](http://i.imgur.com/NhE6mS9.png)
 
 > Recuerda que las credenciales son enviadas al correo que registraste en el proceso de afiliación.
+
+* Para encriptar el payload debes generar un id y llave RSA  ingresando a CulqiPanel > Desarrollo  > RSA Keys
 
 ## Instalación
 
@@ -33,10 +37,10 @@ py -m pip install pycryptodome
 
 ```
 
-El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
-realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
-
 ## Configuracion
+
+Para empezar a enviar peticiones al API de Culqi debes configurar tu llave pública (pk), llave privada (sk).
+Para habilitar encriptación de payload debes configurar tu rsa_id y rsa_public_key.
 
 ```python
 
@@ -45,32 +49,30 @@ from culqi2 import __version__
 from culqi2.client import Culqi
 
 self.public_key = "pk_test_e94078b9b248675d"
-        self.private_key = "sk_test_c2267b5b262745f0"
-        self.culqi = Culqi(self.public_key, self.private_key)
+self.private_key = "sk_test_c2267b5b262745f0"
+self.culqi = Culqi(self.public_key, self.private_key)
 
-        #ecnrypt variables
-        self.rsa_public_key = "-----BEGIN PUBLIC KEY-----\n" + \
-                              "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDswQycch0x/7GZ0oFojkWCYv+g\n" + \
-                              "r5CyfBKXc3Izq+btIEMCrkDrIsz4Lnl5E3FSD7/htFn1oE84SaDKl5DgbNoev3pM\n" + \
-                              "C7MDDgdCFrHODOp7aXwjG8NaiCbiymyBglXyEN28hLvgHpvZmAn6KFo0lMGuKnz8\n" + \
-                              "iuTfpBl6HpD6+02SQIDAQAB\n" + \
-                              "-----END PUBLIC KEY-----"
-        self.rsa_id = "de35e120-e297-4b96-97ef-10a43423ddec"
+#ecnrypt variables
+self.rsa_public_key = "-----BEGIN PUBLIC KEY-----\n" + \
+                        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDswQycch0x/7GZ0oFojkWCYv+g\n" + \
+                        "r5CyfBKXc3Izq+btIEMCrkDrIsz4Lnl5E3FSD7/htFn1oE84SaDKl5DgbNoev3pM\n" + \
+                        "C7MDDgdCFrHODOp7aXwjG8NaiCbiymyBglXyEN28hLvgHpvZmAn6KFo0lMGuKnz8\n" + \
+                        "iuTfpBl6HpD6+02SQIDAQAB\n" + \
+                        "-----END PUBLIC KEY-----"
+self.rsa_id = "de35e120-e297-4b96-97ef-10a43423ddec"
 
 ```
 
 ### Encriptar payload
 
-Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
-
-Luego declara en variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
+Para encriptar el payload necesitas agregar el parámetros **options** que contiene tu id y llave RSA.
 
 Ejemplo
 
 ```python
 options = {}
-options["rsa_public_key"] = "la llave pública RSA"
-options["rsa_id"] = "el id de tu llave"
+options["rsa_public_key"] = self.rsa_public_key #"la llave pública RSA"
+options["rsa_id"] = self.rsa_id # "el id de tu llave"
 token = self.token.create(data=self.token_data, **options)
 
 ```
