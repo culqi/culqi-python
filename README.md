@@ -36,9 +36,7 @@ py -m pip install pycryptodome
 El `status_code` es el estatus HTTP numérico devuelto por la solicitud HTTP que se
 realiza al API de Culqi, y `data` contiene el cuerpo de la respuesta obtenida.
 
-## Ejemplos
-
-### Inicialización
+## Configuracion
 
 ```python
 
@@ -46,11 +44,38 @@ from dotenv import load_dotenv
 from culqi2 import __version__
 from culqi2.client import Culqi
 
-self.public_key = "pk_test_90667d0a57d45c48"
-self.private_key = "sk_test_1573b0e8079863ff"
-self.culqi = Culqi(self.public_key, self.private_key)
+self.public_key = "pk_test_e94078b9b248675d"
+        self.private_key = "sk_test_c2267b5b262745f0"
+        self.culqi = Culqi(self.public_key, self.private_key)
+
+        #ecnrypt variables
+        self.rsa_public_key = "-----BEGIN PUBLIC KEY-----\n" + \
+                              "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDswQycch0x/7GZ0oFojkWCYv+g\n" + \
+                              "r5CyfBKXc3Izq+btIEMCrkDrIsz4Lnl5E3FSD7/htFn1oE84SaDKl5DgbNoev3pM\n" + \
+                              "C7MDDgdCFrHODOp7aXwjG8NaiCbiymyBglXyEN28hLvgHpvZmAn6KFo0lMGuKnz8\n" + \
+                              "iuTfpBl6HpD6+02SQIDAQAB\n" + \
+                              "-----END PUBLIC KEY-----"
+        self.rsa_id = "de35e120-e297-4b96-97ef-10a43423ddec"
 
 ```
+
+### Encriptar payload
+
+Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
+
+Luego declara en variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
+
+Ejemplo
+
+```python
+options = {}
+options["rsa_public_key"] = "la llave pública RSA"
+options["rsa_id"] = "el id de tu llave"
+token = self.token.create(data=self.token_data, **options)
+
+```
+
+## Ejemplos
 
 ### Crear Token
 
@@ -117,21 +142,6 @@ refund = self.refund.create(data=self.refund_data)
 
 ```
 
-### Encriptar payload
-
-Para encriptar el payload necesitas crear un id RSA y llave RSA, para esto debes ingresa a tu panel y hacer click en la sección “Desarrollo / RSA Keys” de la barra de navegación a la mano izquierda.
-
-Luego declara en variables el id RSA y llave RSA en tu backend, y envialo en las funciones de la librería.
-
-Ejemplo
-
-```python
-options = {}
-options["rsa_public_key"] = "la llave pública RSA"
-options["rsa_id"] = "el id de tu llave"
-token = self.token.create(data=self.token_data, **options)
-
-```
 
 ## Documentación
 
