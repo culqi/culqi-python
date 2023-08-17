@@ -146,7 +146,7 @@ refund = self.refund.create(data=self.refund_data)
 
 ## Pruebas
 
-En la caperta **/test** econtraras ejemplo para crear un token, charge,plan, órdenes, card, suscupciones, etc.
+En la caperta **/test** econtraras ejemplo para crear un token, charge, plan, órdenes, card, suscripciones, etc.
 
 > Recuerda que si quieres probar tu integración, puedes utilizar nuestras [tarjetas de prueba.](https://docs.culqi.com/es/documentacion/pagos-online/tarjetas-de-prueba/)
 
