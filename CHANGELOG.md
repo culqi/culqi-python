@@ -1,3 +1,9 @@
+### 15-08-2023
+
+- Source code improvements
+- Add HTTP status code
+- Add RSA encrypt
+
 ### 15-01-2023
 
 - Added support forn orderconfirmtipo
