@@ -4,7 +4,7 @@ import os
 
 from setuptools import find_packages, setup
 
-package_name = "culqi"
+package_name = "culqi-python-oficial"
 package_path = os.path.abspath(os.path.dirname(__file__))
 repositorty_url = "https://github.com/culqi/culqi"
 long_description_file_path = os.path.join(package_path, "README.md")
