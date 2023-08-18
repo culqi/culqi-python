@@ -8,7 +8,7 @@ from requests import session
 from . import resources
 from culqi.utils import capitalize_camel_case
 from culqi.version import VERSION
-import culqi.utils.encryption.rsa_aes.encoder as encoder
+import culqi.utils.encoder as encoder
 
 RESOURCE_CLASSES = {}
 SCHEMAS = {}
