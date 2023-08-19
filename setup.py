@@ -22,10 +22,10 @@ setup(
     packages=find_packages(exclude=[".*", "docs", "scripts", "tests*", "legacy",]),
     include_package_data=True,
     version=__import__("culqi").__version__,
-    description="""Biblioteca de Culqi en Python""",
+    description="""Biblioteca de Culqi para Python""",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Willy Aguirre, Joel Ibaceta, Martin Josemaría",
+    author="Team Culqi",
     zip_safe=False,
     keywords=["Api Client", "Payment Integration", "Culqi", "Python 3", "Python 2",],
     classifiers=[
