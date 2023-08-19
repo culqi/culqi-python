@@ -11,7 +11,7 @@ long_description_file_path = os.path.join(package_path, "README.md")
 long_description = ""
 
 try:
-    with open(long_description_file_path) as f:
+    with open(long_description_file_path, encoding="utf-8") as f:
         long_description = f.read()
 except IOError:
     pass
