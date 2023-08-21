@@ -1,4 +1,4 @@
-# Culqi Python
+# Culqi-Python
 
 [![Build Status](https://travis-ci.org/culqi/culqi-python.svg?branch=master)](https://travis-ci.org/culqi/culqi-python)
 ![](https://img.shields.io/pypi/pyversions/Culqi)
