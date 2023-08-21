@@ -112,16 +112,6 @@ Las devoluciones pueden ser creados vía [API de devolución](https://apidocs.cu
 refund = self.refund.create(data=self.refund_data)
 ```
 
-### Crear Plan
-
-El plan es un servicio que te permite definir con qué frecuencia deseas realizar cobros a tus clientes.
-
-Un plan define el comportamiento de las suscripciones. Los planes pueden ser creados vía el [API de Plan](https://apidocs.culqi.com/#/planes#create) o desde el **CulqiPanel**.
-
-```python
-plan = self.plan.create(data=self.plan_data)
-```
-
 ### Crear Customer
 
 El **cliente** es un servicio que te permite guardar la información de tus clientes. Es un paso necesario para generar una [tarjeta](/es/documentacion/pagos-online/recurrencia/one-click/tarjetas).
@@ -154,6 +144,16 @@ Las tarjetas pueden ser creadas vía [API de tarjeta](https://apidocs.culqi.com/
 
 ```python
  card = self.card.create(data=self.card_data)
+```
+
+### Crear Plan
+
+El plan es un servicio que te permite definir con qué frecuencia deseas realizar cobros a tus clientes.
+
+Un plan define el comportamiento de las suscripciones. Los planes pueden ser creados vía el [API de Plan](https://apidocs.culqi.com/#/planes#create) o desde el **CulqiPanel**.
+
+```python
+plan = self.plan.create(data=self.plan_data)
 ```
 
 ### Crear Suscripción
