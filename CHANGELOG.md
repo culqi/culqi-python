@@ -1,10 +1,10 @@
-### 15-08-2023
+### v1.0.0 15-08-2023
 
 - Source code improvements
 - Add HTTP status code
 - Add RSA encrypt
 
-### 15-01-2023
+### v0.2.9 15-01-2023
 
 - Added support forn orderconfirmtipo
 - Added support for create token yape
