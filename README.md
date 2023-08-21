@@ -22,7 +22,7 @@ Nuestra biblioteca te da la posibilidad de capturar el `status_code` de la solic
 
 > Recuerda que las credenciales son enviadas al correo que registraste en el proceso de afiliación.
 
-* Para encriptar el payload debes generar un id y llave RSA  ingresando a CulqiPanel > Desarrollo  > RSA Keys
+* Para encriptar el payload debes generar un id y llave RSA  ingresando a CulqiPanel > Desarrollo  > RSA Keys.
 
 ## Instalación
 
