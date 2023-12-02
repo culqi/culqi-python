@@ -17,8 +17,8 @@ class TokenTest(unittest.TestCase):
         super(TokenTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = "pk_test_da33560a681ff246"
-        self.private_key = "sk_test_93fd5e4babc0f7a6"
+        self.public_key = "pk_test_90667d0a57d45c48"
+        self.private_key = "sk_test_1573b0e8079863ff"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.token = Token(client=self.culqi)
 
@@ -28,12 +28,12 @@ class TokenTest(unittest.TestCase):
 
         #ecnrypt variables
         self.rsa_public_key = "-----BEGIN PUBLIC KEY-----\n"+\
-        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDuCmwMoEzvBk++m4rZUlZL4pDD\n"+\
-        "W++NV1tSjAOJsRv5Ermg3/ygjINNhi1gfMbfSiWloc85tJBZhXzD7JpOd7JxOOg7\n"+\
-        "CicgbZKGF/sq2geoVw4+n4j4vUZx0+a1PgStwR+BeZn2I+eAn9xOrHJD6/baJqIO\n"+\
-        "/ifGJ1e5jHeQXIR4IwIDAQAB\n"+\
+        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCgd5UbyW6+DysTvwvS6fKzXK7j\n"+\
+        "smjKWPSHcjw8sSTr3rARRYMmOKgDI2ZbfsfcBedHp0ZjsrL/2owXV4N+GYTjheuj\n"+\
+        "VQl2g0rdu9JpYbxe5zSXNptjIPYjwFOzIt5ODotcwgcurA6XlU63zZZuCcUQSgka\n"+\
+        "2B7gmga5bxUZA6dAHwIDAQAB\n"+\
         "-----END PUBLIC KEY-----"
-        self.rsa_id = "30b83fd0-8709-4fe4-86c1-fef042c3c2c3"
+        self.rsa_id = "82d2e538-9b07-4f0b-b615-9d7f028c825b"
 
     @pytest.mark.vcr()
     def test_token_create(self):

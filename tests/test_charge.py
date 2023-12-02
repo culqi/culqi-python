@@ -17,8 +17,8 @@ class ChargeTest(unittest.TestCase):
         super(ChargeTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = "pk_test_da33560a681ff246"
-        self.private_key = "sk_test_93fd5e4babc0f7a6"
+        self.public_key = "pk_test_90667d0a57d45c48"
+        self.private_key = "sk_test_1573b0e8079863ff"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.charge = Charge(client=self.culqi) 
         self.metadata = {"order_id": "0001"}
