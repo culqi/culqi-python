@@ -1,5 +1,6 @@
 from requests.compat import urljoin
 from jsonschema import validate
+from culqi.utils.constants import CONSTANTS
 
 from culqi.utils.urls import URL
 
@@ -19,6 +20,11 @@ class Resource:
         return self.client.patch(url, data, **kwargs)
 
     def _post(self, url, data, **kwargs):
+        kwargs["headers"]["x-culqi-env"] = CONSTANTS.X_CULQI_ENV
+        kwargs["headers"]["x-api-version"] = CONSTANTS.X_API_VERSION
+        kwargs["headers"]["x-culqi-client"] = CONSTANTS.X_CULQI_CLIENT
+        kwargs["headers"]["x-culqi-client-version"] = CONSTANTS.X_CULQI_CLIENT_VERSION
+
         return self.client.post(url, data, **kwargs)
 
     def _put(self, url, data, **kwargs):

@@ -1,9 +1,9 @@
 class Data:
     TOKEN = {
-        "cvv": "111",
-        "card_number": "411111111111111",
+        "cvv": "123",
+        "card_number": "4111111111111111",
         "expiration_year": "2025",
-        "expiration_month": "03",
+        "expiration_month": "09",
         "email": "richard@piedpiper.com",
     }
 
@@ -37,7 +37,7 @@ class Data:
         "email": "usuario@culqi.com",
         "first_name": "Richard",
         "last_name": "Piedpiper",
-        "phone_number": "+51998989789",
+        "phone_number": "998989789",
     }
 
     PLAN = {
@@ -54,7 +54,7 @@ class Data:
         "amount": 1000,
         "currency_code": "PEN",
         "description": "Venta de prueba",
-        "order_number": '12346shsbs',
+        "order_number": '12346shsbs_skd',
         "client_details": {
             "first_name": "Richard",
             "last_name": "Piedpiper",

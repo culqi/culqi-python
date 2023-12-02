@@ -1,6 +1,7 @@
 from ..utils.errors import ErrorMessage, NotAllowedError
 from ..utils.urls import URL
 from .base import Resource
+from ..utils.culqi_validation import CulqiValidation
 
 __all__ = ["Token"]
 
@@ -9,6 +10,8 @@ class Token(Resource):
     endpoint = URL.TOKEN
 
     def create(self, data, **options):
+        print(data)
+        CulqiValidation.create_token_validation(self, data)
         headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
         if "headers" in options:
             options["headers"].update(headers)
