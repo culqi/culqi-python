@@ -10,7 +10,6 @@ class Token(Resource):
     endpoint = URL.TOKEN
 
     def create(self, data, **options):
-        print(data)
         CulqiValidation.create_token_validation(self, data)
         headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
         if "headers" in options:
