@@ -66,12 +66,22 @@ class TokenTest(unittest.TestCase):
     def test_token_retrieve(self):
         created_token = self.token.create(data=self.token_data)
         retrieved_token = self.token.read(created_token["data"]["id"])
-        print(retrieved_token)
         assert created_token["data"]["id"] == retrieved_token["data"]["id"]
 
     @pytest.mark.vcr()
     def test_token_list(self):
-        retrieved_token_list = self.token.list()
+        querystring = {
+            "creation_date": "1476132639",
+            "creation_date_from": "1476132639",
+            "creation_date_to": "1476132639",
+            "card_brand": "Visa",
+            "card_type": "credito",
+            "device_type": "mobile",
+            "bin": "411111",
+            "country_code": "PE",
+            "limit": "10",
+        }
+        retrieved_token_list = self.token.list(querystring)
         assert "items" in retrieved_token_list["data"]
 
     @pytest.mark.vcr()

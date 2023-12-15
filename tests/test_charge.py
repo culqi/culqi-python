@@ -37,7 +37,6 @@ class ChargeTest(unittest.TestCase):
         # pylint: disable=no-member
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
-        print(token)
         charge_data = deepcopy(Data.CHARGE)
         charge_data["source_id"] = token["data"]["id"]
 
