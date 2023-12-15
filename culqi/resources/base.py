@@ -20,9 +20,9 @@ class Resource:
         return self.client.patch(url, data, **kwargs)
 
     def _post(self, url, data, **kwargs):
-        print(567890239876526728930498376217)
-        print(kwargs)
-        print(2345678654323456789)
+        if "headers" not in kwargs:
+            kwargs["headers"] = self.client.session.headers
+        
         key = kwargs["headers"]["Authorization"]
         if 'test' in key:
             kwargs["headers"]["x-culqi-env"] = CONSTANTS.X_CULQI_ENV_TEST

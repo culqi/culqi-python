@@ -1,4 +1,4 @@
-from culqi.utils.culqi_validation import CulqiValidation
+from culqi.utils.validation.charge_validation import ChargeValidation
 from culqi.utils.errors import ErrorMessage, NotAllowedError
 from culqi.utils.urls import URL
 from culqi.resources.base import Resource
@@ -10,7 +10,7 @@ class Charge(Resource):
     endpoint = URL.CHARGE
 
     def create(self, data, **options):
-        CulqiValidation.charge_validation(self, data)
+        ChargeValidation.create(self, data)
         return Resource.create(self, data, **options)
 
     def delete(self, id_, data=None, **options):

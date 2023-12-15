@@ -69,8 +69,11 @@ class Culqi:
 
     def request(self, method, url, data, **options):
         """Dispatch a request to the CULQUI HTTP API."""
-        response = getattr(self.session, method)(url, data, **options)
-
+        if method == "get":
+            response = getattr(self.session, method)(url, params=data, **options)
+        else:
+            response = getattr(self.session, method)(url, data, **options)
+            
         data = response.json()
 
         if "data" in data:
@@ -80,7 +83,7 @@ class Culqi:
         return {"status": response.status_code, "data": data}
 
     def get(self, url, params, **options):
-        return self.request("get", url, params=params, **options)
+        return self.request("get", url, data=params, **options)
 
     def post(self, url, data, **options):
         data, options = rsa_aes_encoder.encrypt_validation(data, options)
