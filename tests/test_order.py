@@ -72,7 +72,7 @@ class OrderTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_order_confirm(self):
         created_order = self.order.create(data=self.order_data)
-        confirmed_order = self.order.confirm(id_="lkmdnsfdc")
+        confirmed_order = self.order.confirm(created_order["data"]["id"])
 
         assert confirmed_order["data"]["id"] == created_order["data"]["id"]
         assert confirmed_order["status"] == 201
