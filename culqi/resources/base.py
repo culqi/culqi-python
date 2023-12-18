@@ -20,19 +20,6 @@ class Resource:
         return self.client.patch(url, data, **kwargs)
 
     def _post(self, url, data, **kwargs):
-        if "headers" not in kwargs:
-            kwargs["headers"] = self.client.session.headers
-        
-        key = kwargs["headers"]["Authorization"]
-        if 'test' in key:
-            kwargs["headers"]["x-culqi-env"] = CONSTANTS.X_CULQI_ENV_TEST
-        else:
-            kwargs["headers"]["x-culqi-env"] = CONSTANTS.X_CULQI_ENV_LIVE
-            
-        kwargs["headers"]["x-api-version"] = CONSTANTS.X_API_VERSION
-        kwargs["headers"]["x-culqi-client"] = CONSTANTS.X_CULQI_CLIENT
-        kwargs["headers"]["x-culqi-client-version"] = CONSTANTS.X_CULQI_CLIENT_VERSION
-
         return self.client.post(url, data, **kwargs)
 
     def _put(self, url, data, **kwargs):

@@ -17,8 +17,15 @@ class ChargeValidation:
             raise CustomException('Invalid amount.')
 
         Helpers.validate_currency_code(data['currency_code'])
-
-        Helpers.validate_string_start(data['source_id'], "tkn")
+        
+        if data['source_id'].startswith("tkn"):
+            Helpers.validate_string_start(data['source_id'], "tkn")
+        elif data['source_id'].startswith("ype"):
+            Helpers.validate_string_start(data['source_id'], "ype")
+        elif data['source_id'].startswith("crd"):
+            Helpers.validate_string_start(data['source_id'], "crd")
+        else:
+            raise CustomException(f'Incorrect format. The format must start with tkn, ype or crd')
         
     def retrieve(self, id):
         Helpers.validate_string_start(id, "chr")
