@@ -26,3 +26,8 @@ class Plan(Resource):
         PlanValidation.update(self, id_)
         url = self._get_url(id_)
         return self._patch(url, data, **options)
+    
+    def delete(self, id_, data=None, **options):
+        PlanValidation.retrieve(self, id_)
+        url = self._get_url(id_)
+        return self._delete(url, data, **options)

@@ -15,10 +15,20 @@ class Order(Resource):
 
     def confirm(self, id_, data={}, **options):
         OrderValidation.confirm(self, id_)
+        headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
+        if "headers" in options:
+            options["headers"].update(headers)
+        else:
+            options["headers"] = headers
         url = self._get_url(id_, "confirm")
         return self._post(url, data, **options)
     def confirmtype(self, data={}, **options):
         OrderValidation.confirm_type(self, data)
+        headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
+        if "headers" in options:
+            options["headers"].update(headers)
+        else:
+            options["headers"] = headers
         url = self._get_url("confirm")
         return self._post(url, data, **options)
     
@@ -36,3 +46,8 @@ class Order(Resource):
         OrderValidation.update(self, id_)
         url = self._get_url(id_)
         return self._patch(url, data, **options)
+    
+    def delete(self, id_, data=None, **options):
+        OrderValidation.retrieve(self, id_)
+        url = self._get_url(id_)
+        return self._delete(url, data, **options)
