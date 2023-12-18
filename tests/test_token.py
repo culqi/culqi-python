@@ -73,8 +73,6 @@ class TokenTest(unittest.TestCase):
         querystring = {
             "creation_date": "1476132639",
             "creation_date_from": "1476132639",
-            "creation_date_to": "1476132639",
-            "card_brand": "Visa",
             "card_type": "credito",
             "device_type": "mobile",
             "bin": "411111",

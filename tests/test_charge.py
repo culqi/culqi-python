@@ -73,6 +73,9 @@ class ChargeTest(unittest.TestCase):
     def test_charge_capture(self):
         created_charge = self.charge.create(data=self.charge_data)
         captured_charge = self.charge.capture(id_=created_charge["data"]["id"])
+        
+        print(created_charge)
+        print(captured_charge)
 
         assert captured_charge["data"]["id"] == created_charge["data"]["id"]
         assert captured_charge["status"] == 201

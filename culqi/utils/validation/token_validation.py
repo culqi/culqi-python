@@ -41,16 +41,24 @@ class TokenValidation:
     def token_retrieve_validation(self, id):
         Helpers.validate_string_start(id, "tkn")
         
+    def token_update_validation(self, id):
+        Helpers.validate_string_start(id, "tkn")
+        
     def token_list_validation(self, data):
-        allowed_device_values = ['desktop', 'mobile', 'tablet']
-        Helpers.validate_value(data['device_type'], allowed_device_values)
+        if 'device_type' in data:
+            allowed_device_values = ['desktop', 'mobile', 'tablet']
+            Helpers.validate_value(data['device_type'], allowed_device_values)
+            
+        if 'card_brand' in data:
+            allowed_brand_values = ['Visa', 'Mastercard', 'Amex', 'Diners']
+            Helpers.validate_value(data['card_brand'], allowed_brand_values)
         
-        allowed_brand_values = ['Visa', 'Mastercard', 'Amex', 'Diners']
-        Helpers.validate_value(data['card_brand'], allowed_brand_values)
+        if 'card_type' in data:
+            allowed_card_type_values = ['credito', 'debito', 'internacional']
+            Helpers.validate_value(data['card_type'], allowed_card_type_values)
         
-        allowed_card_type_values = ['credito', 'debito', 'internacional']
-        Helpers.validate_value(data['card_type'], allowed_card_type_values)
+        if 'country_code' in data:
+            Helpers.validate_value(data['country_code'], get_country_codes())
         
-        Helpers.validate_value(data['country_code'], get_country_codes())
-        
-        Helpers.validate_date_filter(data['creation_date_from'], data['creation_date_to'])
+        if 'creation_date_from' in data and 'creation_date_to' in data:
+            Helpers.validate_date_filter(data['creation_date_from'], data['creation_date_to'])
