@@ -37,7 +37,12 @@ class Token(Resource):
         url = self._get_url(id_)
         return self._get(url, data, **options)
     
-    def list(self, data=None, **options):
+    def update(self, id_, data=None, **options):
+        TokenValidation.token_update_validation(self, id_)
+        url = self._get_url(id_)
+        return self._patch(url, data, **options)
+    
+    def list(self, data={}, **options):
         url = self._get_url()
         TokenValidation.token_list_validation(self, data)
         return self._get(url, data, **options)
