@@ -5,6 +5,8 @@ from types import ModuleType
 
 from requests import session
 
+from culqi.utils.constants import CONSTANTS
+
 from . import resources
 from culqi.utils import capitalize_camel_case
 from culqi.version import VERSION
@@ -58,12 +60,22 @@ class Culqi:
         return data, options
 
     def _set_client_headers(self):
+        
+        if 'test' in self.private_key:
+            xCulqiEnv = CONSTANTS.X_CULQI_ENV_TEST
+        else:
+            xCulqiEnv = CONSTANTS.X_CULQI_ENV_LIVE
+            
         self.session.headers.update(
             {
                 "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
                 "Authorization": "Bearer {0}".format(self.private_key),
                 "Content-type": "application/json",
                 "Accept": "application/json",
+                "x-culqi-env": xCulqiEnv,
+                "x-api-version": CONSTANTS.X_API_VERSION,
+                "x-culqi-client": CONSTANTS.X_CULQI_CLIENT,
+                "x-culqi-client-version": CONSTANTS.X_CULQI_CLIENT_VERSION,
             }
         )
 
