@@ -98,6 +98,7 @@ class Culqi:
         return {"status": response.status_code, "data": data}
 
     def get(self, url, params, **options):
+        params, options = self._update_request(params, options)
         return self.request("get", url, data=params, **options)
 
     def post(self, url, data, **options):
