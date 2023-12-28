@@ -1,6 +1,6 @@
 class Data:
     TOKEN = {
-        "cvv": "123",
+        "cvv": "1",
         "card_number": "4111111111111111",
         "expiration_year": "2025",
         "expiration_month": "09",

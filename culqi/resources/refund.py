@@ -1,4 +1,4 @@
-from culqi.utils.errors import ErrorMessage, NotAllowedError
+from culqi.utils.errors import CustomException, ErrorMessage, NotAllowedError
 from culqi.utils.validation.refund_validation import RefundValidation
 from culqi.utils.urls import URL
 from culqi.resources.base import Resource
@@ -10,23 +10,35 @@ class Refund(Resource):
     endpoint = URL.REFUND
 
     def create(self, data, **options):
-        RefundValidation.create(self, data)
-        return Resource.create(self, data, **options)
+        try:
+            RefundValidation.create(self, data)
+            return Resource.create(self, data, **options)
+        except CustomException as e:
+            return e
 
     def delete(self, id_, data=None, **options):
         raise NotAllowedError(ErrorMessage.NOT_ALLOWED)
     
     def list(self, data={}, **options):
-        RefundValidation.list(self, data)
-        url = self._get_url()
-        return self._get(url, data, **options)
+        try:
+            RefundValidation.list(self, data)
+            url = self._get_url()
+            return self._get(url, data, **options)
+        except CustomException as e:
+            return e
     
     def read(self, id_, data=None, **options):
-        RefundValidation.retrieve(self, id_)
-        url = self._get_url(id_)
-        return self._get(url, data, **options)
+        try:
+            RefundValidation.retrieve(self, id_)
+            url = self._get_url(id_)
+            return self._get(url, data, **options)
+        except CustomException as e:
+            return e
     
     def update(self, id_, data=None, **options):
-        RefundValidation.update(self, id_)
-        url = self._get_url(id_)
-        return self._patch(url, data, **options)
+        try:
+            RefundValidation.update(self, id_)
+            url = self._get_url(id_)
+            return self._patch(url, data, **options)
+        except CustomException as e:
+            return e
