@@ -14,7 +14,7 @@ class Card(Resource):
             CardValidation.create(self, data)
             return Resource.create(self, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def list(self, data={}, **options):
         try:
@@ -22,7 +22,7 @@ class Card(Resource):
             url = self._get_url()
             return self._get(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def read(self, id_, data=None, **options):
         try:
@@ -30,7 +30,7 @@ class Card(Resource):
             url = self._get_url(id_)
             return self._get(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def update(self, id_, data=None, **options):
         try:
@@ -38,7 +38,7 @@ class Card(Resource):
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def delete(self, id_, data=None, **options):
         try:
@@ -46,4 +46,4 @@ class Card(Resource):
             url = self._get_url(id_)
             return self._delete(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
