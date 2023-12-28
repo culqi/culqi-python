@@ -93,6 +93,8 @@ class Culqi:
         """Dispatch a request to the CULQUI HTTP API."""
         if method == "get":
             response = getattr(self.session, method)(url, params=data, **options)
+        elif method == "delete":
+            response = getattr(self.session, method)(url, **options)
         else:
             response = getattr(self.session, method)(url, data, **options)
             
@@ -120,7 +122,7 @@ class Culqi:
 
     def delete(self, url, data, **options):
         data, options = self._update_request(data, options)
-        return self.request("delete", url, data=data, **options)
+        return self.request("delete", url, data, **options)
 
     def put(self, url, data, **options):
         data, options = self._update_request(data, options)
