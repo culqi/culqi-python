@@ -6,6 +6,7 @@ from types import ModuleType
 from requests import session
 
 from culqi.utils.constants import CONSTANTS
+from culqi.utils.errors import CustomException
 from culqi.utils.validation.helpers import Helpers
 
 from . import resources
@@ -33,8 +34,12 @@ except Exception as e:
 
 class Culqi:
     def __init__(self, public_key, private_key):
-        Helpers.validate_string_start(public_key, "pk")
-        Helpers.validate_string_start(private_key, "sk")
+        try:
+            Helpers.validate_string_start(public_key, "pk")
+            Helpers.validate_string_start(private_key, "sk")
+        except CustomException as e:
+            return e.error_data
+        
         self.public_key = public_key
         self.private_key = private_key
         self.session = session()
