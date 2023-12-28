@@ -13,8 +13,15 @@ class ChargeValidation:
             raise CustomException('Invalid email.')
 
         # Validate amount
-        if not isinstance(data['amount'], (int, float)) or int(data['amount']) != data['amount']:
-            raise CustomException('Invalid amount.')
+        amount = data['amount']
+        if isinstance(amount, str):
+            try:
+                amount = int(amount)
+            except CustomException:
+                raise CustomException("Invalid 'amount'. It should be an integer or a string representing an integer.")
+
+        if not isinstance(amount, int):
+            raise CustomException("Invalid 'amount'. It should be an integer or a string representing an integer.")
 
         Helpers.validate_currency_code(data['currency_code'])
         
