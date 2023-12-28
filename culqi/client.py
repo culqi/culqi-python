@@ -50,6 +50,9 @@ class Culqi:
 
     @staticmethod
     def _update_request(data, options):
+        if data is None:
+            data = {}
+
         """Update The resource data and header options."""
         data = json.dumps(data)
 
