@@ -38,6 +38,7 @@ class ChargeTest(unittest.TestCase):
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
         charge_data = deepcopy(Data.CHARGE)
+        print(charge_data)
         charge_data["source_id"] = token["data"]["id"]
 
         return charge_data
