@@ -8,7 +8,7 @@ class Data:
     }
 
     YAPE = {
-        "amount": 36200,
+        "amount": "36200",
         "fingerprint": "86d3c875769bf62b0471b47853bfda77",
         "number_phone": "900000001",
         "otp": "425251",
