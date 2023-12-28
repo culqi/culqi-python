@@ -34,12 +34,6 @@ except Exception as e:
 
 class Culqi:
     def __init__(self, public_key, private_key):
-        try:
-            Helpers.validate_string_start(public_key, "pk")
-            Helpers.validate_string_start(private_key, "sk")
-        except CustomException as e:
-            return e.error_data
-        
         self.public_key = public_key
         self.private_key = private_key
         self.session = session()
@@ -91,6 +85,11 @@ class Culqi:
         )
 
     def request(self, method, url, data, **options):
+        try:
+            Helpers.validate_string_start(self.public_key, "pk")
+            Helpers.validate_string_start(self.private_key, "sk")
+        except CustomException as e:
+            return e.error_data
         """Dispatch a request to the CULQUI HTTP API."""
         if method == "get":
             response = getattr(self.session, method)(url, params=data, **options)
