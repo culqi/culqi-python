@@ -23,14 +23,17 @@ class Token(Resource):
             return e
 
     def createyape(self, data, **options):
-        TokenValidation.create_token_yape_validation(self, data)
-        headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
-        if "headers" in options:
-            options["headers"].update(headers)
-        else:
-            options["headers"] = headers
-        url = self._get_url_secure("yape")
-        return self._post(url, data, **options)
+        try:
+            TokenValidation.create_token_yape_validation(self, data)
+            headers = {"Authorization": "Bearer {0}".format(self.client.public_key)}
+            if "headers" in options:
+                options["headers"].update(headers)
+            else:
+                options["headers"] = headers
+            url = self._get_url_secure("yape")
+            return self._post(url, data, **options)
+        except CustomException as e:
+            return e
     
     def delete(self, id_, data=None, **options):
         raise NotAllowedError(ErrorMessage.NOT_ALLOWED)
@@ -45,12 +48,18 @@ class Token(Resource):
             
     
     def update(self, id_, data=None, **options):
-        TokenValidation.token_update_validation(self, id_)
-        url = self._get_url(id_)
-        return self._patch(url, data, **options)
+        try:
+            TokenValidation.token_update_validation(self, id_)
+            url = self._get_url(id_)
+            return self._patch(url, data, **options)
+        except CustomException as e:
+            return e
     
     def list(self, data={}, **options):
-        url = self._get_url()
-        TokenValidation.token_list_validation(self, data)
-        return self._get(url, data, **options)
+        try:
+            url = self._get_url()
+            TokenValidation.token_list_validation(self, data)
+            return self._get(url, data, **options)
+        except CustomException as e:
+            return e
     
