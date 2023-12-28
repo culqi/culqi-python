@@ -14,7 +14,7 @@ class Charge(Resource):
             ChargeValidation.create(self, data)
             return Resource.create(self, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
 
     def delete(self, id_, data=None, **options):
         raise NotAllowedError(ErrorMessage.NOT_ALLOWED)
@@ -25,7 +25,7 @@ class Charge(Resource):
             url = self._get_url(id_, "capture")
             return self._post(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def list(self, data={}, **options):
         try:
@@ -33,7 +33,7 @@ class Charge(Resource):
             url = self._get_url()
             return self._get(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def read(self, id_, data=None, **options):
         try:
@@ -41,7 +41,7 @@ class Charge(Resource):
             url = self._get_url(id_)
             return self._get(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def update(self, id_, data=None, **options):
         try:
@@ -49,4 +49,4 @@ class Charge(Resource):
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
