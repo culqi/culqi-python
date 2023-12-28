@@ -20,7 +20,7 @@ class Token(Resource):
             url = self._get_url_secure()
             return self._post(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
 
     def createyape(self, data, **options):
         try:
@@ -33,7 +33,7 @@ class Token(Resource):
             url = self._get_url_secure("yape")
             return self._post(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def delete(self, id_, data=None, **options):
         raise NotAllowedError(ErrorMessage.NOT_ALLOWED)
@@ -44,7 +44,7 @@ class Token(Resource):
             url = self._get_url(id_)
             return self._get(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
             
     
     def update(self, id_, data=None, **options):
@@ -53,7 +53,7 @@ class Token(Resource):
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
     def list(self, data={}, **options):
         try:
@@ -61,5 +61,5 @@ class Token(Resource):
             TokenValidation.token_list_validation(self, data)
             return self._get(url, data, **options)
         except CustomException as e:
-            return e
+            return e.error_data
     
