@@ -25,18 +25,25 @@ class TokenValidation:
 
         # Validate expiration year
         current_year = datetime.datetime.now().year
-        if not re.match(r'^\d{4}$', data['expiration_year']) or int(data['expiration_year']) < current_year:
+        if not re.match(r'^\d{4}$', str(data['expiration_year'])) or int(str(data['expiration_year'])) < current_year:
             raise CustomException('Invalid expiration year.')
 
         # Check if the card is expired
-        exp_date = datetime.datetime.strptime(data['expiration_year'] + '-' + data['expiration_month'], "%Y-%m")
+        exp_date = datetime.datetime.strptime(str(data['expiration_year']) + '-' + str(data['expiration_month']), "%Y-%m")
         if exp_date < datetime.datetime.now():
             raise CustomException('Card has expired.')
         
     def create_token_yape_validation(self, data):
         # Validate amount
-        if not isinstance(data['amount'], (int, float)) or int(data['amount']) != data['amount']:
-            raise CustomException('Invalid amount.')
+        amount = data['amount']
+        if isinstance(amount, str):
+            try:
+                amount = int(amount)
+            except CustomException:
+                raise CustomException("Invalid 'amount'. It should be an integer or a string representing an integer.")
+
+        if not isinstance(amount, int):
+            raise CustomException("Invalid 'amount'. It should be an integer or a string representing an integer.")
     
     def token_retrieve_validation(self, id):
         Helpers.validate_string_start(id, "tkn")
