@@ -20,7 +20,7 @@ class TokenValidation:
             raise CustomException('Invalid email.')
 
         # Validate expiration month
-        if not re.match(r'^(0?[1-9]|1[012])$', data['expiration_month']):
+        if not re.match(r'^(0?[1-9]|1[012])$', str(data['expiration_month'])):
             raise CustomException('Invalid expiration month.')
 
         # Validate expiration year
