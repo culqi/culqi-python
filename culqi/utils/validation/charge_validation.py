@@ -50,8 +50,17 @@ class ChargeValidation:
                 raise CustomException('Invalid email.')
         # Validate amount
         if 'amount' in data:
-            if not isinstance(data['amount'], (int)) or int(data['amount']) != data['amount']:
-                raise CustomException('Invalid amount.')
+            # Validate amount
+            amount = data['amount']
+            if isinstance(amount, str):
+                try:
+                    amount = int(amount)
+                except CustomException:
+                    raise CustomException("Invalid 'amount'. It should be an integer or a string representing an integer.")
+
+            if not isinstance(amount, int):
+                raise CustomException("Invalid 'amount'. It should be an integer or a string representing an integer.")
+            
         if 'min_amount' in data:
             if not isinstance(data['min_amount'], (int)) or int(data['min_amount']) != data['min_amount']:
                 raise CustomException('Invalid min amount.')
