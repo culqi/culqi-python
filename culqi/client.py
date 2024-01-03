@@ -5,6 +5,10 @@ from types import ModuleType
 
 from requests import session
 
+from culqi.utils.constants import CONSTANTS
+from culqi.utils.errors import CustomException
+from culqi.utils.validation.helpers import Helpers
+
 from . import resources
 from culqi.utils import capitalize_camel_case
 from culqi.version import VERSION
@@ -45,6 +49,9 @@ class Culqi:
 
     @staticmethod
     def _update_request(data, options):
+        if data is None:
+            data = {}
+
         """Update The resource data and header options."""
         data = json.dumps(data)
 
@@ -58,19 +65,39 @@ class Culqi:
         return data, options
 
     def _set_client_headers(self):
+        
+        if 'test' in self.private_key:
+            xCulqiEnv = CONSTANTS.X_CULQI_ENV_TEST
+        else:
+            xCulqiEnv = CONSTANTS.X_CULQI_ENV_LIVE
+            
         self.session.headers.update(
             {
                 "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
                 "Authorization": "Bearer {0}".format(self.private_key),
                 "Content-type": "application/json",
                 "Accept": "application/json",
+                "x-culqi-env": xCulqiEnv,
+                "x-api-version": CONSTANTS.X_API_VERSION,
+                "x-culqi-client": CONSTANTS.X_CULQI_CLIENT,
+                "x-culqi-client-version": CONSTANTS.X_CULQI_CLIENT_VERSION,
             }
         )
 
     def request(self, method, url, data, **options):
+        try:
+            Helpers.validate_string_start(self.public_key, "pk")
+            Helpers.validate_string_start(self.private_key, "sk")
+        except CustomException as e:
+            return e.error_data
         """Dispatch a request to the CULQUI HTTP API."""
-        response = getattr(self.session, method)(url, data, **options)
-
+        if method == "get":
+            response = getattr(self.session, method)(url, params=data, **options)
+        elif method == "delete":
+            response = getattr(self.session, method)(url, **options)
+        else:
+            response = getattr(self.session, method)(url, data, **options)
+            
         data = response.json()
 
         if "data" in data:
@@ -80,7 +107,8 @@ class Culqi:
         return {"status": response.status_code, "data": data}
 
     def get(self, url, params, **options):
-        return self.request("get", url, params=params, **options)
+        params, options = self._update_request(params, options)
+        return self.request("get", url, data=params, **options)
 
     def post(self, url, data, **options):
         data, options = rsa_aes_encoder.encrypt_validation(data, options)
@@ -94,7 +122,7 @@ class Culqi:
 
     def delete(self, url, data, **options):
         data, options = self._update_request(data, options)
-        return self.request("delete", url, data=data, **options)
+        return self.request("delete", url, data, **options)
 
     def put(self, url, data, **options):
         data, options = self._update_request(data, options)

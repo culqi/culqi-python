@@ -1,5 +1,6 @@
 from requests.compat import urljoin
 from jsonschema import validate
+from culqi.utils.constants import CONSTANTS
 
 from culqi.utils.urls import URL
 
