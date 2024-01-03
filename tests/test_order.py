@@ -18,8 +18,8 @@ class OrderTest(unittest.TestCase):
         super(OrderTest, self).__init__(*args, **kwargs)
         load_dotenv()
         self.version = __version__
-        self.public_key = "pk_live_889113cd74ecfc55"
-        self.private_key = "sk_live_34a07dcb6d4c7e39"
+        self.public_key = "pk_test_90667d0a57d45c48"
+        self.private_key = "sk_test_1573b0e8079863ff"
         self.culqi = Culqi(self.public_key, self.private_key)
         self.order = Order(client=self.culqi)
 
@@ -72,7 +72,7 @@ class OrderTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_order_confirm(self):
         created_order = self.order.create(data=self.order_data)
-        confirmed_order = self.order.confirm(id_=created_order["data"]["id"])
+        confirmed_order = self.order.confirm(created_order["data"]["id"])
 
         assert confirmed_order["data"]["id"] == created_order["data"]["id"]
         assert confirmed_order["status"] == 201

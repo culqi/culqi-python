@@ -141,3 +141,13 @@ class ServerError(Exception):
 
 class NotAllowedError(Exception):
     pass
+
+class CustomException(Exception):
+    def __init__(self, merchant_message):
+        self.error_data = {
+            "object": "error",
+            "type": "param_error",
+            "merchant_message": merchant_message,
+            "user_message": merchant_message
+        }
+        super().__init__(self.error_data)

@@ -1,14 +1,14 @@
 class Data:
     TOKEN = {
-        "cvv": "111",
-        "card_number": "411111111111111",
+        "cvv": "123",
+        "card_number": "4111111111111111",
         "expiration_year": "2025",
-        "expiration_month": "03",
+        "expiration_month": "09",
         "email": "richard@piedpiper.com",
     }
 
     YAPE = {
-        "amount": 36200,
+        "amount": "36200",
         "fingerprint": "86d3c875769bf62b0471b47853bfda77",
         "number_phone": "900000001",
         "otp": "425251",
@@ -37,7 +37,7 @@ class Data:
         "email": "usuario@culqi.com",
         "first_name": "Richard",
         "last_name": "Piedpiper",
-        "phone_number": "+51998989789",
+        "phone_number": "998989789",
     }
 
     PLAN = {
@@ -54,7 +54,7 @@ class Data:
         "amount": 1000,
         "currency_code": "PEN",
         "description": "Venta de prueba",
-        "order_number": '12346shsbs',
+        "order_number": '12346shsbs_skd',
         "client_details": {
             "first_name": "Richard",
             "last_name": "Piedpiper",
