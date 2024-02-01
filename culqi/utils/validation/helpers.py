@@ -83,7 +83,7 @@ class Helpers:
 
         min_amount_pen = 3 * 100
         max_amount_pen = 5000 * 100
-        min_amount_usd = 10 * 100
+        min_amount_usd = 1 * 100
         max_amount_usd = 1500 * 100
 
         min_amount_public_api = min_amount_pen
