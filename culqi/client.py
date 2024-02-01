@@ -53,16 +53,16 @@ class Culqi:
             data = {}
 
         """Update The resource data and header options."""
-        data = json.dumps(data)
-
+    
         if "headers" not in options:
             options["headers"] = {}
-
+    
         options["headers"].update(
             {"Content-type": "application/json", "Accept": "application/json"}
         )
 
         return data, options
+
 
     def _set_client_headers(self):
         
@@ -107,8 +107,8 @@ class Culqi:
         return {"status": response.status_code, "data": data}
 
     def get(self, url, params, **options):
-        params, options = self._update_request(params, options)
-        return self.request("get", url, data=params, **options)
+        data, options = self._update_request(params, options)
+        return self.request("get", url, data=data, **options)
 
     def post(self, url, data, **options):
         data, options = rsa_aes_encoder.encrypt_validation(data, options)

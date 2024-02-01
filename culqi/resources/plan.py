@@ -20,6 +20,8 @@ class Plan(Resource):
         try:
             PlanValidation.list(self, data)
             url = self._get_url()
+            print(url)
+            print(data)
             return self._get(url, data, **options)
         except CustomException as e:
             return e.error_data
@@ -34,7 +36,7 @@ class Plan(Resource):
     
     def update(self, id_, data=None, **options):
         try:
-            PlanValidation.update(self, id_)
+            PlanValidation.update(self, id_, data)
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:

@@ -34,7 +34,7 @@ class Subscription(Resource):
     
     def update(self, id_, data={}, **options):
         try:
-            SubscriptionValidation.update(self, id_)
+            SubscriptionValidation.update(self, id_, data)
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:
