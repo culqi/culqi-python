@@ -1,5 +1,5 @@
 class URL:
-    BASE = "https://api.culqi.com"
+    BASE = "https://qa-api.culqi.xyz"
     BASE_SECURE = "https://secure.culqi.com"
     VERSION = "v2"
 
@@ -8,9 +8,9 @@ class URL:
     CUSTOMER = "customers"
     EVENT = "events"
     ORDER = "orders"
-    PLAN = "plans"
+    PLAN = "recurrent/plans"
     REFUND = "refunds"
-    SUBSCRIPTION = "subscriptions"
+    SUBSCRIPTION = "recurrent/subscriptions"
     TOKEN = "tokens"
 
     TRANSFER = "transfers"

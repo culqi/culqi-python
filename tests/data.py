@@ -41,13 +41,21 @@ class Data:
     }
 
     PLAN = {
-        "amount": 1000,
-        "currency_code": "PEN",
-        "interval": "dias",
-        "interval_count": 2,
-        "limit": 10,
+        "short_name": "cp-prueb2442",
+        "description": "Cypress PCI | ERRROR NO USAR",
+        "amount": 300,
+        "currency": "PEN",
+        "interval_unit_time": 1,
+        "interval_count": 1,
+        "initial_cycles": {
+          "count": 1,
+          "has_initial_charge": True,
+          "amount": 400,
+          "interval_unit_time": 1
+        },
         "name": None,
-        "trial_days": 30,
+        "image": "https://recurrencia-suscripciones-qa.s3.amazonaws.com/f097e1d5-e365-42f3-bc40-a27beab80f54",
+	    "metadata":{}
     }
 
     ORDER = {

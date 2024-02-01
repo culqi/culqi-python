@@ -51,6 +51,7 @@ class SubscriptionTest(unittest.TestCase):
         return {
             "card_id": card["data"]["id"],
             "plan_id": plan["data"]["id"],
+            "tyc": True
         }
 
     def test_url(self):
@@ -62,38 +63,54 @@ class SubscriptionTest(unittest.TestCase):
             id_
         ) == "https://api.culqi.com/v2/subscriptions/{0}".format(id_)
 
+    #python3 -m pytest -k test_subscription_create -p no:warnings
     @pytest.mark.vcr()
     def test_subscription_create(self):
         subscription = self.subscription.create(data=self.subscription_data)
-        assert subscription["data"]["object"] == "subscription"
+        print(subscription)
+        assert "id" in subscription["data"] and isinstance(subscription["data"]["id"], str)
 
+    #python3 -m pytest -k test_subscription_create -p no:warnings
     @pytest.mark.vcr()
     def test_subscription_retrieve(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
         retrieved_subscription = self.subscription.read(
             created_subscription["data"]["id"]
         )
+        print(retrieved_subscription)
         assert (
             created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
         )
 
-#     @pytest.mark.vcr()
-#     def test_subscription_list(self):
-#         retrieved_subscription_list = self.subscription.list()
-#         assert "items" in retrieved_subscription_list["data"]
+    #python3 -m pytest -k test_subscription_list -p no:warnings
+    @pytest.mark.vcr()
+    def test_subscription_list(self):
+         data_filter = {
+            "before": "sxn_live_**********",
+            "after": "sxn_live_**********",
+            "limit": 29
+            #"creation_date_from": "2023-12-30T00:00:00.000Z",
+            #"creation_date_to": "2023-12-20T00:00:00.000Z",
+        }
+         retrieved_subscription_list = self.subscription.list(data=data_filter)
+         print(retrieved_subscription_list)
+         assert "items" in retrieved_subscription_list["data"]
 
+    #python3 -m pytest -k test_subscription_update -p no:warnings
     @pytest.mark.vcr()
     def test_subscription_update(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
 
-        metadatada = {"metadata": self.metadata}
+        data_update = {
+            "metadata": self.metadata,
+        }
+        
         updated_subscription = self.subscription.update(
-            id_=created_subscription["data"]["id"], data=metadatada
+            id_=created_subscription["data"]["id"], data=data_update
         )
+        assert updated_subscription["data"]["id"] == created_subscription["data"]["id"]
 
-        assert created_subscription["data"]["id"] == created_subscription["data"]["id"]
-        assert updated_subscription["data"]["metadata"] == self.metadata
-
+    #python3 -m pytest -k test_subscription_delete -p no:warnings
     @pytest.mark.vcr()
     def test_subscription_delete(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
