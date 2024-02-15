@@ -44,7 +44,7 @@ class Helpers:
     def additional_validation(data, required_fields):
         for field in required_fields:
             if field not in data or data[field] is None or data[field] == "" or data[field] == "undefined":
-                return ValueError(f"El campo '{field}' es requerido y no está presente'")
+                return ValueError(f"El campo '{field}' es requerido.")
 
         return None  
     

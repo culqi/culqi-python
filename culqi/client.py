@@ -53,7 +53,8 @@ class Culqi:
             data = {}
 
         """Update The resource data and header options."""
-    
+        data = json.dumps(data)
+
         if "headers" not in options:
             options["headers"] = {}
     
@@ -99,7 +100,7 @@ class Culqi:
             response = getattr(self.session, method)(url, data, **options)
             
         data = response.json()
-
+        print("Response :: ", data)
         if "data" in data:
             data["items"] = deepcopy(data["data"])
             del data["data"]
@@ -111,6 +112,8 @@ class Culqi:
         return self.request("get", url, data=data, **options)
 
     def post(self, url, data, **options):
+        if "plan" in url or "subscription" in url:
+            url += "/create"
         data, options = rsa_aes_encoder.encrypt_validation(data, options)
         data, options = self._update_request(data, options) 
         return self.request("post", url, data, **options)
