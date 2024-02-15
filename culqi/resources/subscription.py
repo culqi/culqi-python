@@ -14,6 +14,7 @@ class Subscription(Resource):
             SubscriptionValidation.create(self, data)
             return Resource.create(self, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def list(self, data={}, **options):
@@ -22,6 +23,7 @@ class Subscription(Resource):
             url = self._get_url()
             return self._get(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def read(self, id_, data={}, **options):
@@ -30,6 +32,7 @@ class Subscription(Resource):
             url = self._get_url(id_)
             return self._get(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def update(self, id_, data={}, **options):
@@ -38,6 +41,7 @@ class Subscription(Resource):
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def delete(self, id_, data=None, **options):
@@ -46,4 +50,5 @@ class Subscription(Resource):
             url = self._get_url(id_)
             return self._delete(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
