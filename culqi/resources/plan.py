@@ -14,16 +14,16 @@ class Plan(Resource):
             PlanValidation.create(self, data)
             return Resource.create(self, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def list(self, data={}, **options):
         try:
             PlanValidation.list(self, data)
             url = self._get_url()
-            print(url)
-            print(data)
             return self._get(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def read(self, id_, data=None, **options):
@@ -32,6 +32,7 @@ class Plan(Resource):
             url = self._get_url(id_)
             return self._get(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def update(self, id_, data=None, **options):
@@ -40,6 +41,7 @@ class Plan(Resource):
             url = self._get_url(id_)
             return self._patch(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
     
     def delete(self, id_, data=None, **options):
@@ -48,4 +50,5 @@ class Plan(Resource):
             url = self._get_url(id_)
             return self._delete(url, data, **options)
         except CustomException as e:
+            print("Error: ", e)
             return e.error_data
