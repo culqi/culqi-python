@@ -41,7 +41,7 @@ class Data:
     }
 
     PLAN = {
-        "short_name": "cp-prueb2442",
+        "short_name": "cppe",
         "description": "Cypress PCI | ERRROR NO USAR",
         "amount": 300,
         "currency": "PEN",
@@ -49,8 +49,8 @@ class Data:
         "interval_count": 1,
         "initial_cycles": {
           "count": 1,
-          "has_initial_charge": True,
-          "amount": 400,
+          "has_initial_charge": False,
+          "amount": 0,
           "interval_unit_time": 1
         },
         "name": None,

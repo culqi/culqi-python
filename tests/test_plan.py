@@ -57,9 +57,9 @@ class PlanTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_plan_list(self):
         data_filter = {
-            "before": "pln_live_**********",
-            "after": "pln_live_**********",
-            "limit": 1,
+            #"before": "pln_live_**********",
+            #"after": "pln_live_**********",
+            #"limit": 1,
             "min_amount": 300,
             "max_amount": 500000,
             "status": 1,

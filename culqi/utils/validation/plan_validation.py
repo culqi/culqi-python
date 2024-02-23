@@ -45,7 +45,7 @@ class PlanValidation:
             # Validate short_name
             rangeShortName = range(5,51)
             if not isinstance(data['short_name'], str) or len(data['short_name']) not in rangeShortName:
-                raise CustomException("El campo'short_name' es inválido o está vacío. El valor debe tener un rango de 5 a 50 caracteres.")
+                raise CustomException("El campo 'short_name' es inválido o está vacío. El valor debe tener un rango de 5 a 50 caracteres.")
             
             # Validate initial_cycles
             Helpers.validate_initial_cycles_parameters(data['initial_cycles'])
