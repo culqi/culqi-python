@@ -53,7 +53,7 @@ class Culqi:
             data = {}
 
         """Update The resource data and header options."""
-        data = json.dumps(data)
+        #data = json.dumps(data)
 
         if "headers" not in options:
             options["headers"] = {}
@@ -93,6 +93,7 @@ class Culqi:
             return e.error_data
         """Dispatch a request to the CULQUI HTTP API."""
         if method == "get":
+            print("Response url :: ", url)
             response = getattr(self.session, method)(url, params=data, **options)
         elif method == "delete":
             response = getattr(self.session, method)(url, **options)
