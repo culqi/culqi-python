@@ -49,23 +49,29 @@ class Helpers:
         return None  
     
     def validate_initial_cycles_parameters(initial_cycles):
+        parameters_initial_cycles_response = {
+            'count': "El campo 'initial_cycles.count' es inválido o está vacío, debe tener un valor numérico.",
+            'has_initial_charge': "El campo 'initial_cycles.has_initial_charge' es inválido o está vacío. El valor debe ser un booleano (true o false).",
+            'amount': "El campo 'initial_cycles.amount' es inválido o está vacío, debe tener un valor numérico.",
+            'interval_unit_time': "El campo 'initial_cycles.interval_unit_time' tiene un valor inválido o está vacío. Estos son los únicos valores permitidos: [1,2,3,4,5,6]"
+        }
         parameters_initial_cycles = ['count', 'has_initial_charge', 'amount', 'interval_unit_time']
         for campo in parameters_initial_cycles:
             if campo not in initial_cycles:
-                raise CustomException(f"El campo obligatorio '{campo}' no está presente en 'initial_cycles'.")
+                raise CustomException(parameters_initial_cycles_response[campo])
     
         if not isinstance(initial_cycles['count'], int):
-            raise CustomException(f"El campo 'initial_cycles.count' es inválido o está vacío, debe tener un valor numérico.")
+            raise CustomException(parameters_initial_cycles_response['count'])
         
         if not isinstance(initial_cycles['has_initial_charge'], bool):
-            raise CustomException(f"El campo 'initial_cycles.has_initial_charge' es inválido o está vacío. El valor debe ser un booleano (true o false).")
+            raise CustomException(parameters_initial_cycles_response['has_initial_charge'])
         
         if not isinstance(initial_cycles['amount'], int):
-            raise CustomException(f"El campo 'initial_cycles.amount' es inválido o está vacío, debe tener un valor numérico.")
+            raise CustomException(parameters_initial_cycles_response['amount'])
 
         valuesIntervalUnitTime = [1, 2, 3, 4, 5, 6]
         if not isinstance(initial_cycles['interval_unit_time'], int) or initial_cycles['interval_unit_time'] not in valuesIntervalUnitTime:
-            raise CustomException(f"El campo 'initial_cycles.interval_unit_time' tiene un valor inválido o está vacío. Estos son los únicos valores permitidos: [1,2,3,4,5,6]")
+            raise CustomException(parameters_initial_cycles_response['interval_unit_time'])
         
     def validate_enum_currency(currency):
         allowed_values = ["PEN", "USD"]
