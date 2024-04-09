@@ -1,5 +1,5 @@
 class URL:
-    BASE = "https://qa-api.culqi.xyz"
+    BASE = "https://api.culqi.com"
     BASE_SECURE = "https://secure.culqi.com"
     VERSION = "v2"
 

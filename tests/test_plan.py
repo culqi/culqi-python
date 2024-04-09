@@ -36,8 +36,8 @@ class PlanTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.plan._get_url() == "https://qa-api.culqi.xyz/v2/plans"
-        assert self.plan._get_url(id_) == "https://api.culqi.com/v2/plans/{0}".format(
+        assert self.plan._get_url() == "https://qa-api.culqi.xyz/v2/recurrent/plans"
+        assert self.plan._get_url(id_) == "https://api.culqi.com/v2/recurrent/plans/{0}".format(
             id_
         )
     #python3 -m pytest -k test_plan_create -p no:warnings
@@ -62,9 +62,9 @@ class PlanTest(unittest.TestCase):
             #"limit": 1,
             "min_amount": 300,
             "max_amount": 500000,
-            "status": 1,
-            #"creation_date_from": "2023-12-30T00:00:00.000Z",
-            #"creation_date_to": "2023-12-20T00:00:00.000Z",
+            #"status": 1,
+            #"creation_date_from": "1712692203",
+            #"creation_date_to": "1712692203",
         }
         retrieved_plan_list = self.plan.list(data=data_filter)
         assert "items" in retrieved_plan_list["data"]
