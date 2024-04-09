@@ -80,8 +80,8 @@ class SubscriptionTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_subscription_list(self):
          data_filter = {
-            "before": "1712692203",
-            "after": "1712692203",
+            #"before": "1712692203",
+            #"after": "1712692203",
             "limit": 29
             #"creation_date_from": "2023-12-30T00:00:00.000Z",
             #"creation_date_to": "2023-12-20T00:00:00.000Z",
