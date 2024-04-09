@@ -58,10 +58,10 @@ class SubscriptionTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.subscription._get_url() == "https://api.culqi.com/v2/subscriptions"
+        assert self.subscription._get_url() == "https://api.culqi.com/v2/recurrent/subscriptions"
         assert self.subscription._get_url(
             id_
-        ) == "https://api.culqi.com/v2/subscriptions/{0}".format(id_)
+        ) == "https://api.culqi.com/v2/recurrent/subscriptions/{0}".format(id_)
 
     #python3 -m pytest -k test_subscription_create -p no:warnings
     @pytest.mark.vcr()
@@ -73,19 +73,15 @@ class SubscriptionTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_subscription_retrieve(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
-        retrieved_subscription = self.subscription.read(
-            created_subscription["data"]["id"]
-        )
-        assert (
-            created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
-        )
+        retrieved_subscription = self.subscription.read(created_subscription["data"]["id"])
+        assert (created_subscription["data"]["id"] == retrieved_subscription["data"]["id"])
 
     #python3 -m pytest -k test_subscription_list -p no:warnings
     @pytest.mark.vcr()
     def test_subscription_list(self):
          data_filter = {
-            "before": "sxn_live_**********",
-            "after": "sxn_live_**********",
+            "before": "1712692203",
+            "after": "1712692203",
             "limit": 29
             #"creation_date_from": "2023-12-30T00:00:00.000Z",
             #"creation_date_to": "2023-12-20T00:00:00.000Z",
@@ -97,10 +93,7 @@ class SubscriptionTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_subscription_update(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
-
-        data_update = {
-            "metadata": self.metadata,
-        }
+        data_update = { "metadata": self.metadata}
         
         updated_subscription = self.subscription.update(
             id_=created_subscription["data"]["id"], data=data_update
@@ -111,9 +104,7 @@ class SubscriptionTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_subscription_delete(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
-        deleted_subscription = self.subscription.delete(
-            id_=created_subscription["data"]["id"]
-        )
+        deleted_subscription = self.subscription.delete(id_=created_subscription["data"]["id"])
 
         assert deleted_subscription["data"]["deleted"]
         assert deleted_subscription["data"]["id"] == created_subscription["data"]["id"]
