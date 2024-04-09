@@ -67,7 +67,6 @@ class SubscriptionTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_subscription_create(self):
         subscription = self.subscription.create(data=self.subscription_data)
-        print(subscription)
         assert "id" in subscription["data"] and isinstance(subscription["data"]["id"], str)
 
     #python3 -m pytest -k test_subscription_create -p no:warnings
@@ -77,7 +76,6 @@ class SubscriptionTest(unittest.TestCase):
         retrieved_subscription = self.subscription.read(
             created_subscription["data"]["id"]
         )
-        print(retrieved_subscription)
         assert (
             created_subscription["data"]["id"] == retrieved_subscription["data"]["id"]
         )
@@ -93,7 +91,6 @@ class SubscriptionTest(unittest.TestCase):
             #"creation_date_to": "2023-12-20T00:00:00.000Z",
         }
          retrieved_subscription_list = self.subscription.list(data=data_filter)
-         print(retrieved_subscription_list)
          assert "items" in retrieved_subscription_list["data"]
 
     #python3 -m pytest -k test_subscription_update -p no:warnings

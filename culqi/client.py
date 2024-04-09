@@ -93,7 +93,6 @@ class Culqi:
             return e.error_data
         """Dispatch a request to the CULQUI HTTP API."""
         if method == "get":
-            print("Response url :: ", url)
             response = getattr(self.session, method)(url, params=data, **options)
         elif method == "delete":
             response = getattr(self.session, method)(url, **options)
@@ -101,7 +100,6 @@ class Culqi:
             response = getattr(self.session, method)(url, data, **options)
             
         data = response.json()
-        print("Response :: ", data)
         if "data" in data:
             data["items"] = deepcopy(data["data"])
             del data["data"]
