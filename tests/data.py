@@ -41,8 +41,8 @@ class Data:
     }
 
     PLAN = {
-        "short_name": "cppe",
-        "description": "Cypress PCI | ERRROR NO USAR",
+        "short_name": "cppe4",
+        "description": "Cypress PCI  ERRROR NO USAR",
         "amount": 300,
         "currency": "PEN",
         "interval_unit_time": 1,

@@ -36,7 +36,7 @@ class PlanTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.plan._get_url() == "https://qa-api.culqi.xyz/v2/recurrent/plans"
+        assert self.plan._get_url() == "https://api.culqi.com/v2/recurrent/plans"
         assert self.plan._get_url(id_) == "https://api.culqi.com/v2/recurrent/plans/{0}".format(
             id_
         )

@@ -2,6 +2,7 @@ from culqi.utils.errors import CustomException
 from culqi.utils.urls import URL
 from culqi.resources.base import Resource
 from culqi.utils.validation.plan_validation import PlanValidation
+from jsonschema import validate
 
 __all__ = ["Plan"]
 
@@ -12,7 +13,11 @@ class Plan(Resource):
     def create(self, data, **options):
         try:
             PlanValidation.create(self, data)
-            return Resource.create(self, data, **options)
+            if (hasattr(self, 'schema')):
+                validate(instance=data, schema=self.schema)
+            url = self._get_url("create")
+            
+            return self._post(url, data, **options)
         except CustomException as e:
             return e.error_data
     

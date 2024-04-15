@@ -111,8 +111,6 @@ class Culqi:
         return self.request("get", url, data=data, **options)
 
     def post(self, url, data, **options):
-        if "plan" in url or "subscription" in url:
-            url += "/create"
         data, options = rsa_aes_encoder.encrypt_validation(data, options)
         data, options = self._update_request(data, options) 
         return self.request("post", url, data, **options)
