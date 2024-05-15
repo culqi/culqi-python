@@ -106,26 +106,14 @@ class Helpers:
 
         return None
     
-    def validate_initial_cycles(self, has_initial_charge, currency, amount, pay_amount, count):
+    def validate_initial_cycles(has_initial_charge, count):
         if has_initial_charge:
-            err = self.validate_currency(Helpers, currency, amount)
-            if err is not None:
-                return err
-
-            if amount == pay_amount:
-                raise CustomException("El campo 'initial_cycles.amount' es inválido o está vacío. El valor no debe ser igual al monto del plan.")
 
             if not (1 <= count <= 9999):
                 raise CustomException("El campo 'initial_cycles.count' solo admite valores numéricos en el rango 1 a 9999.")
-
-            if not (300 <= pay_amount <= 500000):
-                raise CustomException("El campo 'initial_cycles.amount' solo admite valores numéricos en el rango 300 a 500000.")
         else:
             if not (0 <= count <= 9999):
                 raise CustomException("El campo 'initial_cycles.count' solo admite valores numéricos en el rango 0 a 9999.")
-
-            if pay_amount != 0:
-                raise CustomException("El campo 'initial_cycles.amount' es inválido, debe ser 0.")
 
     def validate_image(image):
     # Expresión regular para validar URLs
