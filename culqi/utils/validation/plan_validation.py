@@ -30,7 +30,7 @@ class PlanValidation:
                 raise CustomException("El campo 'amount' es inválido o está vacío, debe tener un valor numérico.")
 
             #validateCurrency
-            Helpers.validate_currency(Helpers, data['currency'], data['amount'])
+            Helpers.validate_enum_currency(data['currency'])
             
             # Validate name
             rangeName = range(5, 51)
@@ -50,7 +50,7 @@ class PlanValidation:
             # Validate initial_cycles
             Helpers.validate_initial_cycles_parameters(data['initial_cycles'])
             initial_cycles = data['initial_cycles']
-            Helpers.validate_initial_cycles(Helpers, initial_cycles['has_initial_charge'], data['currency'], data['amount'], initial_cycles['amount'], initial_cycles['count'])
+            Helpers.validate_initial_cycles(initial_cycles['has_initial_charge'], initial_cycles['count'])
 
             # Validate image
             if 'image' in data:
@@ -135,14 +135,12 @@ class PlanValidation:
 
         # Validate parameters max_amount
         if 'max_amount' in data :
-            rangeMaxAmount = range(300, 500001)
-            if not isinstance(data['max_amount'], int) or data['max_amount'] not in rangeMaxAmount:
-                raise CustomException("El filtro 'max_amount' admite valores en el rango 300 a 500000")
+            if not isinstance(data['max_amount'], int):
+                raise CustomException("El filtro 'max_amount' es invalido, debe tener un valor numérico entero.")
             
         if 'min_amount' in data :
-            rangeMinAmount = range(300, 500001)
-            if not isinstance(data['min_amount'], int) or data['min_amount'] not in rangeMinAmount:
-                raise CustomException("El filtro'min_amount' admite valores en el rango 300 a 500000")
+            if not isinstance(data['min_amount'], int):
+                raise CustomException("El filtro 'min_amount' es invalido, debe tener un valor numérico entero.")
             
         if 'creation_date_from' in data and 'creation_date_to' in data:
             Helpers.validate_date_filter(data['creation_date_from'], data['creation_date_to'])
