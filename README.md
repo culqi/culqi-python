@@ -101,6 +101,11 @@ Los cargos pueden ser creados vía [API de devolución](https://apidocs.culqi.co
 El parámetro custom_headers es opcional y define los headers personalizados que se enviarán en la solicitud HTTP.
 
 ```python
+charge = self.charge.create(data=self.charge_data)
+```
+
+Para realizar un cargo recurrente, puedes utilizar el siguiente código:
+```python
 charge = self.charge.create(data=self.charge_data, custom_headers={'X-Charge-Channel': 'recurrent'})
 ```
 
