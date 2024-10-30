@@ -46,6 +46,11 @@ class Resource:
         if (hasattr(self, 'schema')):
             validate(instance=data, schema=self.schema)
 
+        for key, value in options.copy().items():
+            if key == 'custom_headers':
+                self.client._update_client_headers({k: v for k, v in value.items() if v not in [False, '', None]})
+                del options['custom_headers']
+
         url = self._get_url()
         return self._post(url, data, **options)
 

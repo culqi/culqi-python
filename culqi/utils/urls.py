@@ -8,9 +8,9 @@ class URL:
     CUSTOMER = "customers"
     EVENT = "events"
     ORDER = "orders"
-    PLAN = "plans"
+    PLAN = "recurrent/plans"
     REFUND = "refunds"
-    SUBSCRIPTION = "subscriptions"
+    SUBSCRIPTION = "recurrent/subscriptions"
     TOKEN = "tokens"
 
     TRANSFER = "transfers"

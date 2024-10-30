@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi 
 from culqi.resources import Card
+from culqi.utils.urls import URL
 
 from tests.data import Data
 
@@ -48,10 +49,8 @@ class CardTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.card._get_url() == "https://api.culqi.com/v2/cards"
-        assert self.card._get_url(id_) == "https://api.culqi.com/v2/cards/{0}".format(
-            id_
-        )
+        assert self.card._get_url() == f"{URL.BASE}/v2/cards"
+        assert self.card._get_url(id_) ==  f"{URL.BASE}/v2/cards/{id_}"
 
     @pytest.mark.vcr()
     def test_card_create(self):

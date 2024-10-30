@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Refund
+from culqi.utils.urls import URL
 
 from .data import Data
 
@@ -42,10 +43,10 @@ class RefundTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.refund._get_url() == "https://api.culqi.com/v2/refunds"
+        assert self.refund._get_url() == f"{URL.BASE}/v2/refunds"
         assert self.refund._get_url(
             id_
-        ) == "https://api.culqi.com/v2/refunds/{0}".format(id_)
+        ) == f"{URL.BASE}/v2/refunds/{id_}"
 
     @pytest.mark.vcr()
     def test_refund_create(self):

@@ -26,7 +26,7 @@ class Charge(Resource):
             return self._post(url, data, **options)
         except CustomException as e:
             return e.error_data
-    
+
     def list(self, data={}, **options):
         try:
             ChargeValidation.list(self, data)
@@ -34,7 +34,7 @@ class Charge(Resource):
             return self._get(url, data, **options)
         except CustomException as e:
             return e.error_data
-    
+
     def read(self, id_, data=None, **options):
         try:
             ChargeValidation.retrieve(self, id_)
@@ -42,7 +42,7 @@ class Charge(Resource):
             return self._get(url, data, **options)
         except CustomException as e:
             return e.error_data
-    
+
     def update(self, id_, data=None, **options):
         try:
             ChargeValidation.update(self, id_)
