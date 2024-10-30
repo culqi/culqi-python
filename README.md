@@ -41,6 +41,7 @@ py -m pip install pycryptodome
 
 Para empezar a enviar peticiones al API de Culqi debes configurar tu llave pública (pk), llave privada (sk).
 Para habilitar encriptación de payload debes configurar tu rsa_id y rsa_public_key.
+El parámetro custom_headers es opcional y define los headers personalizados que se enviarán en la solicitud HTTP. Está presente solo en los métodos create.
 
 ```python
 
@@ -97,9 +98,15 @@ token = self.token.create(data=self.token_data)
 Crear un cargo significa cobrar una venta a una tarjeta. Para esto previamente deberías generar el  `token` y enviarlo en parámetro **source_id**.
 
 Los cargos pueden ser creados vía [API de devolución](https://apidocs.culqi.com/#tag/Cargos/operation/crear-cargo).
+El parámetro custom_headers es opcional y define los headers personalizados que se enviarán en la solicitud HTTP.
 
 ```python
 charge = self.charge.create(data=self.charge_data)
+```
+
+Para realizar un cargo recurrente, puedes utilizar el siguiente código:
+```python
+charge = self.charge.create(data=self.charge_data, custom_headers={'X-Charge-Channel': 'recurrent'})
 ```
 
 ### Crear Devolución

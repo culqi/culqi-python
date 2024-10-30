@@ -145,9 +145,12 @@ class NotAllowedError(Exception):
 class CustomException(Exception):
     def __init__(self, merchant_message):
         self.error_data = {
+          "status": 400,
+          "data": {
             "object": "error",
             "type": "param_error",
             "merchant_message": merchant_message,
             "user_message": merchant_message
+          }
         }
-        super().__init__(self.error_data)
+        super().__init__(merchant_message)

@@ -1,3 +1,5 @@
+import time
+
 class Data:
     TOKEN = {
         "cvv": "123",
@@ -41,13 +43,20 @@ class Data:
     }
 
     PLAN = {
-        "amount": 1000,
-        "currency_code": "PEN",
-        "interval": "dias",
-        "interval_count": 2,
-        "limit": 10,
+        "short_name": "cppe4",
+        "description": "Cypress PCI  ERRROR NO USAR",
+        "amount": 300,
+        "currency": "PEN",
+        "interval_unit_time": 1,
+        "interval_count": 1,
+        "initial_cycles": {
+          "count": 1,
+          "has_initial_charge": False,
+          "amount": 0,
+          "interval_unit_time": 1
+        },
         "name": None,
-        "trial_days": 30,
+	    "metadata":{}
     }
 
     ORDER = {
@@ -61,6 +70,6 @@ class Data:
             "email": "richard@piedpiper.com",
             "phone_number": "+51998989789",
         },
-        "expiration_date": 1893474000,
+        "expiration_date": int(time.time()) + 3600,
         "confirm": False,
     }

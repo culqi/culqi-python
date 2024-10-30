@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from culqi import __version__ 
 from culqi.client import Culqi 
 from culqi.resources import Customer
+from culqi.utils.urls import URL
 
 from .data import Data
 
@@ -32,10 +33,10 @@ class CustomerTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.customer._get_url() == "https://api.culqi.com/v2/customers"
+        assert self.customer._get_url() == f"{URL.BASE}/v2/customers"
         assert self.customer._get_url(
             id_
-        ) == "https://api.culqi.com/v2/customers/{0}".format(id_)
+        ) ==f"{URL.BASE}/v2/customers/{id_}"
 
     @pytest.mark.vcr()
     def test_customer_create(self):

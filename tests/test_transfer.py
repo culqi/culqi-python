@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Transfer
+from culqi.utils.urls import URL
 
 
 class TransferTest(unittest.TestCase):
@@ -23,10 +24,10 @@ class TransferTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.transfer._get_url() == "https://api.culqi.com/v2/transfers"
+        assert self.transfer._get_url() ==f"{URL.BASE}/v2/transfers"
         assert self.transfer._get_url(
             id_
-        ) == "https://api.culqi.com/v2/transfers/{0}".format(id_)
+        ) ==f"{URL.BASE}/v2/transfers/{id_}"
 
     # @pytest.mark.vcr()
     # def test_transfer_retrieve(self):

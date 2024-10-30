@@ -29,13 +29,13 @@ class ClientTest(unittest.TestCase):
         headers = {
             "User-Agent": "Culqi-API-Python/{0}".format(self.version),
             "Authorization": "Bearer {0}".format(self.private_key),
-            "Content-type": "application/json",
+            "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
         assert headers["User-Agent"] == session_headers["User-Agent"]
         assert headers["Authorization"] == session_headers["Authorization"]
-        assert headers["Content-type"] == session_headers["Content-type"]
+        assert headers["Content-Type"] == session_headers["Content-Type"]
         assert headers["Accept"] == session_headers["Accept"]
 
 
