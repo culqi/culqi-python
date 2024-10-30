@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Order
+from culqi.utils.urls import URL
 
 from .data import Data
 
@@ -45,13 +46,11 @@ class OrderTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.order._get_url() == "https://api.culqi.com/v2/orders"
-        assert self.order._get_url(id_) == "https://api.culqi.com/v2/orders/{0}".format(
-            id_
-        )
+        assert self.order._get_url() == f"{URL.BASE}/v2/orders"
+        assert self.order._get_url(id_) == f"{URL.BASE}/v2/orders/{id_}"
         assert self.order._get_url(
             id_, "confirm"
-        ) == "https://api.culqi.com/v2/orders/{0}/confirm".format(id_)
+        ) ==f"{URL.BASE}/v2/orders/{id_}/confirm"
 
     @pytest.mark.vcr()
     def test_order_create(self):

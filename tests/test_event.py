@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 
 from culqi import __version__
 from culqi.client import Culqi 
+from culqi.utils.urls import URL
+
 from culqi.resources import Event
 
 
@@ -23,11 +25,9 @@ class EventTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.event._get_url() == "https://api.culqi.com/v2/events"
-        assert self.event._get_url(id_) == "https://api.culqi.com/v2/events/{0}".format(
-            id_
-        )
-
+        assert self.event._get_url() == f"{URL.BASE}/v2/events"
+        assert self.event._get_url(id_) == f"{URL.BASE}/v2/events/{id_}"
+        
     # @pytest.mark.vcr()
     # def test_event_retrieve(self):
     #     retrieved_event = self.event.read(created_event["data"]["id"])

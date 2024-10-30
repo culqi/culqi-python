@@ -59,8 +59,6 @@ class SubscriptionValidation:
                 Helpers.validate_metadata(Helpers, data['metadata'])
         
     def list(self, data):
-        # Validate parameters status
-        
         # Validate plan_id
         if 'plan_id' in data:
             if not isinstance(data['plan_id'], str) or len(data['plan_id'])!= 25:

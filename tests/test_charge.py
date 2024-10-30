@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Charge
+from culqi.utils.urls import URL
 
 from tests.data import Data
 
@@ -47,13 +48,13 @@ class ChargeTest(unittest.TestCase):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.charge._get_url() == "https://api.culqi.com/v2/charges"
+        assert self.charge._get_url() == f"{URL.BASE}/v2/charges"
         assert self.charge._get_url(
             id_
-        ) == "https://api.culqi.com/v2/charges/{0}".format(id_)
+        ) == f"{URL.BASE}/v2/charges/{id_}"
         assert self.charge._get_url(
             id_, "capture"
-        ) == "https://api.culqi.com/v2/charges/{0}/capture".format(id_)
+        ) ==  f"{URL.BASE}/v2/charges/{id_}/capture"
 
     @pytest.mark.vcr()
     def test_charge_create(self):

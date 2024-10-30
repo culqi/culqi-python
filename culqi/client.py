@@ -53,13 +53,13 @@ class Culqi:
             data = {}
 
         """Update The resource data and header options."""
-        data = json.dumps(data)
+        #data = json.dumps(data)
 
         if "headers" not in options:
             options["headers"] = {}
     
         options["headers"].update(
-            {"Content-type": "application/json", "Accept": "application/json"}
+            {"Content-Type": "application/json", "Accept": "application/json"}
         )
 
         return data, options
@@ -74,7 +74,7 @@ class Culqi:
         return {
             "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
             "Authorization": "Bearer {0}".format(self.private_key),
-            "Content-type": "application/json",
+            "Content-Type": "application/json",
             "Accept": "application/json",
             "x-culqi-env": xCulqiEnv,
             "x-api-version": CONSTANTS.X_API_VERSION,
@@ -96,6 +96,14 @@ class Culqi:
         )
 
     def request(self, method, url, data, **options):
+        if 'headers' not in options:
+            options['headers'] = {}
+
+        # Agregar headers únicos a options['headers']
+        for key, value in self.session.headers.items():
+            if key not in options['headers']:
+                options['headers'][key] = value
+
         try:
             Helpers.validate_string_start(self.public_key, "pk")
             Helpers.validate_string_start(self.private_key, "sk")
@@ -107,6 +115,7 @@ class Culqi:
         elif method == "delete":
             response = getattr(self.session, method)(url, **options)
         else:
+            data = json.dumps(data)
             response = getattr(self.session, method)(url, data, **options)
             
         data = response.json()

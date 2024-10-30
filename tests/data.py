@@ -1,3 +1,5 @@
+import time
+
 class Data:
     TOKEN = {
         "cvv": "123",
@@ -68,6 +70,6 @@ class Data:
             "email": "richard@piedpiper.com",
             "phone_number": "+51998989789",
         },
-        "expiration_date": 1893474000,
+        "expiration_date": int(time.time()) + 3600,
         "confirm": False,
     }
