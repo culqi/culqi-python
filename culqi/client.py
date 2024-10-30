@@ -65,23 +65,33 @@ class Culqi:
         return data, options
 
 
-    def _set_client_headers(self):
-        
+    def _get_client_headers(self):
         if 'test' in self.private_key:
             xCulqiEnv = CONSTANTS.X_CULQI_ENV_TEST
         else:
             xCulqiEnv = CONSTANTS.X_CULQI_ENV_LIVE
-            
+
+        return {
+            "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
+            "Authorization": "Bearer {0}".format(self.private_key),
+            "Content-type": "application/json",
+            "Accept": "application/json",
+            "x-culqi-env": xCulqiEnv,
+            "x-api-version": CONSTANTS.X_API_VERSION,
+            "x-culqi-client": CONSTANTS.X_CULQI_CLIENT,
+            "x-culqi-client-version": CONSTANTS.X_CULQI_CLIENT_VERSION,
+        }
+
+    def _set_client_headers(self):
+        self.session.headers.update(
+            **self._get_client_headers()
+        )
+
+    def _update_client_headers(self, headers):
         self.session.headers.update(
             {
-                "User-Agent": "Culqi-API-Python/{0}".format(self._get_version()),
-                "Authorization": "Bearer {0}".format(self.private_key),
-                "Content-type": "application/json",
-                "Accept": "application/json",
-                "x-culqi-env": xCulqiEnv,
-                "x-api-version": CONSTANTS.X_API_VERSION,
-                "x-culqi-client": CONSTANTS.X_CULQI_CLIENT,
-                "x-culqi-client-version": CONSTANTS.X_CULQI_CLIENT_VERSION,
+                **self._get_client_headers(),
+                **headers,
             }
         )
 
@@ -112,7 +122,7 @@ class Culqi:
 
     def post(self, url, data, **options):
         data, options = rsa_aes_encoder.encrypt_validation(data, options)
-        data, options = self._update_request(data, options) 
+        data, options = self._update_request(data, options)
         return self.request("post", url, data, **options)
 
     def patch(self, url, data, **options):

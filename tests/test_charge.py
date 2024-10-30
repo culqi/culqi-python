@@ -38,8 +38,8 @@ class ChargeTest(unittest.TestCase):
         token_data = deepcopy(Data.TOKEN)
         token = self.culqi.token.create(data=token_data)
         charge_data = deepcopy(Data.CHARGE)
-        print(charge_data)
         charge_data["source_id"] = token["data"]["id"]
+        print(charge_data)
 
         return charge_data
 
@@ -74,7 +74,7 @@ class ChargeTest(unittest.TestCase):
     def test_charge_capture(self):
         created_charge = self.charge.create(data=self.charge_data)
         captured_charge = self.charge.capture(id_=created_charge["data"]["id"])
-        
+
         print(created_charge)
         print(captured_charge)
 
@@ -84,6 +84,13 @@ class ChargeTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_charge_retrieve(self):
         created_charge = self.charge.create(data=self.charge_data)
+        retrieved_charge = self.charge.read(created_charge["data"]["id"])
+
+        assert created_charge["data"]["id"] == retrieved_charge["data"]["id"]
+
+    @pytest.mark.vcr()
+    def test_charge_recurrent_header(self):
+        created_charge = self.charge.create(data=self.charge_data, custom_headers={'X-Charge-Channel': 'recurrent'})
         retrieved_charge = self.charge.read(created_charge["data"]["id"])
 
         assert created_charge["data"]["id"] == retrieved_charge["data"]["id"]

@@ -80,7 +80,6 @@ class PlanTest(unittest.TestCase):
             "name": "plan-{0}".format(uuid4().hex[:4]),
             "short_name": "short_plan-{0}".format(uuid4().hex[:4]),
             "description": "description",
-            "image": "https://recurrencia-suscripciones-qa.s3.amazonaws.com/f097e1d5-e365-42f3-bc40-a27beab80f54"
         }
 
         updated_plan = self.plan.update(id_=created_plan["data"]["id"], data=data_update)
