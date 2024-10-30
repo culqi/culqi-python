@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from culqi import __version__
 from culqi.client import Culqi
 from culqi.resources import Subscription
+from culqi.utils.urls import URL
 
 from .data import Data
 
@@ -53,15 +54,39 @@ class SubscriptionTest(unittest.TestCase):
             "plan_id": plan["data"]["id"],
             "tyc": True
         }
+    
+    @property
+    def subscription_data_update(self):
+        # pylint: disable=no-member
+        email = "richard{0}@piedpiper.com".format(uuid4().hex[:4])
+
+        token_data = deepcopy(Data.TOKEN)
+        token_data["email"] = email
+        token = self.culqi.token.create(data=token_data)
+
+        customer_data = deepcopy(Data.CUSTOMER)
+        customer_data["email"] = email
+        customer = self.culqi.customer.create(data=customer_data)
+
+        card_data = {
+            "token_id": token["data"]["id"],
+            "customer_id": customer["data"]["id"],
+        }
+        card = self.culqi.card.create(data=card_data)
+
+        return {
+            "card_id": card["data"]["id"],
+            "metadata": self.metadata
+        }
 
     def test_url(self):
         # pylint: disable=protected-access
         id_ = "sample_id"
 
-        assert self.subscription._get_url() == "https://api.culqi.com/v2/recurrent/subscriptions"
+        assert self.subscription._get_url() == f"{URL.BASE}/v2/recurrent/subscriptions"
         assert self.subscription._get_url(
             id_
-        ) == "https://api.culqi.com/v2/recurrent/subscriptions/{0}".format(id_)
+        ) ==f"{URL.BASE}/v2/recurrent/subscriptions/{id_}"
 
     #python3 -m pytest -k test_subscription_create -p no:warnings
     @pytest.mark.vcr()
@@ -82,7 +107,7 @@ class SubscriptionTest(unittest.TestCase):
          data_filter = {
             #"before": "1712692203",
             #"after": "1712692203",
-            "limit": 29
+            "limit": 1
             #"creation_date_from": "2023-12-30T00:00:00.000Z",
             #"creation_date_to": "2023-12-20T00:00:00.000Z",
         }
@@ -93,8 +118,8 @@ class SubscriptionTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_subscription_update(self):
         created_subscription = self.subscription.create(data=self.subscription_data)
-        data_update = { "metadata": self.metadata}
-        
+        data_update = self.subscription_data_update
+
         updated_subscription = self.subscription.update(
             id_=created_subscription["data"]["id"], data=data_update
         )
