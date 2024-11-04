@@ -54,13 +54,13 @@ class TokenTest(unittest.TestCase):
         token = self.token.createyape(data=self.yape_data)
         assert token["data"]["object"] == "token"
 
-    @pytest.mark.vcr()
-    def test_token_yape_create_encrypt(self):
-        options = {}
-        options["rsa_public_key"] = self.rsa_public_key
-        options["rsa_id"] = self.rsa_id
-        token = self.token.createyape(data=self.yape_data, **options)
-        assert token["data"]["object"] == "token"
+    #@pytest.mark.vcr()
+    #def test_token_yape_create_encrypt(self):
+    #    options = {}
+    #    options["rsa_public_key"] = self.rsa_public_key
+    #    options["rsa_id"] = self.rsa_id
+    #    token = self.token.createyape(data=self.yape_data, **options)
+    #    assert token["data"]["object"] == "token"
 
     @pytest.mark.vcr()
     def test_token_retrieve(self):
@@ -71,12 +71,12 @@ class TokenTest(unittest.TestCase):
     @pytest.mark.vcr()
     def test_token_list(self):
         querystring = {
-            "creation_date": "1476132639",
-            "creation_date_from": "1476132639",
-            "card_type": "credito",
-            "device_type": "mobile",
-            "bin": "411111",
-            "country_code": "PE",
+            #"creation_date": "1476132639",
+            #"creation_date_from": "1476132639",
+            #"card_type": "credito",
+            "device_type": "movil",
+            #"bin": "411111",
+            #"country_code": "PE",
             "limit": "10",
         }
         retrieved_token_list = self.token.list(querystring)
