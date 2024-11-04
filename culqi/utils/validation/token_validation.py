@@ -53,7 +53,7 @@ class TokenValidation:
         
     def token_list_validation(self, data):
         if 'device_type' in data:
-            allowed_device_values = ['desktop', 'mobile', 'tablet']
+            allowed_device_values = ['escritorio', 'movil', 'tablet']
             Helpers.validate_value(data['device_type'], allowed_device_values)
             
         if 'card_brand' in data:
