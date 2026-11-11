@@ -43,6 +43,13 @@ Para empezar a enviar peticiones al API de Culqi debes configurar tu llave públ
 Para habilitar encriptación de payload debes configurar tu rsa_id y rsa_public_key.
 El parámetro custom_headers es opcional y define los headers personalizados que se enviarán en la solicitud HTTP. Está presente solo en los métodos create.
 
+Para las pruebas y ejemplos, reemplaza `INSERTE_SU_LLAVE_PUBLICA` e
+`INSERTE_SU_LLAVE_PRIVADA` por tus propias llaves `pk_test_` y `sk_test_`.
+Si usas encriptación, reemplaza también `INSERTE_SU_LLAVE_RSA` y
+`INSERTE_SU_RSA_ID` por tu llave pública RSA y su identificador.
+No hagas commit de tus credenciales. Las pruebas pueden realizar solicitudes
+reales al API de Culqi.
+
 ```python
 
 from dotenv import load_dotenv
